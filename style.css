@@ -151,6 +151,74 @@ img{max-width:100%;display:block}
 .contact-box .mail{font-size:clamp(17px,4vw,22px);font-weight:700;color:var(--navy);word-break:break-all}
 .contact-box .note{color:var(--ink-2);font-size:13.5px;margin-top:16px}
 
+/* ===== Article (post) ===== */
+.post-wrap{padding:50px 0 72px}
+.post{max-width:760px;margin:0 auto}
+.post .post-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.post .tag{display:inline-block;font-size:11px;color:var(--gold);
+  border:1px solid var(--gold);border-radius:999px;padding:3px 12px;letter-spacing:.06em}
+.post .date{font-size:13px;color:#9a9ab0;letter-spacing:.04em}
+.post h1{font-size:clamp(23px,4.4vw,32px);line-height:1.5;margin:0 0 30px;letter-spacing:.02em}
+.post h2{font-size:clamp(19px,3.4vw,23px);margin:42px 0 14px;padding-bottom:10px;
+  border-bottom:2px solid var(--gold);letter-spacing:.02em}
+.post h3{font-size:17px;margin:28px 0 10px;color:var(--navy);
+  padding-left:12px;border-left:4px solid var(--gold);letter-spacing:.02em}
+.post p{margin:0 0 16px;color:#33333d}
+.post a{color:#9a7d2e;text-decoration:underline}
+.post strong{color:var(--navy);font-weight:700}
+.post ul,.post ol{margin:0 0 18px;padding-left:24px;color:#33333d}
+.post li{margin-bottom:7px}
+.post hr{border:0;border-top:1px solid var(--line);margin:34px 0}
+.post table{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:14.5px}
+.post th,.post td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.post thead th{background:var(--gold-soft);color:var(--navy);font-weight:700}
+.post tbody tr:nth-child(even){background:var(--bg-2)}
+.post .lead{text-align:left;max-width:none;color:var(--ink-2);font-size:16.5px}
+.post-foot{max-width:760px;margin:44px auto 0;padding-top:24px;border-top:1px solid var(--line)}
+.post-foot .back{display:inline-block;color:var(--navy);font-weight:700;font-size:14px}
+.post-foot .back:hover{color:var(--gold)}
+.post-foot .disc{margin-top:16px;font-size:12.5px;color:#9a9ab0;line-height:1.9}
+
+/* ===== Article pages (header-inner / article-body structure) ===== */
+header:not(.site-header){
+  background:var(--navy);position:sticky;top:0;z-index:50;
+  border-bottom:1px solid rgba(201,168,76,.35);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+.header-inner .logo{color:#fff;font-weight:700;letter-spacing:.16em;font-size:16px}
+.header-inner nav{display:flex;gap:20px;flex-wrap:wrap}
+.header-inner nav a{color:#d7d7e2;font-size:13.5px;letter-spacing:.04em}
+.header-inner nav a:hover{color:var(--gold)}
+
+.article-body{padding:50px 0 72px;background:#fff}
+.article-container{max-width:760px;margin:0 auto;padding:0 20px}
+.article-category{
+  display:inline-block;color:var(--gold);border:1px solid var(--gold);border-radius:999px;
+  padding:3px 12px;font-size:11px;letter-spacing:.06em;margin:0 0 14px;
+}
+.article-container h1{font-size:clamp(23px,4.4vw,32px);line-height:1.5;margin:0 0 10px;letter-spacing:.02em}
+.article-date{color:#9a9ab0;font-size:13px;margin:0 0 30px;letter-spacing:.04em}
+.article-container h2{font-size:clamp(19px,3.4vw,23px);margin:40px 0 14px;padding-bottom:10px;
+  border-bottom:2px solid var(--gold);letter-spacing:.02em}
+.article-container h3{font-size:17px;margin:26px 0 10px;color:var(--navy);
+  padding-left:12px;border-left:4px solid var(--gold);letter-spacing:.02em}
+.article-container p{margin:0 0 16px;color:#33333d}
+.article-container ul,.article-container ol{margin:0 0 18px;padding-left:24px;color:#33333d}
+.article-container li{margin-bottom:7px}
+.article-container strong{color:var(--navy);font-weight:700}
+.article-container a{color:#9a7d2e;text-decoration:underline}
+
+footer:not(.site-footer){
+  background:var(--navy);color:#9a9ab0;text-align:center;
+  padding:40px 20px 34px;border-top:3px solid var(--gold);
+}
+footer:not(.site-footer) p{margin:0 0 10px;font-size:12.5px;line-height:1.9}
+footer:not(.site-footer) a{color:#d7d7e2;text-decoration:underline;font-size:13px}
+footer:not(.site-footer) a:hover{color:var(--gold)}
+
 /* ===== Footer ===== */
 .site-footer{
   background:var(--navy);color:#c2c2d2;padding:46px 20px 34px;margin-top:0;
