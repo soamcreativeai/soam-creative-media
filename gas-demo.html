@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問い合わせ自動管理ツール｜SOAM CREATIVE｜業務自動化デモ</title>
+<meta name="description" content="Googleフォーム→スプレッドシート自動記録→メール通知まで全自動。GAS×AIで業務を自動化する「問い合わせ自動管理ツール」のデモページです。">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== gas-demo page-specific ===== */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+  .step{
+    position:relative;border:1px solid var(--line);border-radius:14px;
+    padding:30px 24px;background:#fff;text-align:center;transition:.2s;
+  }
+  .step:hover{border-color:var(--gold);box-shadow:0 14px 36px -22px rgba(26,26,46,.4)}
+  .step .num{
+    width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--gold);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+    font-weight:700;font-size:18px;letter-spacing:.04em;
+  }
+  .step .ic{font-size:30px;margin-bottom:12px;line-height:1}
+  .step h3{margin:0 0 8px;font-size:16px;letter-spacing:.03em}
+  .step p{margin:0;color:var(--ink-2);font-size:14px}
+  .step .arrow{
+    display:none;position:absolute;right:-14px;top:50%;transform:translateY(-50%);
+    color:var(--gold);font-size:22px;z-index:2;
+  }
+  .steps .step:not(:last-child) .arrow{display:block}
+
+  .solve-list{
+    max-width:640px;margin:0 auto;list-style:none;padding:0;
+  }
+  .solve-list li{
+    position:relative;padding:16px 18px 16px 52px;margin-bottom:12px;
+    border:1px solid var(--line);border-radius:12px;background:#fff;
+    color:var(--ink);font-size:15px;letter-spacing:.02em;
+  }
+  .solve-list li::before{
+    content:"✓";position:absolute;left:18px;top:50%;transform:translateY(-50%);
+    width:24px;height:24px;border-radius:50%;background:var(--gold-soft);color:var(--gold);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;
+  }
+
+  .demo-cta{
+    border:1px solid rgba(201,168,76,.4);border-radius:18px;
+    background:linear-gradient(160deg,var(--navy),var(--navy-soft));
+    color:#fff;text-align:center;padding:48px 28px;max-width:680px;margin:0 auto;
+  }
+  .demo-cta h3{margin:0 0 10px;font-size:clamp(19px,3.4vw,24px);letter-spacing:.03em}
+  .demo-cta p{color:#c9c9d6;margin:0 0 26px;font-size:14.5px}
+
+  @media(max-width:820px){
+    .steps{grid-template-columns:1fr}
+    .step .arrow{display:none !important;transform:none;right:auto;left:50%;top:auto;bottom:-13px;margin-left:-11px}
+    .steps .step:not(:last-child) .arrow{display:block;transform:rotate(90deg) translateX(0)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html"><span class="dot"></span>SOAM CREATIVE</a>
+    <button class="nav-toggle" aria-label="メニュー" onclick="document.getElementById('nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="index.html">ホーム</a>
+      <a href="articles/index.html">記事一覧</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">BUSINESS AUTOMATION DEMO</div>
+    <h1>問い合わせ自動管理ツール</h1>
+    <p>Googleフォーム→スプレッドシート自動記録→メール通知まで、全自動。</p>
+    <a class="btn" href="#demo">実際のデモフォームを試す</a>
+  </div>
+</section>
+
+<!-- ===== How it works ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">HOW IT WORKS</div>
+      <h2>仕組みはかんたん3ステップ</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="ic">📝</div>
+        <h3>フォームに回答が届く</h3>
+        <p>Googleフォームからお客様が問い合わせを送信。受付はいつでも、24時間自動です。</p>
+        <span class="arrow">➜</span>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="ic">📊</div>
+        <h3>スプレッドシートに自動記録</h3>
+        <p>届いた内容がスプレッドシートへ自動で追記。手入力もコピペも一切不要です。</p>
+        <span class="arrow">➜</span>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="ic">📧</div>
+        <h3>メールで即座に通知</h3>
+        <p>担当者のメールに新着のお知らせが自動送信。対応漏れを防ぎます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What it solves ===== -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">BENEFITS</div>
+      <h2>このツールで解決できること</h2>
+    </div>
+    <ul class="solve-list">
+      <li>問い合わせを見逃さなくなる</li>
+      <li>担当者不在中でも自動で記録・通知</li>
+      <li>スプレッドシートが問い合わせ台帳になる</li>
+      <li>業種問わず導入できる</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Demo CTA ===== -->
+<section class="section" id="demo">
+  <div class="container">
+    <div class="demo-cta">
+      <h3>実際の動きを体験してみませんか？</h3>
+      <p>下のボタンからデモフォームを開けます。送信すると、自動記録〜通知までの流れをそのまま体験できます。</p>
+      <a class="btn" href="https://forms.gle/JypaWuywEjCZkJuM6" target="_blank" rel="noopener">実際のデモフォームを試す</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GAS x AI possibilities ===== -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">GAS × AI</div>
+      <h2>GAS×AIで、こんなこともできます</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="ic">↩️</div>
+        <h3>メールの自動返信</h3>
+        <p>受け付けた問い合わせに、内容に応じた自動返信メールを即時に送信します。</p>
+      </div>
+      <div class="card">
+        <div class="ic">📈</div>
+        <h3>データ集計・日報自動生成</h3>
+        <p>蓄積したデータを自動で集計し、日報やレポートを決まった時間に自動作成します。</p>
+      </div>
+      <div class="card">
+        <div class="ic">🔍</div>
+        <h3>重複データの自動検知</h3>
+        <p>同じ問い合わせや重複データを自動で見つけ出し、ハイライトして気づける状態に。</p>
+      </div>
+      <div class="card">
+        <div class="ic">🔔</div>
+        <h3>Slack・LINEへの通知連携</h3>
+        <p>メールだけでなく、SlackやLINEへも通知。チームへの共有がスムーズになります。</p>
+      </div>
+      <div class="card">
+        <div class="ic">🤖</div>
+        <h3>AIによる内容の自動分類</h3>
+        <p>AIが問い合わせ内容を読み取り、カテゴリーや優先度を自動で振り分けます。</p>
+      </div>
+      <div class="card">
+        <div class="ic">✨</div>
+        <h3>あなたの業務に合わせて</h3>
+        <p>「こんなことできる？」もお気軽に。業務に合わせた自動化を組み合わせられます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="copy" style="text-align:center">SOAM CREATIVE</div>
+  </div>
+</footer>
+
+</body>
+</html>
