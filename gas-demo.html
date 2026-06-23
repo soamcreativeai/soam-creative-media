@@ -97,6 +97,25 @@
     .more-item { background: #111827; border: 1px solid #1e2a3a; border-radius: 8px; padding: 14px 18px; font-size: 14px; color: #ccc; display: flex; align-items: center; gap: 10px; }
     .more-item::before { content: '✦'; color: #c9a84c; font-size: 12px; }
 
+    /* BEFORE / AFTER */
+    .ba { max-width: 860px; margin: 0 auto; padding: 56px 24px 10px; }
+    .ba h2 { font-size: 24px; font-weight: 700; margin-bottom: 32px; text-align: center; }
+    .ba h2 span { color: #c9a84c; }
+    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
+    .ba-col { border-radius: 14px; padding: 28px 24px; border: 1px solid #1e2a3a; }
+    .ba-col.before { border-color: #2a3340; background: #10141f; }
+    .ba-col.after { border-color: rgba(201,168,76,0.45); background: rgba(201,168,76,0.06); }
+    .ba-label { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 20px; margin-bottom: 20px; }
+    .ba-col.before .ba-label { background: rgba(150,160,175,0.12); color: #9aa6b5; border: 1px solid rgba(150,160,175,0.3); }
+    .ba-col.after .ba-label { background: rgba(201,168,76,0.15); color: #c9a84c; border: 1px solid rgba(201,168,76,0.4); }
+    .ba-list { list-style: none; }
+    .ba-list li { font-size: 14.5px; line-height: 1.7; padding: 11px 0 11px 28px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .ba-list li:last-child { border-bottom: none; }
+    .ba-col.before .ba-list li { color: #9aa6b5; }
+    .ba-col.before .ba-list li::before { content: '×'; position: absolute; left: 5px; top: 11px; color: #6b7585; font-weight: 700; }
+    .ba-col.after .ba-list li { color: #e8e8e8; }
+    .ba-col.after .ba-list li::before { content: '✓'; position: absolute; left: 3px; top: 11px; color: #6fe0a8; font-weight: 700; }
+
     /* FOOTER */
     footer { text-align: center; padding: 24px; border-top: 1px solid #1e2a3a; color: #555; font-size: 13px; }
 
@@ -107,6 +126,8 @@
       .demo-inner { padding: 48px 18px; }
       .demo-card { padding: 22px; }
       .step:not(:last-child)::after { display: none; }
+      .ba-grid { grid-template-columns: 1fr; }
+      .ba { padding: 44px 18px 4px; }
     }
   </style>
 </head>
@@ -144,6 +165,28 @@
       <div class="step-num">3</div>
       <h3>返信案を画面に表示</h3>
       <p>生成された返信案がそのまま表示される</p>
+    </div>
+  </div>
+</section>
+
+<section class="ba">
+  <h2>導入前と<span>導入後</span></h2>
+  <div class="ba-grid">
+    <div class="ba-col before">
+      <span class="ba-label">BEFORE 導入前</span>
+      <ul class="ba-list">
+        <li>問い合わせが届くたびに文章をゼロから考える</li>
+        <li>1件返信に10〜20分かかる</li>
+        <li>対応漏れ・文体のブレが発生する</li>
+      </ul>
+    </div>
+    <div class="ba-col after">
+      <span class="ba-label">AFTER 導入後</span>
+      <ul class="ba-list">
+        <li>送信するだけでAIが返信案を自動生成</li>
+        <li>数秒で文章が完成する</li>
+        <li>語尾・丁寧さのブレがなくなる</li>
+      </ul>
     </div>
   </div>
 </section>
