@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>問い合わせ自動管理ツール | SOAM CREATIVE</title>
+  <title>AI返信案 自動生成デモ | SOAM CREATIVE</title>
+  <meta name="description" content="お問い合わせ内容を入力すると、GAS経由でClaude APIが返信案を自動生成。SOAM CREATIVEの業務自動化デモページです。">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #0a0e1a; color: #f0f0f0; font-family: 'Helvetica Neue', sans-serif; line-height: 1.7; }
@@ -16,36 +17,77 @@
     header nav a:hover { color: #c9a84c; }
 
     /* HERO */
-    .hero { text-align: center; padding: 80px 24px 60px; }
+    .hero { text-align: center; padding: 80px 24px 50px; }
     .hero .badge { display: inline-block; background: rgba(201,168,76,0.15); color: #c9a84c; border: 1px solid rgba(201,168,76,0.4); border-radius: 20px; font-size: 13px; padding: 4px 16px; margin-bottom: 24px; letter-spacing: 0.05em; }
-    .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 800; margin-bottom: 20px; line-height: 1.3; }
+    .hero h1 { font-size: clamp(28px, 5vw, 46px); font-weight: 800; margin-bottom: 20px; line-height: 1.3; }
     .hero h1 span { color: #c9a84c; }
-    .hero p { color: #aaa; font-size: 16px; max-width: 560px; margin: 0 auto 40px; }
-    .btn-demo { display: inline-block; background: #c9a84c; color: #0a0e1a; font-weight: 700; font-size: 16px; padding: 14px 36px; border-radius: 8px; transition: opacity 0.2s; }
+    .hero p { color: #aaa; font-size: 16px; max-width: 580px; margin: 0 auto 36px; }
+    .btn-demo { display: inline-block; background: #c9a84c; color: #0a0e1a; font-weight: 700; font-size: 16px; padding: 14px 36px; border-radius: 8px; transition: opacity 0.2s; cursor: pointer; }
     .btn-demo:hover { opacity: 0.85; }
 
     /* FLOW */
-    .section { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+    .section { max-width: 860px; margin: 0 auto; padding: 40px 24px 30px; }
     .section h2 { font-size: 24px; font-weight: 700; margin-bottom: 40px; text-align: center; }
     .section h2 span { color: #c9a84c; }
-
     .steps { display: flex; gap: 0; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
-    .step { flex: 1; min-width: 180px; max-width: 220px; text-align: center; padding: 24px 16px; position: relative; }
+    .step { flex: 1; min-width: 180px; max-width: 240px; text-align: center; padding: 24px 16px; position: relative; }
     .step:not(:last-child)::after { content: '→'; position: absolute; right: -12px; top: 36px; font-size: 24px; color: #c9a84c; }
     .step-num { width: 56px; height: 56px; border-radius: 50%; background: rgba(201,168,76,0.15); border: 2px solid #c9a84c; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 20px; font-weight: 800; color: #c9a84c; }
     .step h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
     .step p { font-size: 13px; color: #888; }
 
-    /* FEATURES */
-    .features { background: #0d1220; }
-    .features-inner { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
-    .features-inner h2 { font-size: 24px; font-weight: 700; margin-bottom: 40px; text-align: center; }
-    .features-inner h2 span { color: #c9a84c; }
-    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .feature-card { background: #111827; border: 1px solid #1e2a3a; border-radius: 12px; padding: 24px; }
-    .feature-card .icon { font-size: 28px; margin-bottom: 12px; }
-    .feature-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: #f0f0f0; }
-    .feature-card p { font-size: 13px; color: #888; }
+    /* DEMO */
+    .demo { background: #0d1220; border-top: 1px solid #1e2a3a; border-bottom: 1px solid #1e2a3a; }
+    .demo-inner { max-width: 680px; margin: 0 auto; padding: 64px 24px; }
+    .demo-inner h2 { font-size: 26px; font-weight: 700; margin-bottom: 8px; text-align: center; }
+    .demo-inner h2 span { color: #c9a84c; }
+    .demo-inner .lead { color: #999; font-size: 14px; text-align: center; margin-bottom: 36px; }
+
+    .demo-card { background: #111827; border: 1px solid #1e2a3a; border-radius: 14px; padding: 32px; }
+    .field { margin-bottom: 20px; }
+    .field label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 8px; color: #e6e6e6; }
+    .field input, .field textarea {
+      width: 100%; background: #0a0e1a; border: 1px solid #2a3850; border-radius: 8px;
+      color: #f0f0f0; font-size: 15px; padding: 12px 14px; font-family: inherit; line-height: 1.6;
+      transition: border-color 0.2s;
+    }
+    .field input:focus, .field textarea:focus { outline: none; border-color: #c9a84c; }
+    .field textarea { resize: vertical; min-height: 130px; }
+    .field .hint { font-size: 12px; color: #666; margin-top: 6px; }
+
+    .submit-btn {
+      width: 100%; background: #c9a84c; color: #0a0e1a; font-weight: 700; font-size: 16px;
+      padding: 15px; border: none; border-radius: 8px; cursor: pointer; transition: opacity 0.2s;
+    }
+    .submit-btn:hover:not(:disabled) { opacity: 0.85; }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* STATES */
+    .state { margin-top: 28px; }
+    .loading { display: none; align-items: center; justify-content: center; gap: 12px; color: #c9a84c; font-size: 15px; padding: 24px; }
+    .loading.show { display: flex; }
+    .spinner {
+      width: 22px; height: 22px; border: 3px solid rgba(201,168,76,0.25);
+      border-top-color: #c9a84c; border-radius: 50%; animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .result { display: none; }
+    .result.show { display: block; }
+    .result .result-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .result .result-head .tag { background: rgba(201,168,76,0.15); color: #c9a84c; border: 1px solid rgba(201,168,76,0.4); border-radius: 6px; font-size: 12px; font-weight: 700; padding: 4px 12px; }
+    .result .reply-box {
+      background: #0a0e1a; border: 1px solid #2a3850; border-left: 3px solid #c9a84c;
+      border-radius: 8px; padding: 20px; font-size: 15px; color: #e8e8e8; white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .result .copy-btn { margin-top: 14px; background: transparent; border: 1px solid #2a3850; color: #aaa; font-size: 13px; padding: 8px 16px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+    .result .copy-btn:hover { border-color: #c9a84c; color: #c9a84c; }
+
+    .error { display: none; background: rgba(220,80,80,0.1); border: 1px solid rgba(220,80,80,0.4); border-radius: 8px; padding: 16px 18px; color: #f0a5a5; font-size: 14px; }
+    .error.show { display: block; }
+
+    .note { text-align: center; color: #555; font-size: 12px; margin-top: 22px; }
 
     /* MORE */
     .more { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
@@ -55,13 +97,17 @@
     .more-item { background: #111827; border: 1px solid #1e2a3a; border-radius: 8px; padding: 14px 18px; font-size: 14px; color: #ccc; display: flex; align-items: center; gap: 10px; }
     .more-item::before { content: '✦'; color: #c9a84c; font-size: 12px; }
 
-    /* CTA */
-    .cta { text-align: center; padding: 60px 24px 80px; }
-    .cta h2 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
-    .cta p { color: #888; font-size: 14px; margin-bottom: 32px; }
-
     /* FOOTER */
     footer { text-align: center; padding: 24px; border-top: 1px solid #1e2a3a; color: #555; font-size: 13px; }
+
+    @media (max-width: 600px) {
+      header { padding: 14px 18px; }
+      header nav a { margin-left: 16px; }
+      .hero { padding: 56px 20px 40px; }
+      .demo-inner { padding: 48px 18px; }
+      .demo-card { padding: 22px; }
+      .step:not(:last-child)::after { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -75,10 +121,10 @@
 </header>
 
 <section class="hero">
-  <div class="badge">GAS × 業務自動化 デモ</div>
-  <h1>問い合わせを<span>全自動</span>で管理する</h1>
-  <p>Googleフォームに回答が届いた瞬間、スプレッドシートに自動記録され、メールで即通知。担当者不在でも、見逃しゼロ。</p>
-  <a href="https://forms.gle/JypaWuywEjCZkJuM6" target="_blank" class="btn-demo">実際のデモフォームを試す</a>
+  <div class="badge">GAS × Claude API デモ</div>
+  <h1>問い合わせに<span>AIが返信案</span>を自動生成</h1>
+  <p>お問い合わせ内容を入力するだけで、GAS（Google Apps Script）経由でClaude APIが最適な返信案を自動作成。担当者は確認して送るだけ。返信業務を大幅に時短します。</p>
+  <a href="#demo" class="btn-demo">デモを試してみる</a>
 </section>
 
 <section class="section">
@@ -86,69 +132,180 @@
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
-      <h3>フォームに回答が届く</h3>
-      <p>お客様がGoogleフォームに入力して送信</p>
+      <h3>問い合わせを入力</h3>
+      <p>フォームにお問い合わせ内容を入力して送信</p>
     </div>
     <div class="step">
       <div class="step-num">2</div>
-      <h3>スプレッドシートに自動記録</h3>
-      <p>回答内容が即座に一覧として蓄積される</p>
+      <h3>GAS経由でClaudeが生成</h3>
+      <p>GASがClaude APIを呼び出し返信案を作成</p>
     </div>
     <div class="step">
       <div class="step-num">3</div>
-      <h3>メールで即座に通知</h3>
-      <p>担当者のGmailに内容が自動送信される</p>
+      <h3>返信案を画面に表示</h3>
+      <p>生成された返信案がそのまま表示される</p>
     </div>
   </div>
 </section>
 
-<div class="features">
-  <div class="features-inner">
-    <h2>このツールで<span>解決できること</span></h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="icon">📬</div>
-        <h3>見逃しゼロ</h3>
-        <p>問い合わせが届いた瞬間にメール通知。営業機会を逃さない。</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🗂️</div>
-        <h3>自動台帳化</h3>
-        <p>スプレッドシートが問い合わせ台帳になる。手入力・転記が不要。</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🌙</div>
-        <h3>不在中も自動対応</h3>
-        <p>担当者が不在でも記録・通知は止まらない。</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🏢</div>
-        <h3>業種問わず導入可能</h3>
-        <p>飲食・美容・士業・EC・教育など、あらゆる業種に対応。</p>
+<div class="demo" id="demo">
+  <div class="demo-inner">
+    <h2>AI返信案を<span>その場で生成</span></h2>
+    <p class="lead">実際に動くデモです。お問い合わせ内容を入力して送信してください。</p>
+
+    <div class="demo-card">
+      <form id="ai-form">
+        <div class="field">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" placeholder="例：山田 太郎" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" name="message" placeholder="例：先日購入した商品が届きません。発送状況を教えてください。" required></textarea>
+          <div class="hint">※ 入力内容はデモ用にClaude APIへ送信され、返信案の生成にのみ使われます。</div>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-btn">AI返信案を生成する</button>
+      </form>
+
+      <div class="state">
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <span>AI が返信案を生成中...</span>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="result" id="result">
+          <div class="result-head">
+            <span class="tag">AI返信案</span>
+          </div>
+          <div class="reply-box" id="reply-box"></div>
+          <button type="button" class="copy-btn" id="copy-btn">返信案をコピー</button>
+        </div>
       </div>
     </div>
+
+    <p class="note">APIキーはGAS側で安全に管理しており、このページには含まれていません。</p>
   </div>
 </div>
 
 <section class="more">
   <h2>GAS × AIで<span>こんなことも</span>できます</h2>
   <div class="more-list">
-    <div class="more-item">メールの自動返信</div>
-    <div class="more-item">データ集計・日報自動生成</div>
-    <div class="more-item">重複データの自動検知・ハイライト</div>
+    <div class="more-item">問い合わせ内容に応じた自動返信</div>
+    <div class="more-item">返信トーンの自動調整（丁寧・カジュアル）</div>
+    <div class="more-item">FAQからの最適回答の自動引用</div>
+    <div class="more-item">問い合わせ内容の自動分類・優先度付け</div>
+    <div class="more-item">スプレッドシートへの自動記録</div>
     <div class="more-item">Slack・LINEへの通知連携</div>
-    <div class="more-item">AIによる問い合わせ内容の自動分類</div>
-    <div class="more-item">リスト自動分割・整理</div>
   </div>
 </section>
 
-<section class="cta">
-  <h2>まず、動くものを見てください</h2>
-  <p>実際に送信すると、スプレッドシートへの記録とメール通知が自動で動きます。</p>
-  <a href="https://forms.gle/JypaWuywEjCZkJuM6" target="_blank" class="btn-demo">デモフォームを試す（無料）</a>
-</section>
-
 <footer>© 2026 SOAM CREATIVE</footer>
+
+<script>
+  // GAS Web App エンドポイント（Claude APIはGAS側で呼び出し / APIキーはGAS側で管理）
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbwkMOU6B1meUSELUWJBzE6klZxXQ_ikSaM0xDkM6tINyUqhmiI6nh1sn45X0r2Xua8/exec';
+
+  const form = document.getElementById('ai-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const loadingEl = document.getElementById('loading');
+  const errorEl = document.getElementById('error');
+  const resultEl = document.getElementById('result');
+  const replyBox = document.getElementById('reply-box');
+  const copyBtn = document.getElementById('copy-btn');
+
+  function show(el) { el.classList.add('show'); }
+  function hide(el) { el.classList.remove('show'); }
+
+  // GASのレスポンス（JSON / プレーンテキスト）から返信本文を取り出す
+  function extractReply(raw) {
+    raw = (raw || '').trim();
+    try {
+      const data = JSON.parse(raw);
+      if (typeof data === 'string') return data;
+      const reply = data.reply ?? data.text ?? data.result ?? data.message ??
+                    data.content ?? data.answer ?? data.output;
+      if (reply != null && reply !== '') {
+        if (data.status === 'error' || data.error) {
+          throw new Error(typeof reply === 'string' ? reply : '生成に失敗しました');
+        }
+        return typeof reply === 'string' ? reply : JSON.stringify(reply, null, 2);
+      }
+      if (data.error) throw new Error(String(data.error));
+      return JSON.stringify(data, null, 2);
+    } catch (e) {
+      if (e instanceof SyntaxError) return raw; // JSONでなければそのまま本文として扱う
+      throw e;
+    }
+  }
+
+  form.addEventListener('submit', async function (ev) {
+    ev.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!message) {
+      hide(resultEl);
+      errorEl.textContent = 'お問い合わせ内容を入力してください。';
+      show(errorEl);
+      return;
+    }
+
+    hide(errorEl);
+    hide(resultEl);
+    show(loadingEl);
+    submitBtn.disabled = true;
+    submitBtn.textContent = '生成中...';
+
+    try {
+      // Content-Type を text/plain にすることで CORS プリフライトを回避（GAS側は e.postData.contents をJSONパース）
+      const res = await fetch(GAS_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ name: name, message: message, inquiry: message }),
+        redirect: 'follow'
+      });
+
+      if (!res.ok) {
+        throw new Error('サーバーエラーが発生しました（HTTP ' + res.status + '）');
+      }
+
+      const raw = await res.text();
+      const reply = extractReply(raw);
+
+      if (!reply || !reply.trim()) {
+        throw new Error('返信案が空でした。時間をおいて再度お試しください。');
+      }
+
+      replyBox.textContent = reply;
+      show(resultEl);
+    } catch (err) {
+      let msg = err && err.message ? err.message : '不明なエラーが発生しました。';
+      if (err instanceof TypeError) {
+        msg = '通信に失敗しました。ネットワーク環境をご確認のうえ、再度お試しください。';
+      }
+      errorEl.textContent = '⚠ ' + msg;
+      show(errorEl);
+    } finally {
+      hide(loadingEl);
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'AI返信案を生成する';
+    }
+  });
+
+  copyBtn.addEventListener('click', function () {
+    const text = replyBox.textContent;
+    navigator.clipboard.writeText(text).then(function () {
+      copyBtn.textContent = 'コピーしました ✓';
+      setTimeout(function () { copyBtn.textContent = '返信案をコピー'; }, 2000);
+    }).catch(function () {
+      copyBtn.textContent = 'コピーできませんでした';
+      setTimeout(function () { copyBtn.textContent = '返信案をコピー'; }, 2000);
+    });
+  });
+</script>
 
 </body>
 </html>
