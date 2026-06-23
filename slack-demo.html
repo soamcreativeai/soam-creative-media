@@ -3,216 +3,349 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slack通知 自動連携デモ | SOAM CREATIVE</title>
-  <meta name="description" content="お問い合わせ内容を入力すると、GAS経由でSlackの指定チャンネルへ自動通知。SOAM CREATIVEの業務自動化デモページです。">
+  <title>問い合わせ通知チャンネル | SOAM CREATIVE</title>
+  <meta name="description" content="お問い合わせが届いた瞬間、チャットツールに自動通知が届く様子を再現したデモ。GAS経由でSlackに通知します。SOAM CREATIVEの業務自動化デモ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0a0e1a; color: #f0f0f0; font-family: 'Helvetica Neue', sans-serif; line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-
-    /* HEADER */
-    header { background: #0d1220; border-bottom: 1px solid #1e2a3a; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
-    header .logo { font-size: 18px; font-weight: 700; color: #c9a84c; letter-spacing: 0.1em; }
-    header nav a { color: #aaa; font-size: 14px; margin-left: 24px; }
-    header nav a:hover { color: #c9a84c; }
-
-    /* HERO */
-    .hero { text-align: center; padding: 80px 24px 50px; }
-    .hero .badge { display: inline-block; background: rgba(201,168,76,0.15); color: #c9a84c; border: 1px solid rgba(201,168,76,0.4); border-radius: 20px; font-size: 13px; padding: 4px 16px; margin-bottom: 24px; letter-spacing: 0.05em; }
-    .hero h1 { font-size: clamp(28px, 5vw, 46px); font-weight: 800; margin-bottom: 20px; line-height: 1.3; }
-    .hero h1 span { color: #c9a84c; }
-    .hero p { color: #aaa; font-size: 16px; max-width: 580px; margin: 0 auto 36px; }
-    .btn-demo { display: inline-block; background: #c9a84c; color: #0a0e1a; font-weight: 700; font-size: 16px; padding: 14px 36px; border-radius: 8px; transition: opacity 0.2s; cursor: pointer; }
-    .btn-demo:hover { opacity: 0.85; }
-
-    /* FLOW */
-    .section { max-width: 860px; margin: 0 auto; padding: 40px 24px 30px; }
-    .section h2 { font-size: 24px; font-weight: 700; margin-bottom: 40px; text-align: center; }
-    .section h2 span { color: #c9a84c; }
-    .steps { display: flex; gap: 0; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
-    .step { flex: 1; min-width: 180px; max-width: 240px; text-align: center; padding: 24px 16px; position: relative; }
-    .step:not(:last-child)::after { content: '→'; position: absolute; right: -12px; top: 36px; font-size: 24px; color: #c9a84c; }
-    .step-num { width: 56px; height: 56px; border-radius: 50%; background: rgba(201,168,76,0.15); border: 2px solid #c9a84c; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 20px; font-weight: 800; color: #c9a84c; }
-    .step h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-    .step p { font-size: 13px; color: #888; }
-
-    /* DEMO */
-    .demo { background: #0d1220; border-top: 1px solid #1e2a3a; border-bottom: 1px solid #1e2a3a; }
-    .demo-inner { max-width: 680px; margin: 0 auto; padding: 64px 24px; }
-    .demo-inner h2 { font-size: 26px; font-weight: 700; margin-bottom: 8px; text-align: center; }
-    .demo-inner h2 span { color: #c9a84c; }
-    .demo-inner .lead { color: #999; font-size: 14px; text-align: center; margin-bottom: 36px; }
-
-    .demo-card { background: #111827; border: 1px solid #1e2a3a; border-radius: 14px; padding: 32px; }
-    .field { margin-bottom: 20px; }
-    .field label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 8px; color: #e6e6e6; }
-    .field input, .field textarea {
-      width: 100%; background: #0a0e1a; border: 1px solid #2a3850; border-radius: 8px;
-      color: #f0f0f0; font-size: 15px; padding: 12px 14px; font-family: inherit; line-height: 1.6;
-      transition: border-color 0.2s;
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --aubergine:#3d1d57;       /* 紫サイドバー */
+      --aubergine-2:#4a2768;
+      --aubergine-hover:#522a73;
+      --aubergine-active:#7b3fa0;
+      --plum-text:#cdb3dd;
+      --plum-text-dim:#a482bd;
+      --ink:#1c1530;
+      --ink-2:#5b5670;
+      --ink-3:#8d8a9c;
+      --line:#e7e3ee;
+      --line-2:#f0edf5;
+      --bg:#ffffff;
+      --bg-hover:#f7f5fb;
+      --green:#15b886;
+      --green-soft:#e3f8f0;
+      --purple:#7b3fa0;
+      --purple-soft:#f2e9f8;
+      --amber:#e8a33d;
     }
-    .field input:focus, .field textarea:focus { outline: none; border-color: #c9a84c; }
-    .field textarea { resize: vertical; min-height: 130px; }
-
-    .submit-btn {
-      width: 100%; background: #c9a84c; color: #0a0e1a; font-weight: 700; font-size: 16px;
-      padding: 15px; border: none; border-radius: 8px; cursor: pointer; transition: opacity 0.2s;
+    html{-webkit-text-size-adjust:100%}
+    body{
+      font-family:'Lato',-apple-system,'Hiragino Kaku Gothic ProN',sans-serif;
+      background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6;
+      -webkit-font-smoothing:antialiased;
     }
-    .submit-btn:hover:not(:disabled) { opacity: 0.85; }
-    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    a{color:inherit;text-decoration:none}
+    ::selection{background:var(--purple-soft)}
 
-    /* STATES */
-    .state { margin-top: 28px; }
-    .loading { display: none; align-items: center; justify-content: center; gap: 12px; color: #c9a84c; font-size: 15px; padding: 20px; }
-    .loading.show { display: flex; }
-    .spinner {
-      width: 22px; height: 22px; border: 3px solid rgba(201,168,76,0.25);
-      border-top-color: #c9a84c; border-radius: 50%; animation: spin 0.8s linear infinite;
+    /* ===== APP HEADER (SOAM) ===== */
+    .app-header{
+      height:48px;background:var(--aubergine);color:#fff;
+      display:flex;align-items:center;justify-content:space-between;padding:0 18px;
+      border-bottom:1px solid rgba(0,0,0,.2);
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    .app-header .brand{display:flex;align-items:center;gap:9px;font-weight:900;font-size:14px;letter-spacing:.12em}
+    .app-header .brand .mark{width:24px;height:24px;border-radius:6px;background:#fff;color:var(--aubergine);display:grid;place-items:center;font-weight:900;font-size:14px;letter-spacing:0}
+    .app-header .brand .sub{color:var(--plum-text);font-weight:400}
+    .app-header nav{display:flex;gap:18px;font-size:13px;color:var(--plum-text)}
+    .app-header nav a:hover{color:#fff}
 
-    .success { display: none; text-align: center; background: rgba(80,200,140,0.1); border: 1px solid rgba(80,200,140,0.4); border-radius: 10px; padding: 24px; }
-    .success.show { display: block; }
-    .success .big { font-size: 18px; font-weight: 700; color: #6fe0a8; margin-bottom: 6px; }
-    .success .sub { font-size: 13px; color: #8aa; }
+    /* ===== WORKSPACE SHELL ===== */
+    .workspace{display:grid;grid-template-columns:260px 1fr;height:calc(100vh - 48px);min-height:560px}
 
-    .error { display: none; background: rgba(220,80,80,0.1); border: 1px solid rgba(220,80,80,0.4); border-radius: 8px; padding: 16px 18px; color: #f0a5a5; font-size: 14px; }
-    .error.show { display: block; }
+    /* ===== SIDEBAR ===== */
+    .sidebar{background:var(--aubergine);color:var(--plum-text);display:flex;flex-direction:column;overflow:hidden}
+    .ws-head{
+      padding:14px 16px;border-bottom:1px solid rgba(0,0,0,.18);
+      display:flex;align-items:center;justify-content:space-between;cursor:pointer
+    }
+    .ws-head .nm{font-weight:900;font-size:16px;color:#fff;letter-spacing:.01em;display:flex;align-items:center;gap:7px}
+    .ws-head .nm .stat{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 2px var(--aubergine)}
+    .ws-head .me{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#9a5cc4,#6a2f96);display:grid;place-items:center;font-weight:900;font-size:12px;color:#fff}
+    .chan-scroll{flex:1;overflow-y:auto;padding:12px 0}
+    .grp{padding:6px 16px;font-size:12.5px;font-weight:700;color:var(--plum-text-dim);display:flex;align-items:center;gap:7px;letter-spacing:.02em}
+    .grp .car{font-size:10px;opacity:.7}
+    .chan{
+      display:flex;align-items:center;gap:9px;padding:6px 16px 6px 18px;font-size:14.5px;
+      color:var(--plum-text);cursor:pointer;line-height:1.5
+    }
+    .chan:hover{background:var(--aubergine-hover)}
+    .chan.active{background:var(--aubergine-active);color:#fff;font-weight:700}
+    .chan .hash{opacity:.55;font-weight:400}
+    .chan.active .hash{opacity:.85}
+    .chan .unread{margin-left:auto;background:#eb4d5c;color:#fff;font-size:11px;font-weight:700;min-width:19px;height:19px;border-radius:10px;display:grid;place-items:center;padding:0 5px}
+    .chan .dm-av{width:18px;height:18px;border-radius:4px;display:grid;place-items:center;font-size:9px;font-weight:900;color:#fff;position:relative}
+    .chan .dm-av .on{position:absolute;right:-3px;bottom:-3px;width:9px;height:9px;border-radius:50%;background:var(--green);border:2px solid var(--aubergine)}
 
-    .note { text-align: center; color: #555; font-size: 12px; margin-top: 22px; }
+    /* ===== MAIN CHAT ===== */
+    .chat{display:flex;flex-direction:column;background:var(--bg);min-width:0}
+    .chat-head{
+      height:56px;border-bottom:1px solid var(--line);padding:0 20px;
+      display:flex;align-items:center;gap:12px;flex:0 0 auto
+    }
+    .chat-head .title{font-weight:900;font-size:17px;display:flex;align-items:center;gap:6px}
+    .chat-head .title .hash{color:var(--ink-3);font-weight:400}
+    .chat-head .topic{color:var(--ink-3);font-size:13px;border-left:1px solid var(--line);padding-left:12px}
+    .chat-head .members{margin-left:auto;display:flex;align-items:center;gap:6px;color:var(--ink-2);font-size:13px;border:1px solid var(--line);border-radius:7px;padding:5px 10px}
+    .chat-head .members .av-stack{display:flex}
+    .chat-head .members .av-stack span{width:20px;height:20px;border-radius:5px;border:1.5px solid #fff;margin-left:-6px;display:grid;place-items:center;font-size:9px;font-weight:900;color:#fff}
+    .chat-head .members .av-stack span:first-child{margin-left:0}
 
-    /* BEFORE / AFTER */
-    .ba { max-width: 860px; margin: 0 auto; padding: 56px 24px 10px; }
-    .ba h2 { font-size: 24px; font-weight: 700; margin-bottom: 32px; text-align: center; }
-    .ba h2 span { color: #c9a84c; }
-    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
-    .ba-col { border-radius: 14px; padding: 28px 24px; border: 1px solid #1e2a3a; }
-    .ba-col.before { border-color: #2a3340; background: #10141f; }
-    .ba-col.after { border-color: rgba(201,168,76,0.45); background: rgba(201,168,76,0.06); }
-    .ba-label { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 20px; margin-bottom: 20px; }
-    .ba-col.before .ba-label { background: rgba(150,160,175,0.12); color: #9aa6b5; border: 1px solid rgba(150,160,175,0.3); }
-    .ba-col.after .ba-label { background: rgba(201,168,76,0.15); color: #c9a84c; border: 1px solid rgba(201,168,76,0.4); }
-    .ba-list { list-style: none; }
-    .ba-list li { font-size: 14.5px; line-height: 1.7; padding: 11px 0 11px 28px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .ba-list li:last-child { border-bottom: none; }
-    .ba-col.before .ba-list li { color: #9aa6b5; }
-    .ba-col.before .ba-list li::before { content: '×'; position: absolute; left: 5px; top: 11px; color: #6b7585; font-weight: 700; }
-    .ba-col.after .ba-list li { color: #e8e8e8; }
-    .ba-col.after .ba-list li::before { content: '✓'; position: absolute; left: 3px; top: 11px; color: #6fe0a8; font-weight: 700; }
+    .timeline{flex:1;overflow-y:auto;padding:20px 0 8px}
+    .day-div{display:flex;align-items:center;gap:12px;padding:6px 20px;margin:6px 0}
+    .day-div::before,.day-div::after{content:"";flex:1;height:1px;background:var(--line)}
+    .day-div span{font-size:12px;font-weight:700;color:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:3px 13px;background:#fff}
 
-    /* FOOTER */
-    footer { text-align: center; padding: 24px; border-top: 1px solid #1e2a3a; color: #555; font-size: 13px; }
+    .msg{display:flex;gap:11px;padding:8px 20px;transition:background .12s}
+    .msg:hover{background:var(--bg-hover)}
+    .msg .avatar{width:38px;height:38px;border-radius:9px;flex:0 0 auto;display:grid;place-items:center;font-weight:900;font-size:15px;color:#fff}
+    .msg .body{min-width:0;flex:1}
+    .msg .line1{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+    .msg .author{font-weight:900;font-size:15px}
+    .msg .bot-tag{background:var(--ink-3);color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;letter-spacing:.04em;transform:translateY(-1px)}
+    .msg .ts{font-size:12px;color:var(--ink-3)}
+    .msg .text{margin-top:2px;color:var(--ink);word-break:break-word}
 
-    @media (max-width: 600px) {
-      header { padding: 14px 18px; }
-      header nav a { margin-left: 16px; }
-      .hero { padding: 56px 20px 40px; }
-      .demo-inner { padding: 48px 18px; }
-      .demo-card { padding: 22px; }
-      .step:not(:last-child)::after { display: none; }
-      .ba-grid { grid-template-columns: 1fr; }
-      .ba { padding: 44px 18px 4px; }
+    /* 通知アタッチメント（Slackのattachment風・左に色帯） */
+    .attach{
+      margin-top:7px;border-left:4px solid var(--purple);background:#faf8fd;
+      border:1px solid var(--line);border-left:4px solid var(--purple);
+      border-radius:6px;padding:11px 15px;max-width:560px
+    }
+    .attach .pretext{font-size:12.5px;color:var(--ink-3);font-weight:700;margin-bottom:7px;display:flex;align-items:center;gap:6px}
+    .attach .row{display:flex;gap:8px;font-size:14px;padding:2px 0}
+    .attach .row .k{color:var(--ink-2);font-weight:700;flex:0 0 76px}
+    .attach .row .v{color:var(--ink);min-width:0;word-break:break-word}
+    .attach .foot{margin-top:9px;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-3)}
+    .attach .foot .react{border:1px solid var(--line);border-radius:14px;padding:2px 9px;background:#fff;font-weight:700}
+
+    .sys-msg{text-align:center;padding:6px 20px;color:var(--ink-3);font-size:12.5px}
+
+    /* ===== COMPOSER ===== */
+    .composer-wrap{padding:0 20px 22px;flex:0 0 auto}
+    .composer{border:1px solid var(--ink-3);border-radius:11px;overflow:hidden;box-shadow:0 1px 3px rgba(28,21,48,.06)}
+    .composer:focus-within{border-color:var(--purple);box-shadow:0 0 0 1px var(--purple)}
+    .composer .toolbar{display:flex;align-items:center;gap:3px;padding:7px 10px;border-bottom:1px solid var(--line-2);background:#fbfafd}
+    .composer .toolbar .tb{width:28px;height:26px;border-radius:5px;display:grid;place-items:center;color:var(--ink-3);font-weight:700;font-size:14px}
+    .composer .toolbar .sep{width:1px;height:16px;background:var(--line);margin:0 4px}
+    .composer .toolbar .hint{margin-left:auto;font-size:11.5px;color:var(--ink-3)}
+    .composer .name-row{display:flex;align-items:center;gap:8px;padding:8px 14px 0}
+    .composer .name-row label{font-size:12.5px;font-weight:700;color:var(--ink-2)}
+    .composer .name-row input{
+      flex:1;border:none;outline:none;font-family:inherit;font-size:14px;color:var(--ink);
+      background:transparent;padding:4px 0;max-width:240px
+    }
+    .composer .name-row input::placeholder{color:var(--ink-3)}
+    .composer textarea{
+      width:100%;border:none;outline:none;resize:none;font-family:inherit;font-size:15px;
+      color:var(--ink);padding:11px 14px;line-height:1.6;min-height:46px;max-height:160px
+    }
+    .composer textarea::placeholder{color:var(--ink-3)}
+    .composer .send-row{display:flex;align-items:center;padding:6px 10px 9px;gap:10px}
+    .composer .send-row .left{font-size:11.5px;color:var(--ink-3);display:flex;align-items:center;gap:5px}
+    .send-btn{
+      margin-left:auto;border:none;border-radius:8px;cursor:pointer;font-family:inherit;
+      font-size:14px;font-weight:900;padding:8px 16px;color:#fff;background:var(--green);
+      display:flex;align-items:center;gap:7px;transition:.15s
+    }
+    .send-btn:hover:not(:disabled){background:#119e74}
+    .send-btn:disabled{background:#c9e9dd;color:#fff;cursor:not-allowed}
+    .send-btn .ic{width:15px;height:15px;fill:#fff}
+
+    .err{display:none;margin:0 0 12px;background:#fdeaec;border:1px solid #f3c2c8;border-radius:9px;padding:11px 14px;color:#b4313f;font-size:13px}
+    .err.show{display:block}
+    .note{font-size:11.5px;color:var(--ink-3);text-align:center;padding:0 20px 16px;display:flex;align-items:center;justify-content:center;gap:6px}
+
+    .spinner{width:15px;height:15px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* highlight newly added msg */
+    @keyframes flashin{0%{background:#fff6e0}100%{background:transparent}}
+    .msg.fresh{animation:flashin 2.4s ease}
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:780px){
+      .workspace{grid-template-columns:1fr;height:auto;min-height:0}
+      .sidebar{display:none}
+      .timeline{max-height:none}
+      .chat{min-height:calc(100vh - 48px)}
+    }
+    @media(max-width:520px){
+      .app-header nav a:not(:first-child){display:none}
+      .chat-head .topic{display:none}
+      .chat-head .members{display:none}
+      .msg{padding:8px 14px}
+      .composer-wrap{padding:0 12px 16px}
+      .attach{max-width:none}
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">SOAM CREATIVE</div>
+<!-- ===== APP HEADER ===== -->
+<header class="app-header">
+  <a href="index.html" class="brand"><span class="mark">S</span><span>SOAM</span><span class="sub">CREATIVE</span></a>
   <nav>
     <a href="index.html">ホーム</a>
     <a href="articles/index.html">記事</a>
+    <a href="gas-demo.html">AI返信デモ</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="badge">GAS × Slack連携 デモ</div>
-  <h1>問い合わせを<span>Slackに即通知</span></h1>
-  <p>お問い合わせが届いた瞬間、チームのSlackチャンネルへ自動通知。メールを開かなくても、見逃さず・すぐに気づける。担当者間の共有もスムーズです。</p>
-  <a href="#demo" class="btn-demo">デモを試してみる</a>
-</section>
+<!-- ===== WORKSPACE ===== -->
+<div class="workspace">
 
-<section class="section">
-  <h2>仕組みは<span>3ステップ</span></h2>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h3>問い合わせを入力</h3>
-      <p>フォームにお名前と内容を入力して送信</p>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="ws-head">
+      <div class="nm"><span class="stat"></span>SOAM CREATIVE</div>
+      <div class="me">あ</div>
     </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h3>GAS経由でSlackへ</h3>
-      <p>GASがSlackのWebhookへメッセージを送信</p>
+    <div class="chan-scroll">
+      <div class="grp"><span class="car">▾</span>チャンネル</div>
+      <div class="chan active"><span class="hash">#</span>all-soam-creative<span class="unread">3</span></div>
+      <div class="chan"><span class="hash">#</span>general</div>
+      <div class="chan"><span class="hash">#</span>sales-team</div>
+      <div class="chan"><span class="hash">#</span>random</div>
+      <div class="grp" style="margin-top:10px"><span class="car">▾</span>アプリ</div>
+      <div class="chan">
+        <span class="dm-av" style="background:linear-gradient(135deg,#7b3fa0,#4a2768)">B<span class="on"></span></span>
+        お問い合わせbot
+      </div>
+      <div class="grp" style="margin-top:10px"><span class="car">▾</span>ダイレクトメッセージ</div>
+      <div class="chan">
+        <span class="dm-av" style="background:linear-gradient(135deg,#15b886,#0d9488)">山<span class="on"></span></span>
+        山田 太郎
+      </div>
+      <div class="chan">
+        <span class="dm-av" style="background:linear-gradient(135deg,#e8a33d,#c97b1a)">中</span>
+        中村 さくら
+      </div>
     </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h3>チャンネルに即通知</h3>
-      <p>#all-soam-creative に通知が届きチームで共有</p>
-    </div>
-  </div>
-</section>
+  </aside>
 
-<section class="ba">
-  <h2>導入前と<span>導入後</span></h2>
-  <div class="ba-grid">
-    <div class="ba-col before">
-      <span class="ba-label">BEFORE 導入前</span>
-      <ul class="ba-list">
-        <li>メールを開かないと問い合わせに気づかない</li>
-        <li>外出中・不在中に対応が遅れる</li>
-        <li>複数人で山分けするのが面倒くさくなる</li>
-      </ul>
-    </div>
-    <div class="ba-col after">
-      <span class="ba-label">AFTER 導入後</span>
-      <ul class="ba-list">
-        <li>問い合わせが届いた瞬間、Slackに自動通知</li>
-        <li>メールを開かずともリアルタイムで気づける</li>
-        <li>チーム全員で即座に共有できる</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="demo" id="demo">
-  <div class="demo-inner">
-    <h2>Slack通知を<span>その場で送信</span></h2>
-    <p class="lead">実際に動くデモです。送信すると #all-soam-creative チャンネルへ通知が届きます。</p>
-
-    <div class="demo-card">
-      <form id="slack-form">
-        <div class="field">
-          <label for="name">お名前</label>
-          <input type="text" id="name" name="name" placeholder="例：山田 太郎" autocomplete="off" required>
+  <!-- CHAT -->
+  <main class="chat">
+    <div class="chat-head">
+      <div class="title"><span class="hash">#</span>all-soam-creative</div>
+      <div class="topic">お問い合わせの自動通知が届くチャンネル</div>
+      <div class="members">
+        <div class="av-stack">
+          <span style="background:#7b3fa0">あ</span>
+          <span style="background:#15b886">山</span>
+          <span style="background:#e8a33d">中</span>
         </div>
-        <div class="field">
-          <label for="message">お問い合わせ内容</label>
-          <textarea id="message" name="message" placeholder="例：サービスについて詳しく聞きたいです。" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn" id="submit-btn">Slackに通知を送る</button>
-      </form>
-
-      <div class="state">
-        <div class="loading" id="loading">
-          <div class="spinner"></div>
-          <span>Slackに通知中...</span>
-        </div>
-
-        <div class="error" id="error"></div>
-
-        <div class="success" id="success">
-          <div class="big">✅ Slackに通知しました！</div>
-          <div class="sub">#all-soam-creative チャンネルをご確認ください。</div>
-        </div>
+        4
       </div>
     </div>
 
-    <p class="note">Slack Webhook URL はGAS側で安全に管理しており、このページには含まれていません。</p>
-  </div>
-</div>
+    <div class="timeline" id="timeline">
+      <div class="day-div"><span>今日</span></div>
 
-<footer>© 2026 SOAM CREATIVE</footer>
+      <!-- BOT NOTIFICATION 1 -->
+      <div class="msg">
+        <div class="avatar" style="background:linear-gradient(135deg,#7b3fa0,#4a2768)">B</div>
+        <div class="body">
+          <div class="line1">
+            <span class="author">お問い合わせbot</span>
+            <span class="bot-tag">APP</span>
+            <span class="ts">8:04</span>
+          </div>
+          <div class="text">🔔 新しいお問い合わせが届きました</div>
+          <div class="attach">
+            <div class="pretext">📨 Webサイトのお問い合わせフォーム</div>
+            <div class="row"><span class="k">お名前</span><span class="v">渡辺 結衣 さま</span></div>
+            <div class="row"><span class="k">内容</span><span class="v">退会したいのですが、データは削除されますか？手続き方法を教えてください。</span></div>
+            <div class="foot"><span class="react">✅ 1</span><span class="react">👀 2</span><span>対応済み</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOT NOTIFICATION 2 -->
+      <div class="msg">
+        <div class="avatar" style="background:linear-gradient(135deg,#7b3fa0,#4a2768)">B</div>
+        <div class="body">
+          <div class="line1">
+            <span class="author">お問い合わせbot</span>
+            <span class="bot-tag">APP</span>
+            <span class="ts">8:58</span>
+          </div>
+          <div class="text">🔔 新しいお問い合わせが届きました</div>
+          <div class="attach">
+            <div class="pretext">📨 Webサイトのお問い合わせフォーム</div>
+            <div class="row"><span class="k">お名前</span><span class="v">鈴木 あおい さま</span></div>
+            <div class="row"><span class="k">内容</span><span class="v">アカウントにログインできなくなりました。パスワードの再設定方法を教えてください。</span></div>
+            <div class="foot"><span class="react">👀 1</span><span>対応中</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HUMAN REPLY -->
+      <div class="msg">
+        <div class="avatar" style="background:linear-gradient(135deg,#15b886,#0d9488)">山</div>
+        <div class="body">
+          <div class="line1">
+            <span class="author">山田 太郎</span>
+            <span class="ts">9:02</span>
+          </div>
+          <div class="text">鈴木さまの件、こちらで対応します 🙋‍♂️ パスワード再設定の案内を送りました。</div>
+        </div>
+      </div>
+
+      <!-- BOT NOTIFICATION 3 -->
+      <div class="msg">
+        <div class="avatar" style="background:linear-gradient(135deg,#7b3fa0,#4a2768)">B</div>
+        <div class="body">
+          <div class="line1">
+            <span class="author">お問い合わせbot</span>
+            <span class="bot-tag">APP</span>
+            <span class="ts">9:42</span>
+          </div>
+          <div class="text">🔔 新しいお問い合わせが届きました</div>
+          <div class="attach">
+            <div class="pretext">📨 Webサイトのお問い合わせフォーム</div>
+            <div class="row"><span class="k">お名前</span><span class="v">田中 美咲 さま</span></div>
+            <div class="row"><span class="k">内容</span><span class="v">先日注文した商品がまだ届いていません。発送状況を確認していただけますか？</span></div>
+            <div class="foot"><span class="react">🆕 NEW</span><span>未対応</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sys-msg">― ここから下に、あなたが送信した通知が追加されます ―</div>
+    </div>
+
+    <!-- COMPOSER -->
+    <div class="composer-wrap">
+      <div class="err" id="error"></div>
+      <form class="composer" id="slack-form">
+        <div class="toolbar">
+          <span class="tb" style="font-weight:900">B</span>
+          <span class="tb" style="font-style:italic">i</span>
+          <span class="tb" style="text-decoration:line-through">S</span>
+          <span class="sep"></span>
+          <span class="tb">🔗</span>
+          <span class="tb">≡</span>
+          <span class="tb">@</span>
+          <span class="hint">#all-soam-creative へ通知を送信</span>
+        </div>
+        <div class="name-row">
+          <label for="name">差出人</label>
+          <input type="text" id="name" name="name" placeholder="お名前（例：山田 太郎）" autocomplete="off" required>
+        </div>
+        <textarea id="message" name="message" placeholder="お問い合わせ内容を入力して送信すると、Slackチャンネルへ通知が飛びます。" required></textarea>
+        <div class="send-row">
+          <span class="left">⚡ GAS → Slack Webhook 経由でリアルタイム通知</span>
+          <button type="submit" class="send-btn" id="submit-btn">
+            <svg class="ic" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+            送信
+          </button>
+        </div>
+      </form>
+      <div class="note">🔒 Slack Webhook URL はGAS側で安全に管理しており、このページには含まれていません。</div>
+    </div>
+  </main>
+</div>
 
 <script>
   // GAS Web App エンドポイント（GAS側でSlack Webhookへ転送 / Webhook URLはGAS側で管理）
@@ -220,72 +353,102 @@
 
   const form = document.getElementById('slack-form');
   const submitBtn = document.getElementById('submit-btn');
-  const loadingEl = document.getElementById('loading');
   const errorEl = document.getElementById('error');
-  const successEl = document.getElementById('success');
+  const timeline = document.getElementById('timeline');
+  const nameInput = document.getElementById('name');
+  const msgInput = document.getElementById('message');
 
-  function show(el) { el.classList.add('show'); }
-  function hide(el) { el.classList.remove('show'); }
+  function show(el){ el.classList.add('show'); }
+  function hide(el){ el.classList.remove('show'); }
 
-  form.addEventListener('submit', async function (ev) {
+  function escapeHtml(s){
+    return (s || '').replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function nowLabel(){
+    const d = new Date();
+    return d.getHours() + ':' + String(d.getMinutes()).padStart(2, '0');
+  }
+
+  // タイムラインに新しい通知メッセージを追加
+  function appendNotification(name, message){
+    const el = document.createElement('div');
+    el.className = 'msg fresh';
+    el.innerHTML =
+      '<div class="avatar" style="background:linear-gradient(135deg,#7b3fa0,#4a2768)">B</div>' +
+      '<div class="body">' +
+        '<div class="line1">' +
+          '<span class="author">お問い合わせbot</span>' +
+          '<span class="bot-tag">APP</span>' +
+          '<span class="ts">' + nowLabel() + '</span>' +
+        '</div>' +
+        '<div class="text">🔔 新しいお問い合わせが届きました</div>' +
+        '<div class="attach">' +
+          '<div class="pretext">📨 Webサイトのお問い合わせフォーム</div>' +
+          '<div class="row"><span class="k">お名前</span><span class="v">' + escapeHtml(name) + ' さま</span></div>' +
+          '<div class="row"><span class="k">内容</span><span class="v">' + escapeHtml(message) + '</span></div>' +
+          '<div class="foot"><span class="react">🆕 NEW</span><span>たった今届きました</span></div>' +
+        '</div>' +
+      '</div>';
+    timeline.appendChild(el);
+    el.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }
+
+  form.addEventListener('submit', async function(ev){
     ev.preventDefault();
+    const name = nameInput.value.trim();
+    const message = msgInput.value.trim();
 
-    const name = document.getElementById('name').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !message) {
-      hide(successEl);
-      errorEl.textContent = 'お名前とお問い合わせ内容を入力してください。';
+    if(!name || !message){
+      errorEl.textContent = '⚠ お名前とお問い合わせ内容を入力してください。';
       show(errorEl);
       return;
     }
 
     hide(errorEl);
-    hide(successEl);
-    show(loadingEl);
     submitBtn.disabled = true;
-    submitBtn.textContent = '送信中...';
+    submitBtn.innerHTML = '<span class="spinner"></span>送信中';
 
     try {
-      // Content-Type を text/plain にして CORS プリフライトを回避（GAS側は e.postData.contents をJSONパース）
       const res = await fetch(GAS_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({ type: 'slack', name: name, message: message }),
         redirect: 'follow'
       });
-
-      if (!res.ok) {
-        throw new Error('サーバーエラーが発生しました（HTTP ' + res.status + '）');
-      }
+      if(!res.ok) throw new Error('サーバーエラーが発生しました（HTTP ' + res.status + '）');
 
       const raw = (await res.text()).trim();
       let data = {};
-      try { data = JSON.parse(raw); } catch (e) { data = {}; }
+      try { data = JSON.parse(raw); } catch(e){ data = {}; }
 
-      if (data.status === 'ok' || data.ok === true) {
-        show(successEl);
+      if(data.status === 'ok' || data.ok === true){
+        appendNotification(name, message);
         form.reset();
-      } else if (data.reply !== undefined) {
-        // GAS側がSlack転送に未対応（AI返信用のレスポンスが返ってきた）
+      } else if(data.reply !== undefined){
         throw new Error('GAS側のSlack通知設定が見つかりません。GASにSlack転送の処理を追加してください。');
-      } else if (data.error) {
+      } else if(data.error){
         throw new Error(String(data.error));
       } else {
         throw new Error('Slackへの通知結果を確認できませんでした。時間をおいて再度お試しください。');
       }
-    } catch (err) {
+    } catch(err){
       let msg = err && err.message ? err.message : '不明なエラーが発生しました。';
-      if (err instanceof TypeError) {
-        msg = '通信に失敗しました。ネットワーク環境をご確認のうえ、再度お試しください。';
-      }
+      if(err instanceof TypeError) msg = '通信に失敗しました。ネットワーク環境をご確認のうえ、再度お試しください。';
       errorEl.textContent = '⚠ ' + msg;
       show(errorEl);
     } finally {
-      hide(loadingEl);
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Slackに通知を送る';
+      submitBtn.innerHTML = '<svg class="ic" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>送信';
     }
+  });
+
+  // テキストエリアの自動リサイズ
+  msgInput.addEventListener('input', function(){
+    msgInput.style.height = 'auto';
+    msgInput.style.height = Math.min(msgInput.scrollHeight, 160) + 'px';
   });
 </script>
 
