@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>AI副業ツール診断｜あなたに最適なAIと自動化の始め方</title>
+<meta name="description" content="どのAIツールに課金すべきか分からず、合わないものに課金して乗り換えていませんか。あなたの技術力と面倒くさがり度から、最適なAIツールと自動化の始め方を診断します。ログイン不要・無料。">
+<meta property="og:title" content="どのAIツールに課金すればいいか、まだ手探りで消耗してませんか。" />
+<meta property="og:description" content="あなたの技術力と面倒くさがり度で、最適なAIツールと自動化の始め方が分かる。30秒・無料。" />
+<meta property="og:image" content="https://soam-creative.com/assets/saki/saki_mascot_v1.png" />
+<meta property="og:url" content="https://soam-creative.com/shindan-ai.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="どのAIツールに課金すればいいか、まだ手探りで消耗してませんか。" />
+<meta name="twitter:description" content="あなたの技術力と面倒くさがり度で、最適なAIツールと自動化の始め方が分かる。30秒・無料。" />
+<meta name="twitter:image" content="https://soam-creative.com/assets/saki/saki_mascot_v1.png" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<!-- GA4: soam-creative-media専用プロパティがあれば差し替え。暫定でmimi-to-rami計測ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LDQ9J4C8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8LDQ9J4C8B');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+  font-family:'M PLUS Rounded 1c','Noto Sans JP',sans-serif;
+  background:radial-gradient(ellipse at 50% -10%, #1e2340 0%, #161a2e 45%, #10131f 100%);
+  color:#dfe3ee; line-height:1.7; -webkit-font-smoothing:antialiased; min-height:100%;
+}
+.wrap{max-width:460px;margin:0 auto;min-height:100%;padding:24px 16px 48px}
+.hdr{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.hdr-av{width:42px;height:42px;border-radius:50%;background:#20243c;border:1.5px solid #C9A96A;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.hdr-av img{width:118%;height:118%;object-fit:cover;object-position:50% 22%}
+.hdr-name{font-size:13px;font-weight:800;color:#C9A96A}
+.hdr-beta{font-size:10px;font-weight:800;padding:3px 9px;border-radius:999px;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;letter-spacing:1px;margin-left:auto}
+.card{background:#1b2038;border:1.5px solid #2e3557;border-radius:26px;padding:26px 22px;box-shadow:0 12px 34px rgba(0,0,0,.35);position:relative}
+.step{display:none;animation:fade .3s ease}
+.step.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.badge{display:inline-block;font-size:11px;font-weight:800;padding:5px 14px;border-radius:999px;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;letter-spacing:.5px;margin-bottom:14px}
+.h{font-size:18px;font-weight:800;color:#f2f4fb;margin-bottom:8px;line-height:1.6}
+.sub{font-size:12.5px;color:#9aa2c0;margin-bottom:18px;line-height:1.8}
+.opt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:16px 18px;margin-bottom:11px;border-radius:18px;border:1.5px solid #2e3557;background:#212845;color:#e7ebf6;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;line-height:1.5}
+.opt:active{transform:scale(.97)}
+@media(hover:hover){.opt:hover{border-color:#C9A96A;box-shadow:0 4px 14px rgba(201,169,106,.2);transform:translateY(-1px)}}
+.opt .dot{width:8px;height:8px;border-radius:50%;background:#C9A96A;flex-shrink:0}
+.progress{display:flex;gap:6px;margin-bottom:18px;justify-content:center}
+.progress span{width:9px;height:9px;border-radius:50%;background:#2e3557;transition:.2s}
+.progress span.done{background:linear-gradient(135deg,#C9A96A,#E0C48A);box-shadow:0 0 0 3px rgba(201,169,106,.18)}
+.intro-copy{font-size:13px;color:#c2c8de;line-height:1.9;margin-bottom:20px;background:#20243c;padding:16px 18px;border-radius:16px;border:1px solid #2e3557}
+.intro-copy b{color:#E0C48A}
+.start-btn{width:100%;padding:16px;border:none;border-radius:18px;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;font-family:inherit;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(201,169,106,.3)}
+.start-btn:active{transform:scale(.98)}
+.back{background:none;border:none;color:#7d85a6;font-size:12px;text-decoration:underline;cursor:pointer;font-family:inherit;padding:0 0 14px;display:block}
+/* result */
+.result-badge{text-align:center;padding:24px 16px 20px;border-radius:22px;background:linear-gradient(135deg,#20243c,#2a2f4e);border:1.5px solid #C9A96A;margin-bottom:16px;position:relative}
+.result-badge .r-av{width:96px;height:96px;margin:0 auto 10px;border-radius:50%;overflow:hidden;background:#161a2e;border:2px solid #C9A96A;display:flex;align-items:center;justify-content:center}
+.result-badge .r-av img{width:118%;height:118%;object-fit:cover;object-position:50% 22%}
+.result-badge .k{font-size:11px;color:#C9A96A;font-weight:800;letter-spacing:1.5px}
+.result-badge .v{font-size:20px;font-weight:800;margin-top:6px;color:#f2f4fb;line-height:1.4}
+.result-badge .ax{font-size:11px;color:#9aa2c0;margin-top:8px;font-weight:700}
+.saki-say{background:#20243c;border:1.5px solid #2e3557;border-left:3px solid #C9A96A;border-radius:14px;padding:15px 16px;margin-bottom:16px;font-size:13.5px;font-weight:700;color:#e7ebf6;line-height:1.85}
+.blk{background:#20243c;border:1px solid #2e3557;border-radius:16px;padding:16px 18px;margin-bottom:12px}
+.blk-label{font-size:10px;font-weight:800;color:#C9A96A;letter-spacing:1px;margin-bottom:8px}
+.tool-row{font-size:13.5px;font-weight:800;color:#f2f4fb;line-height:1.6;margin-bottom:4px}
+.tool-note{font-size:11.5px;color:#9aa2c0;line-height:1.7}
+.auto-line{font-size:13px;color:#dfe3ee;line-height:1.8}
+.auto-line b{color:#E0C48A}
+.tease{margin-top:6px;padding:18px 18px 16px;border-radius:18px;background:linear-gradient(135deg,#26210f,#2f2811);border:1.5px dashed #C9A96A}
+.tease-h{font-size:13.5px;font-weight:800;color:#E0C48A;margin-bottom:8px;line-height:1.6}
+.tease-lead{font-size:12px;color:#d8cfae;line-height:1.85;margin-bottom:14px}
+.tease-list{list-style:none;margin-bottom:14px}
+.tease-list li{font-size:12px;color:#d8cfae;line-height:1.75;padding-left:18px;position:relative;margin-bottom:5px}
+.tease-list li::before{content:'▸';position:absolute;left:0;color:#C9A96A;font-weight:800}
+.tease-btn{width:100%;padding:14px;border:none;border-radius:16px;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;font-family:inherit;font-size:13.5px;font-weight:800;cursor:pointer}
+.tease-btn:active{transform:scale(.98)}
+.tease-note{font-size:10.5px;color:#a08e63;line-height:1.6;margin-top:10px;text-align:center}
+.share-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:16px;padding:15px;border:none;border-radius:18px;background:#0d0f18;color:#fff;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;text-decoration:none;border:1px solid #2e3557}
+.share-btn:active{transform:scale(.98)}
+.restart{width:100%;margin-top:10px;padding:13px;border-radius:16px;border:1.5px solid #C9A96A;background:none;color:#C9A96A;font-family:inherit;font-size:12.5px;font-weight:800;cursor:pointer}
+.footer-note{text-align:center;font-size:10.5px;color:#6b728f;margin-top:18px;line-height:1.7}
+.disc{font-size:10px;color:#5f667f;line-height:1.65;margin-top:14px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div class="hdr-av"><img src="assets/saki/saki_mascot_v1.png" alt="サキ"></div>
+    <div class="hdr-name">サキ</div>
+    <div class="hdr-beta">AIツール診断 β</div>
+  </div>
+  <div class="card">
+
+    <div class="step active" id="s0">
+      <div class="badge">⚡ 7問・30秒で分かる</div>
+      <div class="h">どのAIツールに課金すればいいか、まだ手探りで消耗してない？</div>
+      <div class="intro-copy">"AIで稼げる"って話は山ほど流れてくる。でもさ——<br><b>どれを使えばいいのか</b>、誰もちゃんと教えてくれないだろ。<br><br>合わないツールに月3,000円払って、なんか違って、また乗り換えて。気づいたら数万円と週末が溶けてる。それ、あんたのせいじゃない。<br><br>まず、あんたの"技術力"と"面倒くさがり度"を測る。それだけで、正解のルートはだいたい絞れるんだよ。</div>
+      <button class="start-btn" onclick="skStart()">診断をはじめる ⚡</button>
+      <div class="disc">※ログイン不要・無料。特定のツールへの登録を強制するものではありません。</div>
+    </div>
+
+    <div class="step" id="q1"><div class="progress" data-n="1"></div><div class="h" id="q1-h">-</div><div id="q1-opts"></div></div>
+    <div class="step" id="q2"><div class="progress" data-n="2"></div><div class="h" id="q2-h">-</div><div id="q2-opts"></div></div>
+    <div class="step" id="q3"><div class="progress" data-n="3"></div><div class="h" id="q3-h">-</div><div id="q3-opts"></div></div>
+    <div class="step" id="q4"><div class="progress" data-n="4"></div><div class="h" id="q4-h">-</div><div id="q4-opts"></div></div>
+    <div class="step" id="q5"><div class="progress" data-n="5"></div><div class="h" id="q5-h">-</div><div id="q5-opts"></div></div>
+    <div class="step" id="q6"><div class="progress" data-n="6"></div><div class="h" id="q6-h">-</div><div id="q6-opts"></div></div>
+    <div class="step" id="q7"><div class="progress" data-n="7"></div><div class="h" id="q7-h">-</div><div id="q7-opts"></div></div>
+
+    <div class="step" id="s3">
+      <div class="result-badge">
+        <div class="r-av"><img src="assets/saki/saki_mascot_v1.png" alt="サキ"></div>
+        <div class="k">あんたのタイプ</div>
+        <div class="v" id="type-name">-</div>
+        <div class="ax" id="type-axis">-</div>
+      </div>
+      <div class="saki-say" id="saki-say">-</div>
+      <div class="blk">
+        <div class="blk-label">🛠 あんたに合うツール</div>
+        <div class="tool-row" id="tool-row">-</div>
+        <div class="tool-note" id="tool-note">-</div>
+      </div>
+      <div class="blk">
+        <div class="blk-label">🌙 寝てても回す・自動化の方向</div>
+        <div class="auto-line" id="auto-line">-</div>
+      </div>
+      <div class="tease">
+        <div class="tease-h" id="tease-h">で、"あんた専用の設計図"は、ここから先だ。</div>
+        <div class="tease-lead">今のは大枠。本当に知りたいのは「じゃあ具体的に、どのツールに課金して、どう繋げば寝てても動くのか」だろ？ それを、あんたの回答から1枚の設計図にまとめる。</div>
+        <ul class="tease-list">
+          <li>あんたが"本当に課金すべき"ツールと、無料で済ませていいもの</li>
+          <li>そのまま動く24時間自動化レシピ（コピペで導入）</li>
+          <li>手戻りを半減させる専用プロンプト</li>
+        </ul>
+        <button class="tease-btn" onclick="skWantDetail()">詳細な設計図がほしい（準備中）</button>
+        <div class="tease-note" id="tease-note">※有料の詳細版は現在準備中。ボタンを押すと「ほしい人リスト」に手が挙がる（今は集計だけ）。</div>
+      </div>
+      <a class="share-btn" id="share-link" href="#" target="_blank" rel="noopener">結果をXでシェアする</a>
+      <button class="restart" onclick="skRestart()">最初からやり直す</button>
+    </div>
+
+  </div>
+  <div class="footer-note">SOAM CREATIVE｜AI・ビジネス・お金の情報メディア<br>案内役：サキ</div>
+</div>
+<script>
+/* ===== 状態 ===== */
+const skA={q1:null,q2:null,q3:null,q4:null,q5:null,q6:null,q7:null};
+const Q_ORDER=['q1','q2','q3','q4','q5','q6','q7'];
+
+/* ===== 7問（SJT寄り。技術力×面倒くさがり度＋目的＋現状＋予算） ===== */
+/* 集計キー: tech(技術力) / time(作り込み意欲=マメ度) / goal / spend / budget */
+const QSET=[
+  {key:'q1',axis:'tech',text:'プログラミングの「黒い画面（ターミナル）」、どう感じる？',opts:[
+    {label:'普通に触れる／触ってみたい',v:2},
+    {label:'見たことはあるけど、正直こわい',v:1},
+    {label:'黒い画面が出た時点で無理',v:0}]},
+  {key:'q2',axis:'tech',text:'「AIツールのAPIキーを取って連携させる」と聞いて？',opts:[
+    {label:'やったことある／調べればできる',v:2},
+    {label:'言葉は分かるけど、自分では無理そう',v:1},
+    {label:'何を言ってるのか分からない',v:0}]},
+  {key:'q3',axis:'time',text:'AIで稼ぐ「仕組み」、どっちが理想？',opts:[
+    {label:'最初は時間かけてでも、あとは自動で回る仕組みを作りたい',v:2},
+    {label:'難しいことは抜きで、今すぐ使える形がいい',v:0}]},
+  {key:'q4',axis:'time',text:'新しいツールの設定・調整、どう向き合う？',opts:[
+    {label:'いじるのは、わりと苦じゃない・むしろ楽しい',v:2},
+    {label:'必要ならやるけど、できれば最小限で済ませたい',v:1},
+    {label:'"設定"と聞くだけで気が重い。誰かにやってほしい',v:0}]},
+  {key:'q5',axis:'goal',text:'AIで一番やりたいのは、どれに近い？',opts:[
+    {label:'文章・デザイン・動画を作る',v:'make'},
+    {label:'作業を自動化して、放っておいても回る仕組みにする',v:'auto'},
+    {label:'アプリやツールを開発する',v:'dev'},
+    {label:'情報収集・リサーチ・分析',v:'research'}]},
+  {key:'q6',axis:'spend',text:'今、AIツールに月いくら払ってる？',opts:[
+    {label:'まだ何も払ってない（無料だけ）',v:'none'},
+    {label:'月3,000円くらい（Pro系を1つ）',v:'mid'},
+    {label:'月1万円以上（複数 or 上位プラン）',v:'high'}]},
+  {key:'q7',axis:'budget',text:'AIに毎月回せる額は、正直どのくらい？',opts:[
+    {label:'できれば無料〜数百円で抑えたい',v:'low'},
+    {label:'月3,000円くらいまでなら',v:'mid'},
+    {label:'成果が出るなら1万円超でもいい',v:'high'}]}
+];
+
+function skRenderQuestions(){
+  QSET.forEach(function(q,i){
+    var n=i+1;
+    document.getElementById('q'+n+'-h').textContent=q.text;
+    var wrap=document.getElementById('q'+n+'-opts');
+    wrap.innerHTML='';
+    q.opts.forEach(function(o){
+      var b=document.createElement('button');
+      b.className='opt';
+      b.innerHTML='<span class="dot"></span>'+o.label;
+      b.onclick=function(){skAnswer(q.key,o.v);};
+      wrap.appendChild(b);
+    });
+    // progress dots
+    var p=document.querySelector('#q'+n+' .progress');
+    if(p && !p.dataset.built){
+      var html='';
+      for(var k=0;k<7;k++){html+='<span'+(k<n?' class="done"':'')+'></span>';}
+      p.innerHTML=html; p.dataset.built='1';
+    }
+  });
+}
+
+/* ===== 4タイプ定義 ===== */
+const TYPES={
+  A:{name:'即席スマート型',axis:'GUI派 × 即効タイパ',
+     say:'あんたはガチの仕組み作りに向いてない。ていうか、そこに時間かけたくないだろ？ だったら無理に自動化なんか組むな。ChatGPTを使い倒すのが、あんたの最短だ。それで十分戦える。',
+     tool:'ChatGPT Plus（Custom GPTs）＋ NotebookLM（無料）',
+     toolnote:'複雑な連携はしない。よく使う作業を"自分専用GPT"に覚えさせて、1クリックで回す。資料の要約はNotebookLM（無料）で十分。',
+     auto:'凝った自動化は<b>やらない方が正解</b>。まずは手元の作業を"AIに任せて即終わらせる"に集中しろ。仕組み化はできるようになってからでいい。'},
+  B:{name:'自動仕組み構築型',axis:'GUI派 × 作り込める',
+     say:'コードは書けない。でも、時間をかけてでも"寝てても回る仕組み"を作りたい——あんたが一番それに近い。安心しろ、コード無しで組める。順番さえ間違えなきゃ、あんたにもできる。',
+     tool:'Dify（ノーコードのワークフロー）＋ Make.com ＋ 各種AIのAPI',
+     toolnote:'GUIでAIの処理を線で繋ぐだけ。プログラミングは要らない。DifyかMakeのどちらかから始めれば十分。',
+     auto:'<b>DifyのCron（定期実行）やMakeのタイマー</b>を使えば、SNS投稿・記事更新・メール配信を、寝てる間も24時間ノーコードで自動で回せる。あんたの「寝てても動くやつ」は、ここが本命ルート。'},
+  C:{name:'高速開発型',axis:'コード派 × 即効タイパ',
+     say:'あんたは手を動かせる側だ。だったら話は早い。作業を減らすんじゃなくて、"コードを書く時間ごと"AIに投げろ。あんたのボトルネックは技術じゃなく、手数だから。',
+     tool:'Claude Code（自律CLI）＋ Cursor Pro',
+     toolnote:'ターミナルで動くClaude Codeに複数ファイルを一気に直させる。日々のコーディングはCursorでAI補完。手作業を極限まで削る構成。',
+     auto:'自律エージェントに<b>まとまった作業を丸投げ</b>して、自分は方針だけ決める。定期処理はGASやcronと繋げば、あとは勝手に回る。'},
+  D:{name:'フルスタック型',axis:'コード派 × 作り込める',
+     say:'あんたはもう、この診断より先に行ってる側だ。既製ツールじゃ物足りないだろ。API直で叩いて、自分専用の仕組みを組め。強いて言うなら、車輪の再発明だけ気をつけろ。',
+     tool:'主要LLMのAPI（Sonnet / Opus 等）＋ 自作Python ＋ Dify API',
+     toolnote:'自作スクリプトからAPIを直接叩き、独自ロジックで大規模・複雑な処理を回す。検証（A/Bテスト等）も自分で組める。',
+     auto:'自作のPythonやGASからDify等のワークフローAPIを叩いて、<b>スケジュール実行で大規模な自動処理</b>を組む。ほぼ何でも自動化できる。'}
+};
+
+function skDetermineType(){
+  var tech=(skA.q1||0)+(skA.q2||0);   // 0-4
+  var time=(skA.q3||0)+(skA.q4||0);   // 0-4
+  var techHigh = tech>=3;             // 保守的に：はっきり技術に強い時だけHigh
+  var timeHigh = time>=2;             // 作り込み意欲がある時High
+  if(!techHigh && !timeHigh) return 'A';
+  if(!techHigh &&  timeHigh) return 'B';
+  if( techHigh && !timeHigh) return 'C';
+  return 'D';
+}
+
+/* ===== フロー制御 ===== */
+function skShow(id){
+  document.querySelectorAll('.step').forEach(function(s){s.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function skStart(){
+  skRenderQuestions();
+  gtag('event','ai_diag_start');
+  skShow('q1');
+}
+function skAnswer(key,v){
+  skA[key]=v;
+  var idx=QSET.findIndex(function(q){return q.key===key;});
+  gtag('event','ai_diag_answer',{q:key});
+  if(idx < QSET.length-1){ skShow('q'+(idx+2)); }
+  else { skResult(); }
+}
+function skResult(){
+  var t=skDetermineType();
+  var T=TYPES[t];
+  document.getElementById('type-name').textContent=T.name;
+  document.getElementById('type-axis').textContent=T.axis;
+  document.getElementById('tool-row').textContent=T.tool;
+  document.getElementById('tool-note').textContent=T.toolnote;
+  document.getElementById('auto-line').innerHTML=T.auto;
+
+  // 現状課金による一言の出し分け（乗り換え層＝最優先客）
+  var extra='';
+  if(skA.q6==='high' || skA.q6==='mid'){
+    extra=' もう課金してるなら、今のが"あんたの型"に合ってるか、これで答え合わせできる。違ってたら、乗り換えの判断材料にしろ。';
+  }else if(skA.q6==='none'){
+    extra=' まだ無料なら、いきなり高いの契約すんな。まずは上のツールから触ってみろ。';
+  }
+  document.getElementById('saki-say').textContent=T.say+extra;
+
+  // シェアリンク
+  var shareText='AI副業ツール診断、俺は「'+T.name+'」だった。あんたはどのタイプ？';
+  var shareUrl='https://soam-creative.com/shindan-ai.html';
+  document.getElementById('share-link').href='https://twitter.com/intent/tweet?text='+encodeURIComponent(shareText)+'&url='+encodeURIComponent(shareUrl);
+
+  gtag('event','ai_diag_complete',{type:t,spend:skA.q6,budget:skA.q7,goal:skA.q5});
+  try{ localStorage.setItem('soam_ai_diag',JSON.stringify({type:t,ts:Date.now()})); }catch(e){}
+  skShow('s3');
+}
+function skWantDetail(){
+  gtag('event','ai_diag_want_detail',{type:skDetermineType()});
+  var btn=event.target;
+  btn.textContent='手、挙がった。ありがとう ✅';
+  btn.disabled=true; btn.style.opacity='.7';
+  document.getElementById('tease-note').textContent='※準備できたら、この診断で真っ先に案内する。';
+}
+function skRestart(){
+  Object.keys(skA).forEach(function(k){skA[k]=null;});
+  skShow('s0');
+}
+</script>
+</body>
+</html>
