@@ -134,14 +134,14 @@ body{
       </div>
       <div class="cite-note">※技術力・面倒くさがり度の2軸は、状況判断テスト（SJT）とBig Five性格特性論（開放性・誠実性）の学術的知見に基づいて設計しています。</div>
       <div class="tease">
-        <div class="tease-h" id="tease-h">で、"あんた専用の設計図"は、ここから先だ。</div>
-        <div class="tease-lead">今のは大枠。本当に知りたいのは「じゃあ具体的に、どのツールに課金して、どう繋げば寝てても動くのか」だろ？ それを、あんたの回答から1枚の設計図にまとめる。</div>
+        <div class="tease-h" id="tease-h">で、"今のあんたが課金していいもの"は、ここから先だ。</div>
+        <div class="tease-lead">今のは大枠。本当に知りたいのは「じゃあ具体的に、今何に課金して、何にはまだ課金しなくていいのか」だろ？ それを、あんたの回答からサキがジャッジする。</div>
         <ul class="tease-list">
-          <li>あんたが"本当に課金すべき"ツールと、無料で済ませていいもの</li>
-          <li>そのまま動く24時間自動化レシピ（コピペで導入）</li>
-          <li>手戻りを半減させる専用プロンプト</li>
+          <li>今すぐ課金していいものと、まだ課金しなくていいもの</li>
+          <li>今使ってるものを残す/切る/様子見の判断</li>
+          <li>1週間後、続ける/やめるの判断基準</li>
         </ul>
-        <button class="tease-btn" onclick="skWantDetail()">詳細な設計図がほしい（準備中）</button>
+        <button class="tease-btn" onclick="skWantDetail()">サキのAI課金ジャッジを受ける（準備中）</button>
         <div class="tease-note" id="tease-note">※有料の詳細版は現在準備中。ボタンを押すと「ほしい人リスト」に手が挙がる（今は集計だけ）。</div>
       </div>
       <a class="share-btn" id="share-link" href="#" target="_blank" rel="noopener">結果をXでシェアする</a>
@@ -234,7 +234,7 @@ const TYPES={
      toolnote:'ターミナルで動くClaude Codeに複数ファイルを一気に直させる。日々のコーディングはCursorでAI補完。手作業を極限まで削る構成。',
      auto:'自律エージェントに<b>まとまった作業を丸投げ</b>して、自分は方針だけ決める。定期処理はGASやcronと繋げば、あとは勝手に回る。'},
   D:{name:'フルスタック型',axis:'コード派 × 作り込める',
-     say:'あんたはもう、この診断より先に行ってる側だ。既製ツールじゃ物足りないだろ。API直で叩いて、自分専用の仕組みを組め。強いて言うなら、車輪の再発明だけ気をつけろ。',
+     say:'初心者向け診断では物足りない側だ。ただし、作れる人ほど必要ないものまで作る。今見るべきは、何を足すかじゃない。何をまだ足さないかだ。',
      tool:'主要LLMのAPI（Sonnet / Opus 等）＋ 自作Python ＋ Dify API',
      toolnote:'自作スクリプトからAPIを直接叩き、独自ロジックで大規模・複雑な処理を回す。検証（A/Bテスト等）も自分で組める。',
      auto:'自作のPythonやGASからDify等のワークフローAPIを叩いて、<b>スケジュール実行で大規模な自動処理</b>を組む。ほぼ何でも自動化できる。'}
