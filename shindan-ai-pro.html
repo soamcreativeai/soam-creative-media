@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-<title>【準備中・非公開】AIツール診断 有料本編｜サキ</title>
+<title>【準備中・非公開】サキのAI課金ジャッジ｜サキ</title>
 <meta name="robots" content="noindex,nofollow">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <!-- GA4: 無料版と同一プロパティ（暫定） -->
@@ -75,25 +75,49 @@ body{
 .why-box b{color:#c2c8de}
 .cite-note{font-size:9.5px;color:#6b728f;line-height:1.7;margin:-6px 0 14px;padding:0 2px;font-style:italic}
 .tier{background:#20243c;border:1px solid #2e3557;border-radius:16px;padding:14px 16px;margin-bottom:10px}
-.tier.locked{opacity:.5}
+.tier.locked{opacity:.6}
 .tier .t-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .tier .t-rank{font-size:10px;font-weight:800;color:#161a2e;background:linear-gradient(135deg,#C9A96A,#E0C48A);padding:3px 10px;border-radius:999px}
+.tier.locked .t-rank{background:#4a5070;color:#c2c8de}
 .tier .t-price{font-size:11px;color:#9aa2c0;font-weight:800}
 .tier .t-name{font-size:14px;font-weight:800;color:#f2f4fb;margin-bottom:5px}
 .tier .t-desc{font-size:12px;color:#c2c8de;line-height:1.75}
-.step-list{counter-reset:st}
-.step-item{position:relative;padding:14px 16px 14px 44px;margin-bottom:10px;background:#20243c;border:1px solid #2e3557;border-radius:14px;font-size:12.5px;color:#e7ebf6;line-height:1.75}
-.step-item::before{counter-increment:st;content:counter(st);position:absolute;left:14px;top:14px;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
-.prompt-box{background:#181c30;border:1px solid #2e3557;border-radius:12px;padding:12px 14px;margin-bottom:9px;font-size:12px;color:#c2c8de;line-height:1.7;font-family:'Noto Sans JP',monospace;position:relative}
-.prompt-box .p-copy{position:absolute;right:10px;top:10px;font-size:10px;color:#C9A96A;font-weight:800;cursor:pointer;background:none;border:1px solid #C9A96A;border-radius:8px;padding:3px 8px}
-.aff-row{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#20243c;border:1px solid #2e3557;border-radius:12px;padding:11px 14px;margin-bottom:8px}
-.aff-row .a-name{font-size:12.5px;font-weight:800;color:#f2f4fb}
-.aff-row .a-note{font-size:10.5px;color:#9aa2c0}
-.aff-row .a-link{font-size:11px;font-weight:800;color:#161a2e;background:linear-gradient(135deg,#C9A96A,#E0C48A);padding:6px 12px;border-radius:999px;white-space:nowrap}
-.pending-note{font-size:9.5px;color:#a08e63;margin-top:2px}
-.support-box{background:linear-gradient(135deg,#26210f,#2f2811);border:1.5px dashed #C9A96A;border-radius:16px;padding:16px 18px}
-.support-box .s-h{font-size:13px;font-weight:800;color:#E0C48A;margin-bottom:8px}
-.support-box .s-txt{font-size:12px;color:#d8cfae;line-height:1.8;margin-bottom:10px}
+/* AI現在地 */
+.status-box{background:linear-gradient(135deg,#20243c,#2a2f4e);border:1.5px solid #C9A96A;border-radius:16px;padding:16px 18px;margin-bottom:14px}
+.status-box .st-lbl{font-size:15px;font-weight:800;color:#f2f4fb;margin-bottom:6px}
+.status-box .st-desc{font-size:12.5px;color:#c2c8de;line-height:1.8}
+/* サキの結論：今すぐ/今は不要 */
+.verdict-now{background:#182e22;border:1.5px solid #3f8a5f;border-radius:14px;padding:14px 16px;margin-bottom:10px}
+.verdict-now .v-lbl{font-size:10px;font-weight:800;color:#6fd396;letter-spacing:1px;margin-bottom:6px}
+.verdict-now .v-name{font-size:14.5px;font-weight:800;color:#f2f4fb;margin-bottom:2px}
+.verdict-now .v-price{font-size:11px;color:#9aa2c0;margin-bottom:6px}
+.verdict-now .v-why{font-size:12px;color:#c2c8de;line-height:1.75}
+.verdict-hold{background:#2e1f20;border:1.5px solid #8a5a5a;border-radius:14px;padding:12px 14px;margin-bottom:8px}
+.verdict-hold .v-lbl{font-size:10px;font-weight:800;color:#e08a8a;letter-spacing:1px;margin-bottom:6px}
+.verdict-hold .v-name{font-size:13px;font-weight:800;color:#f2f4fb;margin-bottom:3px}
+.verdict-hold .v-why{font-size:11.5px;color:#c2c8de;line-height:1.7}
+.try-next{background:#20243c;border:1.5px dashed #C9A96A;border-radius:14px;padding:14px 16px;margin-top:10px}
+.try-next .tn-lbl{font-size:10px;font-weight:800;color:#E0C48A;letter-spacing:1px;margin-bottom:6px}
+.try-next .tn-txt{font-size:13px;color:#f2f4fb;font-weight:700;line-height:1.8}
+.existing-box{background:#181c30;border:1px dashed #3a4066;border-radius:12px;padding:12px 14px;margin-top:10px;font-size:12px;color:#c2c8de;line-height:1.8}
+.existing-box b{color:#E0C48A}
+/* 失敗パターン */
+.fail-list{list-style:none}
+.fail-item{position:relative;padding:12px 14px 12px 38px;margin-bottom:9px;background:#20243c;border:1px solid #2e3557;border-radius:12px;font-size:12.5px;color:#e7ebf6;line-height:1.7}
+.fail-item::before{content:'×';position:absolute;left:12px;top:11px;width:20px;height:20px;border-radius:50%;background:#8a5a5a;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+/* 自動化との距離感 */
+.ladder-box{background:linear-gradient(135deg,#20243c,#2a2f4e);border:1.5px solid #2e3557;border-radius:16px;padding:16px 18px}
+.ladder-box .ld-lbl{font-size:10px;font-weight:800;color:#C9A96A;letter-spacing:1px;margin-bottom:6px}
+.ladder-box .ld-pos{font-size:14.5px;font-weight:800;color:#f2f4fb;margin-bottom:10px;line-height:1.6}
+.ladder-box .ld-warn{font-size:12.5px;color:#e0c48a;line-height:1.8;padding-top:10px;border-top:1px dashed #3a4066}
+/* 1週間後の判断基準 */
+.checkpoint-box{background:linear-gradient(135deg,#26210f,#2f2811);border:1.5px dashed #C9A96A;border-radius:16px;padding:16px 18px}
+.checkpoint-box .cp-h{font-size:11px;font-weight:800;color:#E0C48A;letter-spacing:1px;margin-bottom:8px}
+.checkpoint-box .cp-txt{font-size:13px;color:#d8cfae;line-height:1.85}
+/* 免責 */
+.disclaimer-list{list-style:none}
+.disclaimer-list li{position:relative;padding-left:16px;margin-bottom:6px;font-size:10.5px;color:#7d85a6;line-height:1.7}
+.disclaimer-list li::before{content:'・';position:absolute;left:0}
 .print-btn{width:100%;padding:15px;border:none;border-radius:18px;background:#0d0f18;color:#fff;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;border:1px solid #2e3557;margin-top:6px}
 .print-btn:active{transform:scale(.98)}
 .restart{width:100%;margin-top:10px;padding:13px;border-radius:16px;border:1.5px solid #C9A96A;background:none;color:#C9A96A;font-family:inherit;font-size:12.5px;font-weight:800;cursor:pointer}
@@ -127,28 +151,31 @@ body{
 
     <div class="step active" id="s0">
       <div class="badge">⚡ 18問・約3分で分かる</div>
-      <div class="h">あんた専用の"AIツール課金構成図"を作る。</div>
-      <div class="intro-copy">さっきの7問は大枠だった。ここから先は本気の18問。<br><br>
-      技術力・時間の使い方・目的・今の課金状況・予算・サポートの要不要——全部聞く。面倒くさいと思うだろ？<br><br>
-      でもな、<b>質問が浅いと、答えも浅くなる</b>。あんたの状況にちゃんと刺さる設計図がほしいなら、この18問はサボれない。<br><br>
-      答え終わったら、あんた専用の「課金構成図」「24時間自動化レシピ」「時短プロンプト集」を1本の診断書にまとめて渡す。</div>
-      <button class="start-btn" onclick="skpStart()">本気の診断をはじめる ⚡</button>
+      <div class="h">あんたの"AI課金"、今のままで合ってるか判定する。</div>
+      <div class="intro-copy">この診断は、AIで稼げる保証をするものじゃない。<br><br>
+      あんたが本当に知りたいのは「稼げるかどうか」じゃなく、<b>無駄な課金で遠回りしたくない</b>ってことのはずだ。<br><br>
+      18問答えたら、サキが判定する。<b>今すぐ課金していいもの・今はまだ課金しなくていいもの・次に試すべき1つ</b>。それだけに絞って渡す。</div>
+      <button class="start-btn" onclick="skpStart()">サキの判定を受ける ⚡</button>
       <div class="disc">※これは有料本編相当のコンテンツです。金額の断定・収入の保証は一切しません（目安・可能性の提示に留めます）。</div>
     </div>
 
     <div id="q-steps"></div>
 
     <div class="step" id="s3">
-      <div class="section-tag">1 / 7　表紙</div>
+      <div class="section-tag">サキのAI課金ジャッジ</div>
       <div class="rep-cover">
         <div class="r-av"><img src="assets/saki/saki_mascot_v1.png" alt="サキ"></div>
-        <div class="k">サキの診断書</div>
+        <div class="k">サキのAI課金ジャッジ</div>
         <div class="v" id="rep-type-name">-</div>
         <div class="meta" id="rep-meta">-</div>
       </div>
 
       <div class="sec">
-        <div class="sec-h"><span class="n">2</span>結果詳細</div>
+        <div class="sec-h"><span class="n">1</span>あんたのAI現在地</div>
+        <div class="status-box">
+          <div class="st-lbl" id="status-lbl">-</div>
+          <div class="st-desc" id="status-desc">-</div>
+        </div>
         <div class="score-row">
           <div class="score-box">
             <div class="lbl">技術力（T）</div>
@@ -161,42 +188,63 @@ body{
             <div class="txt" id="txt-z">-</div>
           </div>
         </div>
-        <div class="saki-say" id="saki-summary">-</div>
-        <div class="why-box" id="why-box">-</div>
         <div class="cite-note">※技術力・面倒くさがり度の2軸は、状況判断テスト（SJT）とBig Five性格特性論（開放性・誠実性）の学術的知見に基づいて設計しています。</div>
       </div>
 
       <div class="sec">
-        <div class="sec-h"><span class="n">3</span>課金構成図</div>
+        <div class="sec-h"><span class="n">2</span>サキの結論</div>
+        <div class="saki-say" id="saki-summary">-</div>
+        <div class="verdict-now">
+          <div class="v-lbl">✅ 今すぐ課金していいもの</div>
+          <div class="v-name" id="verdict-now-name">-</div>
+          <div class="v-price" id="verdict-now-price">-</div>
+          <div class="v-why" id="verdict-now-why">-</div>
+        </div>
+        <div id="verdict-hold-list"></div>
+        <div class="try-next">
+          <div class="tn-lbl">次に試すなら、これ1つだけ</div>
+          <div class="tn-txt" id="try-next-txt">-</div>
+        </div>
+        <div class="existing-box" id="existing-verdict">-</div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h"><span class="n">3</span>あんたがハマりやすい失敗パターン</div>
+        <ul class="fail-list" id="fail-list"></ul>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h"><span class="n">4</span>自動化との距離感</div>
+        <div class="ladder-box">
+          <div class="ld-lbl">今のあんたの立ち位置</div>
+          <div class="ld-pos" id="ladder-pos">-</div>
+          <div class="ld-warn" id="ladder-warn">-</div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h"><span class="n">5</span>課金優先順位</div>
         <div id="tier-list"></div>
       </div>
 
       <div class="sec">
-        <div class="sec-h"><span class="n">4</span>自動化レシピ</div>
-        <div class="step-list" id="recipe-list"></div>
-      </div>
-
-      <div class="sec">
-        <div class="sec-h"><span class="n">5</span>時短プロンプト集</div>
-        <div class="cite-note">※目的の分類は、ホランドの職業興味理論（RIASEC）に基づく6分類を採用しています。</div>
-        <div id="prompt-list"></div>
-      </div>
-
-      <div class="sec">
-        <div class="sec-h"><span class="n">6</span>周辺ツール</div>
-        <div id="aff-list"></div>
-        <div class="pending-note">※実アフィリンクは出稿確定後に差し込み（現在プレースホルダー）</div>
-      </div>
-
-      <div class="sec" id="support-sec" style="display:none">
-        <div class="sec-h"><span class="n">7</span>困ったら</div>
-        <div class="support-box">
-          <div class="s-h">セットアップ、丸投げしたい？</div>
-          <div class="s-txt">あんたは「自分でやり切る」より「頼れる相手がいる」方が向いてる。無理に一人で抱えるな。構築代行の相談窓口は現在準備中——問い合わせ導線は後日ここに追加する。</div>
+        <div class="sec-h"><span class="n">6</span>1週間後の判断基準</div>
+        <div class="checkpoint-box">
+          <div class="cp-h">7日間実行プランじゃない。7日後、これで判断しろ。</div>
+          <div class="cp-txt" id="checkpoint-txt">-</div>
         </div>
       </div>
 
-      <button class="print-btn" onclick="window.print()">🖨 このレポートを保存する（PDF）</button>
+      <div class="sec">
+        <div class="sec-h"><span class="n">7</span>免責と期待値調整</div>
+        <ul class="disclaimer-list">
+          <li>収益や成果を保証するものではありません。</li>
+          <li>個別サポート（操作代行・導入支援）は含まれません。この商品はAI課金判断の整理です。</li>
+          <li>ツールの料金・仕様は変動するため、これは購入時点での判断材料です。</li>
+        </ul>
+      </div>
+
+      <button class="print-btn" onclick="window.print()">🖨 このジャッジを保存する（PDF）</button>
       <button class="restart" onclick="skpRestart()">最初からやり直す</button>
       <div class="legal-note">本診断は収入・成果を保証するものではありません。ツール名・料金は変動するため最新情報は各公式サイトでご確認ください。</div>
     </div>
@@ -207,13 +255,17 @@ body{
 
 <script>
 /* =========================================================================
-   AI副業診断（サキ）有料本編・エンジン
-   一次ソース：副業診断_設計枠組み_2026-07-08.md §10（質問18問・判定ロジック・PDF7セクション）
-   設計方針：データ（QSET_PRO/TYPES_PRO/GOAL_PROMPTS/AFF_TOOLS）とエンジン（採点・分岐・描画関数）を分離。
-   これは「金型」の複製フェーズ（美容版等）で、データ部分だけ差し替えれば良いようにするため
-   （§11-C：エンジン=80%共通・データ=20%業種差し替え）。
+   サキのAI課金ジャッジ（旧称：AI副業診断有料本編）・エンジン
+   一次ソース：副業診断_設計枠組み_2026-07-08.md §10（質問18問・判定ロジック）
+   ＋2026-07-08ファウンダー指示による全面再設計：
+   商品の核＝「今何に課金すべきか／すべきでないか」のジャッジ（AI課金の失敗回避商品）。
+   「7日間サポート」「30分指示書」「プロンプト集が本体」「自動化を完成させる」は核ではない
+   （削除・弱化済み）。設計方針：データ（QSET_PRO/TYPES_PRO/STATUS_INFO）とエンジン
+   （採点・分岐・描画関数）を分離。これは「金型」の複製フェーズ（美容版等）で、データ部分だけ
+   差し替えれば良いようにするため（§11-C：エンジン=80%共通・データ=20%業種差し替え）。
    簡略化した点：設計書§10-A Q7は「複数可」だが、既存の無料版と同じ単一選択タップ式フローを
-   維持するため単一選択に簡略化した（要件未確定の複数選択UIを推測実装しない）。
+   維持するため単一選択に簡略化した（Q7自体はQSET_PROに残すが、今回の再設計後は
+   出力ロジックでは未使用＝有料版の核が目的カテゴリでなく課金ジャッジに変わったため）。
    ========================================================================= */
 
 /* ---------- 18問（SJT形式） ---------- */
@@ -318,110 +370,127 @@ const QSET_PRO=[
 const skpA={};
 QSET_PRO.forEach(function(q){skpA[q.key]=null;});
 
-/* ---------- 4タイプ定義（推奨ツール・段階別課金構成・自動化レシピ） ---------- */
+/* ---------- 4タイプ定義（2026-07-08 全面再設計）----------
+   商品の本質＝「AI版・一発屋」＝AI課金の失敗回避商品。
+   「7日間サポート」「30分指示書」「プロンプト集が本体」「自動化を完成させる」は
+   全部この商品の核ではない（ファウンダー指示）。核は「今何に課金すべきか／すべきでないか」
+   をサキが判断すること。全項目、他に何も知らない前提で読んでそのまま判断・実行できる
+   具体性を必須とする（メモリ`feedback_verify_mission_checklist_before_done`）。 */
 const TYPES_PRO={
   A:{
     name:'即席スマート型',axisLabel:'GUI派 × 即効タイパ',
-    summary:'あんたはガチの仕組み作りに向いてない。それでいい。時間をかけずに、今あるAIを使い倒すのが最短ルートだ。凝った自動化に手を出すと、たぶん途中で投げる。',
-    tiers:[
-      {rank:'1位・必須',name:'ChatGPT Plus',price:'月20ドル前後',desc:'まずこれ1本。Custom GPTsに普段の作業を覚えさせるだけで、あんたの"面倒"の8割は消える。'},
-      {rank:'2位・慣れたら',name:'NotebookLM（無料）',price:'無料',desc:'資料の要約・整理はこっちに任せる。ChatGPTと役割を分けると迷わなくなる。'},
-      {rank:'3位・応用',name:'Notion AI',price:'既存Notionに追加課金',desc:'メモやタスク管理を既にNotionでやってるなら、AI機能を足すだけで二度手間が消える。'}
+    summary:'あんたはガチの仕組み作りに向いてない。それでいい。今あるAIを使い倒すことだけ考えろ。自動化に手を出すのはまだ早い。',
+    verdictNow:{name:'ChatGPT Plus',price:'月20ドル前後',why:'Custom GPTsに普段の作業を1個教え込む。それだけで、あんたの"面倒"の8割は消える。'},
+    verdictHold:[
+      {name:'Dify・Make.com（ノーコード自動化）',why:'"自動化"って言葉に惹かれて手を出しても、設定画面を開いた瞬間に止まる。今のあんたには早い。'},
+      {name:'Cursor Pro・Claude Code（コード系）',why:'コードを書く前提のツール。環境構築の時点で心が折れるタイプだ。'}
     ],
-    recipe:[
-      '普段よくやる作業を1つ選ぶ（例：SNS投稿文を考える）',
-      'ChatGPTのCustom GPTsに、その作業の「いつもの型」を教え込む',
-      '次からはそのGPTに投げるだけ。仕組みを作る手間はゼロ'
-    ]
+    tryNext:'ChatGPTでCustom GPTsを1個作れ。普段よくやる作業（例：SNS投稿文を考える）を1つだけ、そのGPTに任せてみろ。',
+    failurePatterns:[
+      '"自動化"という言葉に釣られてDifyやMakeを開き、設定画面で止まって放置する',
+      '比較サイトやYouTubeを何本も見て、結局どれも試さないまま時間だけ溶かす',
+      '「もっと良いツールがあるはず」と探し続けて、今あるChatGPTすら使い倒せていない'
+    ],
+    ladder:{position:'まずChatGPT/Claudeを使い倒すべき人',warning:'Make/Difyに行くのは、その後でいい。今はまだ、そこに行くな。'},
+    tiers:[
+      {rank:'今月試すならこれ',name:'ChatGPT Plus',price:'月20ドル前後',desc:'Custom GPTsに普段の作業を1個教え込む。それだけでいい。'},
+      {rank:'慣れたら候補',name:'NotebookLM（無料）',price:'無料',desc:'資料の要約・整理はこっちに任せる。まずは無料のまま試せる。'},
+      {rank:'今は保留',name:'Dify・Make.com・Cursor Pro・Claude Code',price:'-',desc:'自動化・コード系ツール全般。ChatGPTを使い倒しきってから考えろ。今契約しても宝の持ち腐れになる。'}
+    ],
+    checkpoint:'1週間後、ChatGPTのCustom GPTsを実際に3回以上使えたか？　使えていたら継続でいい。「作ったけど結局使ってない」なら、それは自動化以前の問題——まず"使う習慣"を作り直せ。'
   },
   B:{
     name:'自動仕組み構築型',axisLabel:'GUI派 × 作り込める',
-    summary:'コードは書けない。でも時間をかけてでも"寝てても回る仕組み"を作りたいあんたは、実は一番"伸びしろ"がでかいタイプだ。順番さえ間違えなきゃ、ノーコードで本当に自動化できる。',
-    tiers:[
-      {rank:'1位・必須',name:'Dify（ノーコードワークフロー）',price:'無料枠あり／本格運用は月20ドル前後〜',desc:'AIの処理をGUIで線で繋ぐだけ。まずはここから。プログラミングは要らない。'},
-      {rank:'2位・慣れたら',name:'Make.com',price:'無料枠あり／月9ドル前後〜',desc:'SNS投稿・記事更新・通知など「時間で動く」自動化はこっちが得意。Difyと組み合わせる。'},
-      {rank:'3位・応用',name:'各種LLM API（従量課金）',price:'使った分だけ',desc:'DifyやMakeの中でAI処理を呼ぶ時の裏側。慣れてきたら直接API連携も視野に。'}
+    summary:'コードは書けない。でも時間をかけてでも仕組みを作りたいあんたは、伸びしろがでかいタイプだ。ただし今は「あれもこれも自動化したい」で止まりやすい。',
+    verdictNow:{name:'Dify（無料枠）',price:'無料枠から',why:'コードが書けないなら一番向いてるルート。ただし課金する前に、無料枠で1つワークフローを作り切れるか試せ。'},
+    verdictHold:[
+      {name:'Cursor Pro・Claude Code（コード系）',why:'コードが書けないなら今は不要。'},
+      {name:'Dify・Makeの上位プラン',why:'無料枠すら使い切れてないのに上のプランに上げても意味がない。'}
     ],
-    recipe:[
-      'まず1つの作業だけをDifyでワークフロー化する（欲張って全部やろうとしない）',
-      'うまく回ったら、Make.comの「タイマー」機能で定期実行に繋ぐ',
-      '寝てる間・仕事中も、SNS投稿や記事更新が勝手に進む状態を作る'
-    ]
+    tryNext:'Difyの無料枠で、1つの作業だけをワークフロー化しろ。全部自動化しようとするな。',
+    failurePatterns:[
+      '"何を自動化したいか"を決めないままDifyを開き、機能の多さに圧倒されて止まる',
+      'Difyの全機能を使おうとして複雑にしすぎ、結局壊れて放置する',
+      'Make.comとDifyを両方契約して、どっちも中途半端なまま料金だけ払い続ける'
+    ],
+    ladder:{position:'Make/Difyに行く前に、用途を1つに固定すべき人',warning:'"あれもこれも自動化したい"のまま始めると、必ず途中で止まる。まず1つに絞れ。'},
+    tiers:[
+      {rank:'今月試すならこれ',name:'Dify（無料枠）',price:'無料',desc:'1つの作業だけをワークフロー化する。'},
+      {rank:'慣れたら候補',name:'Dify有料プラン または Make.com',price:'月9〜20ドル前後',desc:'無料枠のワークフローが実際に動いて役に立ったら、次のステップ。'},
+      {rank:'今は保留',name:'Cursor Pro・Claude Code・API直叩き',price:'-',desc:'コード系。今のあんたには不要な選択肢。'}
+    ],
+    checkpoint:'1週間後、Difyで作った1つのワークフローが、実際に1回でも自動で動いたか？　動いたなら次のステップへ進んでいい。動いていない、あるいは複数のワークフローを同時に作りかけているなら、用途を1つに絞り直せ。'
   },
   C:{
     name:'高速開発型',axisLabel:'コード派 × 即効タイパ',
-    summary:'あんたは手を動かせる側。だったら"作業を減らす"んじゃなく"コードを書く時間ごと"AIに投げろ。ボトルネックは技術じゃなく手数だ。',
-    tiers:[
-      {rank:'1位・必須',name:'Claude Code',price:'Claude Pro/Max内で利用可',desc:'ターミナルで動く自律型AI。複数ファイルの改修を一気に任せられる。'},
-      {rank:'2位・慣れたら',name:'Cursor Pro',price:'月20ドル前後',desc:'日々のコーディングはこっちのAI補完で加速。Claude Codeと役割を分ける。'},
-      {rank:'3位・応用',name:'GitHub Actions等のCI/CD',price:'無料枠中心',desc:'テスト・デプロイまで自動化すると、書いたコードが勝手に本番へ届く状態になる。'}
+    summary:'あんたは手を動かせる側。ただし環境構築（APIキー・ターミナル操作）の壁で一番止まりやすいタイプでもある。',
+    verdictNow:{name:'Claude Code',price:'Claude Pro/Max内で利用可',why:'手を動かせるあんたには一番早いルート。ただし最初の環境構築で止まりやすい。'},
+    verdictHold:[
+      {name:'Dify・Make.com（ノーコード自動化）',why:'すでにコードが書けるなら、ノーコードツールは回り道になる。'},
+      {name:'Cursor Proの即時契約',why:'Claude Codeだけで足りるか、まず1週間試してから決めろ。両方いきなり契約するな。'}
     ],
-    recipe:[
-      '手を動かす前に、Claude Codeに「やりたいこと」を要件として渡す',
-      'まとまった作業（機能追加・バグ修正）を丸ごと任せて、自分は方針とレビューに専念する',
-      '定期処理はcronやGitHub Actionsに繋いで、判断以外を自動化する'
-    ]
+    tryNext:'Claude Codeで、今持ってる既存のコードを1つ改修させてみろ。',
+    failurePatterns:[
+      'APIキーの発行・環境変数の設定でつまずいて、そこで止まる（"環境構築の壁"）',
+      '「高いプランに上げれば解決する」と思い込んで、実際は使い方の問題を放置する',
+      'Claude CodeとCursorを両方契約して、使い分けが曖昧なまま両方の料金だけ払う'
+    ],
+    ladder:{position:'Cursor/Claude Codeに行くと詰みやすい人（環境構築の壁に注意）',warning:'ここで止まる人が一番多い。エラーが出たら、まず"環境構築の手順を1つずつ確認する"に戻れ。プランを上げても解決しない。'},
+    tiers:[
+      {rank:'今月試すならこれ',name:'Claude Code',price:'Claude Pro/Max内',desc:'既存のコードを1つ改修させることから始める。'},
+      {rank:'慣れたら候補',name:'Cursor Pro',price:'月20ドル前後',desc:'Claude Codeで環境構築に慣れてから追加する。'},
+      {rank:'今は保留',name:'自作Python+API直叩き・CI/CD構築',price:'-',desc:'まだ早い。まずは既製ツールで手を動かす感覚を掴んでからでいい。'}
+    ],
+    checkpoint:'1週間後、Claude Codeで実際に1つのコードを改修できたか？　できていれば継続。環境構築で止まって何も動かせていないなら、無理に次に進まず、まず"動く状態"を作ることだけに集中しろ。'
   },
   D:{
     name:'フルスタック型',axisLabel:'コード派 × 作り込める',
-    summary:'あんたはもう、この診断より先に行ってる側だ。既製ツールじゃ物足りないだろ。API直で叩いて、自分専用の仕組みを組め。強いて言うなら車輪の再発明だけ気をつけろ。',
-    tiers:[
-      {rank:'1位・必須',name:'主要LLM API（Claude/GPT等）',price:'従量課金',desc:'既製のGUIツールを介さず、自分のロジックで直接叩く。制御の自由度が段違い。'},
-      {rank:'2位・慣れたら',name:'自作Python + スケジューラ',price:'サーバー代のみ',desc:'定期実行・大規模処理は自作スクリプトで。Dify API等と組み合わせても良い。'},
-      {rank:'3位・応用',name:'ベクトルDB・RAG基盤',price:'規模による',desc:'独自データを持たせた高度な自動化がしたくなったら、ここまで踏み込める。'}
+    summary:'あんたはもう診断より先に行ってる側だ。既製ツールを卒業していい。ただし"作りすぎ"には注意しろ。',
+    verdictNow:{name:'主要LLM API（Claude/GPT等）',price:'従量課金',why:'既製ツールを卒業して、自分のロジックで直接叩け。制御の自由度が段違いだ。'},
+    verdictHold:[
+      {name:'高額な自動化SaaS・構築代行',why:'自分で作れるなら、外注する意味がない。'},
+      {name:'凝ったベクトルDB・RAG基盤の早すぎる導入',why:'本当に必要になってから組め。先に作っても使わなければ意味がない。'}
     ],
-    recipe:[
-      '今の課題を「API単体で解けるか」「複数処理を組み合わせる必要があるか」で切り分ける',
-      '既製ノーコードツールを使うより、直接APIを叩いた方が速い部分から着手する',
-      'スケジュール実行・エラー通知まで組んで、監視しなくても回る状態にする'
-    ]
+    tryNext:'API経由で、今ノーコードツールでやってる処理を1つだけ、自作コードに置き換えてみろ。',
+    failurePatterns:[
+      '凝った仕組みを作ろうとして"車輪の再発明"に時間を溶かす（既にあるものを一から作り直す）',
+      '複数のAPIやフレームワークを同時に試して、どれも中途半端なまま終わる',
+      '既製のノーコードツールで十分な部分まで、こだわって自作しようとする'
+    ],
+    ladder:{position:'既製ツールより自作が有利な人。ただし"作りすぎ"に注意',warning:'何でも自分で作ろうとするな。既製ツールで十分な部分は既製ツールのままでいい。'},
+    tiers:[
+      {rank:'今月試すならこれ',name:'主要LLM API',price:'従量課金',desc:'1つの処理だけ、既製ツールから自作コードに置き換えてみる。'},
+      {rank:'慣れたら候補',name:'自作Python + スケジューラ',price:'サーバー代のみ',desc:'定期実行・大規模処理はここまで踏み込める。'},
+      {rank:'今は保留',name:'ベクトルDB・RAG基盤・構築代行',price:'-',desc:'本当に必要になるまで組むな。先に作っても宝の持ち腐れになる。'}
+    ],
+    checkpoint:'1週間後、自作コードに置き換えた処理が、既製ツールより明確に優れていると確認できたか？　そうでなければ、こだわりを捨てて既製ツールに戻していい。それは負けじゃない、判断が早いだけだ。'
   }
 };
 
-/* ---------- 目的（Q7）別・時短プロンプト集 ----------
-   2026-07-08改訂：RIASEC6分類（r/i/a/s/e/c）に合わせて再編。
-   旧data(データ整理・分析)は、リサーチ本文の再定義に基づき
-   「分析寄り」はi（リサーチ）へ、「事務整理寄り」はc（事務効率化）として新規に書き分けた。 */
-const GOAL_PROMPTS={
-  r:[ // Realistic：自動化スクリプト・AIエージェント開発
-    'このエラーメッセージの原因を、初心者にも分かる言葉で切り分けて。',
-    'この関数を、可読性を落とさずにパフォーマンス改善する案を出して。',
-    'このコードに、想定される例外ケースのテストを追加して。'
-  ],
-  i:[ // Investigative：専門リサーチ・データ分析
-    'このテーマについて、一次情報と二次情報を区別しながら要点を5つにまとめて。',
-    '競合3社の違いを、価格・機能・ターゲット層の3軸で比較表にして。',
-    'このデータの中から、異常値・外れ値だけを抽出する手順を説明して。'
-  ],
-  a:[ // Artistic：クリエイティブ・マルチメディア制作
-    'この文章を、読者が3秒で要点を掴める見出し構成に組み替えて。専門用語は平易な言葉に。',
-    'このSNS投稿文を3パターン（共感型／煽り型／データ提示型）で書き直して。',
-    '30秒のショート動画の構成案を、冒頭2秒で離脱させない工夫つきで出して。'
-  ],
-  s:[ // Social：AI活用型オンライン教育・導入サポート
-    'この操作手順を、AI初心者向けに1ステップずつ迷わない説明に書き直して。',
-    'このよくある質問（FAQ）を、専門用語を使わずに言い換えて。',
-    'このつまずきポイントを、初心者がやりがちなミスの例つきで解説して。'
-  ],
-  e:[ // Enterprising：AIマーケティング・収益化ディレクション
-    'このLPのキャッチコピーを、訴求軸を変えて3パターン出して。',
-    'この商品の強みを、ターゲット別（初心者向け／上級者向け）に2通り言語化して。',
-    'この記事の構成を、読者が最後まで読んで行動したくなる順番に組み替えて。'
-  ],
-  c:[ // Conventional：AI事務効率化・データベース管理運用
-    'この請求書・領収書の情報を、日付・金額・取引先の3項目に構造化して抽出して。',
-    'この文章の表記ゆれ（全角/半角・敬語の統一等）をチェックして直して。',
-    'このメール文面を、次回から使い回せる定型テンプレートの形に整理して。'
-  ]
+/* ---------- あんたのAI現在地（6分類・q11-13の回答から判定） ---------- */
+const STATUS_INFO={
+  beginner:{label:'完全初心者',desc:'まだ何にも課金していない、これから始める段階。焦って高いプランに手を出す必要はない。'},
+  freeStuck:{label:'無料プラン停滞中',desc:'無料の範囲では触っているけど、そこから先に進めていない状態。'},
+  lostInBilling:{label:'課金迷子',desc:'あれこれ課金しては使わなくなる、を繰り返している状態。'},
+  switching:{label:'乗り換え検討中',desc:'今使っているものが合っていない気がしていて、乗り換えを考えている状態。'},
+  automationDream:{label:'自動化に憧れているが実態が見えていない',desc:'「自動化したい」気持ちは強いけど、具体的に何をどうすればいいかが見えていない状態。'},
+  stuckOnNext:{label:'すでに使っているが次の一手が分からない',desc:'ちゃんと使えてはいるけど、次に何をすればもっと良くなるかが分からない状態。'}
 };
-
-/* ---------- 周辺ツール（実アフィリンク未確定・プレースホルダー） ---------- */
-const AFF_TOOLS=[
-  {name:'Notion',note:'ドキュメント・タスク管理の土台。AI機能もツール群と相性が良い。'},
-  {name:'n8n',note:'Difyより踏み込んだ自動化がしたくなった時の選択肢。'},
-  {name:'ElevenLabs',note:'音声生成。動画・音声コンテンツを作るなら候補に。'},
-  {name:'InVideo',note:'動画編集の自動化。ショート動画量産に。'}
-];
+function skpDetermineStatus(r){
+  if(skpA.q11==='none' && skpA.q13==='none') return 'beginner';
+  if(skpA.q11==='none') return 'freeStuck';
+  if(skpA.q13==='many') return 'lostInBilling';
+  if(skpA.q12==='yes') return 'switching';
+  if(r.Z>2 && r.T<0) return 'automationDream';
+  return 'stuckOnNext';
+}
+/* ---------- 既存課金の残す/切る/様子見 判断（q11-13から動的生成） ---------- */
+function skpExistingVerdict(){
+  if(skpA.q11==='none') return '<b>既存課金：なし。</b>まずは上の「今すぐ課金していいもの」から試せ。';
+  if(skpA.q12==='yes') return '<b>既存課金の判断：切れ。</b>「合ってないかも」と分かってるものを続けるのは、一番もったいない金の使い方だ。';
+  if(skpA.q13==='many') return '<b>既存課金の判断：一度全部書き出せ。</b>課金しては使わなくなる、を繰り返してきたなら、今契約してるものをこの診断のタイプに合わないものから切れ。';
+  return '<b>既存課金の判断：様子見でいい。</b>上の「今すぐ課金していいもの」と一致しているなら継続、一致していないなら次の更新月で見直せ。';
+}
 
 /* ---------- スコア集計 ---------- */
 function skpSum(axis){
@@ -499,33 +568,60 @@ function skpRestart(){
   skpShow('s0');
 }
 
-/* ---------- レポート組み立て（§10-C・7セクション） ---------- */
+/* ---------- レポート組み立て（2026-07-08 全面再設計・7セクション） ---------- */
 function skpBuildReport(){
   var r=skpDetermine();
   var T=TYPES_PRO[r.primary];
+  var status=skpDetermineStatus(r);
+  var S=STATUS_INFO[status];
 
-  // 1. 表紙
+  // 表紙
   var typeLabel=T.name+(r.secondary ? '（'+TYPES_PRO[r.secondary].name+'寄りの傾向あり）':'');
   document.getElementById('rep-type-name').textContent=typeLabel;
   var today=new Date();
   document.getElementById('rep-meta').textContent='回答18問・'+today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
 
-  // 2. 結果詳細
+  // 1. あんたのAI現在地
+  document.getElementById('status-lbl').textContent=S.label;
+  document.getElementById('status-desc').textContent=S.desc;
   var tPct=Math.max(0,Math.min(100, (r.T+5)/12*100));
   var zPct=Math.max(0,Math.min(100, (r.Z+6)/13*100));
   document.getElementById('bar-t').style.width=tPct+'%';
   document.getElementById('bar-z').style.width=zPct+'%';
   document.getElementById('txt-t').textContent=(r.T>2?'コード派寄り':(r.T<-2?'GUI派寄り':'GUIとコードの中間'));
   document.getElementById('txt-z').textContent=(r.Z>2?'ズボラ・即効重視':(r.Z<-2?'マメ・作り込み志向':'状況次第で両方いける'));
+
+  // 2. サキの結論
   document.getElementById('saki-summary').textContent=T.summary;
+  document.getElementById('verdict-now-name').textContent=T.verdictNow.name;
+  document.getElementById('verdict-now-price').textContent=T.verdictNow.price;
+  document.getElementById('verdict-now-why').textContent=T.verdictNow.why;
+  var holdWrap=document.getElementById('verdict-hold-list');
+  holdWrap.innerHTML='';
+  T.verdictHold.forEach(function(h){
+    var div=document.createElement('div');
+    div.className='verdict-hold';
+    div.innerHTML='<div class="v-lbl">🛑 今はまだ課金しなくていいもの</div><div class="v-name">'+h.name+'</div><div class="v-why">'+h.why+'</div>';
+    holdWrap.appendChild(div);
+  });
+  document.getElementById('try-next-txt').textContent=T.tryNext;
+  document.getElementById('existing-verdict').innerHTML=skpExistingVerdict();
 
-  var mismatchNote='';
-  if(skpA.q12==='yes'){ mismatchNote='今使ってるツール、「合ってないかも」って自分で気づいてるなら、もう答えは出てる。この診断を乗り換えの判断材料にしろ。'; }
-  else if(skpA.q13==='many'){ mismatchNote='課金しては使わなくなる、を何度もやってきたなら、今度は"型に合ってるか"から選べ。行き当たりばったりはもう終わりにしろ。'; }
-  else { mismatchNote='回答の傾向（技術力T='+r.T+'・面倒くさがり度Z='+r.Z+'）から、この型を導き出した。境界ギリギリの項目は「両にらみ」として上に併記してある。'; }
-  document.getElementById('why-box').innerHTML='<b>なぜこう出たか：</b>'+mismatchNote;
+  // 3. 失敗パターン
+  var failWrap=document.getElementById('fail-list');
+  failWrap.innerHTML='';
+  T.failurePatterns.forEach(function(p){
+    var li=document.createElement('li');
+    li.className='fail-item';
+    li.textContent=p;
+    failWrap.appendChild(li);
+  });
 
-  // 3. 課金構成図（予算Q14/初期投資Q15で表示段数を出し分け）
+  // 4. 自動化との距離感
+  document.getElementById('ladder-pos').textContent=T.ladder.position;
+  document.getElementById('ladder-warn').textContent=T.ladder.warning;
+
+  // 5. 課金優先順位（予算Q14で表示段数を出し分け。3位＝今は保留は常にその旨を明記）
   var tierWrap=document.getElementById('tier-list');
   tierWrap.innerHTML='';
   var showTiers = (skpA.q14==='tiny') ? 1 : (skpA.q14==='small' ? 2 : 3);
@@ -534,46 +630,15 @@ function skpBuildReport(){
     var div=document.createElement('div');
     div.className='tier'+(locked?' locked':'');
     div.innerHTML='<div class="t-top"><span class="t-rank">'+tier.rank+'</span><span class="t-price">'+tier.price+'</span></div>'+
-      '<div class="t-name">'+tier.name+'</div><div class="t-desc">'+tier.desc+(locked?'（今の予算感だと後回しでいい）':'')+'</div>';
+      '<div class="t-name">'+tier.name+'</div><div class="t-desc">'+tier.desc+'</div>';
     tierWrap.appendChild(div);
   });
 
-  // 4. 自動化レシピ
-  var recWrap=document.getElementById('recipe-list');
-  recWrap.innerHTML='';
-  T.recipe.forEach(function(step){
-    var div=document.createElement('div');
-    div.className='step-item';
-    div.textContent=step;
-    recWrap.appendChild(div);
-  });
+  // 6. 1週間後の判断基準
+  document.getElementById('checkpoint-txt').textContent=T.checkpoint;
 
-  // 5. 時短プロンプト集（Q7の目的で出し分け）
-  var promptWrap=document.getElementById('prompt-list');
-  promptWrap.innerHTML='';
-  var prompts=GOAL_PROMPTS[skpA.q7] || GOAL_PROMPTS.a;
-  prompts.forEach(function(p){
-    var div=document.createElement('div');
-    div.className='prompt-box';
-    div.textContent=p;
-    promptWrap.appendChild(div);
-  });
-
-  // 6. 周辺ツール（実リンクは未確定のためプレースホルダー）
-  var affWrap=document.getElementById('aff-list');
-  affWrap.innerHTML='';
-  AFF_TOOLS.forEach(function(t){
-    var div=document.createElement('div');
-    div.className='aff-row';
-    div.innerHTML='<div><div class="a-name">'+t.name+'</div><div class="a-note">'+t.note+'</div></div><span class="a-link">準備中</span>';
-    affWrap.appendChild(div);
-  });
-
-  // 7. 困ったら（サポート必要度S軸が高い時だけ表示）
-  document.getElementById('support-sec').style.display = (r.S>=2) ? 'block' : 'none';
-
-  gtag('event','ai_diag_pro_complete',{type:r.primary,secondary:r.secondary||'',T:r.T,Z:r.Z,S:r.S,goal:skpA.q7,budget:skpA.q14});
-  try{ localStorage.setItem('soam_ai_diag_pro',JSON.stringify({type:r.primary,secondary:r.secondary,ts:Date.now()})); }catch(e){}
+  gtag('event','ai_diag_pro_complete',{type:r.primary,secondary:r.secondary||'',status:status,T:r.T,Z:r.Z,S:r.S,budget:skpA.q14});
+  try{ localStorage.setItem('soam_ai_diag_pro',JSON.stringify({type:r.primary,secondary:r.secondary,status:status,ts:Date.now()})); }catch(e){}
   skpShow('s3');
 }
 </script>
