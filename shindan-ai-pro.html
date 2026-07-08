@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>【準備中・非公開】AIツール診断 有料本編｜サキ</title>
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<!-- GA4: 無料版と同一プロパティ（暫定） -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LDQ9J4C8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8LDQ9J4C8B');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+  font-family:'M PLUS Rounded 1c','Noto Sans JP',sans-serif;
+  background:radial-gradient(ellipse at 50% -10%, #1e2340 0%, #161a2e 45%, #10131f 100%);
+  color:#dfe3ee; line-height:1.7; -webkit-font-smoothing:antialiased; min-height:100%;
+}
+.wrap{max-width:460px;margin:0 auto;min-height:100%;padding:24px 16px 48px}
+.hdr{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.hdr-av{width:42px;height:42px;border-radius:50%;background:#20243c;border:1.5px solid #C9A96A;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.hdr-av img{width:118%;height:118%;object-fit:cover;object-position:50% 22%}
+.hdr-name{font-size:13px;font-weight:800;color:#C9A96A}
+.hdr-beta{font-size:10px;font-weight:800;padding:3px 9px;border-radius:999px;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;letter-spacing:1px;margin-left:auto}
+.dev-banner{background:#3a1a1a;border:1.5px solid #a33;border-radius:14px;padding:12px 14px;margin-bottom:16px;font-size:11.5px;color:#f2b8b8;line-height:1.7}
+.card{background:#1b2038;border:1.5px solid #2e3557;border-radius:26px;padding:26px 22px;box-shadow:0 12px 34px rgba(0,0,0,.35);position:relative}
+.step{display:none;animation:fade .3s ease}
+.step.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.badge{display:inline-block;font-size:11px;font-weight:800;padding:5px 14px;border-radius:999px;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;letter-spacing:.5px;margin-bottom:14px}
+.h{font-size:18px;font-weight:800;color:#f2f4fb;margin-bottom:8px;line-height:1.6}
+.sub{font-size:12.5px;color:#9aa2c0;margin-bottom:18px;line-height:1.8}
+.opt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:16px 18px;margin-bottom:11px;border-radius:18px;border:1.5px solid #2e3557;background:#212845;color:#e7ebf6;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;line-height:1.5}
+.opt:active{transform:scale(.97)}
+@media(hover:hover){.opt:hover{border-color:#C9A96A;box-shadow:0 4px 14px rgba(201,169,106,.2);transform:translateY(-1px)}}
+.opt .dot{width:8px;height:8px;border-radius:50%;background:#C9A96A;flex-shrink:0}
+.progress{display:flex;gap:4px;margin-bottom:18px;justify-content:center;flex-wrap:wrap}
+.progress span{width:7px;height:7px;border-radius:50%;background:#2e3557;transition:.2s}
+.progress span.done{background:linear-gradient(135deg,#C9A96A,#E0C48A);box-shadow:0 0 0 2px rgba(201,169,106,.18)}
+.section-tag{font-size:10.5px;font-weight:800;color:#C9A96A;letter-spacing:1px;margin-bottom:6px;text-align:center}
+.intro-copy{font-size:13px;color:#c2c8de;line-height:1.9;margin-bottom:20px;background:#20243c;padding:16px 18px;border-radius:16px;border:1px solid #2e3557}
+.intro-copy b{color:#E0C48A}
+.start-btn{width:100%;padding:16px;border:none;border-radius:18px;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;font-family:inherit;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(201,169,106,.3)}
+.start-btn:active{transform:scale(.98)}
+.back{background:none;border:none;color:#7d85a6;font-size:12px;text-decoration:underline;cursor:pointer;font-family:inherit;padding:0 0 14px;display:block}
+.disc{font-size:10px;color:#5f667f;line-height:1.65;margin-top:14px;text-align:center}
+
+/* ===== レポート（結果） ===== */
+.rep-cover{text-align:center;padding:30px 16px 24px;border-radius:22px;background:linear-gradient(135deg,#20243c,#2a2f4e);border:1.5px solid #C9A96A;margin-bottom:18px}
+.rep-cover .r-av{width:88px;height:88px;margin:0 auto 12px;border-radius:50%;overflow:hidden;background:#161a2e;border:2px solid #C9A96A;display:flex;align-items:center;justify-content:center}
+.rep-cover .r-av img{width:118%;height:118%;object-fit:cover;object-position:50% 22%}
+.rep-cover .k{font-size:10.5px;color:#C9A96A;font-weight:800;letter-spacing:1.5px}
+.rep-cover .v{font-size:21px;font-weight:800;margin-top:8px;color:#f2f4fb;line-height:1.4}
+.rep-cover .meta{font-size:10.5px;color:#7d85a6;margin-top:10px}
+.sec{margin-bottom:22px}
+.sec-h{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#E0C48A;letter-spacing:.5px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #2e3557}
+.sec-h .n{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.saki-say{background:#20243c;border:1.5px solid #2e3557;border-left:3px solid #C9A96A;border-radius:14px;padding:15px 16px;margin-bottom:14px;font-size:13.5px;font-weight:700;color:#e7ebf6;line-height:1.85}
+.score-row{display:flex;gap:10px;margin-bottom:14px}
+.score-box{flex:1;background:#20243c;border:1px solid #2e3557;border-radius:14px;padding:12px 14px}
+.score-box .lbl{font-size:10px;color:#9aa2c0;font-weight:800;margin-bottom:6px}
+.score-bar-bg{height:8px;border-radius:8px;background:#2e3557;overflow:hidden;margin-bottom:6px}
+.score-bar-fg{height:100%;background:linear-gradient(90deg,#C9A96A,#E0C48A);border-radius:8px}
+.score-box .txt{font-size:11.5px;color:#c2c8de;font-weight:700}
+.why-box{background:#181c30;border:1px dashed #3a4066;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:11.5px;color:#9aa2c0;line-height:1.8}
+.why-box b{color:#c2c8de}
+.tier{background:#20243c;border:1px solid #2e3557;border-radius:16px;padding:14px 16px;margin-bottom:10px}
+.tier.locked{opacity:.5}
+.tier .t-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.tier .t-rank{font-size:10px;font-weight:800;color:#161a2e;background:linear-gradient(135deg,#C9A96A,#E0C48A);padding:3px 10px;border-radius:999px}
+.tier .t-price{font-size:11px;color:#9aa2c0;font-weight:800}
+.tier .t-name{font-size:14px;font-weight:800;color:#f2f4fb;margin-bottom:5px}
+.tier .t-desc{font-size:12px;color:#c2c8de;line-height:1.75}
+.step-list{counter-reset:st}
+.step-item{position:relative;padding:14px 16px 14px 44px;margin-bottom:10px;background:#20243c;border:1px solid #2e3557;border-radius:14px;font-size:12.5px;color:#e7ebf6;line-height:1.75}
+.step-item::before{counter-increment:st;content:counter(st);position:absolute;left:14px;top:14px;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.prompt-box{background:#181c30;border:1px solid #2e3557;border-radius:12px;padding:12px 14px;margin-bottom:9px;font-size:12px;color:#c2c8de;line-height:1.7;font-family:'Noto Sans JP',monospace;position:relative}
+.prompt-box .p-copy{position:absolute;right:10px;top:10px;font-size:10px;color:#C9A96A;font-weight:800;cursor:pointer;background:none;border:1px solid #C9A96A;border-radius:8px;padding:3px 8px}
+.aff-row{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#20243c;border:1px solid #2e3557;border-radius:12px;padding:11px 14px;margin-bottom:8px}
+.aff-row .a-name{font-size:12.5px;font-weight:800;color:#f2f4fb}
+.aff-row .a-note{font-size:10.5px;color:#9aa2c0}
+.aff-row .a-link{font-size:11px;font-weight:800;color:#161a2e;background:linear-gradient(135deg,#C9A96A,#E0C48A);padding:6px 12px;border-radius:999px;white-space:nowrap}
+.pending-note{font-size:9.5px;color:#a08e63;margin-top:2px}
+.support-box{background:linear-gradient(135deg,#26210f,#2f2811);border:1.5px dashed #C9A96A;border-radius:16px;padding:16px 18px}
+.support-box .s-h{font-size:13px;font-weight:800;color:#E0C48A;margin-bottom:8px}
+.support-box .s-txt{font-size:12px;color:#d8cfae;line-height:1.8;margin-bottom:10px}
+.print-btn{width:100%;padding:15px;border:none;border-radius:18px;background:#0d0f18;color:#fff;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;border:1px solid #2e3557;margin-top:6px}
+.print-btn:active{transform:scale(.98)}
+.restart{width:100%;margin-top:10px;padding:13px;border-radius:16px;border:1.5px solid #C9A96A;background:none;color:#C9A96A;font-family:inherit;font-size:12.5px;font-weight:800;cursor:pointer}
+.footer-note{text-align:center;font-size:10.5px;color:#6b728f;margin-top:18px;line-height:1.7}
+.legal-note{font-size:9.5px;color:#5f667f;line-height:1.7;margin-top:16px;text-align:center;padding:0 4px}
+
+@media print{
+  body{background:#fff;color:#111}
+  .hdr,.dev-banner,.print-btn,.restart,.footer-note,.progress{display:none!important}
+  .card{border:none;box-shadow:none;background:#fff}
+  .rep-cover{background:#fff;border:2px solid #333}
+  .rep-cover .v{color:#111}
+  .sec-h{color:#333}
+  .saki-say,.tier,.step-item,.prompt-box,.aff-row,.why-box,.score-box,.support-box{background:#f7f7f7;border-color:#ccc;color:#222}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div class="hdr-av"><img src="assets/saki/saki_mascot_v1.png" alt="サキ"></div>
+    <div class="hdr-name">サキ</div>
+    <div class="hdr-beta">有料本編 β</div>
+  </div>
+
+  <div class="dev-banner">
+    ⚠️ このページは開発中の非公開プレビューです（<code>noindex</code>設定・どこからもリンクされていません）。決済導線はまだ無く、そのまま一般公開すると有料コンテンツが無料流出します。P3（Stripe連携）まで手渡し・社内確認限定で使ってください。
+  </div>
+
+  <div class="card">
+
+    <div class="step active" id="s0">
+      <div class="badge">⚡ 18問・約3分で分かる</div>
+      <div class="h">あんた専用の"AIツール課金構成図"を作る。</div>
+      <div class="intro-copy">さっきの7問は大枠だった。ここから先は本気の18問。<br><br>
+      技術力・時間の使い方・目的・今の課金状況・予算・サポートの要不要——全部聞く。面倒くさいと思うだろ？<br><br>
+      でもな、<b>質問が浅いと、答えも浅くなる</b>。あんたの状況にちゃんと刺さる設計図がほしいなら、この18問はサボれない。<br><br>
+      答え終わったら、あんた専用の「課金構成図」「24時間自動化レシピ」「時短プロンプト集」を1本の診断書にまとめて渡す。</div>
+      <button class="start-btn" onclick="skpStart()">本気の診断をはじめる ⚡</button>
+      <div class="disc">※これは有料本編相当のコンテンツです。金額の断定・収入の保証は一切しません（目安・可能性の提示に留めます）。</div>
+    </div>
+
+    <div id="q-steps"></div>
+
+    <div class="step" id="s3">
+      <div class="section-tag">1 / 7　表紙</div>
+      <div class="rep-cover">
+        <div class="r-av"><img src="assets/saki/saki_mascot_v1.png" alt="サキ"></div>
+        <div class="k">サキの診断書</div>
+        <div class="v" id="rep-type-name">-</div>
+        <div class="meta" id="rep-meta">-</div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h"><span class="n">2</span>結果詳細</div>
+        <div class="score-row">
+          <div class="score-box">
+            <div class="lbl">技術力（T）</div>
+            <div class="score-bar-bg"><div class="score-bar-fg" id="bar-t" style="width:50%"></div></div>
+            <div class="txt" id="txt-t">-</div>
+          </div>
+          <div class="score-box">
+            <div class="lbl">面倒くさがり度（Z）</div>
+            <div class="score-bar-bg"><div class="score-bar-fg" id="bar-z" style="width:50%"></div></div>
+            <div class="txt" id="txt-z">-</div>
+          </div>
+        </div>
+        <div class="saki-say" id="saki-summary">-</div>
+        <div class="why-box" id="why-box">-</div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h"><span class="n">3</span>課金構成図</div>
+        <div id="tier-list"></div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h"><span class="n">4</span>自動化レシピ</div>
+        <div class="step-list" id="recipe-list"></div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h"><span class="n">5</span>時短プロンプト集</div>
+        <div id="prompt-list"></div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h"><span class="n">6</span>周辺ツール</div>
+        <div id="aff-list"></div>
+        <div class="pending-note">※実アフィリンクは出稿確定後に差し込み（現在プレースホルダー）</div>
+      </div>
+
+      <div class="sec" id="support-sec" style="display:none">
+        <div class="sec-h"><span class="n">7</span>困ったら</div>
+        <div class="support-box">
+          <div class="s-h">セットアップ、丸投げしたい？</div>
+          <div class="s-txt">あんたは「自分でやり切る」より「頼れる相手がいる」方が向いてる。無理に一人で抱えるな。構築代行の相談窓口は現在準備中——問い合わせ導線は後日ここに追加する。</div>
+        </div>
+      </div>
+
+      <button class="print-btn" onclick="window.print()">🖨 このレポートを保存する（PDF）</button>
+      <button class="restart" onclick="skpRestart()">最初からやり直す</button>
+      <div class="legal-note">本診断は収入・成果を保証するものではありません。ツール名・料金は変動するため最新情報は各公式サイトでご確認ください。</div>
+    </div>
+
+  </div>
+  <div class="footer-note">SOAM CREATIVE｜AI・ビジネス・お金の情報メディア<br>案内役：サキ</div>
+</div>
+
+<script>
+/* =========================================================================
+   AI副業診断（サキ）有料本編・エンジン
+   一次ソース：副業診断_設計枠組み_2026-07-08.md §10（質問18問・判定ロジック・PDF7セクション）
+   設計方針：データ（QSET_PRO/TYPES_PRO/GOAL_PROMPTS/AFF_TOOLS）とエンジン（採点・分岐・描画関数）を分離。
+   これは「金型」の複製フェーズ（美容版等）で、データ部分だけ差し替えれば良いようにするため
+   （§11-C：エンジン=80%共通・データ=20%業種差し替え）。
+   簡略化した点：設計書§10-A Q7は「複数可」だが、既存の無料版と同じ単一選択タップ式フローを
+   維持するため単一選択に簡略化した（要件未確定の複数選択UIを推測実装しない）。
+   ========================================================================= */
+
+/* ---------- 18問（SJT形式） ---------- */
+const QSET_PRO=[
+  // 技術リテラシー（T軸）
+  {key:'q1',axis:'T',text:'使ったことないツールの設定画面を開いた。最初にどうする？',opts:[
+    {label:'全項目触って挙動を確認する',v:2},
+    {label:'使い方を検索して、手順どおりに進める',v:1},
+    {label:'説明動画やスクショを探す',v:0},
+    {label:'そっ閉じ。誰かに設定してほしい',v:-1}]},
+  {key:'q2',axis:'T',text:'「APIキーを発行して環境変数に入れて」と言われたら？',opts:[
+    {label:'普通にやれる',v:3},
+    {label:'調べればやれる',v:1},
+    {label:'単語だけでしんどい',v:-1},
+    {label:'日本語でお願いしたい',v:-2}]},
+  {key:'q3',axis:'T',text:'赤いエラーが出て処理が止まった。手は？',opts:[
+    {label:'エラー文を読んで原因を切り分ける',v:2},
+    {label:'コピペしてAIに聞く',v:1},
+    {label:'リロードしてみる。ダメなら諦める',v:-1},
+    {label:'壊れたと思ってやめる',v:-2}]},
+  // 面倒くさがり度・時間（Z軸）
+  {key:'q4',axis:'Z',text:'どっちが近い？',opts:[
+    {label:'毎日1〜2時間の手作業で月3万。手を動かすのは苦じゃない',v:-2},
+    {label:'初期設定だけ頑張れば、あとは寝てても自動でいい',v:1},
+    {label:'設定すら面倒。今すぐ楽できる形がいい',v:3}]},
+  {key:'q5',axis:'Z',text:'毎週AI副業に使える時間は？',opts:[
+    {label:'週10時間以上',v:-2},
+    {label:'週末中心に3〜5時間',v:0},
+    {label:'隙間時間で1〜2時間だけ',v:2}]},
+  {key:'q6',axis:'Z',text:'一度作った仕組みのメンテ、どう感じる？',opts:[
+    {label:'改善するの好き。むしろ楽しい',v:-2},
+    {label:'必要なら最小限やる',v:0},
+    {label:'正直、二度と触りたくない',v:2}]},
+  // 目的（出し分け変数・単一選択に簡略化）
+  {key:'q7',axis:'goal',text:'AIで一番やりたいことは、どれに近い？',opts:[
+    {label:'文章・記事・SNS投稿を作る',v:'content'},
+    {label:'画像・動画・デザインを作る',v:'visual'},
+    {label:'データ整理・分析をする',v:'data'},
+    {label:'アプリ・ツールを開発する',v:'dev'},
+    {label:'リサーチ・情報収集を効率化する',v:'research'}]},
+  {key:'q8',axis:'audience',text:'それは、誰のため？',opts:[
+    {label:'自分の副業の売上のため',v:'income'},
+    {label:'今の仕事の効率化のため',v:'job'},
+    {label:'発信・フォロワー集めのため',v:'brand'},
+    {label:'正直、まだ決まってない',v:'unclear'}]},
+  {key:'q9',axis:'output',text:'できたものは、どこに出す？',opts:[
+    {label:'SNS',v:'sns'},
+    {label:'ブログ・note',v:'blog'},
+    {label:'クライアントへの納品物',v:'client'},
+    {label:'社内・自分用',v:'internal'}]},
+  {key:'q10',axis:'outcome',text:'これが叶ったら一番うれしいのは？',opts:[
+    {label:'手作業がゼロになること',v:'zero'},
+    {label:'アウトプットの質が一段上がること',v:'quality'},
+    {label:'アウトプットの量が何倍にもなること',v:'volume'},
+    {label:'新しい収入源になること',v:'income'}]},
+  // 現状の課金・満足度
+  {key:'q11',axis:'spend',text:'今、AIツールに月いくら払ってる？',opts:[
+    {label:'0円（無料だけ）',v:'none'},
+    {label:'〜3,000円くらい',v:'low'},
+    {label:'3,000〜1万円くらい',v:'mid'},
+    {label:'1万円以上',v:'high'}]},
+  {key:'q12',axis:'mismatch',text:'今使ってるツール、正直「合ってないかも」と思うものは？',opts:[
+    {label:'ある。乗り換えたい',v:'yes'},
+    {label:'なんとなくモヤモヤしてる',v:'vague'},
+    {label:'特にない',v:'no'},
+    {label:'まだ何も使ってない',v:'none'}]},
+  {key:'q13',axis:'churn',text:'課金したけど、結局使わなくなったツールは？',opts:[
+    {label:'何個もある',v:'many'},
+    {label:'1〜2個ある',v:'few'},
+    {label:'ない（これから始める）',v:'none'}]},
+  // 予算
+  {key:'q14',axis:'budget',text:'毎月AIに回せる上限は、正直どのくらい？',opts:[
+    {label:'〜2,000円',v:'tiny'},
+    {label:'〜5,000円',v:'small'},
+    {label:'〜1万円',v:'mid'},
+    {label:'上限は気にしない',v:'open'}]},
+  {key:'q15',axis:'invest',text:'初期投資はどこまでできる？',opts:[
+    {label:'月額以外は出したくない',v:'none'},
+    {label:'数千円くらいなら',v:'small'},
+    {label:'1〜2万円くらいなら',v:'mid'},
+    {label:'必要なら、それ以上でも投資する',v:'high'}]},
+  // サポート必要度（S軸）
+  {key:'q16',axis:'S',text:'作業に詰まった時、どうする？',opts:[
+    {label:'自分で調べ倒す',v:-1},
+    {label:'少し調べて無理なら人に聞く',v:1},
+    {label:'最初から聞ける人がほしい',v:2}]},
+  {key:'q17',axis:'S',text:'手順書どおりに進めるの、得意？',opts:[
+    {label:'得意',v:-1},
+    {label:'だいたいできる',v:0},
+    {label:'途中で分からなくなりがち',v:2}]},
+  {key:'q18',axis:'S',text:'「全部セットアップして渡してほしい」って思う？',opts:[
+    {label:'いや、自分でやりたい',v:-2},
+    {label:'半々かな',v:0},
+    {label:'正直、丸投げしたい',v:2}]}
+];
+
+/* ---------- 状態 ---------- */
+const skpA={};
+QSET_PRO.forEach(function(q){skpA[q.key]=null;});
+
+/* ---------- 4タイプ定義（推奨ツール・段階別課金構成・自動化レシピ） ---------- */
+const TYPES_PRO={
+  A:{
+    name:'即席スマート型',axisLabel:'GUI派 × 即効タイパ',
+    summary:'あんたはガチの仕組み作りに向いてない。それでいい。時間をかけずに、今あるAIを使い倒すのが最短ルートだ。凝った自動化に手を出すと、たぶん途中で投げる。',
+    tiers:[
+      {rank:'1位・必須',name:'ChatGPT Plus',price:'月20ドル前後',desc:'まずこれ1本。Custom GPTsに普段の作業を覚えさせるだけで、あんたの"面倒"の8割は消える。'},
+      {rank:'2位・慣れたら',name:'NotebookLM（無料）',price:'無料',desc:'資料の要約・整理はこっちに任せる。ChatGPTと役割を分けると迷わなくなる。'},
+      {rank:'3位・応用',name:'Notion AI',price:'既存Notionに追加課金',desc:'メモやタスク管理を既にNotionでやってるなら、AI機能を足すだけで二度手間が消える。'}
+    ],
+    recipe:[
+      '普段よくやる作業を1つ選ぶ（例：SNS投稿文を考える）',
+      'ChatGPTのCustom GPTsに、その作業の「いつもの型」を教え込む',
+      '次からはそのGPTに投げるだけ。仕組みを作る手間はゼロ'
+    ]
+  },
+  B:{
+    name:'自動仕組み構築型',axisLabel:'GUI派 × 作り込める',
+    summary:'コードは書けない。でも時間をかけてでも"寝てても回る仕組み"を作りたいあんたは、実は一番"伸びしろ"がでかいタイプだ。順番さえ間違えなきゃ、ノーコードで本当に自動化できる。',
+    tiers:[
+      {rank:'1位・必須',name:'Dify（ノーコードワークフロー）',price:'無料枠あり／本格運用は月20ドル前後〜',desc:'AIの処理をGUIで線で繋ぐだけ。まずはここから。プログラミングは要らない。'},
+      {rank:'2位・慣れたら',name:'Make.com',price:'無料枠あり／月9ドル前後〜',desc:'SNS投稿・記事更新・通知など「時間で動く」自動化はこっちが得意。Difyと組み合わせる。'},
+      {rank:'3位・応用',name:'各種LLM API（従量課金）',price:'使った分だけ',desc:'DifyやMakeの中でAI処理を呼ぶ時の裏側。慣れてきたら直接API連携も視野に。'}
+    ],
+    recipe:[
+      'まず1つの作業だけをDifyでワークフロー化する（欲張って全部やろうとしない）',
+      'うまく回ったら、Make.comの「タイマー」機能で定期実行に繋ぐ',
+      '寝てる間・仕事中も、SNS投稿や記事更新が勝手に進む状態を作る'
+    ]
+  },
+  C:{
+    name:'高速開発型',axisLabel:'コード派 × 即効タイパ',
+    summary:'あんたは手を動かせる側。だったら"作業を減らす"んじゃなく"コードを書く時間ごと"AIに投げろ。ボトルネックは技術じゃなく手数だ。',
+    tiers:[
+      {rank:'1位・必須',name:'Claude Code',price:'Claude Pro/Max内で利用可',desc:'ターミナルで動く自律型AI。複数ファイルの改修を一気に任せられる。'},
+      {rank:'2位・慣れたら',name:'Cursor Pro',price:'月20ドル前後',desc:'日々のコーディングはこっちのAI補完で加速。Claude Codeと役割を分ける。'},
+      {rank:'3位・応用',name:'GitHub Actions等のCI/CD',price:'無料枠中心',desc:'テスト・デプロイまで自動化すると、書いたコードが勝手に本番へ届く状態になる。'}
+    ],
+    recipe:[
+      '手を動かす前に、Claude Codeに「やりたいこと」を要件として渡す',
+      'まとまった作業（機能追加・バグ修正）を丸ごと任せて、自分は方針とレビューに専念する',
+      '定期処理はcronやGitHub Actionsに繋いで、判断以外を自動化する'
+    ]
+  },
+  D:{
+    name:'フルスタック型',axisLabel:'コード派 × 作り込める',
+    summary:'あんたはもう、この診断より先に行ってる側だ。既製ツールじゃ物足りないだろ。API直で叩いて、自分専用の仕組みを組め。強いて言うなら車輪の再発明だけ気をつけろ。',
+    tiers:[
+      {rank:'1位・必須',name:'主要LLM API（Claude/GPT等）',price:'従量課金',desc:'既製のGUIツールを介さず、自分のロジックで直接叩く。制御の自由度が段違い。'},
+      {rank:'2位・慣れたら',name:'自作Python + スケジューラ',price:'サーバー代のみ',desc:'定期実行・大規模処理は自作スクリプトで。Dify API等と組み合わせても良い。'},
+      {rank:'3位・応用',name:'ベクトルDB・RAG基盤',price:'規模による',desc:'独自データを持たせた高度な自動化がしたくなったら、ここまで踏み込める。'}
+    ],
+    recipe:[
+      '今の課題を「API単体で解けるか」「複数処理を組み合わせる必要があるか」で切り分ける',
+      '既製ノーコードツールを使うより、直接APIを叩いた方が速い部分から着手する',
+      'スケジュール実行・エラー通知まで組んで、監視しなくても回る状態にする'
+    ]
+  }
+};
+
+/* ---------- 目的（Q7）別・時短プロンプト集 ---------- */
+const GOAL_PROMPTS={
+  content:[
+    'この文章を、読者が3秒で要点を掴める見出し構成に組み替えて。専門用語は平易な言葉に。',
+    'このSNS投稿文を3パターン（共感型／煽り型／データ提示型）で書き直して。',
+    '次の記事のアウトラインを、結論→理由→具体例→再結論の順で作って。'
+  ],
+  visual:[
+    'この画像の雰囲気を保ったまま、背景だけを差し替えたプロンプトを考えて。',
+    '30秒のショート動画の構成案を、冒頭2秒で離脱させない工夫つきで出して。',
+    'このデザイン案の改善点を、視線誘導の観点だけに絞って3つ挙げて。'
+  ],
+  data:[
+    'このデータの中から、異常値・外れ値だけを抽出する手順を説明して。',
+    'この表を、意思決定者が10秒で判断できるグラフの見せ方に変えて。',
+    '週次のこの数字の変化を、要因仮説つきで3行にまとめて。'
+  ],
+  dev:[
+    'このエラーメッセージの原因を、初心者にも分かる言葉で切り分けて。',
+    'この関数を、可読性を落とさずにパフォーマンス改善する案を出して。',
+    'このコードに、想定される例外ケースのテストを追加して。'
+  ],
+  research:[
+    'このテーマについて、一次情報と二次情報を区別しながら要点を5つにまとめて。',
+    '競合3社の違いを、価格・機能・ターゲット層の3軸で比較表にして。',
+    'この情報の中で、まだ裏付けが弱い主張はどれか指摘して。'
+  ]
+};
+
+/* ---------- 周辺ツール（実アフィリンク未確定・プレースホルダー） ---------- */
+const AFF_TOOLS=[
+  {name:'Notion',note:'ドキュメント・タスク管理の土台。AI機能もツール群と相性が良い。'},
+  {name:'n8n',note:'Difyより踏み込んだ自動化がしたくなった時の選択肢。'},
+  {name:'ElevenLabs',note:'音声生成。動画・音声コンテンツを作るなら候補に。'},
+  {name:'InVideo',note:'動画編集の自動化。ショート動画量産に。'}
+];
+
+/* ---------- スコア集計 ---------- */
+function skpSum(axis){
+  return QSET_PRO.filter(function(q){return q.axis===axis;})
+    .reduce(function(s,q){ return s + (typeof skpA[q.key]==='number' ? skpA[q.key] : 0); },0);
+}
+function skpDetermine(){
+  var T=skpSum('T'), Z=skpSum('Z'), S=skpSum('S');
+  var codeLeaning = T>2 ? true : (T<-2 ? false : 'boundary');
+  var zuboraLeaning = Z>2 ? true : (Z<-2 ? false : 'boundary');
+  function pick(code,zubora){
+    if(code && zubora) return 'C';
+    if(code && !zubora) return 'D';
+    if(!code && zubora) return 'A';
+    return 'B';
+  }
+  var primaryCode = codeLeaning==='boundary' ? (T>=0) : codeLeaning;
+  var primaryZubora = zuboraLeaning==='boundary' ? (Z>=0) : zuboraLeaning;
+  var primary = pick(primaryCode,primaryZubora);
+  var boundary = (codeLeaning==='boundary' || zuboraLeaning==='boundary');
+  var secondary = null;
+  if(boundary){
+    // 境界にかかっている軸だけを反転させた"もう一つの可能性"
+    var altCode = codeLeaning==='boundary' ? !primaryCode : primaryCode;
+    var altZubora = zuboraLeaning==='boundary' ? !primaryZubora : primaryZubora;
+    var alt = pick(altCode,altZubora);
+    if(alt!==primary) secondary=alt;
+  }
+  return {T:T,Z:Z,S:S,primary:primary,secondary:secondary,boundary:boundary};
+}
+
+/* ---------- 質問レンダリング ---------- */
+function skpRenderQuestions(){
+  var wrap=document.getElementById('q-steps');
+  wrap.innerHTML='';
+  QSET_PRO.forEach(function(q,i){
+    var n=i+1;
+    var step=document.createElement('div');
+    step.className='step';
+    step.id='pq'+n;
+    var dots='';
+    for(var k=0;k<QSET_PRO.length;k++){ dots+='<span'+(k<n?' class="done"':'')+'></span>'; }
+    step.innerHTML='<div class="progress">'+dots+'</div><div class="h">'+q.text+'</div><div class="opts"></div>';
+    wrap.appendChild(step);
+    var optsWrap=step.querySelector('.opts');
+    q.opts.forEach(function(o){
+      var b=document.createElement('button');
+      b.className='opt';
+      b.innerHTML='<span class="dot"></span>'+o.label;
+      b.onclick=function(){skpAnswer(q.key,o.v,i);};
+      optsWrap.appendChild(b);
+    });
+  });
+}
+
+/* ---------- フロー制御 ---------- */
+function skpShow(id){
+  document.querySelectorAll('.step').forEach(function(s){s.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function skpStart(){
+  skpRenderQuestions();
+  gtag('event','ai_diag_pro_start');
+  skpShow('pq1');
+}
+function skpAnswer(key,v,idx){
+  skpA[key]=v;
+  gtag('event','ai_diag_pro_answer',{q:key});
+  if(idx < QSET_PRO.length-1){ skpShow('pq'+(idx+2)); }
+  else { skpBuildReport(); }
+}
+function skpRestart(){
+  QSET_PRO.forEach(function(q){skpA[q.key]=null;});
+  skpShow('s0');
+}
+
+/* ---------- レポート組み立て（§10-C・7セクション） ---------- */
+function skpBuildReport(){
+  var r=skpDetermine();
+  var T=TYPES_PRO[r.primary];
+
+  // 1. 表紙
+  var typeLabel=T.name+(r.secondary ? '（'+TYPES_PRO[r.secondary].name+'寄りの傾向あり）':'');
+  document.getElementById('rep-type-name').textContent=typeLabel;
+  var today=new Date();
+  document.getElementById('rep-meta').textContent='回答18問・'+today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+
+  // 2. 結果詳細
+  var tPct=Math.max(0,Math.min(100, (r.T+5)/12*100));
+  var zPct=Math.max(0,Math.min(100, (r.Z+6)/13*100));
+  document.getElementById('bar-t').style.width=tPct+'%';
+  document.getElementById('bar-z').style.width=zPct+'%';
+  document.getElementById('txt-t').textContent=(r.T>2?'コード派寄り':(r.T<-2?'GUI派寄り':'GUIとコードの中間'));
+  document.getElementById('txt-z').textContent=(r.Z>2?'ズボラ・即効重視':(r.Z<-2?'マメ・作り込み志向':'状況次第で両方いける'));
+  document.getElementById('saki-summary').textContent=T.summary;
+
+  var mismatchNote='';
+  if(skpA.q12==='yes'){ mismatchNote='今使ってるツール、「合ってないかも」って自分で気づいてるなら、もう答えは出てる。この診断を乗り換えの判断材料にしろ。'; }
+  else if(skpA.q13==='many'){ mismatchNote='課金しては使わなくなる、を何度もやってきたなら、今度は"型に合ってるか"から選べ。行き当たりばったりはもう終わりにしろ。'; }
+  else { mismatchNote='回答の傾向（技術力T='+r.T+'・面倒くさがり度Z='+r.Z+'）から、この型を導き出した。境界ギリギリの項目は「両にらみ」として上に併記してある。'; }
+  document.getElementById('why-box').innerHTML='<b>なぜこう出たか：</b>'+mismatchNote;
+
+  // 3. 課金構成図（予算Q14/初期投資Q15で表示段数を出し分け）
+  var tierWrap=document.getElementById('tier-list');
+  tierWrap.innerHTML='';
+  var showTiers = (skpA.q14==='tiny') ? 1 : (skpA.q14==='small' ? 2 : 3);
+  T.tiers.forEach(function(tier,i){
+    var locked = i>=showTiers;
+    var div=document.createElement('div');
+    div.className='tier'+(locked?' locked':'');
+    div.innerHTML='<div class="t-top"><span class="t-rank">'+tier.rank+'</span><span class="t-price">'+tier.price+'</span></div>'+
+      '<div class="t-name">'+tier.name+'</div><div class="t-desc">'+tier.desc+(locked?'（今の予算感だと後回しでいい）':'')+'</div>';
+    tierWrap.appendChild(div);
+  });
+
+  // 4. 自動化レシピ
+  var recWrap=document.getElementById('recipe-list');
+  recWrap.innerHTML='';
+  T.recipe.forEach(function(step){
+    var div=document.createElement('div');
+    div.className='step-item';
+    div.textContent=step;
+    recWrap.appendChild(div);
+  });
+
+  // 5. 時短プロンプト集（Q7の目的で出し分け）
+  var promptWrap=document.getElementById('prompt-list');
+  promptWrap.innerHTML='';
+  var prompts=GOAL_PROMPTS[skpA.q7] || GOAL_PROMPTS.content;
+  prompts.forEach(function(p){
+    var div=document.createElement('div');
+    div.className='prompt-box';
+    div.textContent=p;
+    promptWrap.appendChild(div);
+  });
+
+  // 6. 周辺ツール（実リンクは未確定のためプレースホルダー）
+  var affWrap=document.getElementById('aff-list');
+  affWrap.innerHTML='';
+  AFF_TOOLS.forEach(function(t){
+    var div=document.createElement('div');
+    div.className='aff-row';
+    div.innerHTML='<div><div class="a-name">'+t.name+'</div><div class="a-note">'+t.note+'</div></div><span class="a-link">準備中</span>';
+    affWrap.appendChild(div);
+  });
+
+  // 7. 困ったら（サポート必要度S軸が高い時だけ表示）
+  document.getElementById('support-sec').style.display = (r.S>=2) ? 'block' : 'none';
+
+  gtag('event','ai_diag_pro_complete',{type:r.primary,secondary:r.secondary||'',T:r.T,Z:r.Z,S:r.S,goal:skpA.q7,budget:skpA.q14});
+  try{ localStorage.setItem('soam_ai_diag_pro',JSON.stringify({type:r.primary,secondary:r.secondary,ts:Date.now()})); }catch(e){}
+  skpShow('s3');
+}
+</script>
+</body>
+</html>
