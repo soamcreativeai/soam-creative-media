@@ -87,6 +87,7 @@ body{
 .restart{width:100%;margin-top:10px;padding:13px;border-radius:16px;border:1.5px solid #C9A96A;background:none;color:#C9A96A;font-family:inherit;font-size:12.5px;font-weight:800;cursor:pointer}
 .footer-note{text-align:center;font-size:10.5px;color:#6b728f;margin-top:18px;line-height:1.7}
 .disc{font-size:10px;color:#5f667f;line-height:1.65;margin-top:14px;text-align:center}
+.cite-note{font-size:9.5px;color:#6b728f;line-height:1.7;margin:6px 2px 0;font-style:italic}
 </style>
 </head>
 <body>
@@ -131,6 +132,7 @@ body{
         <div class="blk-label">🌙 寝てても回す・自動化の方向</div>
         <div class="auto-line" id="auto-line">-</div>
       </div>
+      <div class="cite-note">※技術力・面倒くさがり度の2軸は、状況判断テスト（SJT）とBig Five性格特性論（開放性・誠実性）の学術的知見に基づいて設計しています。</div>
       <div class="tease">
         <div class="tease-h" id="tease-h">で、"あんた専用の設計図"は、ここから先だ。</div>
         <div class="tease-lead">今のは大枠。本当に知りたいのは「じゃあ具体的に、どのツールに課金して、どう繋げば寝てても動くのか」だろ？ それを、あんたの回答から1枚の設計図にまとめる。</div>
@@ -172,11 +174,15 @@ const QSET=[
     {label:'いじるのは、わりと苦じゃない・むしろ楽しい',v:2},
     {label:'必要ならやるけど、できれば最小限で済ませたい',v:1},
     {label:'"設定"と聞くだけで気が重い。誰かにやってほしい',v:0}]},
+  // 2026-07-08改訂：RIASEC（ホランド職業興味理論）に基づく6分類に統一（有料版と共通の分類軸）。
+  // 旧「自動化して放っておく」はZ軸（面倒くさがり度）と概念が重複していたため統合・削除。
   {key:'q5',axis:'goal',text:'AIで一番やりたいのは、どれに近い？',opts:[
-    {label:'文章・デザイン・動画を作る',v:'make'},
-    {label:'作業を自動化して、放っておいても回る仕組みにする',v:'auto'},
-    {label:'アプリやツールを開発する',v:'dev'},
-    {label:'情報収集・リサーチ・分析',v:'research'}]},
+    {label:'自動化スクリプト・AIエージェントを開発する',v:'r'},
+    {label:'専門分野のリサーチ・データ分析をする',v:'i'},
+    {label:'AIイラスト・動画・文章などクリエイティブを作る',v:'a'},
+    {label:'AIの使い方を人に教える・導入をサポートする',v:'s'},
+    {label:'AIでマーケティング・収益化の仕組みを作る',v:'e'},
+    {label:'AIで事務作業・データ整理を効率化する',v:'c'}]},
   {key:'q6',axis:'spend',text:'今、AIツールに月いくら払ってる？',opts:[
     {label:'まだ何も払ってない（無料だけ）',v:'none'},
     {label:'月3,000円くらい（Pro系を1つ）',v:'mid'},

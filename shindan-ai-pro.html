@@ -73,6 +73,7 @@ body{
 .score-box .txt{font-size:11.5px;color:#c2c8de;font-weight:700}
 .why-box{background:#181c30;border:1px dashed #3a4066;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:11.5px;color:#9aa2c0;line-height:1.8}
 .why-box b{color:#c2c8de}
+.cite-note{font-size:9.5px;color:#6b728f;line-height:1.7;margin:-6px 0 14px;padding:0 2px;font-style:italic}
 .tier{background:#20243c;border:1px solid #2e3557;border-radius:16px;padding:14px 16px;margin-bottom:10px}
 .tier.locked{opacity:.5}
 .tier .t-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
@@ -162,6 +163,7 @@ body{
         </div>
         <div class="saki-say" id="saki-summary">-</div>
         <div class="why-box" id="why-box">-</div>
+        <div class="cite-note">※技術力・面倒くさがり度の2軸は、状況判断テスト（SJT）とBig Five性格特性論（開放性・誠実性）の学術的知見に基づいて設計しています。</div>
       </div>
 
       <div class="sec">
@@ -176,6 +178,7 @@ body{
 
       <div class="sec">
         <div class="sec-h"><span class="n">5</span>時短プロンプト集</div>
+        <div class="cite-note">※目的の分類は、ホランドの職業興味理論（RIASEC）に基づく6分類を採用しています。</div>
         <div id="prompt-list"></div>
       </div>
 
@@ -245,12 +248,16 @@ const QSET_PRO=[
     {label:'必要なら最小限やる',v:0},
     {label:'正直、二度と触りたくない',v:2}]},
   // 目的（出し分け変数・単一選択に簡略化）
+  // 2026-07-08改訂：旧5分類はRIASEC（ホランド職業興味理論）に照らすとMECEが崩れていた
+  // （S/E領域が丸ごと欠落・A/Iに重複偏重）。research_results/AI副業診断_学術的裏付け_...md ③を
+  // 反映し、RIASEC6類型（R/I/A/S/E/C）に1対1で対応する6分類へ改訂。
   {key:'q7',axis:'goal',text:'AIで一番やりたいことは、どれに近い？',opts:[
-    {label:'文章・記事・SNS投稿を作る',v:'content'},
-    {label:'画像・動画・デザインを作る',v:'visual'},
-    {label:'データ整理・分析をする',v:'data'},
-    {label:'アプリ・ツールを開発する',v:'dev'},
-    {label:'リサーチ・情報収集を効率化する',v:'research'}]},
+    {label:'自動化スクリプト・AIエージェントを開発する',v:'r'},
+    {label:'専門分野のリサーチ・データ分析をする',v:'i'},
+    {label:'AIイラスト・動画・文章などクリエイティブを作る',v:'a'},
+    {label:'AIの使い方を人に教える・導入をサポートする',v:'s'},
+    {label:'AIでマーケティング・収益化の仕組みを作る',v:'e'},
+    {label:'AIで事務作業・データ整理を効率化する',v:'c'}]},
   {key:'q8',axis:'audience',text:'それは、誰のため？',opts:[
     {label:'自分の副業の売上のため',v:'income'},
     {label:'今の仕事の効率化のため',v:'job'},
@@ -371,32 +378,40 @@ const TYPES_PRO={
   }
 };
 
-/* ---------- 目的（Q7）別・時短プロンプト集 ---------- */
+/* ---------- 目的（Q7）別・時短プロンプト集 ----------
+   2026-07-08改訂：RIASEC6分類（r/i/a/s/e/c）に合わせて再編。
+   旧data(データ整理・分析)は、リサーチ本文の再定義に基づき
+   「分析寄り」はi（リサーチ）へ、「事務整理寄り」はc（事務効率化）として新規に書き分けた。 */
 const GOAL_PROMPTS={
-  content:[
-    'この文章を、読者が3秒で要点を掴める見出し構成に組み替えて。専門用語は平易な言葉に。',
-    'このSNS投稿文を3パターン（共感型／煽り型／データ提示型）で書き直して。',
-    '次の記事のアウトラインを、結論→理由→具体例→再結論の順で作って。'
-  ],
-  visual:[
-    'この画像の雰囲気を保ったまま、背景だけを差し替えたプロンプトを考えて。',
-    '30秒のショート動画の構成案を、冒頭2秒で離脱させない工夫つきで出して。',
-    'このデザイン案の改善点を、視線誘導の観点だけに絞って3つ挙げて。'
-  ],
-  data:[
-    'このデータの中から、異常値・外れ値だけを抽出する手順を説明して。',
-    'この表を、意思決定者が10秒で判断できるグラフの見せ方に変えて。',
-    '週次のこの数字の変化を、要因仮説つきで3行にまとめて。'
-  ],
-  dev:[
+  r:[ // Realistic：自動化スクリプト・AIエージェント開発
     'このエラーメッセージの原因を、初心者にも分かる言葉で切り分けて。',
     'この関数を、可読性を落とさずにパフォーマンス改善する案を出して。',
     'このコードに、想定される例外ケースのテストを追加して。'
   ],
-  research:[
+  i:[ // Investigative：専門リサーチ・データ分析
     'このテーマについて、一次情報と二次情報を区別しながら要点を5つにまとめて。',
     '競合3社の違いを、価格・機能・ターゲット層の3軸で比較表にして。',
-    'この情報の中で、まだ裏付けが弱い主張はどれか指摘して。'
+    'このデータの中から、異常値・外れ値だけを抽出する手順を説明して。'
+  ],
+  a:[ // Artistic：クリエイティブ・マルチメディア制作
+    'この文章を、読者が3秒で要点を掴める見出し構成に組み替えて。専門用語は平易な言葉に。',
+    'このSNS投稿文を3パターン（共感型／煽り型／データ提示型）で書き直して。',
+    '30秒のショート動画の構成案を、冒頭2秒で離脱させない工夫つきで出して。'
+  ],
+  s:[ // Social：AI活用型オンライン教育・導入サポート
+    'この操作手順を、AI初心者向けに1ステップずつ迷わない説明に書き直して。',
+    'このよくある質問（FAQ）を、専門用語を使わずに言い換えて。',
+    'このつまずきポイントを、初心者がやりがちなミスの例つきで解説して。'
+  ],
+  e:[ // Enterprising：AIマーケティング・収益化ディレクション
+    'このLPのキャッチコピーを、訴求軸を変えて3パターン出して。',
+    'この商品の強みを、ターゲット別（初心者向け／上級者向け）に2通り言語化して。',
+    'この記事の構成を、読者が最後まで読んで行動したくなる順番に組み替えて。'
+  ],
+  c:[ // Conventional：AI事務効率化・データベース管理運用
+    'この請求書・領収書の情報を、日付・金額・取引先の3項目に構造化して抽出して。',
+    'この文章の表記ゆれ（全角/半角・敬語の統一等）をチェックして直して。',
+    'このメール文面を、次回から使い回せる定型テンプレートの形に整理して。'
   ]
 };
 
@@ -536,7 +551,7 @@ function skpBuildReport(){
   // 5. 時短プロンプト集（Q7の目的で出し分け）
   var promptWrap=document.getElementById('prompt-list');
   promptWrap.innerHTML='';
-  var prompts=GOAL_PROMPTS[skpA.q7] || GOAL_PROMPTS.content;
+  var prompts=GOAL_PROMPTS[skpA.q7] || GOAL_PROMPTS.a;
   prompts.forEach(function(p){
     var div=document.createElement('div');
     div.className='prompt-box';
