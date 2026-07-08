@@ -22,6 +22,12 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-8LDQ9J4C8B');
+  // 流入元計測：外部導線（note/Tips/X/TikTok DM）に ?utm_source=note 等を付けて共有した場合に検知する
+  (function(){
+    var src = new URLSearchParams(location.search).get('utm_source');
+    var map = {note:'source_click_note', tips:'source_click_tips', x:'source_click_x', tiktok_dm:'source_click_tiktok_dm'};
+    if(src && map[src]) gtag('event', map[src]);
+  })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -278,6 +284,7 @@ function skShow(id){
 function skStart(){
   skRenderQuestions();
   gtag('event','ai_diag_start');
+  gtag('event','saki_free_diagnosis_start');
   skShow('q1');
 }
 function skAnswer(key,v){
@@ -311,11 +318,14 @@ function skResult(){
   document.getElementById('share-link').href='https://twitter.com/intent/tweet?text='+encodeURIComponent(shareText)+'&url='+encodeURIComponent(shareUrl);
 
   gtag('event','ai_diag_complete',{type:t,spend:skA.q6,budget:skA.q7,goal:skA.q5});
+  gtag('event','saki_free_diagnosis_complete',{type:t});
+  gtag('event','saki_result_type_shown',{type:t});
   try{ localStorage.setItem('soam_ai_diag',JSON.stringify({type:t,ts:Date.now()})); }catch(e){}
   skShow('s3');
 }
 function skWantDetail(){
   gtag('event','ai_diag_want_detail',{type:skDetermineType()});
+  gtag('event','saki_paid_teaser_click',{type:skDetermineType()});
   var btn=event.target;
   btn.textContent='手、挙がった。ありがとう ✅';
   btn.disabled=true; btn.style.opacity='.7';
