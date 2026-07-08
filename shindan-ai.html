@@ -82,6 +82,12 @@ body{
 .tease-btn{width:100%;padding:14px;border:none;border-radius:16px;background:linear-gradient(135deg,#C9A96A,#E0C48A);color:#161a2e;font-family:inherit;font-size:13.5px;font-weight:800;cursor:pointer}
 .tease-btn:active{transform:scale(.98)}
 .tease-note{font-size:10.5px;color:#a08e63;line-height:1.6;margin-top:10px;text-align:center}
+.not-for-box{margin-bottom:14px;padding:12px 14px;border-radius:12px;background:rgba(0,0,0,.18);border:1px solid #4a3d2a}
+.not-for-box .nf-h{font-size:11px;font-weight:800;color:#c2986a;margin-bottom:7px}
+.not-for-box .nf-list{list-style:none}
+.not-for-box .nf-list li{font-size:11.5px;color:#b8ac95;line-height:1.7;padding-left:16px;position:relative;margin-bottom:3px}
+.not-for-box .nf-list li::before{content:'×';position:absolute;left:0;color:#a07a5a;font-weight:800}
+.price-why{font-size:11px;color:#a08e63;line-height:1.8;margin-bottom:14px;padding:0 2px}
 .share-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:16px;padding:15px;border:none;border-radius:18px;background:#0d0f18;color:#fff;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;text-decoration:none;border:1px solid #2e3557}
 .share-btn:active{transform:scale(.98)}
 .restart{width:100%;margin-top:10px;padding:13px;border-radius:16px;border:1.5px solid #C9A96A;background:none;color:#C9A96A;font-family:inherit;font-size:12.5px;font-weight:800;cursor:pointer}
@@ -135,12 +141,24 @@ body{
       <div class="cite-note">※技術力・面倒くさがり度の2軸は、状況判断テスト（SJT）とBig Five性格特性論（開放性・誠実性）の学術的知見に基づいて設計しています。</div>
       <div class="tease">
         <div class="tease-h" id="tease-h">で、"今のあんたが課金していいもの"は、ここから先だ。</div>
-        <div class="tease-lead">今のは大枠。本当に知りたいのは「じゃあ具体的に、今何に課金して、何にはまだ課金しなくていいのか」だろ？ それを、あんたの回答からサキがジャッジする。</div>
+        <div class="tease-lead">今のは大枠。本当に知りたいのは「じゃあ具体的に、今何に課金して、何にはまだ課金しなくていいのか」だろ？ それを、あんたの回答からサキがジャッジする。「サキのAI課金ジャッジ」で分かるのはこれだけだ：</div>
         <ul class="tease-list">
-          <li>今すぐ課金していいものと、まだ課金しなくていいもの</li>
+          <li>今すぐ課金していいもの</li>
+          <li>まだ課金しなくていいもの</li>
           <li>今使ってるものを残す/切る/様子見の判断</li>
+          <li>次に試すなら1つだけ、何か</li>
           <li>1週間後、続ける/やめるの判断基準</li>
         </ul>
+        <div class="not-for-box">
+          <div class="nf-h">こんな人には向いてない：</div>
+          <ul class="nf-list">
+            <li>操作を手取り足取り教えてほしい人</li>
+            <li>個別サポートや導入代行を期待する人</li>
+            <li>AIで稼げる保証が欲しい人</li>
+            <li>プロンプト集だけが欲しい人</li>
+          </ul>
+        </div>
+        <div class="price-why">AIツールは1つ課金するだけで月3,000円前後かかる。これは、無駄な課金や乗り換えで遠回りする前に、今のあんたに必要な課金と不要な課金を整理するためのものだ。</div>
         <button class="tease-btn" onclick="skWantDetail()">サキのAI課金ジャッジを受ける（準備中）</button>
         <div class="tease-note" id="tease-note">※有料の詳細版は現在準備中。ボタンを押すと「ほしい人リスト」に手が挙がる（今は集計だけ）。</div>
       </div>
