@@ -305,5 +305,27 @@
       }
     ],
     "relatedArticles": []
+  },
+  {
+    "title": "美容サロンの集客を軽くする診断コンテンツの作り方",
+    "slug": "article-14",
+    "file": "article-14.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "beauty",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "「メニューが多くて、どれを選べばいいかわからない」というお客様の声に、その都度対応していませんか。診断コンテンツは、その最初のひと押しをお客様自身に任せる仕組みです。今回は美容サロンでの作り方を基本から整理します。",
+    "metaTitle": "美容サロン向け診断コンテンツの作り方と設計の基本",
+    "metaDescription": "美容サロンが診断コンテンツで予約前の不安を軽くする方法を解説。質問設計や結果パターンの作り方、運用の注意点まで実務目線でまとめました。",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-10"
+    ]
   }
 ]
