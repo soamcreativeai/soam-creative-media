@@ -327,5 +327,28 @@
     "relatedArticles": [
       "article-10"
     ]
+  },
+  {
+    "title": "予約が埋まらない時にまず見直す4つの場所",
+    "slug": "article-15",
+    "file": "article-15.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "nightwork",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "「頑張って営業しているのに予約が埋まらない」。そんな時、多くの人は接客や自分の魅力を疑いがちです。でも、実際に詰まっているのはもっと手前の見えにくい場所であることが少なくありません。",
+    "metaTitle": "予約が埋まらない時に見直す場所｜夜職の集客改善",
+    "metaDescription": "夜職で予約や指名が伸び悩む時、見直すべきは接客そのものより手前の導線かもしれません。プロフィール・返信・見え方など、摩擦を減らす4つのチェック点を実務目線で解説します。",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-05",
+      "article-11"
+    ]
   }
 ]
