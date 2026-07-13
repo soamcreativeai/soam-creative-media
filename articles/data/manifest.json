@@ -392,5 +392,32 @@
       "article-04",
       "article-12"
     ]
+  },
+  {
+    "title": "店舗ビジネスの無料相談導線の作り方と設計の考え方",
+    "slug": "article-17",
+    "file": "article-17.html",
+    "category": "lp",
+    "categoryLabel": "LP・Web集客",
+    "articleType": "lp",
+    "targetIndustry": "local-business",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "「まずは無料相談から」とサイトに書いているのに、なかなか予約が入らない。そんな店舗の方は多いと思います。問題は相談メニューそのものではなく、そこへ辿り着くまでの導線が重すぎることかもしれません。",
+    "metaTitle": "無料相談導線の作り方｜店舗ビジネスのLP設計",
+    "metaDescription": "店舗ビジネスで無料相談を入り口にする集客導線の作り方を解説します。予約フォーム、LPの構成、心理的ハードルの下げ方まで、実務で使える設計の考え方をまとめました。",
+    "publishedAt": "2026-07-14",
+    "updatedAt": "2026-07-14",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "お名前.com",
+        "asp": "A8.net",
+        "placement": "本文中",
+        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（店舗ビジネスの無料相談導線の作り方と設計の考え方）に合致するため選定"
+      }
+    ],
+    "relatedArticles": []
   }
 ]
