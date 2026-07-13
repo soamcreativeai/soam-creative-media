@@ -350,5 +350,47 @@
       "article-05",
       "article-11"
     ]
+  },
+  {
+    "title": "仕事が止まる理由は、能力ではなく「待ち」にある",
+    "slug": "article-16",
+    "file": "article-16.html",
+    "category": "ai",
+    "categoryLabel": "AI活用",
+    "articleType": "thought",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "気づけば今日も、なにも進まなかった気がする。でもサボっていたわけではありません。あなたの仕事が止まるのは、能力の問題ではなく「止まる構造」があるからかもしれません。",
+    "metaTitle": "仕事が止まる理由と、止まりを減らすAIの使い方",
+    "metaDescription": "仕事が止まるのは能力不足ではなく「待ち」と「思い出し」が原因かもしれません。止まりのポイントを見つけ、AIで摩擦を減らす考え方を解説します。",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "status": "published",
+    "primaryCta": "SOAM CREATIVE（X）",
+    "affiliateLinks": [
+      {
+        "name": "PLAUD NOTE",
+        "asp": "A8.net",
+        "placement": "本文中",
+        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（仕事が止まる理由は、能力ではなく「待ち」にある）に合致するため選定"
+      },
+      {
+        "name": "見積太郎２",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連ツール",
+        "reason": "見積管理を効率化したい事業者向けのAI補助付き見積相談スレッド管理として、記事テーマ（仕事が止まる理由は、能力ではなく「待ち」にある）に合致するため選定"
+      },
+      {
+        "name": "AI鬼管理",
+        "asp": "もしもアフィリエイト",
+        "placement": "まとめ前",
+        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（仕事が止まる理由は、能力ではなく「待ち」にある）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-04",
+      "article-12"
+    ]
   }
 ]
