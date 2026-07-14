@@ -490,5 +490,28 @@
       "article-12",
       "article-16"
     ]
+  },
+  {
+    "title": "診断結果ページで離脱されない設計の考え方",
+    "slug": "article-20",
+    "file": "article-20.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "beauty",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "診断は最後まで答えてもらえるのに、結果ページで静かに閉じられてしまう。そんな経験はありませんか。実は診断そのものよりも、結果ページの設計で予約率は大きく変わります。この記事では、その一瞬をどう受け止めるかを考えます。",
+    "metaTitle": "美容サロンの診断結果ページ離脱を防ぐ設計術",
+    "metaDescription": "美容サロンの診断ツールで、結果ページの離脱を減らす設計を解説します。回答直後の一瞬をどう受け止め、次の予約へつなげるか、実務での組み立て方をまとめました。",
+    "publishedAt": "2026-07-15",
+    "updatedAt": "2026-07-15",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-10",
+      "article-14"
+    ]
   }
 ]
