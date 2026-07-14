@@ -115,7 +115,7 @@
     });
 
     const savedLink = document.createElement('a');
-    savedLink.href = 'saved.html';
+    savedLink.href = '../saved.html';
     savedLink.textContent = '保存した記事を見る';
     actions.append(save, share, copy, savedLink);
     utility.append(intro, actions);
@@ -173,7 +173,7 @@
     const nav = document.querySelector('.header-inner nav');
     if (!nav || nav.querySelector('[data-saved-nav]')) return;
     const link = document.createElement('a');
-    link.href = 'saved.html';
+    link.href = '../saved.html';
     link.dataset.savedNav = 'true';
     link.textContent = '保存した記事';
     nav.append(link);
