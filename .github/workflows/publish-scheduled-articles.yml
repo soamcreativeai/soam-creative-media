@@ -1,0 +1,46 @@
+name: Publish scheduled articles
+
+on:
+  schedule:
+    # GitHub Actions の cron は UTC。日本時間 07:00 / 12:00 / 20:00 に対応する。
+    - cron: "0 22 * * *"
+    - cron: "0 3 * * *"
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scheduled-article-publishing
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the publishing branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Publish approved articles that are due
+        run: node scripts/publish-scheduled-articles.mjs
+
+      - name: Commit published articles when there are changes
+        run: |
+          if git diff --quiet; then
+            echo "No approved articles are due."
+            exit 0
+          fi
+          git config user.name "SOAM CREATIVE Publisher"
+          git config user.email "soam.creative.media@gmail.com"
+          git add index.html articles automation/article-queue.json
+          git commit -m "chore: publish scheduled articles"
+          git push origin HEAD:main

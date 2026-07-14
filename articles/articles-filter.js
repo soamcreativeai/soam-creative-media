@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ['love', '恋愛'], ['fortune', '占い']
   ];
   const categoryTerms = {
-    ai: ['AI活用', '診断ツール活用'],
-    creative: ['SNS・note運用'],
+    ai: ['AI・業務効率化', 'AI活用', '診断ツール活用'],
+    creative: ['動画・画像・デザイン', 'SNS・note運用'],
     templates: ['テンプレート・教材'],
-    marketing: ['業界別マーケティング', 'LP・Web集客', '診断ツール活用'],
-    personal: ['業界別マーケティング', 'LP・Web集客'],
-    money: ['お金・確定申告', '副業・キャリア'],
+    marketing: ['集客・販売', '業界別マーケティング', 'LP・Web集客', '診断ツール活用'],
+    personal: ['個人サービス', '業界別マーケティング', 'LP・Web集客'],
+    money: ['税金・副業・お金', 'お金・確定申告', '副業・キャリア'],
     love: ['恋愛・人間関係'],
     fortune: ['占い・診断']
   };

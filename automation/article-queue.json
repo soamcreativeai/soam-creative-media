@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "timezone": "Asia/Tokyo",
+  "slots": [
+    {
+      "id": "morning",
+      "time": "07:00",
+      "role": "discover",
+      "label": "新規流入"
+    },
+    {
+      "id": "noon",
+      "time": "12:00",
+      "role": "decide",
+      "label": "判断支援"
+    },
+    {
+      "id": "evening",
+      "time": "20:00",
+      "role": "return",
+      "label": "再訪"
+    }
+  ],
+  "articles": []
+}

@@ -8,3 +8,6 @@
 .media-nav a:hover,.media-menu-button:hover{transform:translateY(-2px);box-shadow:3px 3px 0 var(--line)}
 .media-tile,.media-category,.media-article{transition:transform .18s,box-shadow .18s}
 .media-tile:hover,.media-tile:focus-visible,.media-category:hover,.media-category:focus-visible,.media-article:hover,.media-article:focus-visible{transform:translateY(-4px);box-shadow:6px 7px 0 var(--line);outline:none}
+.media-thumb-money{background:var(--blue)}
+.media-thumb-love{background:var(--red)}
+.media-thumb-default{background:var(--lav)}
