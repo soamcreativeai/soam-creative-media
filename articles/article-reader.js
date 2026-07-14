@@ -3,6 +3,12 @@
 
   const storageKey = 'soam-creative-media-saved-articles-v1';
 
+  const track = (eventName, parameters = {}) => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, parameters);
+    }
+  };
+
   const readSaved = () => {
     try {
       const value = JSON.parse(localStorage.getItem(storageKey) || '[]');
@@ -90,6 +96,7 @@
       }
       if (writeSaved(saved)) {
         updateSaveLabel();
+        track('article_save', { article_title: title, article_category: category, saved: isSaved() });
       } else {
         save.textContent = 'この端末では保存できません';
       }
@@ -100,6 +107,9 @@
     share.target = '_blank';
     share.rel = 'noopener noreferrer';
     share.textContent = 'Xで共有';
+    share.addEventListener('click', () => {
+      track('article_share', { method: 'x', article_title: title, article_category: category });
+    });
 
     const copy = document.createElement('button');
     copy.type = 'button';
@@ -108,6 +118,7 @@
       try {
         await navigator.clipboard.writeText(url);
         copy.textContent = 'コピーしました';
+        track('article_copy_link', { article_title: title, article_category: category });
       } catch {
         copy.textContent = 'コピーできませんでした';
       }
@@ -159,6 +170,9 @@
         const title = document.createElement('strong');
         title.textContent = item.title;
         link.append(label, title);
+        link.addEventListener('click', () => {
+          track('article_next_read', { from_article: current.title, to_article: item.title, category: item.categoryLabel || '' });
+        });
         list.append(link);
       });
       section.append(heading, list);

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soamcreativeai.github.io/soam-creative-media/sitemap.xml

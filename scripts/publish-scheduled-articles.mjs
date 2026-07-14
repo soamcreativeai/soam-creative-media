@@ -3,6 +3,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { articleStructuredData, canonicalUrl, jsonForScript } from './seo-utils.mjs';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(scriptDir, '..');
@@ -203,6 +204,14 @@ const buildDisclosure = (article) => article.containsAffiliateLinks ? `
 const renderArticlePage = (entry, content) => {
   const article = entry.article;
   const published = datePartsInTokyo(new Date(entry.scheduledAt));
+  const file = `${article.slug}.html`;
+  const structuredData = articleStructuredData({
+    title: article.title,
+    description: article.metaDescription,
+    file,
+    publishedAt: published.date,
+    updatedAt: published.date
+  });
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -210,6 +219,15 @@ const renderArticlePage = (entry, content) => {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(article.metaDescription)}">
   <title>${escapeHtml(article.metaTitle || article.title)} | SOAM CREATIVE</title>
+  <link rel="canonical" href="${canonicalUrl(`articles/${file}`)}" data-seo="canonical">
+  <script type="application/ld+json" data-seo="article">${jsonForScript(structuredData)}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LDQ9J4C8B" data-analytics="ga4-loader"></script>
+  <script data-analytics="ga4">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8LDQ9J4C8B');
+  </script>
   <link rel="stylesheet" href="../style.css">
   <script src="article-reader.js" defer></script>
 </head>

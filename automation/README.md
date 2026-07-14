@@ -15,6 +15,8 @@
 3. `node scripts/publish-scheduled-articles.mjs --check` で検証する。
 4. 指定日時になると GitHub Actions が公開済みの記事ページ、記事一覧、トップの注目記事を更新します。
 
+公開前に、本文が読者の疑問に答えているかを編集者が確認します。特に商品・サービスを紹介する記事では、公式情報で料金・提供条件・対象外・確認日を見直し、広告または紹介リンクを含む場合は `containsAffiliateLinks` を `true` にします。裏取りできない実績、比較、利用者の声は公開しません。
+
 記事はまず既存カテゴリに入れます。`category` と `categoryLabel` は次の組み合わせを使います。商品名・業種・用途は `tags` に入れ、単発の商品ごとにカテゴリは増やしません。
 
 | category | categoryLabel |
@@ -60,8 +62,12 @@
 ```sh
 node scripts/publish-scheduled-articles.mjs --check
 node scripts/publish-scheduled-articles.mjs --dry-run --now=2026-07-15T07:00:00+09:00
+node scripts/generate-sitemap.mjs
+node scripts/test-media-seo.mjs
 ```
 
 `--dry-run` はファイルを書き換えません。通常実行だけが公開対象のファイルを書き換えます。
+
+`test-media-seo.mjs` は、公開済み記事の検索結果向け説明、正規URL、Article構造化データ、XMLサイトマップ、および端末内保存ページの `noindex` を検証します。
 
 GitHub Actions の時刻は混雑時に遅れる場合があります。実行が遅れた場合も、承認済みで公開時刻を過ぎた記事だけを次回実行時に補完します。記事が不足している枠は、埋め合わせ用の量産記事を作らず何も公開しません。

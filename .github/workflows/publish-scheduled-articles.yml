@@ -33,6 +33,12 @@ jobs:
       - name: Publish approved articles that are due
         run: node scripts/publish-scheduled-articles.mjs
 
+      - name: Refresh the XML sitemap
+        run: node scripts/generate-sitemap.mjs
+
+      - name: Verify search metadata and sitemap
+        run: node scripts/test-media-seo.mjs
+
       - name: Commit published articles when there are changes
         run: |
           if git diff --quiet; then
@@ -41,6 +47,6 @@ jobs:
           fi
           git config user.name "SOAM CREATIVE Publisher"
           git config user.email "soam.creative.media@gmail.com"
-          git add index.html articles automation/article-queue.json
+          git add index.html articles automation/article-queue.json sitemap.xml
           git commit -m "chore: publish scheduled articles"
           git push origin HEAD:main
