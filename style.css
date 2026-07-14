@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap');
 /* ===== SOAM CREATIVE - shared styles ===== */
 :root{
-  --navy:#1A1A2E;
-  --navy-soft:#23233f;
+  --navy:#16151b;
+  --navy-soft:#5b3df5;
   --ink:#1d1d24;
   --ink-2:#5b5b68;
   --line:#e6e6ec;
-  --gold:#C9A84C;
-  --gold-soft:#f3ead2;
-  --bg:#ffffff;
-  --bg-2:#f7f7fa;
+  --gold:#5b3df5;
+  --gold-soft:#eeeaff;
+  --bg:#fffdf7;
+  --bg-2:#f3f1eb;
   --maxw:1080px;
 }
 *{box-sizing:border-box}
@@ -17,7 +18,7 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif;
+  font-family:'M PLUS Rounded 1c','Hiragino Maru Gothic ProN','Hiragino Sans','Yu Gothic',Meiryo,sans-serif;
   line-height:1.85;
   font-size:16px;
   -webkit-font-smoothing:antialiased;
@@ -141,6 +142,19 @@ img{max-width:100%;display:block}
 .empty .big{font-size:34px;margin-bottom:12px}
 .empty h3{margin:0 0 8px;color:var(--ink);letter-spacing:.05em}
 
+/* ===== Article discovery ===== */
+.article-tools{margin:0 0 28px;padding:20px;border:2px solid #1a1922;border-radius:16px;background:#fff}
+.article-search{display:flex;gap:8px;margin-bottom:14px}
+.article-search input{min-width:0;flex:1;border:1.5px solid #1a1922;border-radius:11px;padding:11px 13px;font:500 13px inherit}
+.article-search button{border:0;border-radius:11px;background:#5b3df5;color:#fff;padding:0 18px;font:800 12px inherit}
+.article-filters{display:flex;flex-wrap:wrap;gap:7px}
+.article-filter{border:1.5px solid #1a1922;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:800;background:#fff}
+.article-filter.active{background:#dcff67}
+.article-results-note{margin:12px 0 0;font-size:11px;color:#67646e}
+.article-no-results{display:none;margin:20px 0 0;padding:28px;border:2px dashed #1a1922;border-radius:14px;text-align:center;background:#fff}
+.article-no-results.show{display:block}
+.article-card[hidden]{display:none}
+
 /* ===== Static content (privacy / contact) ===== */
 .content{padding:56px 0 72px}
 .content h2{font-size:20px;margin:34px 0 12px;padding-left:12px;border-left:4px solid var(--gold);letter-spacing:.03em}
@@ -260,4 +274,6 @@ footer:not(.site-footer) a:hover{color:var(--gold)}
   .hero{padding:62px 20px 66px}
   .section{padding:48px 0}
   .site-footer .f-top{flex-direction:column;align-items:flex-start;gap:14px}
+  .article-search{flex-direction:column}
+  .article-search button{padding:11px}
 }

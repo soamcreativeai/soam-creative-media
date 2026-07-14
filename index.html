@@ -1,153 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOAM CREATIVE｜AI・ビジネス・お金の情報メディア</title>
-<meta name="description" content="AIとの付き合い方、ビジネス・キャリア、確定申告やお金のこと、占いや恋愛まで。今日から使える実用情報を発信するメディアです。">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SOAM CREATIVE MEDIA｜仕事と暮らしに役立つ情報メディア</title>
+  <meta name="description" content="AI・業務効率化、動画・画像、集客、副業・お金、恋愛・占いまで。仕事と暮らしに役立つ記事を届けるSOAM CREATIVE MEDIAです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="media-home.css">
+  <script src="media-home.js" defer></script>
 </head>
 <body>
+  <div class="media-notice">本サイトはアフィリエイト広告を利用しています。</div>
 
-<!-- ===== Header ===== -->
-<header class="site-header">
-  <div class="container">
-    <a class="brand" href="index.html"><span class="dot"></span>SOAM CREATIVE</a>
-    <button class="nav-toggle" aria-label="メニュー" onclick="document.getElementById('nav').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav" id="nav">
-      <a href="index.html">ホーム</a>
-      <a href="shindan-ai.html">AIツール診断</a>
-      <a href="articles/index.html">記事一覧</a>
-      <a href="privacy.html">プライバシーポリシー</a>
-      <a href="contact.html">お問い合わせ</a>
-    </nav>
-  </div>
-</header>
-
-<!-- ===== Hero ===== -->
-<section class="hero">
-  <div class="container">
-    <div class="eyebrow">AI · BUSINESS · MONEY · LIFE</div>
-    <h1>働くあなたの毎日に、<br>そっと効く情報を。</h1>
-    <p>AIとの付き合い方、ビジネスの伸ばし方、確定申告やお金のこと、占いや恋愛の話まで。きれいごとだけじゃない、リアルな視点で、今日から使える情報をお届けします。</p>
-    <a class="btn" href="articles/index.html">記事を読む</a>
-  </div>
-</section>
-
-<!-- ===== 診断CTA ===== -->
-<section class="section" style="background:linear-gradient(160deg,#1A1A2E,#23233f)">
-  <div class="container">
-    <div style="max-width:760px;margin:0 auto;display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:center;text-align:left">
-      <img src="assets/saki/saki_mascot_v1.png" alt="サキ" style="width:110px;height:110px;flex:0 0 auto;border-radius:50%;background:#20243c;border:1.5px solid #C9A84C;object-fit:cover;object-position:50% 22%">
-      <div style="flex:1;min-width:260px">
-        <div class="eyebrow" style="color:#C9A84C;font-size:12px;letter-spacing:.34em;font-weight:700;margin-bottom:10px">FREE DIAGNOSIS</div>
-        <h2 style="color:#fff;font-size:22px;line-height:1.5;margin-bottom:10px">どのAIツールに課金すればいいか、<br>まだ手探りで消耗してない？</h2>
-        <p style="color:#c2c8de;font-size:14px;line-height:1.85;margin-bottom:18px">合わないツールに月3,000円払って乗り換えを繰り返す前に。あなたの技術力と面倒くさがり度から、最適なAIツールと自動化の始め方を診断します。7問・30秒・無料。</p>
-        <a class="btn" href="shindan-ai.html">AIツール診断をはじめる →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SOAM Link β CTA ===== -->
-<section class="section" style="background:#faf8f3;border-top:1px solid #eee;border-bottom:1px solid #eee">
-  <div class="container">
-    <div style="max-width:760px;margin:0 auto;text-align:left">
-      <div class="eyebrow" style="color:#A9853F;font-size:12px;letter-spacing:.34em;font-weight:700;margin-bottom:10px">SOAM LINK β</div>
-      <h2 style="font-size:22px;line-height:1.5;margin-bottom:10px">AIで作った商品を、<br>紹介される事業導線に。</h2>
-      <p style="font-size:14px;line-height:1.85;color:#555;margin-bottom:18px">「作れる」と「紹介されて売れる」の間には、紹介リンク・成果条件・承認・報酬支払いという運用の壁があります。SOAM Link βは、個人の商品・サービスをその導線に載せる成果報酬型の紹介基盤です。掲載・登録は無料。</p>
-      <a class="btn" href="https://mimi-to-rami.com/soam-link.html?utm_source=media&utm_medium=top_banner" style="background:#1A1A2E">SOAM Link βを見る →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== About ===== -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">ABOUT</div>
-      <h2>SOAM CREATIVE とは</h2>
-    </div>
-    <p class="lead">「もっと早く知りたかった」をなくすメディアです。働き方や生き方が多様になった今、性別や肩書き、業種にかかわらず、自分のために情報を選べることが力になります。SOAM CREATIVE は、AI・ビジネス・お金・占い・恋愛という身近なテーマを、リアルな目線でわかりやすく届けます。</p>
-  </div>
-</section>
-
-<!-- ===== Topics ===== -->
-<section class="section alt">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">TOPICS</div>
-      <h2>取り扱うテーマ</h2>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <div class="ic">🤖</div>
-        <h3>AI・ツール活用</h3>
-        <p>難しく考えなくていい。AIを「面倒を減らす相棒」として使うコツを、具体例でやさしく解説します。</p>
-      </div>
-      <div class="card">
-        <div class="ic">💼</div>
-        <h3>ビジネス・AI活用支援</h3>
-        <p>AIコンサル・業務効率化から独立・副業まで。ビジネスを前に進めるための情報を扱います。</p>
-      </div>
-      <div class="card">
-        <div class="ic">🧾</div>
-        <h3>お金・確定申告</h3>
-        <p>個人事業主・副業のための確定申告や節税、口座管理。苦手な人ほど読んでほしいお金の基本。</p>
-      </div>
-      <div class="card">
-        <div class="ic">🔮</div>
-        <h3>占い・スピリチュアル</h3>
-        <p>迷ったとき、立ち止まりたいときに。占いやスピリチュアルとの上手な付き合い方を紹介します。</p>
-      </div>
-      <div class="card">
-        <div class="ic">💕</div>
-        <h3>恋愛・婚活</h3>
-        <p>出会い方、関係の築き方、将来の選び方。恋愛や婚活のリアルな悩みに寄り添います。</p>
-      </div>
-      <div class="card">
-        <div class="ic">📈</div>
-        <h3>自分の育て方</h3>
-        <p>収入も、スキルも、自信も。今いる場所から少しずつ積み上げるためのヒント。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="section">
-  <div class="container" style="text-align:center">
-    <div class="section-head">
-      <div class="eyebrow">ARTICLES</div>
-      <h2>最新の記事</h2>
-    </div>
-    <p class="lead">AI活用のヒント、確定申告・節税の基本、ビジネスを伸ばすアイデアから、占いや恋愛の話まで。今日から役立つ記事を公開しています。</p>
-    <p style="margin-top:26px"><a class="btn btn-ghost" href="articles/index.html">記事一覧を見る</a></p>
-  </div>
-</section>
-
-<!-- ===== Footer ===== -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="f-top">
-      <div class="f-brand">SOAM CREATIVE</div>
-      <nav class="f-nav">
-        <a href="index.html">ホーム</a>
-        <a href="articles/index.html">記事一覧</a>
-        <a href="privacy.html">プライバシーポリシー</a>
-        <a href="contact.html">お問い合わせ</a>
+  <header class="media-header">
+    <div class="media-wrap media-header-inner">
+      <a class="media-logo" href="index.html">SOAM CREATIVE <span>MEDIA</span></a>
+      <button class="media-menu-button" type="button" aria-expanded="false" aria-controls="media-nav">カテゴリ</button>
+      <nav class="media-nav" id="media-nav" aria-label="メインナビゲーション">
+        <a href="articles/index.html?category=ai">AI・仕事</a>
+        <a href="articles/index.html?category=creative">制作</a>
+        <a href="articles/index.html?category=marketing">集客・ビジネス</a>
+        <a href="articles/index.html?category=money">お金・暮らし</a>
+        <a class="media-nav-all" href="#categories">すべてのカテゴリ</a>
       </nav>
     </div>
-    <div class="notice">
-      <span class="req">本サイトはアフィリエイト広告を利用しています。</span><br>
-      18歳未満の方はご利用いただけません。<br>
-      掲載情報は正確性に努めていますが、内容を保証するものではありません。最終的なご判断はご自身の責任でお願いいたします。
-    </div>
-    <div class="copy">© 2026 SOAM CREATIVE. All rights reserved.</div>
-  </div>
-</footer>
+  </header>
 
+  <main>
+    <section class="media-wrap media-hero" aria-label="注目記事">
+      <div class="media-mosaic">
+        <a class="media-tile media-tile-main" href="articles/article-19.html">
+          <span class="media-pill">AI活用</span>
+          <h1>AIに任せる前に、<br>自分の仕事を<br>見つめ直そう。</h1>
+          <p>新しい道具を探す前に、毎日の「面倒」を見つけるところから。</p>
+          <span class="media-read">記事を読む →</span>
+        </a>
+        <a class="media-tile media-tile-pink" href="articles/article-18.html">
+          <span class="media-pill">SNS・note運用</span>
+          <h2>保存される投稿の作り方</h2>
+          <p>見返される情報の設計を考える。</p>
+        </a>
+        <a class="media-tile media-tile-blue" href="articles/article-16.html">
+          <span class="media-pill">AI活用</span>
+          <h2>仕事を止める「待ち」を減らす</h2>
+          <p>能力ではなく、止まる構造を見直す。</p>
+        </a>
+        <a class="media-tile media-tile-yellow" href="articles/article-17.html">
+          <span class="media-pill">LP・Web集客</span>
+          <h2>無料相談につながる入口を、どう作る？</h2>
+          <p>店舗ビジネスの集客導線を順番に解説します。</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="media-ticker" aria-label="更新情報とカテゴリ">
+      <div class="media-wrap media-ticker-inner">
+        <span><b>1日3回</b> 新しい記事を更新</span>
+        <span>AI・業務効率化</span><span>動画・画像</span><span>テンプレート・教材</span>
+        <span>集客・販売</span><span>個人サービス</span><span>税金・副業</span><span>恋愛</span><span>占い</span>
+      </div>
+    </div>
+
+    <section class="media-search-section">
+      <div class="media-wrap media-search-panel">
+        <div>
+          <h2>読みたい記事を、<br>キーワードから探す。</h2>
+          <p>商品名を知らなくても、悩みや目的から記事を探せます。</p>
+        </div>
+        <form class="media-search-form" action="articles/index.html" method="get">
+          <label class="sr-only" for="media-search">記事を検索</label>
+          <input id="media-search" name="q" type="search" placeholder="例：動画編集を依頼したい、確定申告が不安">
+          <button type="submit">記事を検索</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="media-section" id="categories">
+      <div class="media-wrap">
+        <div class="media-section-head">
+          <h2>興味のあるテーマから探す</h2>
+          <p>仕事、制作、お金、暮らしまで、目的に合うテーマから記事を選べます。</p>
+        </div>
+        <div class="media-category-grid">
+          <a class="media-category media-cat-ai" href="articles/index.html?category=ai"><small>AI / AUTOMATION</small><h3>AI・業務効率化</h3><p>AIツール、GAS、自動化、仕事術</p></a>
+          <a class="media-category media-cat-creative" href="articles/index.html?category=creative"><small>CREATIVE</small><h3>動画・画像・デザイン</h3><p>動画編集、画像制作、発信素材</p></a>
+          <a class="media-category media-cat-template" href="articles/index.html?category=templates"><small>TEMPLATES</small><h3>テンプレート・教材</h3><p>業務フォーマット、教材、デジタル成果物</p></a>
+          <a class="media-category media-cat-marketing" href="articles/index.html?category=marketing"><small>MARKETING</small><h3>集客・販売</h3><p>SNS、広告、店舗集客、販売導線</p></a>
+          <a class="media-category media-cat-personal" href="articles/index.html?category=personal"><small>PERSONAL SERVICE</small><h3>個人サービス</h3><p>相談、代行、制作、専門家サービス</p></a>
+          <a class="media-category media-cat-money" href="articles/index.html?category=money"><small>MONEY</small><h3>税金・副業・お金</h3><p>確定申告、副業、家計、働き方</p></a>
+          <a class="media-category media-cat-love" href="articles/index.html?category=love"><small>RELATIONSHIP</small><h3>恋愛・人間関係</h3><p>恋愛、結婚、コミュニケーション</p></a>
+          <a class="media-category media-cat-fortune" href="articles/index.html?category=fortune"><small>FORTUNE</small><h3>占い・診断</h3><p>占い、自己理解、診断コンテンツ</p></a>
+          <a class="media-category media-cat-other" href="articles/index.html"><small>OTHER</small><h3>暮らし・その他</h3><p>生活、美容、その他のテーマ</p></a>
+        </div>
+        <p class="media-all-articles"><a href="articles/index.html">すべての記事を見る →</a></p>
+      </div>
+    </section>
+
+    <section class="media-section media-latest" id="latest">
+      <div class="media-wrap">
+        <div class="media-section-head">
+          <h2>新しく公開した記事</h2>
+          <p>ジャンルを限定せず、最近公開した記事を掲載しています。</p>
+        </div>
+        <div class="media-article-grid">
+          <a class="media-article" href="articles/article-19.html"><div class="media-thumb media-thumb-ai"></div><div class="media-article-copy"><small>AI活用</small><h3>AIに任せる前に、まず自分の仕事を見つめ直す時間を</h3><p>ツール選びの前に、仕事の摩擦を見つける。</p><span>記事を読む →</span></div></a>
+          <a class="media-article" href="articles/article-18.html"><div class="media-thumb media-thumb-creative"></div><div class="media-article-copy"><small>SNS・note運用</small><h3>保存される投稿の作り方：見返される情報の設計を考える</h3><p>あとで見返したくなる情報の共通点。</p><span>記事を読む →</span></div></a>
+          <a class="media-article" href="articles/article-17.html"><div class="media-thumb media-thumb-marketing"></div><div class="media-article-copy"><small>LP・Web集客</small><h3>店舗ビジネスの無料相談導線の作り方と設計の考え方</h3><p>相談につながるページの入口を整える。</p><span>記事を読む →</span></div></a>
+          <a class="media-article" href="articles/article-16.html"><div class="media-thumb media-thumb-ai"></div><div class="media-article-copy"><small>AI活用</small><h3>仕事が止まる理由は、能力ではなく「待ち」にある</h3><p>止まりのポイントとAIの使い方を考える。</p><span>記事を読む →</span></div></a>
+          <a class="media-article" href="articles/article-15.html"><div class="media-thumb media-thumb-personal"></div><div class="media-article-copy"><small>業界別マーケティング</small><h3>予約が埋まらない時にまず見直す4つの場所</h3><p>接客より手前にある導線を見直す。</p><span>記事を読む →</span></div></a>
+          <a class="media-article" href="articles/article-14.html"><div class="media-thumb media-thumb-fortune"></div><div class="media-article-copy"><small>診断ツール活用</small><h3>美容サロンの集客を軽くする診断コンテンツの作り方</h3><p>予約前の不安を軽くする質問設計。</p><span>記事を読む →</span></div></a>
+          <a class="media-article" href="articles/article-13.html"><div class="media-thumb media-thumb-creative"></div><div class="media-article-copy"><small>SNS・note運用</small><h3>noteとX投稿の使い分けで、発信の摩擦を減らす</h3><p>ストックとフローの役割を分ける。</p><span>記事を読む →</span></div></a>
+          <a class="media-article" href="articles/article-12.html"><div class="media-thumb media-thumb-ai"></div><div class="media-article-copy"><small>AI活用</small><h3>AIに任せる前に、仕事のどこが重いのかを先に見る</h3><p>任せる順番を決めるための考え方。</p><span>記事を読む →</span></div></a>
+        </div>
+        <p class="media-all-articles"><a href="articles/index.html">記事一覧をもっと見る →</a></p>
+      </div>
+    </section>
+
+    <section class="media-soam-link-section" id="soam-link">
+      <div class="media-wrap media-soam-link-banner">
+        <div>
+          <small>SOAM LINK β / 先行公開中</small>
+          <h2>いい商品やサービスが、<br>必要な人へ届く仕組み。</h2>
+          <p>掲載する人、紹介する人、購入する人をつなぐSOAM Linkについて紹介します。</p>
+        </div>
+        <a href="https://mimi-to-rami.com/soam-link.html?utm_source=media&amp;utm_medium=top_banner">SOAM Linkを見る →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="media-footer">
+    <nav class="media-wrap media-footer-categories" aria-label="フッターカテゴリ">
+      <div><h4>仕事・事業</h4><a href="articles/index.html?category=ai">AI・業務効率化</a><a href="articles/index.html?category=marketing">集客・販売</a><a href="articles/index.html?category=personal">個人サービス</a></div>
+      <div><h4>制作・学習</h4><a href="articles/index.html?category=creative">動画・画像・デザイン</a><a href="articles/index.html?category=templates">テンプレート・教材</a></div>
+      <div><h4>お金・暮らし</h4><a href="articles/index.html?category=money">税金・副業・お金</a><a href="articles/index.html">暮らし・その他</a></div>
+      <div><h4>相談・自己理解</h4><a href="articles/index.html?category=love">恋愛・人間関係</a><a href="articles/index.html?category=fortune">占い・診断</a></div>
+    </nav>
+    <div class="media-wrap media-footer-line"><span>SOAM CREATIVE MEDIA</span><nav><a href="articles/index.html">記事一覧</a><a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a></nav></div>
+    <div class="media-wrap media-footer-notice">掲載情報は正確性に努めていますが、内容を保証するものではありません。料金・仕様はリンク先の公式情報をご確認ください。</div>
+    <div class="media-wrap media-copy">© 2026 SOAM CREATIVE. All rights reserved.</div>
+  </footer>
 </body>
 </html>
