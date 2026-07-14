@@ -419,5 +419,34 @@
       }
     ],
     "relatedArticles": []
+  },
+  {
+    "title": "保存される投稿の作り方：見返される情報の設計を考える",
+    "slug": "article-18",
+    "file": "article-18.html",
+    "category": "sns",
+    "categoryLabel": "SNS・note運用",
+    "articleType": "sns",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "投稿はそれなりに見られているのに、フォロワーや反応が伸びない。そんなときに見直したいのが「保存」という指標です。保存される投稿には、見た人が「あとで役立てたい」と思う設計が隠れています。",
+    "metaTitle": "保存される投稿の作り方｜見返される情報設計の考え方",
+    "metaDescription": "いいねより保存されるSNS投稿には共通点があります。あとで見返したくなる情報の設計方法を、実務で使える形で具体的に解説します。",
+    "publishedAt": "2026-07-14",
+    "updatedAt": "2026-07-14",
+    "status": "published",
+    "primaryCta": "SOAM CREATIVE（X）",
+    "affiliateLinks": [
+      {
+        "name": "ConoHa AI Canvas",
+        "asp": "A8.net",
+        "placement": "本文中",
+        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（保存される投稿の作り方：見返される情報の設計を考える）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-13"
+    ]
   }
 ]
