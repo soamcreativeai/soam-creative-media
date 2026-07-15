@@ -590,5 +590,34 @@
       "article-11",
       "article-15"
     ]
+  },
+  {
+    "title": "問い合わせが増えないLPの共通点と店舗が見直すべき導線",
+    "slug": "article-23",
+    "file": "article-23.html",
+    "category": "lp",
+    "categoryLabel": "LP・Web集客",
+    "articleType": "lp",
+    "targetIndustry": "local-business",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "LPを作ったのに問い合わせがほとんど来ない。そんな状態が続くと、そもそもLPに意味があるのか不安になります。実は原因の多くは、見た目ではなく「導線」と「情報の並び順」にあります。",
+    "metaTitle": "問い合わせが増えないLPの共通点｜店舗の見直し方",
+    "metaDescription": "店舗ビジネスのLPで問い合わせが増えない原因を、デザインではなく導線と情報設計の視点から整理します。今日から見直せるチェックポイントを解説します。",
+    "publishedAt": "2026-07-16",
+    "updatedAt": "2026-07-16",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "お名前.com",
+        "asp": "A8.net",
+        "placement": "本文中",
+        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（問い合わせが増えないLPの共通点と店舗が見直すべき導線）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-17"
+    ]
   }
 ]
