@@ -567,5 +567,28 @@
       "article-08",
       "article-09"
     ]
+  },
+  {
+    "title": "業種別に考える、集客導線の摩擦を減らす設計図",
+    "slug": "article-22",
+    "file": "article-22.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "solo-business",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "「集客をなんとかしたい」と思いながら、何から手をつければいいかわからない。そんな夜が続いていませんか。今日は業種別に、自分の集客のどこを軽くするかを一緒に考えてみます。",
+    "metaTitle": "個人事業主のための業種別集客導線の作り方",
+    "metaDescription": "個人事業主が業種ごとに集客導線をどう組み立てるか。SNS・検索・紹介のどこを軽くすれば無理なく続くのか、実務目線で考える記事です。",
+    "publishedAt": "2026-07-15",
+    "updatedAt": "2026-07-15",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-11",
+      "article-15"
+    ]
   }
 ]
