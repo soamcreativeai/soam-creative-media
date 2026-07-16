@@ -1,4 +1,4 @@
-export const SITE_ORIGIN = 'https://soamcreativeai.github.io/soam-creative-media';
+export const SITE_ORIGIN = 'https://media.soam-creative.com';
 
 export const canonicalUrl = (pathname = '') => {
   const normalized = pathname.replace(/^\/+/, '');
