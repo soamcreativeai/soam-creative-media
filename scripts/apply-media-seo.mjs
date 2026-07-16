@@ -77,7 +77,7 @@ const applyStaticPage = async (page) => {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'SOAM CREATIVE MEDIA',
+      name: 'SOAM Media',
       url: canonicalUrl()
     };
     blocks.push(`  <script type="application/ld+json" data-seo="website">${jsonForScript(data)}</script>`);
