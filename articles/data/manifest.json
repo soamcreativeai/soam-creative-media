@@ -649,5 +649,28 @@
       "article-13",
       "article-18"
     ]
+  },
+  {
+    "title": "美容サロンの集客に診断ツールが強い理由と使いどころ",
+    "slug": "article-25",
+    "file": "article-25.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "beauty",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "「広告を出しても反応が薄い」「予約前に離脱される」——美容サロンの集客でこうした悩みは珍しくありません。診断ツールは、その離脱を減らす一つの選択肢になります。なぜ集客に効くのか、仕組みから見ていきます。",
+    "metaTitle": "美容サロンで診断ツールが集客に強い理由と活用法",
+    "metaDescription": "美容サロンの集客で診断ツールが有効な理由を、予約前の心理や運用の負担軽減の視点から解説します。導入の判断材料と自然な使いどころをまとめました。",
+    "publishedAt": "2026-07-17",
+    "updatedAt": "2026-07-17",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-14",
+      "article-20"
+    ]
   }
 ]
