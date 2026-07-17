@@ -768,5 +768,28 @@
       "article-16",
       "article-19"
     ]
+  },
+  {
+    "title": "小さな通販店が発信を続けるための現実的な仕組み作り",
+    "slug": "article-28",
+    "file": "article-28.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "ecommerce",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "「発信は大事とわかっているけれど続かない」。小さな通販店を運営していると、そう感じる場面は多いはずです。この記事では、根性ではなく仕組みで発信の摩擦を減らす方法を考えます。",
+    "metaTitle": "小さなEC店舗が発信を続けるコツと仕組み化の考え方",
+    "metaDescription": "小さな通販店が無理なく発信を続けるための考え方をまとめました。ネタ切れや時間不足を減らし、投稿の摩擦を軽くする実務的な仕組み作りを解説します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-15",
+      "article-22"
+    ]
   }
 ]
