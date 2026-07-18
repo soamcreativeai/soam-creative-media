@@ -1173,5 +1173,35 @@
       "article-19",
       "article-27"
     ]
+  },
+  {
+    "title": "LPのファーストビューで離脱される理由と店舗の見直し方",
+    "slug": "article-43",
+    "file": "article-43.html",
+    "category": "lp",
+    "categoryLabel": "LP・Web集客",
+    "articleType": "lp",
+    "targetIndustry": "local-business",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "せっかく広告や検索から人が来ているのに、ページを開いた瞬間に離れてしまう。店舗のLPでよくある悩みです。その多くは、ファーストビューで「自分に関係ある」と伝わっていないことが原因です。",
+    "metaTitle": "LPのファーストビューで離脱される理由と改善の考え方",
+    "metaDescription": "店舗ビジネスのLPで、ファーストビューでの離脱が起きる理由を整理します。誰に何を伝えるかの設計から、店舗ならではの信頼づくりまで、実務での見直し方を解説します。",
+    "publishedAt": "2026-07-19",
+    "updatedAt": "2026-07-19",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "お名前.com",
+        "asp": "A8.net",
+        "placement": "本文中",
+        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（LPのファーストビューで離脱される理由と店舗の見直し方）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-17",
+      "article-23"
+    ]
   }
 ]
