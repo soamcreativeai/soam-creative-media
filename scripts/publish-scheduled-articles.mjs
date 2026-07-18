@@ -225,7 +225,7 @@ const categoryPracticeGuide = (article) => {
   };
   if (!/^article-(?:3[0-9]|4[01])$/.test(article.slug)) return '';
   const closeout = `<section class="article-practice-guide"><h2>この記事を閉じる前の三つの確認</h2><p>最後に、「今日できる一歩は一つに絞れているか」「無理をして続ける前提になっていないか」「必要なら誰に相談するか」が言葉になっているかを確認します。良い方法でも、生活の状況や相手との関係によって合わないことがあります。試した後の自分の負担を見て、残す・調整する・やめるを選んでください。</p><p>特に健康、安全、契約、金銭、相手の同意に関わることは、記事や一般的な助言だけで判断せず、公式情報、当事者との対話、必要に応じた専門家の確認を重ねます。答えを急がないことも、状況を大切に扱う選択です。</p><h2>小さく試し、記録を次の自分へ渡す</h2><p>変化を大きくしようとせず、まず一回・一日・一週間だけ試します。うまくいった理由、止まった場面、次に変えたいことを二、三行残せば、次回はゼロから考えなくて済みます。この記事の内容も、今の自分に合うところだけを使ってください。</p></section>`;
-  return `${guides[article.category] || ''}${closeout}`;
+  return `${guides[article.category] || guides.personal || ''}${closeout}`;
 };
 
 const buildDisclosure = (article) => article.containsAffiliateLinks ? `
