@@ -20,6 +20,9 @@ const now = nowArgument ? new Date(nowArgument.slice('--now='.length)) : new Dat
 const isCheck = args.has('--check');
 const isDryRun = args.has('--dry-run');
 const isSyncOnly = args.has('--sync-indexes');
+// 編集確認済みの記事を一括で公開するための明示的な手動モードです。
+// 通常の定時公開では使わず、予約枠の重複も許可しません。
+const isPublishAll = args.has('--publish-all');
 
 if (Number.isNaN(now.getTime())) {
   throw new Error('`--now` は ISO 8601 形式で指定してください。');
@@ -166,7 +169,7 @@ const validateArticle = (entry, slots, existingManifest) => {
   }
 };
 
-const validateQueue = (queue, manifest) => {
+const validateQueue = (queue, manifest, { allowReservedSlotOverlap = false } = {}) => {
   if (!queue || queue.timezone !== 'Asia/Tokyo') {
     throw new Error('article-queue.json の timezone は Asia/Tokyo にしてください。');
   }
@@ -192,7 +195,7 @@ const validateQueue = (queue, manifest) => {
     ids.add(entry.id);
     if (articleKeys.has(entry.article.slug)) throw new Error(`記事 ${entry.article.slug} がキュー内で重複しています。`);
     articleKeys.add(entry.article.slug);
-    if (entry.status !== 'published') {
+    if (entry.status !== 'published' && !allowReservedSlotOverlap) {
       const reservationKey = `${entry.scheduledAt}|${entry.slot}`;
       if (reservationKeys.has(reservationKey)) throw new Error(`${reservationKey} に複数の記事が予約されています。`);
       reservationKeys.add(reservationKey);
@@ -216,9 +219,8 @@ const buildDisclosure = (article) => article.containsAffiliateLinks ? `
         <p>この記事には紹介リンクまたはアフィリエイト広告を含む場合があります。料金・仕様・提供条件は変更されることがあるため、リンク先の公式情報をご確認ください。</p>
       </div>` : '';
 
-const renderArticlePage = (entry, content) => {
+const renderArticlePage = (entry, content, published) => {
   const article = entry.article;
-  const published = datePartsInTokyo(new Date(entry.scheduledAt));
   const file = `${article.slug}.html`;
   const structuredData = articleStructuredData({
     title: article.title,
@@ -304,14 +306,14 @@ const syncIndexes = async (manifest, dryRun) => {
 
 const main = async () => {
   const [queue, manifest] = await Promise.all([readJson(queuePath), readJson(manifestPath)]);
-  validateQueue(queue, manifest);
+  validateQueue(queue, manifest, { allowReservedSlotOverlap: isPublishAll });
   if (isCheck) {
     console.log(`[scheduled-publish] queue is valid: ${queue.articles.length} article(s), ${queue.slots.length} slot(s).`);
     return;
   }
 
   const due = queue.articles
-    .filter((entry) => entry.status === 'approved' && new Date(entry.scheduledAt) <= now)
+    .filter((entry) => entry.status === 'approved' && (isPublishAll || new Date(entry.scheduledAt) <= now))
     .sort((a, b) => new Date(a.scheduledAt) - new Date(b.scheduledAt));
   if (!due.length) {
     if (isSyncOnly) {
@@ -327,7 +329,7 @@ const main = async () => {
   for (const entry of due) {
     const content = await readApprovedContent(entry);
     const articlePath = path.join(rootDir, 'articles', `${entry.article.slug}.html`);
-    const published = datePartsInTokyo(new Date(entry.scheduledAt));
+    const published = datePartsInTokyo(isPublishAll ? now : new Date(entry.scheduledAt));
     const manifestItem = {
       title: entry.article.title,
       slug: entry.article.slug,
@@ -348,7 +350,7 @@ const main = async () => {
       affiliateLinks: Array.isArray(entry.article.affiliateLinks) ? entry.article.affiliateLinks : [],
       relatedArticles: Array.isArray(entry.article.relatedArticles) ? entry.article.relatedArticles : []
     };
-    if (!isDryRun) await fs.writeFile(articlePath, renderArticlePage(entry, content));
+    if (!isDryRun) await fs.writeFile(articlePath, renderArticlePage(entry, content, published));
     nextManifest.push(manifestItem);
     entry.status = 'published';
     entry.publishedAt = new Date().toISOString();

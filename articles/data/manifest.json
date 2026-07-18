@@ -821,5 +821,315 @@
       "article-18",
       "article-24"
     ]
+  },
+  {
+    "title": "毎日の仕事を軽くする、はじめての業務テンプレート設計",
+    "slug": "article-30",
+    "file": "article-30.html",
+    "category": "templates",
+    "categoryLabel": "テンプレート・教材",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "テンプレート",
+      "業務効率化",
+      "仕事術"
+    ],
+    "excerpt": "毎回ゼロから考える仕事を減らすために、最初に整えたい業務テンプレートの作り方を紹介します。",
+    "metaTitle": "毎日の仕事を軽くする、はじめての業務テンプレート設計",
+    "metaDescription": "毎日の仕事を軽くする業務テンプレートの設計方法を解説。繰り返し作業を見つけ、使い続けられる形に整える手順を紹介します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-27"
+    ]
+  },
+  {
+    "title": "引き継ぎで迷わないためのチェックリストの作り方",
+    "slug": "article-31",
+    "file": "article-31.html",
+    "category": "templates",
+    "categoryLabel": "テンプレート・教材",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "チェックリスト",
+      "引き継ぎ",
+      "業務整理"
+    ],
+    "excerpt": "担当が変わっても迷わない引き継ぎにするための、チェックリストの分け方と見直し方を整理します。",
+    "metaTitle": "引き継ぎで迷わないためのチェックリストの作り方",
+    "metaDescription": "引き継ぎの漏れや確認の往復を減らすチェックリストの作り方を解説。担当者が変わっても使える項目の設計方法を紹介します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-30"
+    ]
+  },
+  {
+    "title": "AIに渡す前に整える、依頼文テンプレートの基本",
+    "slug": "article-32",
+    "file": "article-32.html",
+    "category": "templates",
+    "categoryLabel": "テンプレート・教材",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "AI活用",
+      "依頼文",
+      "テンプレート"
+    ],
+    "excerpt": "AIへの依頼が毎回ぶれないように、目的・前提・出力の形をそろえるテンプレートの基本をまとめます。",
+    "metaTitle": "AIに渡す前に整える、依頼文テンプレートの基本",
+    "metaDescription": "AIへの依頼文を整えるテンプレートの基本を解説。目的、前提、出力形式をそろえてやり取りの手間を減らす方法を紹介します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-12",
+      "article-30"
+    ]
+  },
+  {
+    "title": "すれ違いを増やさないために、気持ちを言葉にする順番",
+    "slug": "article-33",
+    "file": "article-33.html",
+    "category": "love",
+    "categoryLabel": "恋愛・人間関係",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "コミュニケーション",
+      "恋愛",
+      "人間関係"
+    ],
+    "excerpt": "感情のまま伝えて後悔しないために、相手を責めず自分の希望を伝える順番を考えます。",
+    "metaTitle": "すれ違いを増やさないために、気持ちを言葉にする順番",
+    "metaDescription": "恋愛や人間関係ですれ違いを増やさないための伝え方を解説。感情を整理し、自分の希望を穏やかに言葉にする順番を紹介します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": []
+  },
+  {
+    "title": "返信が遅いと不安になるとき、決めつける前に整理したいこと",
+    "slug": "article-34",
+    "file": "article-34.html",
+    "category": "love",
+    "categoryLabel": "恋愛・人間関係",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "返信",
+      "不安",
+      "コミュニケーション"
+    ],
+    "excerpt": "返信を待つ時間に気持ちが揺れるとき、事実と想像を分けて自分を消耗させないための考え方です。",
+    "metaTitle": "返信が遅いと不安になるとき、決めつける前に整理したいこと",
+    "metaDescription": "返信が遅いときの不安を、決めつけで大きくしないための整理法を紹介。事実と想像を分け、落ち着いて伝える準備を整えます。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-33"
+    ]
+  },
+  {
+    "title": "関係を続けるために、境界線を穏やかに伝える方法",
+    "slug": "article-35",
+    "file": "article-35.html",
+    "category": "love",
+    "categoryLabel": "恋愛・人間関係",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "境界線",
+      "人間関係",
+      "会話"
+    ],
+    "excerpt": "無理を続けて関係を壊さないために、断ることや希望を穏やかに伝えるための準備を整理します。",
+    "metaTitle": "関係を続けるために、境界線を穏やかに伝える方法",
+    "metaDescription": "恋愛や人間関係で無理を抱え込みすぎないために、境界線を穏やかに伝える方法を解説。断ることと関係を続けることを両立する考え方です。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-33",
+      "article-34"
+    ]
+  },
+  {
+    "title": "占いを答え合わせで終わらせない、気持ちを整理する使い方",
+    "slug": "article-36",
+    "file": "article-36.html",
+    "category": "fortune",
+    "categoryLabel": "占い・診断",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "占い",
+      "自己理解",
+      "振り返り"
+    ],
+    "excerpt": "占いの言葉を絶対の答えにせず、今の気持ちや選択肢を見つめ直すきっかけにする使い方を考えます。",
+    "metaTitle": "占いを答え合わせで終わらせない、気持ちを整理する使い方",
+    "metaDescription": "占いを自分の気持ちを整理するきっかけとして使う考え方を紹介。結果を絶対視せず、次の行動を自分で選ぶためのヒントをまとめます。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": []
+  },
+  {
+    "title": "診断結果を次の行動に変えるための3つの問い",
+    "slug": "article-37",
+    "file": "article-37.html",
+    "category": "fortune",
+    "categoryLabel": "占い・診断",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "診断",
+      "自己理解",
+      "行動"
+    ],
+    "excerpt": "診断結果を読むだけで終わらせず、生活や仕事で試せる小さな行動に変えるための問いを紹介します。",
+    "metaTitle": "診断結果を次の行動に変えるための3つの問い",
+    "metaDescription": "診断結果を自分の次の行動につなげるための3つの問いを紹介。結果をラベルとして固定せず、日々の工夫に変える考え方を解説します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-36"
+    ]
+  },
+  {
+    "title": "迷いがある日に、自分の選択を見つめ直す小さな習慣",
+    "slug": "article-38",
+    "file": "article-38.html",
+    "category": "fortune",
+    "categoryLabel": "占い・診断",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "自己理解",
+      "習慣",
+      "選択"
+    ],
+    "excerpt": "答えを急いで決めない日にも使える、気持ちと選択肢を書き出して見つめ直す小さな習慣です。",
+    "metaTitle": "迷いがある日に、自分の選択を見つめ直す小さな習慣",
+    "metaDescription": "迷いがある日に自分の選択を見つめ直す、小さな振り返りの習慣を紹介します。占いや診断の結果も、自分で選ぶための材料として扱います。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-36",
+      "article-37"
+    ]
+  },
+  {
+    "title": "暮らしの小さな面倒を減らす、週に一度の整え方",
+    "slug": "article-39",
+    "file": "article-39.html",
+    "category": "other",
+    "categoryLabel": "暮らし・その他",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "暮らし",
+      "習慣",
+      "整理"
+    ],
+    "excerpt": "毎日が少し楽になるように、週に一度だけ見直したい家のこと・予定・買い物の整え方をまとめます。",
+    "metaTitle": "暮らしの小さな面倒を減らす、週に一度の整え方",
+    "metaDescription": "暮らしの小さな面倒を減らす、週に一度の整え方を紹介。家のこと、予定、買い物を無理なく見直す順番を解説します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": []
+  },
+  {
+    "title": "やることが多い日に、頭の中を軽くするメモの使い方",
+    "slug": "article-40",
+    "file": "article-40.html",
+    "category": "other",
+    "categoryLabel": "暮らし・その他",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "メモ",
+      "暮らし",
+      "整理"
+    ],
+    "excerpt": "忘れないためだけでなく、考え続ける負担を減らすために使うメモの、シンプルな分け方を紹介します。",
+    "metaTitle": "やることが多い日に、頭の中を軽くするメモの使い方",
+    "metaDescription": "やることが多い日に頭の中を軽くするメモの使い方を解説。覚えておく負担を減らし、次にやることを見つけやすくする方法を紹介します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-39"
+    ]
+  },
+  {
+    "title": "疲れた日に判断を増やさないための、いつもの仕組み",
+    "slug": "article-41",
+    "file": "article-41.html",
+    "category": "other",
+    "categoryLabel": "暮らし・その他",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [
+      "暮らし",
+      "ルーティン",
+      "時短"
+    ],
+    "excerpt": "疲れている日に決めることを増やさないために、食事・服・連絡などを小さく決めておく考え方です。",
+    "metaTitle": "疲れた日に判断を増やさないための、いつもの仕組み",
+    "metaDescription": "疲れた日に判断を増やさないための、暮らしの小さな仕組みを紹介。毎回決めなくてよいことを整え、余力を残す考え方を解説します。",
+    "publishedAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-39",
+      "article-40"
+    ]
   }
 ]
