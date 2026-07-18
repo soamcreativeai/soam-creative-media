@@ -19,6 +19,7 @@ const nowArgument = cliArguments.find((argument) => argument.startsWith('--now='
 const now = nowArgument ? new Date(nowArgument.slice('--now='.length)) : new Date();
 const isCheck = args.has('--check');
 const isDryRun = args.has('--dry-run');
+const isSyncOnly = args.has('--sync-indexes');
 
 if (Number.isNaN(now.getTime())) {
   throw new Error('`--now` は ISO 8601 形式で指定してください。');
@@ -67,6 +68,9 @@ const replaceManagedSection = (html, name, content) => {
 };
 
 const excerptFor = (article) => article.excerpt || article.metaDescription || '記事を読む';
+const displayArticleDate = (date) => date
+  ? datePartsInTokyo(new Date(`${date}T00:00:00+09:00`)).display
+  : '';
 
 const visualClassFor = (article) => {
   const key = article.category;
@@ -80,16 +84,24 @@ const visualClassFor = (article) => {
   return 'media-thumb-default';
 };
 
+const articleNumber = (article) => Number((article.slug || article.file || '').match(/(\d+)(?:\.html)?$/)?.[1] || 0);
+
 const sortedPublished = (manifest) => manifest
   .filter((article) => article.status === 'published')
-  .sort((a, b) => `${b.publishedAt || ''}|${b.file || ''}`.localeCompare(`${a.publishedAt || ''}|${a.file || ''}`, 'ja'));
+  .sort((a, b) => {
+    const dateOrder = `${b.updatedAt || b.publishedAt || ''}`.localeCompare(`${a.updatedAt || a.publishedAt || ''}`);
+    if (dateOrder) return dateOrder;
+    const numberOrder = articleNumber(b) - articleNumber(a);
+    if (numberOrder) return numberOrder;
+    return `${b.file || ''}`.localeCompare(`${a.file || ''}`, 'ja');
+  });
 
 const renderArticleList = (articles) => articles.map((article) => `      <a class="article-card" href="${escapeHtml(article.file)}">
         <div class="thumb">SOAM CREATIVE</div>
         <div class="body">
           <span class="tag">${escapeHtml(article.categoryLabel || 'その他')}</span>
           <h3>${escapeHtml(article.title)}</h3>
-          <p>公開日：${escapeHtml(article.publishedAt || '')}</p>
+          <p>公開日：${escapeHtml(displayArticleDate(article.publishedAt || ''))}</p>
           <span class="read-more">記事を読む →</span>
         </div>
       </a>`).join('\n\n');
@@ -107,7 +119,10 @@ const renderHomeHero = (articles) => {
   }).join('\n');
 };
 
-const renderLatest = (articles) => articles.slice(0, 8).map((article) => `          <a class="media-article" href="articles/${escapeHtml(article.file)}"><div class="media-thumb ${visualClassFor(article)}"></div><div class="media-article-copy"><small>${escapeHtml(article.categoryLabel || 'その他')}</small><h3>${escapeHtml(article.title)}</h3><p>${escapeHtml(excerptFor(article))}</p><span>記事を読む →</span></div></a>`).join('\n');
+const renderLatest = (articles) => articles.slice(0, 8).map((article) => {
+  const date = article.updatedAt || article.publishedAt || '';
+  return `          <a class="media-article" href="articles/${escapeHtml(article.file)}"><div class="media-thumb ${visualClassFor(article)}"></div><div class="media-article-copy"><small>${escapeHtml(article.categoryLabel || 'その他')}</small><h3>${escapeHtml(article.title)}</h3><p>${escapeHtml(excerptFor(article))}</p><time class="media-article-date" datetime="${escapeHtml(date)}">更新日：${escapeHtml(displayArticleDate(date))}</time><span>記事を読む →</span></div></a>`;
+}).join('\n');
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'));
 
@@ -265,6 +280,7 @@ ${buildDisclosure(article)}
 
 const syncIndexes = async (manifest, dryRun) => {
   const articles = sortedPublished(manifest);
+  const updated = datePartsInTokyo(now);
   const articleIndex = await fs.readFile(articleIndexPath, 'utf8');
   const home = await fs.readFile(homePath, 'utf8');
   const nextArticleIndex = replaceManagedSection(articleIndex, 'ARTICLE_LIST', renderArticleList(articles));
@@ -273,10 +289,15 @@ const syncIndexes = async (manifest, dryRun) => {
     'HOME_LATEST',
     renderLatest(articles)
   );
+  const homeWithUpdatedDate = replaceManagedSection(
+    nextHome,
+    'SITE_UPDATED_AT',
+    `<time class="media-site-updated" datetime="${updated.date}">最終更新：${updated.display}</time>`
+  );
   if (!dryRun) {
     await Promise.all([
       fs.writeFile(articleIndexPath, nextArticleIndex),
-      fs.writeFile(homePath, nextHome)
+      fs.writeFile(homePath, homeWithUpdatedDate)
     ]);
   }
 };
@@ -293,6 +314,11 @@ const main = async () => {
     .filter((entry) => entry.status === 'approved' && new Date(entry.scheduledAt) <= now)
     .sort((a, b) => new Date(a.scheduledAt) - new Date(b.scheduledAt));
   if (!due.length) {
+    if (isSyncOnly) {
+      await syncIndexes(manifest, isDryRun);
+      console.log(`[scheduled-publish] ${isDryRun ? 'would synchronize' : 'synchronized'} ${sortedPublished(manifest).length} published article(s).`);
+      return;
+    }
     console.log('[scheduled-publish] no approved articles are due.');
     return;
   }

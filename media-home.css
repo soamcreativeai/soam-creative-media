@@ -11,3 +11,4 @@
 .media-thumb-money{background:var(--blue)}
 .media-thumb-love{background:var(--red)}
 .media-thumb-default{background:var(--lav)}
+.media-article-copy p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}.media-article-date{display:block;font-size:8px;color:var(--muted);margin-top:10px}.media-site-updated{display:inline-block;margin-right:8px;color:var(--ink);font-weight:800}
