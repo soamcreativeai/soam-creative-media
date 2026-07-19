@@ -1203,5 +1203,35 @@
       "article-17",
       "article-23"
     ]
+  },
+  {
+    "title": "小さな美容サロンが発信を続けるための現実的なコツ",
+    "slug": "article-44",
+    "file": "article-44.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "beauty",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "「発信した方がいいのはわかっているけれど、施術で手一杯で続かない」。多くの小さな美容サロンが同じ悩みを抱えています。この記事では、頑張り続けるのではなく、発信のどこを軽くすれば続くのかを一緒に考えます。",
+    "metaTitle": "美容サロンが発信を無理なく続けるコツと仕組み化",
+    "metaDescription": "美容サロンの発信が続かないのは、根性ではなく仕組みの問題です。撮影・投稿・導線のどこを軽くすれば無理なく続くのか、実務目線で解説します。",
+    "publishedAt": "2026-07-19",
+    "updatedAt": "2026-07-19",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "本文中",
+        "reason": "AI検索時代に合わせて店舗集客を強化したい経営者向けのAIO×MEO×SNS次世代店舗集客対策として、記事テーマ（小さな美容サロンが発信を続けるための現実的なコツ）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-22",
+      "article-28"
+    ]
   }
 ]
