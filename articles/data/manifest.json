@@ -1305,5 +1305,28 @@
       "article-27",
       "article-42"
     ]
+  },
+  {
+    "title": "美容サロンの診断結果ページでの離脱を防ぐ方法",
+    "slug": "article-47",
+    "file": "article-47.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "beauty",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "美容サロンを運営していると、お客様に最適なサービスを提案する診断ツールが役立ちますが、診断結果ページで離脱されがちではありませんか？この記事では、その対策を考えてみましょう。",
+    "metaTitle": "美容サロン診断結果の離脱防止法",
+    "metaDescription": "美容サロンの診断結果ページでの顧客離脱を防ぎ、集客を効率化するための方法を紹介します。",
+    "publishedAt": "2026-07-22",
+    "updatedAt": "2026-07-22",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-20",
+      "article-25"
+    ]
   }
 ]
