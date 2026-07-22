@@ -1328,5 +1328,41 @@
       "article-20",
       "article-25"
     ]
+  },
+  {
+    "title": "小さな採用店舗が発信を続けるための持続可能な工夫",
+    "slug": "article-48",
+    "file": "article-48.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "recruitment",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "小さな店舗の採用担当者にとって、定期的な発信は大変な作業です。この負担をどう軽くするか、一緒に考えてみませんか？",
+    "metaTitle": "店舗が採用発信を持続するコツ",
+    "metaDescription": "採用に悩む店舗が発信を続けるための具体的なステップを紹介します。",
+    "publishedAt": "2026-07-22",
+    "updatedAt": "2026-07-22",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "コマッタサン（退職防止エージェント）",
+        "asp": "もしもアフィリエイト",
+        "placement": "本文中",
+        "reason": "離職防止・労務相談をしたい経営者向けの退職防止・コンプライアンス相談窓口として、記事テーマ（小さな採用店舗が発信を続けるための持続可能な工夫）に合致するため選定"
+      },
+      {
+        "name": "type転職エージェント",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連ツール",
+        "reason": "転職を考えている求職者向けの転職エージェントの面談実施として、記事テーマ（小さな採用店舗が発信を続けるための持続可能な工夫）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-28",
+      "article-44"
+    ]
   }
 ]
