@@ -1520,5 +1520,28 @@
       "article-42",
       "article-46"
     ]
+  },
+  {
+    "title": "基本から学ぶ診断コンテンツの作り方",
+    "slug": "article-53",
+    "file": "article-53.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "診断コンテンツは顧客との関係構築や理解を深める有効な手段です。しかし、どのように作成するべきか悩んでいる方も多いのではないでしょうか。この記事では、初心者にもわかりやすく診断コンテンツの作り方を解説します。",
+    "metaTitle": "診断コンテンツ作成の基本と活用法",
+    "metaDescription": "診断コンテンツの作成方法と活用法を解説。業種を問わず、集客やコミュニケーションに効果的なツールです。",
+    "publishedAt": "2026-07-24",
+    "updatedAt": "2026-07-24",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-25",
+      "article-47"
+    ]
   }
 ]
