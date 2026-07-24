@@ -1543,5 +1543,41 @@
       "article-25",
       "article-47"
     ]
+  },
+  {
+    "title": "求人が埋まらないときに見直すべき6つのポイント",
+    "slug": "article-54",
+    "file": "article-54.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "recruitment",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "採用の求人が思うように埋まらない。そんな悩みは多くの企業が抱える課題です。しかし、微調整で解決できるケースも少なくありません。本記事では、そんな場合に見直すべき点を具体的に解説します。",
+    "metaTitle": "求人が埋まらないときの見直しポイント",
+    "metaDescription": "求人が埋まらない原因を見直す重要ポイントを紹介。募集企画から導線まで徹底的に検証。",
+    "publishedAt": "2026-07-24",
+    "updatedAt": "2026-07-24",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "コマッタサン（退職防止エージェント）",
+        "asp": "もしもアフィリエイト",
+        "placement": "本文中",
+        "reason": "離職防止・労務相談をしたい経営者向けの退職防止・コンプライアンス相談窓口として、記事テーマ（求人が埋まらないときに見直すべき6つのポイント）に合致するため選定"
+      },
+      {
+        "name": "type転職エージェント",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連ツール",
+        "reason": "転職を考えている求職者向けの転職エージェントの面談実施として、記事テーマ（求人が埋まらないときに見直すべき6つのポイント）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-44",
+      "article-48"
+    ]
   }
 ]
