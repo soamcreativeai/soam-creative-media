@@ -33,6 +33,9 @@ jobs:
       - name: Publish approved articles that are due
         run: node scripts/publish-scheduled-articles.mjs
 
+      - name: Normalize SEO metadata for published articles
+        run: node scripts/apply-media-seo.mjs
+
       - name: Refresh the XML sitemap
         run: node scripts/generate-sitemap.mjs
 

@@ -39,7 +39,7 @@ try {
       id: 'publisher-test-article',
       status: 'approved',
       slot: 'morning',
-      scheduledAt: '2026-07-19T07:00:00+09:00',
+      scheduledAt: '2026-08-01T07:00:00+09:00',
       source: 'automation/approved-content/test-article.html',
       article: {
         slug: 'article-publisher-test',
@@ -61,7 +61,7 @@ try {
 
   execFileSync(process.execPath, [
     'scripts/publish-scheduled-articles.mjs',
-    '--now=2026-07-19T07:00:00+09:00'
+    '--now=2026-08-01T07:00:00+09:00'
   ], { cwd: fixtureDir, stdio: 'inherit' });
 
   const [article, manifest, queue, articleIndex, home] = await Promise.all([
