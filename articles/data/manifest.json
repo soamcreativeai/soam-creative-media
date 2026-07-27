@@ -1861,5 +1861,39 @@
       "article-54",
       "article-59"
     ]
+  },
+  {
+    "title": "AIに任せる作業を決めるための、小さな業務棚卸しの進め方",
+    "slug": "article-64",
+    "file": "article-64.html",
+    "category": "ai",
+    "categoryLabel": "AI・業務効率化",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": "AIを仕事に取り入れたい小規模事業者・個人事業主。業務を効率化したいものの、何から整理すればよいかわからない人。",
+    "tags": [
+      "AIに任せる作業",
+      "業務棚卸し",
+      "AI導入前",
+      "業務整理",
+      "業務効率化",
+      "小規模事業者",
+      "個人事業主"
+    ],
+    "excerpt": "AIを導入する前に必要なのは、ツール探しよりも業務の棚卸しです。日々の仕事を小さく分け、AIに任せやすい作業と人が判断すべき作業を整理する手順を紹介します。",
+    "metaTitle": "AIに任せる作業を決めるための、小さな業務棚卸しの進め方",
+    "metaDescription": "AI導入前に、自分の仕事を小さな単位へ分けて整理する方法を解説。繰り返し作業や待ち時間を見つけ、任せる作業と人が担う判断を分けます。",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-07-27",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-12",
+      "article-19",
+      "article-42",
+      "article-58",
+      "article-16"
+    ]
   }
 ]
