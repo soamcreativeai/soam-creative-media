@@ -367,6 +367,42 @@
         "containsAffiliateLinks": false
       },
       "publishedAt": "2026-07-18T08:00:51.481Z"
+    },
+    {
+      "id": "2026-07-27-evening-auto",
+      "status": "published",
+      "slot": "evening",
+      "scheduledAt": "2026-07-27T20:00:00+09:00",
+      "source": "automation/generated-content/article-62.html",
+      "generated": {
+        "themeId": "personal-service-boundary",
+        "score": 0.07058823529411765,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-62",
+        "title": "個人サービスのやり取りを整える、対応範囲を言葉にする方法",
+        "category": "personal",
+        "categoryLabel": "個人サービス",
+        "articleType": "guide",
+        "targetIndustry": "all",
+        "targetReader": "講師、コーチ、カウンセラー、コンサルタントなど、自分でサービスを提供し、問い合わせや個別対応の範囲に迷っている人。",
+        "tags": [
+          "個人サービス 対応範囲",
+          "講師 対応範囲",
+          "コーチング 境界線",
+          "個人サービス ルール",
+          "問い合わせ対応",
+          "サービス内容の伝え方"
+        ],
+        "excerpt": "個人サービスでは、提供内容だけでなく「どこまで対応するか」を言葉にしておくことが大切です。相談・連絡・追加依頼の境界を整理し、相手とのすれ違いを減らす考え方を紹介します。",
+        "metaDescription": "講師・コーチ・個人サービス提供者向けに、対応範囲を整理して伝える方法を解説。相談内容、返信時間、追加対応、例外時の案内を言葉にして、無理のないやり取りを整えます。",
+        "primaryCta": null,
+        "affiliateLinks": [],
+        "relatedArticles": [],
+        "containsAffiliateLinks": false
+      },
+      "publishedAt": "2026-07-27T02:38:36.091Z"
     }
   ]
 }
