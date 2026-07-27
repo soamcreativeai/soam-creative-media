@@ -92,4 +92,8 @@ const applyStaticPage = async (page) => {
 
 for (const article of manifest.filter((article) => article.status === 'published')) await applyArticle(article);
 for (const page of staticPages) await applyStaticPage(page);
+const robotsPath = path.join(rootDir, 'robots.txt');
+const robots = await fs.readFile(robotsPath, 'utf8');
+const normalizedRobots = robots.replace(/^Sitemap:.*$/m, `Sitemap: ${canonicalUrl('sitemap.xml')}`);
+if (robots !== normalizedRobots) await fs.writeFile(robotsPath, normalizedRobots);
 console.log(`[media-seo] updated ${manifest.filter((article) => article.status === 'published').length} articles and ${staticPages.length} static pages.`);

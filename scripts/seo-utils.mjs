@@ -1,4 +1,5 @@
-export const SITE_ORIGIN = 'https://soamcreativeai.github.io/soam-creative-media';
+// SOAM Media の利用者向け正規公開先。GitHub Pages はソース確認用の配信先です。
+export const SITE_ORIGIN = 'https://media.soam-creative.com';
 
 export const canonicalUrl = (pathname = '') => {
   const normalized = pathname.replace(/^\/+/, '');
