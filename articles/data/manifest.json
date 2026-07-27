@@ -1838,5 +1838,28 @@
     "primaryCta": null,
     "affiliateLinks": [],
     "relatedArticles": []
+  },
+  {
+    "title": "小さなコーチ・講師業の発信を続ける秘訣",
+    "slug": "article-63",
+    "file": "article-63.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "coaching",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "小さな店舗やコーチ業では、日々の発信が重要です。しかし継続するのは簡単ではありません。今回は発信を続けるための具体的なステップを紹介します。",
+    "metaTitle": "小さなコーチ業の発信継続術",
+    "metaDescription": "コーチ・講師業が小さな規模で効果的に発信を続けるための実務的なコツを紹介します。",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-07-27",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-54",
+      "article-59"
+    ]
   }
 ]
