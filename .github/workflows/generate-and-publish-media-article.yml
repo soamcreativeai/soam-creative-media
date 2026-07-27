@@ -88,11 +88,14 @@ jobs:
           retention-days: 7
       - name: Normalize SEO metadata
         if: ${{ !inputs.dry_run && !inputs.list_models_only }}
-        run: node scripts/apply-media-seo.mjs
+        run: |
+          node scripts/normalize-soam-link-urls.mjs
+          node scripts/apply-media-seo.mjs
       - name: Refresh sitemap and verify all published articles
         if: ${{ !inputs.dry_run && !inputs.list_models_only }}
         run: |
           node scripts/generate-sitemap.mjs
+          node scripts/test-site-links.mjs
           node scripts/test-media-seo.mjs
           node scripts/test-publish-scheduled-articles.mjs
       - name: Commit and push a complete article publication

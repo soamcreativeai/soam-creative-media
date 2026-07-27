@@ -6,6 +6,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { fixtureArticle, nextArticleNumber, qualityErrors, selectOffers, selectTheme, slotKey, slots, tokyoParts } from './media-generation-utils.mjs';
 import { articleStructuredData, canonicalUrl, jsonForScript } from './seo-utils.mjs';
+import { SOAM_LINK_URL } from './site-links.mjs';
 
 const exec = promisify(execFile);
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -91,7 +92,7 @@ const main = async () => {
   if (queue.articles.some((entry) => entry.id === id)) return console.log(`[media-generation] no-op: ${id} is already recorded.`);
   const choice = selectTheme({ catalog, manifest, slot }); const number = nextArticleNumber(manifest); const slug = `article-${number}`; const offers = selectOffers({ offers: affiliateCatalog.offers || [], category: choice.theme.category, manifest });
   const relatedCandidates = manifest.filter((article) => article.status === 'published' && article.category === choice.theme.category).map((article) => article.slug);
-  const input = { task: 'SOAM Mediaの新規記事を構造化JSONで生成する', theme: choice.theme, slot, existingArticles: manifest.map((article) => ({ id: article.slug, title: article.title, description: article.metaDescription || article.excerpt, tags: article.tags || [] })), relatedArticleCandidates: relatedCandidates, styleGuide: catalog.styleGuide, seoRequirements: ['unique title', 'unique meta description', 'search intent', 'related articles'], activeAffiliateOffers: offers.map(({ id, name, summary, allowedClaims, prohibitedClaims }) => ({ id, name, summary, allowedClaims, prohibitedClaims })), soamLinkPolicy: 'SOAM Linkは紹介・成果報酬の受け皿。未公開または未提供の機能を提供中と断定しない。', safety: ['架空体験を作らない', '根拠のない数値を作らない', '広告リンクやURLを本文へ書かない', '禁止表現を使わない', 'sections に「まとめ」を入れず、conclusion に最終結論を書く', 'related_article_ids は relatedArticleCandidates のIDだけを使う'] };
+  const input = { task: 'SOAM Mediaの新規記事を構造化JSONで生成する', theme: choice.theme, slot, existingArticles: manifest.map((article) => ({ id: article.slug, title: article.title, description: article.metaDescription || article.excerpt, tags: article.tags || [] })), relatedArticleCandidates: relatedCandidates, styleGuide: catalog.styleGuide, seoRequirements: ['unique title', 'unique meta description', 'search intent', 'related articles'], activeAffiliateOffers: offers.map(({ id, name, summary, allowedClaims, prohibitedClaims }) => ({ id, name, summary, allowedClaims, prohibitedClaims })), soamLinkPolicy: { officialUrl: SOAM_LINK_URL, rule: 'SOAM Linkは紹介・成果報酬の受け皿。URLはAI本文に書かず、テンプレートまたは設定から後付けする。未公開または未提供の機能を提供中と断定しない。' }, safety: ['架空体験を作らない', '根拠のない数値を作らない', '広告リンクやURLを本文へ書かない', '禁止表現を使わない', 'sections に「まとめ」を入れず、conclusion に最終結論を書く', 'related_article_ids は relatedArticleCandidates のIDだけを使う'] };
   let generated; let normalized; let usage = {}; let errors = [];
   for (let attempt = 1; attempt <= 3; attempt += 1) {
     const response = fixture ? { generated: fixtureArticle(choice.theme), usage: { input_tokens: 0, output_tokens: 0 } } : await responseRequest({ ...input, retryAttempt: attempt, previousQualityErrors: errors });
