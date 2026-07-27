@@ -83,8 +83,8 @@ jobs:
         with:
           name: soam-media-article-dry-run-preview
           path: |
-            automation/dry-run-output/article-62-preview.html
-            automation/dry-run-output/article-62-generation-summary.json
+            automation/dry-run-output/*.html
+            automation/dry-run-output/*-generation-summary.json
           retention-days: 7
       - name: Normalize SEO metadata
         if: ${{ !inputs.dry_run && !inputs.list_models_only }}
