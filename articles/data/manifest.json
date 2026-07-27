@@ -1937,5 +1937,35 @@
       "article-58",
       "article-64"
     ]
+  },
+  {
+    "title": "無料相談導線で店舗ビジネスの集客を軽くする方法",
+    "slug": "article-66",
+    "file": "article-66.html",
+    "category": "lp",
+    "categoryLabel": "LP・Web集客",
+    "articleType": "lp",
+    "targetIndustry": "local-business",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "店舗ビジネスで無料相談を上手に活用した集客がしたいですか？導線を整えることで、顧客との接点が効果的に増やせます。",
+    "metaTitle": "無料相談導線の作り方｜店舗ビジネス向けWeb集客",
+    "metaDescription": "店舗ビジネスにおける無料相談導線の作り方を解説。摩擦を減らし顧客の相談を促進する導線設計のポイントを紹介。",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-07-28",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "お名前.com",
+        "asp": "A8.net",
+        "placement": "本文中",
+        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（無料相談導線で店舗ビジネスの集客を軽くする方法）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-50",
+      "article-56"
+    ]
   }
 ]
