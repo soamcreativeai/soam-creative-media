@@ -1,11 +1,6 @@
 name: Publish scheduled articles
 
 on:
-  schedule:
-    # GitHub Actions の cron は UTC。日本時間 07:00 / 12:00 / 20:00 に対応する。
-    - cron: "0 22 * * *"
-    - cron: "0 3 * * *"
-    - cron: "0 11 * * *"
   workflow_dispatch:
 
 permissions:

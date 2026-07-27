@@ -1,0 +1,93 @@
+name: Generate and publish SOAM Media article
+
+on:
+  schedule:
+    # UTC: JST 07:00 / 12:00 / 20:00
+    - cron: "0 22 * * *"
+    - cron: "0 3 * * *"
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "公開枠（auto は現在時刻から選択）"
+        required: false
+        type: choice
+        default: auto
+        options: [auto, morning, noon, evening]
+      dry_run:
+        description: "生成・検証のみ（commit/pushなし）"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: soam-media-generation
+  cancel-in-progress: false
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generate, validate, and publish one article
+        env:
+          MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}
+          MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
+          MEDIA_AI_MODEL: ${{ secrets.MEDIA_AI_MODEL }}
+        run: |
+          SLOT="${{ inputs.slot != 'auto' && inputs.slot || (github.event.schedule == '0 22 * * *' && 'morning') || (github.event.schedule == '0 3 * * *' && 'noon') || 'evening' }}"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/generate-media-article.mjs --dry-run --slot="$SLOT"
+          else
+            node scripts/generate-media-article.mjs --slot="$SLOT"
+          fi
+      - name: Normalize SEO metadata
+        if: ${{ !inputs.dry_run }}
+        run: node scripts/apply-media-seo.mjs
+      - name: Refresh sitemap and verify all published articles
+        if: ${{ !inputs.dry_run }}
+        run: |
+          node scripts/generate-sitemap.mjs
+          node scripts/test-media-seo.mjs
+          node scripts/test-publish-scheduled-articles.mjs
+      - name: Commit and push a complete article publication
+        if: ${{ !inputs.dry_run }}
+        run: |
+          if git diff --quiet; then
+            echo "No new article was generated."
+            exit 0
+          fi
+          TITLE="$(node -e "const q=require('./automation/article-queue.json');const a=q.articles.filter(x=>x.generated).at(-1).article;process.stdout.write('content: publish '+a.slug+' '+a.title.slice(0,60))")"
+          git config user.name "SOAM CREATIVE Publisher"
+          git config user.email "soam.creative.media@gmail.com"
+          git add articles automation index.html sitemap.xml
+          git commit -m "$TITLE"
+          git pull --rebase origin main
+          node scripts/test-media-seo.mjs
+          git push origin HEAD:main
+          ARTICLE_FILE="$(git show --format= --name-only HEAD | sed -n 's#^articles/\(article-[0-9][0-9]*\.html\)$#\1#p' | head -1)"
+          if [ -z "$ARTICLE_FILE" ]; then
+            echo "Generated article file could not be identified after commit."
+            exit 1
+          fi
+          ARTICLE_URL="https://soamcreativeai.github.io/soam-creative-media/articles/$ARTICLE_FILE"
+          for attempt in $(seq 1 20); do
+            PAGE="$(curl --fail --silent --show-error "$ARTICLE_URL" || true)"
+            if printf '%s' "$PAGE" | grep -Fq "https://soamcreativeai.github.io/soam-creative-media/articles/$ARTICLE_FILE" \
+              && printf '%s' "$PAGE" | grep -Fq '"@type":"Article"'; then
+              echo "Published page verified: $ARTICLE_URL"
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "GitHub Pages did not expose the published article with canonical and Article JSON-LD in time."
+          exit 1

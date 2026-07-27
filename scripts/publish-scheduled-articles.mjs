@@ -9,6 +9,7 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(scriptDir, '..');
 const queuePath = path.join(rootDir, 'automation/article-queue.json');
 const approvedContentDir = path.join(rootDir, 'automation/approved-content');
+const generatedContentDir = path.join(rootDir, 'automation/generated-content');
 const manifestPath = path.join(rootDir, 'articles/data/manifest.json');
 const articleIndexPath = path.join(rootDir, 'articles/index.html');
 const homePath = path.join(rootDir, 'index.html');
@@ -166,8 +167,8 @@ const validateArticle = (entry, slots, existingManifest) => {
   if (entry.status === 'approved') {
     const source = requireString(entry.source, `${entry.id}: source`);
     const sourcePath = path.resolve(rootDir, source);
-    if (!sourcePath.startsWith(`${approvedContentDir}${path.sep}`)) {
-      throw new Error(`${entry.id}: source は automation/approved-content/ 配下に置いてください。`);
+    if (!sourcePath.startsWith(`${approvedContentDir}${path.sep}`) && !sourcePath.startsWith(`${generatedContentDir}${path.sep}`)) {
+      throw new Error(`${entry.id}: source は automation/approved-content/ または automation/generated-content/ 配下に置いてください。`);
     }
   }
 };
