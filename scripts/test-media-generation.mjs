@@ -12,4 +12,5 @@ const fixture = fixtureArticle(choice.theme);
 const article = { title: fixture.title, metaDescription: fixture.meta_description, excerpt: fixture.excerpt, introduction: fixture.introduction, sections: [{ heading: '確認', paragraphs: ['内容を確認します。'] }], conclusion: fixture.conclusion, bodyHtml: '<h2>結論</h2><h3>補足</h3><p>向いている人と向いていない人の条件を確認します。</p>' };
 assert.equal(qualityErrors({ article, styleGuide: catalog.styleGuide, expectedTitlePool: manifest.map((item) => item.title), offers: [] }).length, 0, 'fixture記事は品質検査を通る');
 assert.match(qualityErrors({ article: { ...article, bodyHtml: '<h2>TODO</h2>' }, styleGuide: catalog.styleGuide, expectedTitlePool: [], offers: [] }).join('\n'), /TODO/, '仮文を拒否する');
+assert.match(qualityErrors({ article: { ...article, bodyHtml: '<h2>結論</h2><h2>結論</h2><h3>補足</h3><p>向いている人と向いていない人の条件を確認します。</p>' }, styleGuide: catalog.styleGuide, expectedTitlePool: [], offers: [] }).join('\n'), /h2見出しが重複/, '重複した見出しを拒否する');
 console.log('[media-generation:test] passed');

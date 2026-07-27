@@ -64,6 +64,10 @@ export const qualityErrors = ({ article, styleGuide, expectedTitlePool, expected
   const baseline = styleGuide.qualityBaseline || {};
   if (h2Count < (baseline.minimumH2 || 1)) errors.push(`h2が不足しています（${h2Count}/${baseline.minimumH2}）。`);
   if (h3Count < (baseline.minimumH3 || 1)) errors.push(`h3が不足しています（${h3Count}/${baseline.minimumH3}）。`);
+  const headings = [...String(article.bodyHtml).matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)].map((match) => visibleText(match[1]));
+  const duplicateHeading = headings.find((heading, index) => heading && headings.indexOf(heading) !== index);
+  if (duplicateHeading) errors.push(`h2見出しが重複しています: ${duplicateHeading}`);
+  if ((article.sections || []).some((section) => String(section.heading || '').trim() === 'まとめ')) errors.push('sections に「まとめ」を含めず、conclusion を使ってください。');
   if ([...visibleText(article.bodyHtml)].length < (baseline.minimumBodyChars || 0)) errors.push(`article-19基準の本文量を満たしません（${[...visibleText(article.bodyHtml)].length}/${baseline.minimumBodyChars}文字）。`);
   if (!/向いている人/.test(whole) || !/向いていない人/.test(whole)) errors.push('向いている人／向いていない人の判断基準が必要です。');
   if ((article.sections || []).some((section) => !section.heading || !Array.isArray(section.paragraphs) || !section.paragraphs.length || section.paragraphs.some((paragraph) => !String(paragraph).trim()) || [...section.paragraphs.join('')].length < (baseline.minimumSectionChars || 1))) errors.push('空または極端に短いセクションがあります。');
@@ -75,7 +79,7 @@ export const qualityErrors = ({ article, styleGuide, expectedTitlePool, expected
   for (const offer of offers) for (const phrase of offer.prohibitedClaims || []) if (whole.includes(phrase)) errors.push(`案件禁止表現: ${offer.name} / ${phrase}`);
   const externalLinks = [...article.bodyHtml.matchAll(/href=["'](https?:\/\/[^"']+)["']/gi)].map((match) => match[1]);
   if (externalLinks.length) errors.push('AI本文に外部URLを直接入れてはいけません。案件リンクはカタログから後付けします。');
-  if (expectedRelatedIds.length && article.relatedArticleIds?.some((id) => !expectedRelatedIds.includes(id))) errors.push('関連記事IDが実在しません。');
+  if (expectedRelatedIds.length && article.relatedArticleIds?.some((id) => !expectedRelatedIds.includes(id))) errors.push('関連記事IDが選定テーマに適合していません。');
   return errors;
 };
 
