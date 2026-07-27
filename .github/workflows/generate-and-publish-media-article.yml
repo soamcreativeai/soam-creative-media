@@ -19,6 +19,11 @@ on:
         required: false
         default: false
         type: boolean
+      list_models_only:
+        description: "OpenAI利用可能モデルの確認だけを実行する"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -39,12 +44,20 @@ jobs:
         with:
           node-version: 22
       - name: Verify OpenAI connectivity and configured model
+        if: ${{ !inputs.list_models_only }}
         env:
           MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}
           MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
           MEDIA_AI_MODEL: ${{ secrets.MEDIA_AI_MODEL }}
         run: node scripts/generate-media-article.mjs --verify-openai
+      - name: List available OpenAI candidate models
+        if: ${{ inputs.list_models_only }}
+        env:
+          MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}
+          MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
+        run: node scripts/generate-media-article.mjs --list-openai-models
       - name: Generate, validate, and publish one article
+        if: ${{ !inputs.list_models_only }}
         env:
           MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}
           MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
@@ -57,16 +70,16 @@ jobs:
             node scripts/generate-media-article.mjs --slot="$SLOT"
           fi
       - name: Normalize SEO metadata
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
         run: node scripts/apply-media-seo.mjs
       - name: Refresh sitemap and verify all published articles
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
         run: |
           node scripts/generate-sitemap.mjs
           node scripts/test-media-seo.mjs
           node scripts/test-publish-scheduled-articles.mjs
       - name: Commit and push a complete article publication
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
         run: |
           if git diff --quiet; then
             echo "No new article was generated."

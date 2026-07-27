@@ -15,15 +15,16 @@ const requestedSlot = value('--slot');
 const dryRun = args.has('--dry-run');
 const fixture = args.has('--fixture');
 const verifyOpenAI = args.has('--verify-openai');
+const listOpenAIModels = args.has('--list-openai-models');
 if (Number.isNaN(now.getTime())) throw new Error('`--now` は ISO 8601 形式で指定してください。');
 
 const readJson = async (file) => JSON.parse(await fs.readFile(path.join(root, file), 'utf8'));
 const esc = (text) => String(text || '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
-const openAiConfig = () => {
+const openAiConfig = ({ requireModel = true } = {}) => {
   const baseUrl = process.env.MEDIA_AI_BASE_URL;
   const apiKey = process.env.MEDIA_AI_API_KEY;
   const model = process.env.MEDIA_AI_MODEL;
-  if (baseUrl !== 'https://api.openai.com/v1' || !apiKey || !model) throw new Error('OpenAI APIには MEDIA_AI_BASE_URL=https://api.openai.com/v1、MEDIA_AI_API_KEY、MEDIA_AI_MODEL が必要です。');
+  if (baseUrl !== 'https://api.openai.com/v1' || !apiKey || (requireModel && !model)) throw new Error(requireModel ? 'OpenAI APIには MEDIA_AI_BASE_URL=https://api.openai.com/v1、MEDIA_AI_API_KEY、MEDIA_AI_MODEL が必要です。' : 'OpenAI APIには MEDIA_AI_BASE_URL=https://api.openai.com/v1 と MEDIA_AI_API_KEY が必要です。');
   return { baseUrl, apiKey, model };
 };
 const delay = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
@@ -63,11 +64,20 @@ const verifyModels = async () => {
   if (!ids.includes(model)) throw new Error(`MEDIA_AI_MODEL (${model}) はこのOpenAI APIキーで利用可能なモデル一覧にありません。`);
   console.log(`[openai] connectivity verified; configured model is available: ${model}`);
 };
+const listModels = async () => {
+  const { baseUrl, apiKey } = openAiConfig({ requireModel: false });
+  const response = await fetch(`${baseUrl}/models`, { headers: { Authorization: `Bearer ${apiKey}` } });
+  if (!response.ok) throw new Error(`OpenAI model list failed: ${response.status}`);
+  const candidates = (await response.json()).data?.map((item) => item.id).filter((id) => /^gpt-(?:5|4\.1|4o)/.test(id)).sort() || [];
+  if (!candidates.length) throw new Error('記事生成向けのOpenAI GPTモデルを確認できませんでした。');
+  console.log(`[openai] available candidate model IDs: ${candidates.join(', ')}`);
+};
 const selectedSlot = () => { if (requestedSlot) { if (!slots[requestedSlot]) throw new Error(`未知のslotです: ${requestedSlot}`); return requestedSlot; } const time = tokyoParts(now).time; return time >= slots.evening || time < slots.morning ? 'evening' : time >= slots.noon ? 'noon' : 'morning'; };
 const htmlFromArticle = (article) => `<p class="article-excerpt">${esc(article.introduction)}</p>${article.sections.map((section) => `<h2>${esc(section.heading)}</h2>${section.paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join('')}${section.subsections.map((subsection) => `<h3>${esc(subsection.heading)}</h3>${subsection.paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join('')}`).join('')}`).join('')}<h2>まとめ</h2><p>${esc(article.conclusion)}</p>`;
 const serviceBox = (offers) => offers.length ? `<div class="affiliate-box"><p><strong>関連サービスについて</strong></p><ul>${offers.map((offer) => `<li><a href="${esc(offer.affiliateUrl)}">${esc(offer.name)}</a>｜${esc(offer.summary)}</li>`).join('')}</ul><p><small>この記事には紹介リンクまたはアフィリエイト広告を含みます。料金・仕様・対象外は公式情報をご確認ください。</small></p></div>` : '';
 
 const main = async () => {
+  if (listOpenAIModels) return listModels();
   if (verifyOpenAI) return verifyModels();
   const [manifest, queue, catalog, affiliateCatalog] = await Promise.all([readJson('articles/data/manifest.json'), readJson('automation/article-queue.json'), readJson('automation/generation-catalog.json'), readJson('automation/affiliate-catalog.json')]);
   const slot = selectedSlot(); const date = tokyoParts(now).date; const id = `${slotKey(date, slot)}-auto`;
