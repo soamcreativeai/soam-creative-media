@@ -38,6 +38,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Verify OpenAI connectivity and configured model
+        env:
+          MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}
+          MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
+          MEDIA_AI_MODEL: ${{ secrets.MEDIA_AI_MODEL }}
+        run: node scripts/generate-media-article.mjs --verify-openai
       - name: Generate, validate, and publish one article
         env:
           MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}

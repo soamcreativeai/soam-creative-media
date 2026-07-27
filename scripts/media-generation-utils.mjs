@@ -67,9 +67,24 @@ export const qualityErrors = ({ article, styleGuide, expectedTitlePool, expected
 
 export const fixtureArticle = (theme) => ({
   title: `${theme.titleHint}を、今日から試すための考え方`,
-  metaDescription: `${theme.intent}人に向けて、状況を整理し、小さく試して見直すための考え方を紹介します。`,
+  meta_description: `${theme.intent}人に向けて、状況を整理し、小さく試して見直すための考え方を紹介します。`,
   excerpt: `${theme.intent}ときに、最初の一歩を決めるための実務的な整理をまとめます。`,
-  bodyHtml: `<div class="what-you-get"><p><strong>この記事でわかること</strong></p><ul><li>最初に整理する項目</li><li>小さく試す順番</li><li>見直しの目安</li></ul></div><h2>こんな悩みはありませんか</h2><p>やることが増えるほど、何から手をつけるか迷いやすくなります。</p><h2>結論</h2><p>一度に仕組みを変えず、困っている場面を一つ選んで試すことから始めます。</p><h2>状況を一つに絞る</h2><p>最近止まった作業を振り返り、誰が何に迷ったかを書き出します。</p><h3>記録する項目</h3><p>目的、必要な情報、完了の目安を短く残します。</p><h2>具体例</h2><p>問い合わせ後の案内が毎回変わるなら、最初の返信に必要な項目だけをメモにします。</p><h2>注意点</h2><p>料金、契約、公開に関わる判断は、一般的な手順だけで決めず公式情報を確認します。</p><h2>まとめ</h2><p>小さく試し、負担が減ったかを見てから次へ進みます。</p>`
+  category: theme.category,
+  primary_keyword: theme.intent,
+  secondary_keywords: [theme.categoryLabel, '小さく試す'],
+  search_intent: theme.intent,
+  target_reader: theme.reader,
+  introduction: 'やることが増えるほど、何から手をつけるか迷いやすくなります。',
+  sections: [
+    { heading: 'こんな悩みはありませんか', paragraphs: ['状況が複雑になると、最初の一歩が見えにくくなります。'], subsections: [] },
+    { heading: '結論', paragraphs: ['一度に仕組みを変えず、困っている場面を一つ選んで試すことから始めます。'], subsections: [] },
+    { heading: '状況を一つに絞る', paragraphs: ['最近止まった作業を振り返り、誰が何に迷ったかを書き出します。'], subsections: [{ heading: '記録する項目', paragraphs: ['目的、必要な情報、完了の目安を短く残します。'] }] },
+    { heading: '具体例', paragraphs: ['問い合わせ後の案内が毎回変わるなら、最初の返信に必要な項目だけをメモにします。'], subsections: [] },
+    { heading: '注意点', paragraphs: ['料金、契約、公開に関わる判断は、一般的な手順だけで決めず公式情報を確認します。'], subsections: [] }
+  ],
+  conclusion: '小さく試し、負担が減ったかを見てから次へ進みます。',
+  affiliate_recommendations: [],
+  related_article_ids: []
 });
 
 export const sourceHash = (text) => crypto.createHash('sha256').update(text).digest('hex').slice(0, 12);

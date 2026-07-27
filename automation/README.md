@@ -12,7 +12,7 @@
 
 `generation-catalog.json` がテーマと文体の正本です。既存記事のタイトル・要約・タグとの類似度、直近7日・30日のカテゴリ偏りを評価してテーマを選びます。同じ日付・slotのID（例: `2026-07-27-morning-auto`）がキューに残るため、再実行や遅延実行では二重生成しません。
 
-AIは `MEDIA_AI_BASE_URL`、`MEDIA_AI_API_KEY`、`MEDIA_AI_MODEL` をGitHub Actions Secretからだけ受け取ります。値はログへ出しません。Secretまたはモデルが未設定なら、記事・index・sitemapを変更せず明確に失敗します。品質不合格の応答は最大3回（`MEDIA_AI_MAX_ATTEMPTS`で1〜5回に変更可能）まで再生成し、それでも不合格なら書込み・公開を行いません。
+AIはOpenAI Responses APIだけを使います。`MEDIA_AI_BASE_URL=https://api.openai.com/v1`、`MEDIA_AI_API_KEY`、`MEDIA_AI_MODEL` をGitHub Actions Secretからだけ受け取ります。値はログへ出しません。Secretまたはモデルが未設定なら、記事・index・sitemapを変更せず明確に失敗します。品質不合格の応答は最大3回まで再生成し、それでも不合格なら書込み・公開を行いません。設定は [`docs/OPENAI_AUTOMATION_SETUP.md`](../docs/OPENAI_AUTOMATION_SETUP.md) を参照してください。
 
 `affiliate-catalog.json` の `active: true` の案件だけを使います。正式URL・アフィリエイトURL・最終確認日・禁止表現がそろわない案件は、既存記事にリンクがあっても自動挿入しません。
 
