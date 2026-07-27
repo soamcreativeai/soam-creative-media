@@ -4,7 +4,15 @@
   "styleGuide": {
     "voice": "落ち着いた実務的な日本語。読者の判断を急かさず、できることと確認が必要なことを分ける。",
     "forbiddenPhrases": ["いかがでしたでしょうか", "誰でも簡単", "放置で稼げる", "絶対に得する", "今すぐ申し込まないと損", "おすすめ1位"],
-    "requiredSections": ["こんな悩みはありませんか", "結論", "具体例", "注意点", "まとめ"]
+    "requiredSections": ["こんな悩みはありませんか", "結論", "具体例", "注意点", "向いている人・向いていない人", "まとめ"],
+    "qualityBaseline": {
+      "referenceArticle": "article-19",
+      "referenceBodyChars": 3601,
+      "minimumBodyChars": 2521,
+      "minimumH2": 10,
+      "minimumH3": 1,
+      "minimumSectionChars": 150
+    }
   },
   "themes": [
     {"id":"ai-workflow-inventory","category":"ai","categoryLabel":"AI・業務効率化","articleType":"howto","intent":"AI導入前に業務を整理したい","reader":"小規模事業者・個人事業主","titleHint":"AIに任せる作業を決めるための、小さな業務棚卸し"},

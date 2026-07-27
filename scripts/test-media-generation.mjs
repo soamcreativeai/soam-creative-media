@@ -9,7 +9,7 @@ const choice = selectTheme({ catalog, manifest, slot: 'morning' }); assert.equal
 const offer = { id: 'x', name: '確認済み案件', category: 'money', active: true, officialUrl: 'https://example.com', affiliateUrl: 'https://example.com/track', lastVerifiedAt: '2026-07-27', prohibitedClaims: [], summary: '確認済みの説明' };
 assert.deepEqual(selectOffers({ offers: [offer, { ...offer, id: 'off', active: false }], category: 'money', manifest }).map((item) => item.id), ['x'], '無効案件を除外する');
 const fixture = fixtureArticle(choice.theme);
-const article = { title: fixture.title, metaDescription: fixture.meta_description, excerpt: fixture.excerpt, bodyHtml: '<h2>結論</h2><h3>補足</h3><p>確認します。</p>' };
+const article = { title: fixture.title, metaDescription: fixture.meta_description, excerpt: fixture.excerpt, introduction: fixture.introduction, sections: [{ heading: '確認', paragraphs: ['内容を確認します。'] }], conclusion: fixture.conclusion, bodyHtml: '<h2>結論</h2><h3>補足</h3><p>向いている人と向いていない人の条件を確認します。</p>' };
 assert.equal(qualityErrors({ article, styleGuide: catalog.styleGuide, expectedTitlePool: manifest.map((item) => item.title), offers: [] }).length, 0, 'fixture記事は品質検査を通る');
 assert.match(qualityErrors({ article: { ...article, bodyHtml: '<h2>TODO</h2>' }, styleGuide: catalog.styleGuide, expectedTitlePool: [], offers: [] }).join('\n'), /TODO/, '仮文を拒否する');
 console.log('[media-generation:test] passed');

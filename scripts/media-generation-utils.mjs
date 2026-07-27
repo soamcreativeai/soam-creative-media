@@ -49,23 +49,49 @@ export const selectOffers = ({ offers, category, manifest }) => offers
     return count(a.name) - count(b.name) || a.id.localeCompare(b.id);
   }).slice(0, 3);
 
-export const qualityErrors = ({ article, styleGuide, expectedTitlePool, expectedTextPool = [], offers }) => {
+const visibleText = (html) => String(html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+const sentences = (text) => String(text || '').split(/[。！？]/).map((sentence) => sentence.trim()).filter((sentence) => [...sentence].length >= 18);
+
+export const qualityErrors = ({ article, styleGuide, expectedTitlePool, expectedTextPool = [], offers, expectedCategory, expectedRelatedIds = [] }) => {
   const errors = [];
   const whole = `${article.title}\n${article.metaDescription}\n${article.excerpt}\n${article.bodyHtml}`;
-  if (!article.title || !article.metaDescription || !article.excerpt || !article.bodyHtml) errors.push('title、metaDescription、excerpt、bodyHtml は必須です。');
+  if (!article.title || !article.metaDescription || !article.excerpt || !article.introduction || !article.sections?.length || !article.conclusion || !article.bodyHtml) errors.push('title、metaDescription、excerpt、introduction、sections、conclusion、bodyHtml は必須です。');
+  if (expectedCategory && article.category !== expectedCategory) errors.push('選定テーマと記事カテゴリが不一致です。');
   if (expectedTitlePool.some((title) => similarity(article.title, title) >= 0.75)) errors.push('既存記事とのタイトル類似度が高すぎます。');
   if (expectedTextPool.some((text) => similarity(article.bodyHtml, text) >= 0.75)) errors.push('既存記事との本文類似度が高すぎます。');
-  if (!/<h2[\s>]/i.test(article.bodyHtml) || !/<h3[\s>]/i.test(article.bodyHtml)) errors.push('本文には h2 と h3 が必要です。');
+  const h2Count = (article.bodyHtml.match(/<h2[\s>]/gi) || []).length;
+  const h3Count = (article.bodyHtml.match(/<h3[\s>]/gi) || []).length;
+  const baseline = styleGuide.qualityBaseline || {};
+  if (h2Count < (baseline.minimumH2 || 1)) errors.push(`h2が不足しています（${h2Count}/${baseline.minimumH2}）。`);
+  if (h3Count < (baseline.minimumH3 || 1)) errors.push(`h3が不足しています（${h3Count}/${baseline.minimumH3}）。`);
+  if ([...visibleText(article.bodyHtml)].length < (baseline.minimumBodyChars || 0)) errors.push(`article-19基準の本文量を満たしません（${[...visibleText(article.bodyHtml)].length}/${baseline.minimumBodyChars}文字）。`);
+  if (!/向いている人/.test(whole) || !/向いていない人/.test(whole)) errors.push('向いている人／向いていない人の判断基準が必要です。');
+  if ((article.sections || []).some((section) => !section.heading || !Array.isArray(section.paragraphs) || !section.paragraphs.length || section.paragraphs.some((paragraph) => !String(paragraph).trim()) || [...section.paragraphs.join('')].length < (baseline.minimumSectionChars || 1))) errors.push('空または極端に短いセクションがあります。');
+  const repeated = sentences(visibleText(article.bodyHtml)).find((sentence, index, list) => list.indexOf(sentence) !== index);
+  if (repeated) errors.push(`同一文が反復されています: ${repeated.slice(0, 30)}`);
   if (/<(?:script|iframe|html|head|body)\b|\son[a-z]+\s*=/i.test(article.bodyHtml)) errors.push('本文HTMLに許可されない要素またはイベント属性があります。');
   if (/\b(?:TODO|PLACEHOLDER)\b/i.test(whole)) errors.push('仮文または TODO が残っています。');
   for (const phrase of styleGuide.forbiddenPhrases || []) if (whole.includes(phrase)) errors.push(`禁止表現: ${phrase}`);
   for (const offer of offers) for (const phrase of offer.prohibitedClaims || []) if (whole.includes(phrase)) errors.push(`案件禁止表現: ${offer.name} / ${phrase}`);
   const externalLinks = [...article.bodyHtml.matchAll(/href=["'](https?:\/\/[^"']+)["']/gi)].map((match) => match[1]);
   if (externalLinks.length) errors.push('AI本文に外部URLを直接入れてはいけません。案件リンクはカタログから後付けします。');
+  if (expectedRelatedIds.length && article.relatedArticleIds?.some((id) => !expectedRelatedIds.includes(id))) errors.push('関連記事IDが実在しません。');
   return errors;
 };
 
-export const fixtureArticle = (theme) => ({
+export const fixtureArticle = (theme) => {
+  const topics = [
+    ['こんな悩みはありませんか', '仕事を進めたいのに、確認や準備が散らばってしまい、どこから整えればよいか分からなくなることがあります。便利そうな方法を増やしても、今困っている場面が見えなければ、かえって手間が増えることがあります。'],
+    ['結論', '最初に変えるのは大きな仕組みではなく、止まりやすい場面を一つだけ言葉にすることです。目的、相手、完了の基準を短く残せば、試した方法が合っていたかを後から判断できます。'],
+    ['困っている場面を観察する', '一週間の中で手が止まった作業を思い出し、何に時間がかかったかではなく、どの判断で迷ったかを書き出します。作業を細かく分けると、自分で決めるべき部分と、下準備として整えられる部分が見えてきます。'],
+    ['小さな手順に分けて試す', '一度に全部を変えると、何が役立ったのか分からなくなります。最初は一つの返信、一つのメモ、一つの確認だけに範囲を絞り、使った直後に迷った点を一行だけ残します。'],
+    ['判断基準を共有できる形にする', '自分だけが分かる感覚に頼るのではなく、完了とする条件を短い文章にします。相手に渡す前の確認、期限、例外時の相談先を決めておくと、作業を続ける人が変わっても戻りやすくなります。'],
+    ['具体例', '問い合わせ後の案内が毎回変わる場合は、最初の返信に必要な項目だけを三つに絞ります。相談内容、次に確認すること、返信の目安を先に書くことで、説明を増やさなくても相手が次の行動を選びやすくなります。'],
+    ['注意点', '料金、契約、公開、個人情報に関わることは、一般的な手順だけで判断しません。使うサービスの公式情報を確認し、迷う場合は担当者や専門家に相談する余地を残しておくことが大切です。'],
+    ['向いている人・向いていない人', '同じ確認を何度も書き直している人や、作業の始め方で迷う人には小さな整理が向いています。一方で、緊急の判断や個別事情の大きい案件は、定型化だけで解決しようとせず、直接の対話を優先します。'],
+    ['次に見直すこと', '一週間試した後は、続ける、項目を減らす、別の方法に戻すの三つから選びます。うまく使えなかった日も記録に残すことで、方法が自分の状況に合っているかを落ち着いて見直せます。']
+  ];
+  return {
   title: `${theme.titleHint}を、今日から試すための考え方`,
   meta_description: `${theme.intent}人に向けて、状況を整理し、小さく試して見直すための考え方を紹介します。`,
   excerpt: `${theme.intent}ときに、最初の一歩を決めるための実務的な整理をまとめます。`,
@@ -75,16 +101,11 @@ export const fixtureArticle = (theme) => ({
   search_intent: theme.intent,
   target_reader: theme.reader,
   introduction: 'やることが増えるほど、何から手をつけるか迷いやすくなります。',
-  sections: [
-    { heading: 'こんな悩みはありませんか', paragraphs: ['状況が複雑になると、最初の一歩が見えにくくなります。'], subsections: [] },
-    { heading: '結論', paragraphs: ['一度に仕組みを変えず、困っている場面を一つ選んで試すことから始めます。'], subsections: [] },
-    { heading: '状況を一つに絞る', paragraphs: ['最近止まった作業を振り返り、誰が何に迷ったかを書き出します。'], subsections: [{ heading: '記録する項目', paragraphs: ['目的、必要な情報、完了の目安を短く残します。'] }] },
-    { heading: '具体例', paragraphs: ['問い合わせ後の案内が毎回変わるなら、最初の返信に必要な項目だけをメモにします。'], subsections: [] },
-    { heading: '注意点', paragraphs: ['料金、契約、公開に関わる判断は、一般的な手順だけで決めず公式情報を確認します。'], subsections: [] }
-  ],
+  sections: topics.map(([heading, paragraph], index) => ({ heading, paragraphs: [paragraph, `${heading}では、急いで正解を決めるよりも今の条件に合う小さな基準を残し、次に似た場面が来ても迷いを減らしながら自分の状況に合わせて調整できます。`, `${heading}を試した後は、負担が減ったか、相手に伝わったか、例外が増えていないかを見て、合わない部分はやめてもよく、記録を次の判断に渡すことが継続につながります。`, `${heading}について一人で抱え込まないために、必要なら相談する相手や公式情報へ戻る場所も決めておき、方法は生活や仕事の変化に合わせて見直してかまいません。`], subsections: index === 2 ? [{ heading: '記録する項目', paragraphs: ['目的、必要な情報、完了の目安を短く残し、迷いが出た場所も一言添えると、次の見直しに使えます。'] }] : [] })),
   conclusion: '小さく試し、負担が減ったかを見てから次へ進みます。',
   affiliate_recommendations: [],
   related_article_ids: []
-});
+  };
+};
 
 export const sourceHash = (text) => crypto.createHash('sha256').update(text).digest('hex').slice(0, 12);

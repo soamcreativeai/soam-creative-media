@@ -69,6 +69,15 @@ jobs:
           else
             node scripts/generate-media-article.mjs --slot="$SLOT"
           fi
+      - name: Upload dry-run preview
+        if: ${{ inputs.dry_run && !inputs.list_models_only && success() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: soam-media-article-dry-run-preview
+          path: |
+            automation/dry-run-output/article-62-preview.html
+            automation/dry-run-output/article-62-generation-summary.json
+          retention-days: 7
       - name: Normalize SEO metadata
         if: ${{ !inputs.dry_run && !inputs.list_models_only }}
         run: node scripts/apply-media-seo.mjs
