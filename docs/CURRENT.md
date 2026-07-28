@@ -7,8 +7,8 @@
 
 - 公開サイト: https://media.soam-creative.com/
 - 配信基盤: Cloudflare Pages（project: `soam-creative-media`）
-- 公開記事数: 66本
-- 最新の生成済み記事: `article-66`
+- 公開記事数: 67本
+- 最新の生成済み記事: `article-67`
 - 記事自動生成workflow: `Generate and publish SOAM Media article`
 - 定時実行: JST 07:00 / 12:00 / 20:00
 
@@ -27,7 +27,7 @@
 - canonical形式: `https://media.soam-creative.com/articles/article-XX.html`
 - Article JSON-LD の `mainEntityOfPage` / `url` はcanonicalと一致させる。
 - 生成・公開前に `scripts/test-media-seo.mjs` が全公開記事を検査する。
-- 2026-07-28時点の検証: 公開記事66本すべてPASS。
+- 2026-07-28時点の検証: 公開記事67本すべてPASS。
 
 ## SOAM Link 導線の正本
 
@@ -41,18 +41,18 @@
 
 ## 直近の本番反映
 
-- 修正commit: [`8469ef8`](https://github.com/soamcreativeai/soam-creative-media/commit/8469ef8) `fix: update SOAM Link destination across media`
-- GitHub Actions: [run 30234428427](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30234428427)（成功）
-- Cloudflare Pages Deployment ID: `36e92ff2-facc-40e1-a9fe-6b6db2172aa5`
-- デプロイURL: https://36e92ff2.soam-creative-media.pages.dev
-- 本番確認: トップ、記事一覧、全63公開記事を検査し、SOAM Link導線52件すべてが正式URLであることを確認済み。
+- 修正commit: [`4f20393`](https://github.com/soamcreativeai/soam-creative-media/commit/4f20393) `content: publish article-67 依頼のすれ違いを減らす、最初の確認メモの作り方`
+- ワークフロー修正commit: [`f584cd4`](https://github.com/soamcreativeai/soam-creative-media/commit/f584cd4) `fix: restore media article index workflow markers`
+- GitHub Actions: [run 30321297239](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30321297239)（成功）
+- Cloudflare PagesデプロイURL: https://ebc01111.soam-creative-media.pages.dev
+- 本番確認: article-67のtitle、h1、canonical、Article JSON-LD、記事一覧、sitemap、拡張子なしURLをカスタムドメインで検証済み。
 - `https://link.soam-creative.com/` はHTTP 200。
 
 ## 直近検証結果
 
 - `node scripts/normalize-soam-link-urls.mjs`: 変更対象なし
 - `node scripts/test-site-links.mjs`: PASS
-- `node scripts/test-media-seo.mjs`: PASS（63 published articles）
+- `node scripts/test-media-seo.mjs`: PASS（67 published articles）
 - `node scripts/test-publish-scheduled-articles.mjs`: PASS
 - workflow YAML構文検査: PASS
 - Cloudflare Pages build / deploy: PASS
@@ -63,6 +63,8 @@
 - `article-65.html`・`article-66.html` のcanonical・Article JSON-LD、記事一覧canonical、sitemapを生成手順で補正。
 - ローカル検証: site-links、media-seo（66記事）、scheduled-publish、media-generationをPASS。
 - 本番Actionsの失敗原因は、[run 30271254182](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30271254182) の `ARTICLE_LIST` マーカー欠落。
+- 本番push後の[run 30321297239](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30321297239)でarticle-67を公開し、Cloudflare Pagesへデプロイ。
+- 初回のカスタムドメイン確認は伝播中に失敗したが、再実行で全検証がPASS。
 
 ## 残課題・境界
 
