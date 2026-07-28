@@ -2071,5 +2071,28 @@
       "article-64",
       "article-65"
     ]
+  },
+  {
+    "title": "店舗ビジネスを成功に導く診断コンテンツの基本",
+    "slug": "article-70",
+    "file": "article-70.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "local-business",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "店舗ビジネスを効果的に運営するには、顧客のニーズを的確に把握することが重要です。そのために役立つのが診断コンテンツです。この記事では、診断ツールを活用する方法を解説します。",
+    "metaTitle": "店舗向け診断コンテンツの作り方",
+    "metaDescription": "店舗ビジネスにおける効果的な診断コンテンツ作成法。集客やサービス向上に役立つ。",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-07-29",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-53",
+      "article-61"
+    ]
   }
 ]
