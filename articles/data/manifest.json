@@ -1967,5 +1967,37 @@
       "article-50",
       "article-56"
     ]
+  },
+  {
+    "title": "依頼のすれ違いを減らす、最初の確認メモの作り方",
+    "slug": "article-67",
+    "file": "article-67.html",
+    "category": "templates",
+    "categoryLabel": "テンプレート・教材",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": "デザイン、ライティング、動画制作、Web制作、資料作成などを受託している個人事業主。依頼者との認識違いや後からの追加要望に悩んでいる人。",
+    "tags": [
+      "依頼内容 確認メモ",
+      "依頼内容 確認",
+      "制作依頼 ヒアリング",
+      "受託業務 確認事項",
+      "認識違い 防止",
+      "依頼文 テンプレート",
+      "個人事業主 業務整理"
+    ],
+    "excerpt": "依頼を受けたあとに確認の往復が増えるなら、作業を始める前のメモが役立ちます。目的や成果物だけでなく、期限・素材・修正・連絡方法まで整理する基本の型を紹介します。",
+    "metaTitle": "依頼のすれ違いを減らす、最初の確認メモの作り方",
+    "metaDescription": "受託・制作の依頼内容を確認するときに使える、最初の確認メモの作り方を解説。目的、成果物、期限、修正範囲、連絡方法を整理し、確認漏れや認識違いを減らす方法を紹介します。",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-07-28",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-30",
+      "article-31",
+      "article-32"
+    ]
   }
 ]
