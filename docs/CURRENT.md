@@ -1,14 +1,15 @@
 # SOAM Media 現在地
 
-最終更新: 2026-07-28 JST
+最終確認・引き継ぎ更新: 2026-07-28 22:32 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
 ## 本番状態
 
 - 公開サイト: https://media.soam-creative.com/
 - 配信基盤: Cloudflare Pages（project: `soam-creative-media`）
-- 公開記事数: 67本
-- 最新の生成済み記事: `article-67`
+- リポジトリ収録記事数: 69本
+- 本番確認済みの記事数: 67本（`article-67` まで）
+- `article-68`・`article-69` はリポジトリへ追加済みだが、本番反映・公開確認は未完了。
 - 記事自動生成workflow: `Generate and publish SOAM Media article`
 - 定時実行: JST 07:00 / 12:00 / 20:00
 
@@ -27,7 +28,7 @@
 - canonical形式: `https://media.soam-creative.com/articles/article-XX.html`
 - Article JSON-LD の `mainEntityOfPage` / `url` はcanonicalと一致させる。
 - 生成・公開前に `scripts/test-media-seo.mjs` が全公開記事を検査する。
-- 2026-07-28時点の検証: 公開記事67本すべてPASS。
+- 2026-07-28時点の自動検査: 69記事すべてPASS。ただし本番確認済みは`article-67`まで。
 
 ## SOAM Link 導線の正本
 
@@ -66,8 +67,17 @@
 - 本番push後の[run 30321297239](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30321297239)でarticle-67を公開し、Cloudflare Pagesへデプロイ。
 - 初回のカスタムドメイン確認は伝播中に失敗したが、再実行で全検証がPASS。
 
+## 2026-07-28 未解決の自動公開停止
+
+- `article-68` と `article-69` の生成内容・HTML・記事一覧・manifestはリポジトリに追加済み。
+- ただし、[run 30332493526](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30332493526) と [run 30360907669](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30360907669) は失敗。
+- 失敗箇所は、`scripts/test-publish-scheduled-articles.mjs` が実行する予約公開処理。エラーは `ARTICLE_LIST の更新マーカーが見つかりません。`。
+- 失敗後はCloudflare Pagesデプロイとカスタムドメイン確認まで到達していない。そのため`article-68`・`article-69`を本番公開済みとは扱わない。
+- 次回作業は、mainの最新状態を新しい作業場所で取得し、記事一覧テンプレートの`ARTICLE_LIST`更新マーカーを調査・復旧し、全検査、Cloudflare反映、`article-68`・`article-69`の公開URL確認まで行う。
+
 ## 残課題・境界
 
 - `actions/checkout@v4` と `actions/setup-node@v4` のNode 20非推奨警告は、今回の復旧・リンク修正とは別課題として未変更。
 - アフィリエイト案件の掲載可否は、activeな案件カタログと記事テーマに基づいて判断する。案件が0件でも有益な記事は生成・公開可能。
 - 記事本文、外部サービスの機能・実績・数値は、確認できない事実を追加しない。
+- `article-68`・`article-69`の公開状態は未確認のため、修復と本番確認が完了するまで公開済みとして案内しない。
