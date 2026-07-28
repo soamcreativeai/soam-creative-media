@@ -1,14 +1,14 @@
 # SOAM Media 現在地
 
-最終更新: 2026-07-27 JST  
+最終更新: 2026-07-28 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
 ## 本番状態
 
 - 公開サイト: https://media.soam-creative.com/
 - 配信基盤: Cloudflare Pages（project: `soam-creative-media`）
-- 公開記事数: 63本
-- 最新の生成済み記事: `article-62`（`article-63` は既存公開記事として記事一覧・manifestに掲載済み）
+- 公開記事数: 66本
+- 最新の生成済み記事: `article-66`
 - 記事自動生成workflow: `Generate and publish SOAM Media article`
 - 定時実行: JST 07:00 / 12:00 / 20:00
 
@@ -27,7 +27,7 @@
 - canonical形式: `https://media.soam-creative.com/articles/article-XX.html`
 - Article JSON-LD の `mainEntityOfPage` / `url` はcanonicalと一致させる。
 - 生成・公開前に `scripts/test-media-seo.mjs` が全公開記事を検査する。
-- 2026-07-27時点の検証: 公開記事63本すべてPASS。
+- 2026-07-28時点の検証: 公開記事66本すべてPASS。
 
 ## SOAM Link 導線の正本
 
@@ -56,6 +56,13 @@
 - `node scripts/test-publish-scheduled-articles.mjs`: PASS
 - workflow YAML構文検査: PASS
 - Cloudflare Pages build / deploy: PASS
+
+## 2026-07-28 ワークフロー復旧
+
+- `articles/index.html` に `AUTO:ARTICLE_LIST` 更新マーカーを追加し、予約公開テストが記事一覧を更新できる状態に修正。
+- `article-65.html`・`article-66.html` のcanonical・Article JSON-LD、記事一覧canonical、sitemapを生成手順で補正。
+- ローカル検証: site-links、media-seo（66記事）、scheduled-publish、media-generationをPASS。
+- 本番Actionsの失敗原因は、[run 30271254182](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30271254182) の `ARTICLE_LIST` マーカー欠落。
 
 ## 残課題・境界
 
