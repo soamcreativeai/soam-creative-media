@@ -2273,5 +2273,28 @@
       "article-65",
       "article-69"
     ]
+  },
+  {
+    "title": "個人事業主向け診断コンテンツ作成の基本",
+    "slug": "article-76",
+    "file": "article-76.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "solo-business",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "個人事業主としての業務を効率化する診断コンテンツ作成の基本を解説します。自分のビジネスに合った診断ツールを活用し、作業負担を軽減してみましょう。",
+    "metaTitle": "診断コンテンツ作成の基本：個人事業主向け",
+    "metaDescription": "個人事業主が活用できる診断コンテンツの作り方を詳しく解説。効果的な導線作りと活用法を知る。",
+    "publishedAt": "2026-07-31",
+    "updatedAt": "2026-07-31",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-61",
+      "article-70"
+    ]
   }
 ]
