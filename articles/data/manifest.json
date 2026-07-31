@@ -2350,5 +2350,35 @@
       "article-57",
       "article-71"
     ]
+  },
+  {
+    "title": "整体・エステ業界で「予約が埋まらない時に見直す場所」",
+    "slug": "article-78",
+    "file": "article-78.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "salon",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "特に予約が埋まらず、空きが目立つ日が続くと、どうすればいいのか焦ることもありますね。予約状況の不調には、いくつかの見直すべくポイントがあります。実は、少しのアイデアと工夫で、その問題に光を当てることができるのです。",
+    "metaTitle": "整体・エステの予約改善のための見直しポイント",
+    "metaDescription": "予約が埋まらない整体・エステ店のために、見直すべき具体的なポイントをご紹介。集客障害を軽減する方法を探ります。",
+    "publishedAt": "2026-07-31",
+    "updatedAt": "2026-07-31",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "本文中",
+        "reason": "AI検索時代に合わせて店舗集客を強化したい経営者向けのAIO×MEO×SNS次世代店舗集客対策として、記事テーマ（整体・エステ業界で「予約が埋まらない時に見直す場所」）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-63",
+      "article-72"
+    ]
   }
 ]
