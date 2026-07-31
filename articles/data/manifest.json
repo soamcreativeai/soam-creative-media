@@ -2380,5 +2380,35 @@
       "article-63",
       "article-72"
     ]
+  },
+  {
+    "title": "問い合わせが増えないLPの原因と改善策",
+    "slug": "article-79",
+    "file": "article-79.html",
+    "category": "lp",
+    "categoryLabel": "LP・Web集客",
+    "articleType": "lp",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "問い合わせが増えずに悩んでいる方、あなたのLPに共通点があるかもしれません。この記事では、LPの改善策を具体的に紹介します。",
+    "metaTitle": "問い合わせが増えないLPの改善策",
+    "metaDescription": "問い合わせが増えないLPの共通点と効果的な改善策を紹介します。具体的なポイントを押さえて、集客に繋げましょう。",
+    "publishedAt": "2026-08-01",
+    "updatedAt": "2026-08-01",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [
+      {
+        "name": "お名前.com",
+        "asp": "A8.net",
+        "placement": "本文中",
+        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（問い合わせが増えないLPの原因と改善策）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-66",
+      "article-73"
+    ]
   }
 ]
