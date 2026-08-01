@@ -2728,5 +2728,45 @@
       "article-68",
       "article-74"
     ]
+  },
+  {
+    "title": "画像づくりで迷わないために、先に決めておきたい三つのこと",
+    "slug": "article-82",
+    "file": "article-82.html",
+    "category": "creative",
+    "categoryLabel": "動画・画像・デザイン",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": "SNSで商品・サービスを発信している小規模事業者、個人事業主、画像制作を外注したい担当者。",
+    "tags": [
+      "画像づくり 依頼",
+      "画像制作 依頼",
+      "SNS画像 作成",
+      "画像依頼 内容",
+      "デザイン依頼 確認事項",
+      "SNS発信 画像"
+    ],
+    "excerpt": "画像づくりを依頼するとき、デザインの好みだけを伝えると認識のずれが起こりやすくなります。目的、伝える内容、使い方の三つを先に整理して、やり取りの負担を減らしましょう。",
+    "metaTitle": "画像づくりで迷わないために、先に決めておきたい三つのこと",
+    "metaDescription": "SNS発信を行う事業者向けに、画像制作の依頼や外注で迷わないための整理方法を解説。目的・伝える内容・使用条件の三つを先に決める考え方を紹介します。",
+    "publishedAt": "2026-08-01",
+    "updatedAt": "2026-08-01",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [
+      {
+        "name": "MiriCanvas",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "AIを使った資料・デザイン作成を支援するサービス"
+      },
+      {
+        "name": "ConoHa AI Canvas",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "ブラウザで使えるAI画像生成サービス"
+      }
+    ],
+    "relatedArticles": []
   }
 ]
