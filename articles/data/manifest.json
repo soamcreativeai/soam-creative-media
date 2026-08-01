@@ -2654,5 +2654,49 @@
       "article-66",
       "article-73"
     ]
+  },
+  {
+    "title": "打ち合わせ後の連絡を軽くする、メモから次の行動へつなぐ方法",
+    "slug": "article-80",
+    "file": "article-80.html",
+    "category": "ai",
+    "categoryLabel": "AI・業務効率化",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": "顧客との打ち合わせや相談を一人で担当している個人事業主。記録や連絡の抜け漏れを減らし、対応にかかる負担を軽くしたい人。",
+    "tags": [
+      "打ち合わせ後 連絡 メモ 整理",
+      "打ち合わせメモ 整理",
+      "顧客対応 効率化",
+      "議事録 次の行動",
+      "AI 議事録",
+      "個人事業主 業務効率化",
+      "確認事項 メール"
+    ],
+    "excerpt": "打ち合わせ後の連絡が後回しになったり、確認事項が抜けたりする原因は、メモを次の行動に変換する工程が曖昧なことかもしれません。メモの取り方から連絡文の作成、AIを使う際の確認方法まで整理します。",
+    "metaTitle": "打ち合わせ後の連絡を軽くする、メモから次の行動へつなぐ方法",
+    "metaDescription": "顧客対応のある個人事業主向けに、打ち合わせメモを整理し、確認事項や次の行動を抜け漏れなく連絡する方法を解説します。AIを使う場合の注意点も紹介します。",
+    "publishedAt": "2026-08-01",
+    "updatedAt": "2026-08-01",
+    "status": "published",
+    "primaryCta": null,
+    "affiliateLinks": [
+      {
+        "name": "Value AI Writer byGMO",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "SEO記事作成を支援するAIライティングツール"
+      },
+      {
+        "name": "PLAUD NOTE",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "録音と文字起こしを支援するAIボイスレコーダー"
+      }
+    ],
+    "relatedArticles": [
+      "article-16",
+      "article-64"
+    ]
   }
 ]
