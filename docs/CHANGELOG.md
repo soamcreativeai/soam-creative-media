@@ -6,7 +6,8 @@
 - 決定: 正式名称を **SOAM MEDIA** とし、トップ、記事一覧、全記事の表示名・ページ題名・検索用発信者名、固定ページ、今後の記事生成テンプレートを旧 `SOAM CREATIVE MEDIA` / メディア名としての `SOAM CREATIVE` から変更。
 - 維持: 著作権表示の会社名と、SOAM CREATIVE公式X・SOAM Linkの固有名称は変更していない。
 - 再発修復: article-81追加時に失われた記事一覧の `AUTO:ARTICLE_LIST` マーカーを復元。
-- 検証: scheduled-publish、site-links、media-seo（81記事）、media-generation、差分形式検査をPASS。本番反映結果はこの項へ追記する。
+- 検証: scheduled-publish、site-links、media-seo（82記事）、media-generation、差分形式検査をPASS。
+- 公開: [run 30683269194](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30683269194) が成功し、article-82を含むサイトをCloudflare Pagesへ反映。デプロイURLは https://3951b2e9.soam-creative-media.pages.dev。カスタムドメインでトップ、記事一覧、article-82の公開項目を確認済み。
 
 ## 2026-08-01
 
