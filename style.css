@@ -347,6 +347,7 @@ footer:not(.site-footer) a:hover{color:var(--gold)}
 .article-category{color:var(--ink);border-color:var(--line);background:var(--lime,#dcff67);font-weight:800}
 .article-container h1{font-size:clamp(27px,4.4vw,42px);line-height:1.35;letter-spacing:-.04em;font-weight:900}
 .article-date{color:var(--ink-2)}
+.article-byline{color:var(--ink-2);font-size:12px;margin:-22px 0 24px}
 .article-container h2{border-bottom-color:var(--purple,#5b3df5);font-weight:900;letter-spacing:-.02em}
 .article-container h3{color:var(--ink);border-left-color:var(--purple,#5b3df5)}
 .article-container p,.article-container ul,.article-container ol{color:#3f3d44}

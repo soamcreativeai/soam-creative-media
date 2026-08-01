@@ -18,7 +18,13 @@ const escapeAttribute = (value) => String(value)
 const removeGenerated = (html) => html
   .replace(/\s*<link[^>]*data-seo="canonical"[^>]*>\s*/gi, '\n')
   .replace(/\s*<script[^>]*data-seo="article"[^>]*>[\s\S]*?<\/script>\s*/gi, '\n')
-  .replace(/\s*<script[^>]*data-seo="website"[^>]*>[\s\S]*?<\/script>\s*/gi, '\n');
+  .replace(/\s*<script[^>]*data-seo="website"[^>]*>[\s\S]*?<\/script>\s*/gi, '\n')
+  .replace(/\s*<script[^>]*data-seo="organization"[^>]*>[\s\S]*?<\/script>\s*/gi, '\n')
+  .replace(/\s*<meta[^>]*data-seo="social"[^>]*>\s*/gi, '\n');
+
+const ensureByline = (html) => html
+  .replace(/\s*<p[^>]*data-seo="byline"[^>]*>[\s\S]*?<\/p>\s*/gi, '\n')
+  .replace(/(<p class="article-date">[\s\S]*?<\/p>)/i, `$1\n      <p class="article-byline" data-seo="byline">執筆・編集：SOAM MEDIA</p>`);
 
 const ensureDescription = (html, description) => {
   if (/<meta\s+name=["']description["']/i.test(html)) return html;
@@ -26,6 +32,16 @@ const ensureDescription = (html, description) => {
 };
 
 const insertHeadBlocks = (html, blocks) => html.replace('</head>', `${blocks.join('\n')}\n</head>`);
+
+const socialBlocks = ({ title, description, canonical, type = 'website' }) => [
+  `  <meta property="og:title" content="${escapeAttribute(title)}" data-seo="social">`,
+  `  <meta property="og:description" content="${escapeAttribute(description)}" data-seo="social">`,
+  `  <meta property="og:url" content="${escapeAttribute(canonical)}" data-seo="social">`,
+  `  <meta property="og:type" content="${type}" data-seo="social">`,
+  `  <meta name="twitter:card" content="summary" data-seo="social">`,
+  `  <meta name="twitter:title" content="${escapeAttribute(title)}" data-seo="social">`,
+  `  <meta name="twitter:description" content="${escapeAttribute(description)}" data-seo="social">`
+];
 
 const existingJsonLd = (html, marker) => {
   const match = html.match(new RegExp(`<script type="application/ld\\+json" data-seo="${marker}">([\\s\\S]*?)<\\/script>`));
@@ -42,7 +58,7 @@ const applyArticle = async (article) => {
   const original = await fs.readFile(pagePath, 'utf8');
   const description = article.metaDescription || article.excerpt;
   if (!description) throw new Error(`${article.file}: metaDescription または excerpt が必要です。`);
-  const clean = ensureDescription(removeGenerated(original), description);
+  const clean = ensureByline(ensureDescription(removeGenerated(original), description));
   const canonical = canonicalUrl(`articles/${article.file}`);
   const structuredData = articleStructuredData({
     title: article.title,
@@ -51,13 +67,10 @@ const applyArticle = async (article) => {
     publishedAt: article.publishedAt,
     updatedAt: article.updatedAt
   });
-  if (
-    original.includes(`rel="canonical" href="${canonical}"`)
-    && existingJsonLd(original, 'article')?.mainEntityOfPage?.['@id'] === canonical
-  ) return;
   const next = insertHeadBlocks(clean, [
     `  <link rel="canonical" href="${canonical}" data-seo="canonical">`,
-    `  <script type="application/ld+json" data-seo="article">${jsonForScript(structuredData)}</script>`
+    `  <script type="application/ld+json" data-seo="article">${jsonForScript(structuredData)}</script>`,
+    ...socialBlocks({ title: `${article.metaTitle || article.title} | SOAM MEDIA`, description, canonical, type: 'article' })
   ]);
   await fs.writeFile(pagePath, next);
 };
@@ -75,9 +88,13 @@ const applyStaticPage = async (page) => {
   const original = await fs.readFile(pagePath, 'utf8');
   const canonical = canonicalUrl(page.path);
   const existingWebsite = page.type === 'website' ? existingJsonLd(original, 'website') : null;
-  if (original.includes(`rel="canonical" href="${canonical}"`) && (!page.type || existingWebsite?.url === canonical)) return;
   const clean = removeGenerated(original);
-  const blocks = [`  <link rel="canonical" href="${canonical}" data-seo="canonical">`];
+  const title = clean.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() || 'SOAM MEDIA';
+  const description = clean.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i)?.[1] || 'SOAM MEDIAの情報ページです。';
+  const blocks = [
+    `  <link rel="canonical" href="${canonical}" data-seo="canonical">`,
+    ...socialBlocks({ title, description, canonical })
+  ];
   if (page.type === 'website') {
     const data = {
       '@context': 'https://schema.org',
@@ -86,6 +103,7 @@ const applyStaticPage = async (page) => {
       url: canonical
     };
     blocks.push(`  <script type="application/ld+json" data-seo="website">${jsonForScript(data)}</script>`);
+    blocks.push(`  <script type="application/ld+json" data-seo="organization">${jsonForScript({ '@context': 'https://schema.org', '@type': 'Organization', name: 'SOAM MEDIA', url: canonical })}</script>`);
   }
   await fs.writeFile(pagePath, insertHeadBlocks(clean, blocks));
 };

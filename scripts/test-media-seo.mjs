@@ -44,7 +44,14 @@ for (const article of published) {
     check(data['@type'] === 'Article', `${article.file}: Article 型が必要です。`);
     check(data.headline === article.title, `${article.file}: JSON-LD の見出しが不一致です。`);
     check(data.mainEntityOfPage?.['@id'] === expectedCanonical || data.url === expectedCanonical, `${article.file}: JSON-LD のURLが不正です。`);
+    check(data.author?.['@type'] === 'Organization' && data.author.name === 'SOAM MEDIA' && data.author.url === canonicalUrl(), `${article.file}: JSON-LD の著者情報が不正です。`);
+    check(data.publisher?.['@type'] === 'Organization' && data.publisher.name === 'SOAM MEDIA' && data.publisher.url === canonicalUrl(), `${article.file}: JSON-LD の運営者情報が不正です。`);
+    check(data.inLanguage === 'ja-JP', `${article.file}: JSON-LD の言語情報が必要です。`);
   }
+  check(html.includes(`property="og:url" content="${expectedCanonical}"`), `${article.file}: og:url が不正です。`);
+  check(html.includes('property="og:type" content="article"'), `${article.file}: og:type が必要です。`);
+  check(html.includes('name="twitter:card" content="summary"'), `${article.file}: twitter:card が必要です。`);
+  check(/<p class="article-byline" data-seo="byline">執筆・編集：SOAM MEDIA<\/p>/.test(html), `${article.file}: 著者表記が必要です。`);
   const ogUrl = html.match(/<meta\b[^>]*(?:property|name)="og:url"[^>]*content="([^"]+)"[^>]*>/i)?.[1]
     || html.match(/<meta\b[^>]*content="([^"]+)"[^>]*(?:property|name)="og:url"[^>]*>/i)?.[1];
   check(!ogUrl || ogUrl === expectedCanonical, `${article.file}: og:url がcanonicalと不一致です。`);
@@ -54,6 +61,8 @@ for (const file of ['index.html', 'articles/index.html', 'editorial-policy.html'
   const html = await read(file);
   const pagePath = file === 'index.html' ? '' : file;
   check(html.includes(`rel="canonical" href="${canonicalUrl(pagePath)}"`), `${file}: canonical が不正です。`);
+  check(html.includes(`property="og:url" content="${canonicalUrl(pagePath)}"`), `${file}: og:url が不正です。`);
+  check(html.includes('name="twitter:card" content="summary"'), `${file}: twitter:card が必要です。`);
 }
 
 const home = await read('index.html');
@@ -63,6 +72,8 @@ if (webSite) {
   check(webSite['@type'] === 'WebSite', 'トップページに WebSite 構造化データが必要です。');
   check(webSite.url === canonicalUrl(), 'WebSite のURLが不正です。');
 }
+const organization = jsonLdFor(home, 'organization');
+check(organization?.['@type'] === 'Organization' && organization.name === 'SOAM MEDIA' && organization.url === canonicalUrl(), 'トップページに Organization 構造化データが必要です。');
 
 const robots = await read('robots.txt');
 check(robots.includes(`Sitemap: ${canonicalUrl('sitemap.xml')}`), 'robots.txt に sitemap の場所が必要です。');

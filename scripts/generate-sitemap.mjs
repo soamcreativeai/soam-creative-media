@@ -24,7 +24,11 @@ const latestDate = articles.map((article) => article.updatedAt || article.publis
 const staticPages = [
   { path: '', lastmod: latestDate },
   { path: 'articles/index.html', lastmod: latestDate },
-  { path: 'editorial-policy.html', lastmod: '2026-07-14' }
+  { path: 'editorial-policy.html', lastmod: '2026-07-14' },
+  { path: 'privacy.html', lastmod: '2026-07-14' },
+  { path: 'contact.html', lastmod: '2026-07-14' },
+  { path: 'shindan-ai.html', lastmod: latestDate },
+  { path: 'ai-tool-lp.html', lastmod: latestDate }
 ];
 const urls = [
   ...staticPages.map((page) => ({ loc: canonicalUrl(page.path), lastmod: page.lastmod })),

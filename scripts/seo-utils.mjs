@@ -3,7 +3,9 @@ export const SITE_ORIGIN = 'https://media.soam-creative.com';
 
 export const canonicalUrl = (pathname = '') => {
   const normalized = pathname.replace(/^\/+/, '');
-  return normalized ? `${SITE_ORIGIN}/${normalized}` : `${SITE_ORIGIN}/`;
+  if (!normalized || normalized === 'index.html') return `${SITE_ORIGIN}/`;
+  if (normalized.endsWith('/index.html')) return `${SITE_ORIGIN}/${normalized.slice(0, -'index.html'.length)}`;
+  return `${SITE_ORIGIN}/${normalized.replace(/\.html$/, '')}`;
 };
 
 export const jsonForScript = (value) => JSON.stringify(value)
@@ -22,9 +24,16 @@ export const articleStructuredData = ({ title, description, file, publishedAt, u
   description,
   datePublished: `${publishedAt}T00:00:00+09:00`,
   dateModified: `${updatedAt || publishedAt}T00:00:00+09:00`,
+  inLanguage: 'ja-JP',
   isAccessibleForFree: true,
+  author: {
+    '@type': 'Organization',
+    name: 'SOAM MEDIA',
+    url: canonicalUrl()
+  },
   publisher: {
     '@type': 'Organization',
-    name: 'SOAM MEDIA'
+    name: 'SOAM MEDIA',
+    url: canonicalUrl()
   }
 });

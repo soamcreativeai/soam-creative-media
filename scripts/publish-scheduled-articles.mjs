@@ -235,6 +235,15 @@ const buildDisclosure = (article) => article.containsAffiliateLinks ? `
         <p>この記事には紹介リンクまたはアフィリエイト広告を含む場合があります。料金・仕様・提供条件は変更されることがあるため、リンク先の公式情報をご確認ください。</p>
       </div>` : '';
 
+const socialMeta = (article, canonical) => `
+  <meta property="og:title" content="${escapeHtml(article.metaTitle || article.title)} | SOAM MEDIA" data-seo="social">
+  <meta property="og:description" content="${escapeHtml(article.metaDescription)}" data-seo="social">
+  <meta property="og:url" content="${canonical}" data-seo="social">
+  <meta property="og:type" content="article" data-seo="social">
+  <meta name="twitter:card" content="summary" data-seo="social">
+  <meta name="twitter:title" content="${escapeHtml(article.metaTitle || article.title)} | SOAM MEDIA" data-seo="social">
+  <meta name="twitter:description" content="${escapeHtml(article.metaDescription)}" data-seo="social">`;
+
 const renderArticlePage = (entry, content, published) => {
   const article = entry.article;
   const file = `${article.slug}.html`;
@@ -254,6 +263,7 @@ const renderArticlePage = (entry, content, published) => {
   <title>${escapeHtml(article.metaTitle || article.title)} | SOAM MEDIA</title>
   <link rel="canonical" href="${canonicalUrl(`articles/${file}`)}" data-seo="canonical">
   <script type="application/ld+json" data-seo="article">${jsonForScript(structuredData)}</script>
+${socialMeta(article, canonicalUrl(`articles/${file}`))}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LDQ9J4C8B" data-analytics="ga4-loader"></script>
   <script data-analytics="ga4">
     window.dataLayer = window.dataLayer || [];
@@ -281,6 +291,7 @@ const renderArticlePage = (entry, content, published) => {
       <p class="article-category">${escapeHtml(article.categoryLabel)}</p>
       <h1>${escapeHtml(article.title)}</h1>
       <p class="article-date">${published.display}</p>
+      <p class="article-byline" data-seo="byline">執筆・編集：SOAM MEDIA</p>
       <p class="article-excerpt">${escapeHtml(article.excerpt)}</p>
 ${content}
 ${buildDisclosure(article)}

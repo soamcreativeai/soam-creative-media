@@ -73,6 +73,14 @@
 - workflow YAML構文検査: PASS
 - Cloudflare Pages build / deploy: PASS
 
+## 2026-08-01 検索流入・SEO基盤の整備
+
+- Google Search Consoleに `https://media.soam-creative.com/` を登録し、Google Analyticsによる所有権確認を完了。`sitemap.xml`を送信した。
+- Search Consoleの初回データは処理待ちのため、インデックス数・検索語・表示回数は翌日以降に確認する。
+- 実際の配信先は `.html` なしURLのため、公開82記事・記事一覧・固定ページ・サイトマップのcanonicalを実URLへ統一。
+- 全82記事に、著者・運営者・言語・公開日・更新日を含むArticle構造化データ、表示上の著者表記、SNS共有情報を追加。今後の自動公開にも同じ検査を適用する。
+- 収益記事はテーマに一致する有効案件だけを使い、広告明示・公式情報確認・向く人/向かない人の記載を必須とする。監査詳細は `docs/SEO_AUDIT_20260801.md`。
+
 ## 2026-07-28 ワークフロー復旧
 
 - `articles/index.html` に `AUTO:ARTICLE_LIST` 更新マーカーを追加し、予約公開テストが記事一覧を更新できる状態に修正。
