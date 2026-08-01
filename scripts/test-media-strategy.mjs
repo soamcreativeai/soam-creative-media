@@ -29,7 +29,10 @@ for (const article of manifest) {
   assert.equal((html.match(/AUTO:PRIMARY_CTA:START/g) || []).length, 1, `${article.file}: 主導線を1種類だけ表示`);
   assert.equal((html.match(/AUTO:ARTICLE_FRESHNESS:START/g) || []).length, 1, `${article.file}: 情報確認日を表示`);
   assert.doesNotMatch(html, /<a\b[^>]*>[^<]*(?:今すぐ登録|案件を探す|契約する|決済する|報酬を受け取る)[^<]*<\/a>/, `${article.file}: 未提供行動をリンクにしない`);
-  if (article.primaryCtaType === 'affiliate') assert.match(html, /data-track-event="affiliate_click"/, `${article.file}: affiliate_click を計測`);
+  if (article.primaryCtaType === 'affiliate') {
+    assert.equal((html.match(/data-track-event="affiliate_click"/g) || []).length, article.affiliateLinks.length, `${article.file}: 各案件に紹介用ボタンを1件だけ表示`);
+    assert.doesNotMatch(html, /data-track-event="outbound_official_click"/, `${article.file}: 同じサービスへの公式情報ボタンを重複表示しない`);
+  }
   if (article.primaryCtaType === 'soam-link') assert.match(html, /data-track-event="soam_link_click"/, `${article.file}: soam_link_click を計測`);
 }
 
@@ -48,7 +51,7 @@ for (const cron of ['0 22 * * *', '0 3 * * *', '0 11 * * *']) assert.match(workf
 assert.doesNotMatch(workflow, /Verify OpenAI connectivity/, '定時実行で余分なモデル確認APIを呼ばない');
 const reader = await read('articles/article-reader.js');
 const trackedMarkup = articleHtmls.join('\n');
-for (const event of ['affiliate_click', 'soam_link_click', 'related_article_click', 'template_click', 'outbound_official_click']) {
+for (const event of ['affiliate_click', 'soam_link_click', 'related_article_click', 'template_click']) {
   assert.ok(reader.includes(event) || home.includes(event) || trackedMarkup.includes(event), `${event} の計測経路が必要`);
 }
 console.log(`[media-strategy:test] passed (${manifest.length} articles, ${manifest.filter((article) => article.primaryCtaType === 'affiliate').length} affiliate CTAs)`);

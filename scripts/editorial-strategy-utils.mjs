@@ -276,7 +276,7 @@ const offerDetails = (article, link, offer) => {
           <h3>${escapeHtml(link.name)}</h3>
           <p>${escapeHtml(link.reason)}</p>
           <dl><div><dt>向いている人</dt><dd>${escapeHtml(suitable)}</dd></div><div><dt>向いていない人</dt><dd>${escapeHtml(unsuitable)}</dd></div></dl>
-          <p class="affiliate-option__links"><a href="${escapeHtml(offer.affiliateUrl)}" rel="nofollow sponsored" data-track-event="affiliate_click" data-offer-id="${escapeHtml(link.offerId)}">サービス内容を確認する</a><a href="${escapeHtml(offer.officialUrl)}" rel="noopener" data-track-event="outbound_official_click" data-offer-id="${escapeHtml(link.offerId)}">公式情報</a></p>
+          <p class="affiliate-option__links"><a href="${escapeHtml(offer.affiliateUrl)}" rel="nofollow sponsored" data-track-event="affiliate_click" data-offer-id="${escapeHtml(link.offerId)}">サービス内容を確認する</a></p>
           <p class="affiliate-option__date">情報確認日：${escapeHtml(link.informationVerifiedAt)}／次回見直し：${escapeHtml(link.nextReviewAt)}</p>
         </li>`;
 };
