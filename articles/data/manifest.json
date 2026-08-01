@@ -2698,5 +2698,35 @@
       "article-16",
       "article-64"
     ]
+  },
+  {
+    "title": "投稿ネタが尽きたときの新しい視点の持ち方",
+    "slug": "article-81",
+    "file": "article-81.html",
+    "category": "sns",
+    "categoryLabel": "SNS・note運用",
+    "articleType": "sns",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "SNS運用において、アイデアが枯渇する瞬間が誰しも訪れます。そこで今回は、日々の生活や活動の中から新しいネタを見つける方法を考えます。",
+    "metaTitle": "ネタ切れ時のSNS新戦略",
+    "metaDescription": "SNS運用でネタがない時の解決策。日常を切り取り新たな発信を生む方法を探ります。",
+    "publishedAt": "2026-08-01",
+    "updatedAt": "2026-08-01",
+    "status": "published",
+    "primaryCta": "SOAM CREATIVE（X）",
+    "affiliateLinks": [
+      {
+        "name": "ConoHa AI Canvas",
+        "asp": "A8.net",
+        "placement": "本文中",
+        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（投稿ネタが尽きたときの新しい視点の持ち方）に合致するため選定"
+      }
+    ],
+    "relatedArticles": [
+      "article-68",
+      "article-74"
+    ]
   }
 ]
