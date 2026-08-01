@@ -79,7 +79,20 @@
     "updatedAt": "2026-06-21",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "Value AI Writer byGMO",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "SEO記事作成を支援するAIライティングツール"
+      },
+      {
+        "name": "PLAUD NOTE",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "録音と文字起こしを支援するAIボイスレコーダー"
+      }
+    ],
     "relatedArticles": [],
     "legacyImport": true
   },
@@ -205,7 +218,14 @@
     "updatedAt": "2026-07-10",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": []
   },
   {
@@ -323,7 +343,14 @@
     "updatedAt": "2026-07-13",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": [
       "article-10"
     ]
@@ -345,7 +372,20 @@
     "updatedAt": "2026-07-13",
     "status": "published",
     "primaryCta": "お問い合わせ",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "ブログ運用を支援するAIサービス"
+      },
+      {
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "店舗集客の情報発信を支援するサービス"
+      }
+    ],
     "relatedArticles": [
       "article-05",
       "article-11"
@@ -508,7 +548,14 @@
     "updatedAt": "2026-07-15",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": [
       "article-10",
       "article-14"
@@ -585,7 +632,20 @@
     "updatedAt": "2026-07-15",
     "status": "published",
     "primaryCta": "お問い合わせ",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "ブログ運用を支援するAIサービス"
+      },
+      {
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "店舗集客の情報発信を支援するサービス"
+      }
+    ],
     "relatedArticles": [
       "article-11",
       "article-15"
@@ -667,7 +727,14 @@
     "updatedAt": "2026-07-17",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": [
       "article-14",
       "article-20"
@@ -786,7 +853,20 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": "お問い合わせ",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "ブログ運用を支援するAIサービス"
+      },
+      {
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "店舗集客の情報発信を支援するサービス"
+      }
+    ],
     "relatedArticles": [
       "article-15",
       "article-22"
@@ -843,7 +923,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "見積太郎２",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "見積もり相談と管理を支援するツール"
+      }
+    ],
     "relatedArticles": [
       "article-27"
     ]
@@ -869,7 +956,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "見積太郎２",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "見積もり相談と管理を支援するツール"
+      }
+    ],
     "relatedArticles": [
       "article-30"
     ]
@@ -895,7 +989,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "見積太郎２",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "見積もり相談と管理を支援するツール"
+      }
+    ],
     "relatedArticles": [
       "article-12",
       "article-30"
@@ -922,7 +1023,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "NewMA",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "結婚に関する相談先を探すための結婚相談所サービス"
+      }
+    ],
     "relatedArticles": []
   },
   {
@@ -946,7 +1054,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "NewMA",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "結婚に関する相談先を探すための結婚相談所サービス"
+      }
+    ],
     "relatedArticles": [
       "article-33"
     ]
@@ -972,7 +1087,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "NewMA",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "結婚に関する相談先を探すための結婚相談所サービス"
+      }
+    ],
     "relatedArticles": [
       "article-33",
       "article-34"
@@ -999,7 +1121,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "iraada（イラーダ）",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト"
+      }
+    ],
     "relatedArticles": []
   },
   {
@@ -1023,7 +1152,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "iraada（イラーダ）",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト"
+      }
+    ],
     "relatedArticles": [
       "article-36"
     ]
@@ -1049,7 +1185,14 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "iraada（イラーダ）",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト"
+      }
+    ],
     "relatedArticles": [
       "article-36",
       "article-37"
@@ -1323,7 +1466,14 @@
     "updatedAt": "2026-07-22",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": [
       "article-20",
       "article-25"
@@ -1538,7 +1688,14 @@
     "updatedAt": "2026-07-24",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": [
       "article-25",
       "article-47"
@@ -1753,7 +1910,20 @@
     "updatedAt": "2026-07-26",
     "status": "published",
     "primaryCta": "お問い合わせ",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "ブログ運用を支援するAIサービス"
+      },
+      {
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "店舗集客の情報発信を支援するサービス"
+      }
+    ],
     "relatedArticles": [
       "article-48",
       "article-54"
@@ -1806,7 +1976,14 @@
     "updatedAt": "2026-07-27",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": [
       "article-47",
       "article-53"
@@ -1836,7 +2013,14 @@
     "updatedAt": "2026-07-27",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "ココナラ",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット"
+      }
+    ],
     "relatedArticles": []
   },
   {
@@ -1856,7 +2040,20 @@
     "updatedAt": "2026-07-27",
     "status": "published",
     "primaryCta": "お問い合わせ",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "ブログ運用を支援するAIサービス"
+      },
+      {
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "店舗集客の情報発信を支援するサービス"
+      }
+    ],
     "relatedArticles": [
       "article-54",
       "article-59"
@@ -1887,7 +2084,20 @@
     "updatedAt": "2026-07-27",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "Value AI Writer byGMO",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "SEO記事作成を支援するAIライティングツール"
+      },
+      {
+        "name": "PLAUD NOTE",
+        "asp": "A8.net",
+        "placement": "関連サービス",
+        "reason": "録音と文字起こしを支援するAIボイスレコーダー"
+      }
+    ],
     "relatedArticles": [
       "article-12",
       "article-19",
@@ -1993,7 +2203,14 @@
     "updatedAt": "2026-07-28",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "見積太郎２",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "見積もり相談と管理を支援するツール"
+      }
+    ],
     "relatedArticles": [
       "article-30",
       "article-31",
@@ -2089,7 +2306,14 @@
     "updatedAt": "2026-07-29",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": [
       "article-53",
       "article-61"
@@ -2166,7 +2390,20 @@
     "updatedAt": "2026-07-29",
     "status": "published",
     "primaryCta": "お問い合わせ",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "ブログ運用を支援するAIサービス"
+      },
+      {
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "店舗集客の情報発信を支援するサービス"
+      }
+    ],
     "relatedArticles": [
       "article-59",
       "article-63"
@@ -2291,7 +2528,14 @@
     "updatedAt": "2026-07-31",
     "status": "published",
     "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
-    "affiliateLinks": [],
+    "affiliateLinks": [
+      {
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "関連サービス",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+      }
+    ],
     "relatedArticles": [
       "article-61",
       "article-70"
