@@ -6,6 +6,7 @@
 - 原因: タブレット幅でPC用の3列カード配置が維持され、長い記事タイトルがカード内で詰まっていた。
 - 変更: 1,100px以下を2列、700px以下を1列とする表示切替を追加。カードの最小幅と長い日本語見出しの折り返しを安定化し、CSSの版番号で旧ブラウザキャッシュを更新するようにした。
 - 検証: PC・タブレット・スマホの実画面で、横スクロール・カード見切れ・文字重なりがないことを確認。site-links、media-seo（82記事）、scheduled-publish、media-generation、Cloudflare Pages buildをPASS。
+- 公開: Cloudflare Pagesへ反映。デプロイURLは https://48e6f3f8.soam-creative-media.pages.dev。カスタムドメインでPC・タブレット・スマホの全表示を確認済み。
 
 ## 2026-08-01
 
