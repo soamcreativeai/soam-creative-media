@@ -7,9 +7,9 @@
 
 - 公開サイト: https://media.soam-creative.com/
 - 配信基盤: Cloudflare Pages（project: `soam-creative-media`）
-- リポジトリ収録記事数: 80本
+- リポジトリ収録記事数: 81本
 - 本番確認済みの記事数: 80本（`article-80` まで）
-- `article-68`〜`article-80` はCloudflare Pagesへ反映済み。`article-80` はカスタムドメインで公開項目を確認済み。
+- `article-81` はリポジトリへ追加済み。本番反映・公開確認は名称統一の反映時に行う。
 - 記事自動生成workflow: `Generate and publish SOAM Media article`
 - 定時実行: JST 07:00 / 12:00 / 20:00
 
@@ -28,7 +28,7 @@
 - canonical形式: `https://media.soam-creative.com/articles/article-XX.html`
 - Article JSON-LD の `mainEntityOfPage` / `url` はcanonicalと一致させる。
 - 生成・公開前に `scripts/test-media-seo.mjs` が全公開記事を検査する。
-- 2026-08-01時点の自動検査: 80記事すべてPASS。article-80をカスタムドメインで確認済み。
+- 2026-08-01時点の自動検査: 81記事すべてPASS。article-80をカスタムドメインで確認済み。
 
 ## SOAM Link 導線の正本
 
@@ -53,7 +53,7 @@
 
 - `node scripts/normalize-soam-link-urls.mjs`: SOAM Link URLの正規化を実施
 - `node scripts/test-site-links.mjs`: PASS
-- `node scripts/test-media-seo.mjs`: PASS（80 published articles）
+- `node scripts/test-media-seo.mjs`: PASS（81 published articles）
 - `node scripts/test-publish-scheduled-articles.mjs`: PASS
 - workflow YAML構文検査: PASS
 - Cloudflare Pages build / deploy: PASS
@@ -80,6 +80,13 @@
 - A8で有効な提携21件、もしもで提携36件を確認した。案件カタログには登録がなかったため、自動生成時に選べる案件が0件だった。
 - 記事テーマに適合する13案件をカタログへ登録し、既存記事のうちリンク未設置かつテーマが一致する28本に「関連サービスについて」を追記した。広告リンクがない記事は31本から3本（暮らしの一般記事）へ減少した。
 - 自動処理 `scripts/sync-affiliate-links.mjs` は、今後の公開前にもテーマ一致・有効案件のみを最大2件挿入する。診断・恋愛・占いなど、適合案件を確認できていない記事には入れない。
+
+## 2026-08-01 名称統一
+
+- メディアの正式名称は **SOAM MEDIA**。旧表記の `SOAM CREATIVE MEDIA` と、記事・一覧でメディア名として表示されていた `SOAM CREATIVE` をSOAM MEDIAへ統一する。
+- 対象はトップ、記事一覧、全記事のヘッダー・ページ題名・検索用発信者名、固定ページ、今後の記事生成テンプレート。
+- 著作権表示の会社名 `SOAM CREATIVE`、SOAM CREATIVE公式Xへの既存導線、SOAM Linkの運営主体表記は別の固有名称のため変更しない。
+- 最新のarticle-81追加で記事一覧の更新マーカーが再度失われていたため、名称統一と同時に `AUTO:ARTICLE_LIST` マーカーを復元し、予約公開テストをPASSした。
 
 ## 残課題・境界
 

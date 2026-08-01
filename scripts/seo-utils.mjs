@@ -25,6 +25,6 @@ export const articleStructuredData = ({ title, description, file, publishedAt, u
   isAccessibleForFree: true,
   publisher: {
     '@type': 'Organization',
-    name: 'SOAM CREATIVE'
+    name: 'SOAM MEDIA'
   }
 });

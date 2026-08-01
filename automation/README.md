@@ -1,6 +1,6 @@
 # 毎日3本の予約公開
 
-このディレクトリは、SOAM CREATIVE MEDIA の記事キューと生成ルールです。既存の承認済み記事は `Publish scheduled articles` で手動公開できます。定時の新規生成は `Generate and publish SOAM Media article` が担当し、テーマ重複・品質・SEO検査をすべて通過した1本だけを公開します。
+このディレクトリは、SOAM MEDIA の記事キューと生成ルールです。既存の承認済み記事は `Publish scheduled articles` で手動公開できます。定時の新規生成は `Generate and publish SOAM Media article` が担当し、テーマ重複・品質・SEO検査をすべて通過した1本だけを公開します。
 
 | 枠 | 日本時間 | 役割 |
 | --- | --- | --- |

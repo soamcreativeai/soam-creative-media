@@ -2,6 +2,14 @@
 
 ## 2026-08-01
 
+- 対象: メディア名称の統一。
+- 決定: 正式名称を **SOAM MEDIA** とし、トップ、記事一覧、全記事の表示名・ページ題名・検索用発信者名、固定ページ、今後の記事生成テンプレートを旧 `SOAM CREATIVE MEDIA` / メディア名としての `SOAM CREATIVE` から変更。
+- 維持: 著作権表示の会社名と、SOAM CREATIVE公式X・SOAM Linkの固有名称は変更していない。
+- 再発修復: article-81追加時に失われた記事一覧の `AUTO:ARTICLE_LIST` マーカーを復元。
+- 検証: scheduled-publish、site-links、media-seo（81記事）、media-generation、差分形式検査をPASS。本番反映結果はこの項へ追記する。
+
+## 2026-08-01
+
 - 対象: 自動記事公開停止の復旧とアフィリエイトリンク運用の再開。
 - 原因: 記事一覧を旧方式で書き戻す処理が、予約公開に必要な `AUTO:ARTICLE_LIST` 更新マーカーを削除していた。記事生成後の予約公開テストで停止したため、article-68以降はCloudflare Pagesへ反映されなかった。
 - 変更: 記事一覧マーカーを復元。記事68〜79のcanonical・Article JSON-LD・記事一覧・sitemapを79記事の正本へ整合させた。

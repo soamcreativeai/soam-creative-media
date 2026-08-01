@@ -21,7 +21,7 @@ const isCurrentArticle = (html) => {
   const rawJsonLd = (html.match(/<script[^>]+data-seo="article"[^>]*>([\s\S]*?)<\/script>/i) || [])[1];
   try {
     const jsonLd = JSON.parse(rawJsonLd);
-    return title === `${article.title} | SOAM CREATIVE`
+    return title === `${article.title} | SOAM MEDIA`
       && h1 === article.title
       && canonical === expectedCanonical
       && jsonLd['@type'] === 'Article'
@@ -53,7 +53,7 @@ const rawJsonLd = (text.match(/<script[^>]+data-seo="article"[^>]*>([\s\S]*?)<\/
 let jsonLd;
 try { jsonLd = JSON.parse(rawJsonLd); } catch { throw new Error(`${articleFile}: Article JSON-LD を解析できません。`); }
 const errors = [];
-if (title !== `${article.title} | SOAM CREATIVE`) errors.push(`title が記事タイトルと一致しません: ${title || 'なし'}`);
+if (title !== `${article.title} | SOAM MEDIA`) errors.push(`title が記事タイトルと一致しません: ${title || 'なし'}`);
 if (h1 !== article.title) errors.push(`h1 が記事タイトルと一致しません: ${h1 || 'なし'}`);
 if (canonical !== expectedCanonical) errors.push(`canonical が不正です: ${canonical || 'なし'}`);
 if (jsonLd['@type'] !== 'Article' || jsonLd.headline !== article.title || jsonLd.mainEntityOfPage?.['@id'] !== expectedCanonical) errors.push('Article JSON-LD が記事と一致しません。');

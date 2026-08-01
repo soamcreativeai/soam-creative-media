@@ -104,7 +104,7 @@ const sortedPublished = (manifest) => manifest
   });
 
 const renderArticleList = (articles) => articles.map((article) => `      <a class="article-card" href="${escapeHtml(article.file)}">
-        <div class="thumb">SOAM CREATIVE</div>
+        <div class="thumb">SOAM MEDIA</div>
         <div class="body">
           <span class="tag">${escapeHtml(article.categoryLabel || 'その他')}</span>
           <h3>${escapeHtml(article.title)}</h3>
@@ -251,7 +251,7 @@ const renderArticlePage = (entry, content, published) => {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(article.metaDescription)}">
-  <title>${escapeHtml(article.metaTitle || article.title)} | SOAM CREATIVE</title>
+  <title>${escapeHtml(article.metaTitle || article.title)} | SOAM MEDIA</title>
   <link rel="canonical" href="${canonicalUrl(`articles/${file}`)}" data-seo="canonical">
   <script type="application/ld+json" data-seo="article">${jsonForScript(structuredData)}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LDQ9J4C8B" data-analytics="ga4-loader"></script>
@@ -267,7 +267,7 @@ const renderArticlePage = (entry, content, published) => {
 <body>
   <header>
     <div class="header-inner">
-      <a href="../index.html" class="logo">● SOAM CREATIVE</a>
+      <a href="../index.html" class="logo">● SOAM MEDIA</a>
       <nav>
         <a href="../index.html">ホーム</a>
         <a href="../articles/index.html">記事一覧</a>
