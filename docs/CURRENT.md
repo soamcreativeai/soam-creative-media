@@ -3,9 +3,9 @@
 最終確認・引き継ぎ更新: 2026-08-01 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
-## 2026-08-01 メディア戦略再設計（専用作業場所・本番未反映）
+## 2026-08-01 メディア戦略再設計（本番反映・確認済み）
 
-- 状態: **ローカル反映・検査済み／main・GitHub・本番は未変更**。
+- 状態: **GitHub送信・Cloudflare Pages本番反映・カスタムドメイン確認まで完了**。
 - 作業開始時の保存ID: `c3e7ba67adb29eebb2ea8a3d3c7762a282a52080`。本番統合時は共有側の最新 `fe3da52` を土台に再適用。
 - メディアの使命、3本柱、トップ、3本柱ハブ、比較・選び方ハブを追加。
 - 既存82記事を全件監査し、読者、困りごと、検索意図、記事種類、3本柱、情報確認日、次回見直し日、関連記事3件以上、主導線1種類を記録・表示。
@@ -14,7 +14,11 @@
 - 今後の有料記事生成APIは **07:00・12:00・20:00の各枠で1回だけ**。再生成APIを呼ばず、固定形式と手元の処理で判断表・出典・確認日・導線を完成させる。
 - ローカル検査: generation、scheduled-publish、site-links、media-seo（82記事）、media-strategy、Pages build、差分形式がPASS。
 - 実画面: PC、タブレット、スマホでトップ、article-82、比較絞り込みを確認。横方向のページずれなし、記事の主導線1種類、比較の「お金・事業手続き」12件表示を確認。
-- 未検証: 実際の定時GitHub Actions、Cloudflare Pages、本番ドメイン。今回の指示で本番反映が禁止されているため未実施。
+- 本番保存ID: `fe7637e3be20a3686a37cbdf57ea410735398bee`。
+- 公開処理: [run 30687307314](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30687307314) が成功。82記事の生成・予約公開・SOAM Link・SEO・戦略検査、Pages build、本番反映、カスタムドメイン確認をすべて通過。
+- Cloudflare Pages確認URL: https://caed2fac.soam-creative-media.pages.dev
+- 本番確認: トップ、3本柱、比較・選び方、article-82の計6ページで使命文、主要導線、戦略情報、アフィリエイト主導線を確認。伝播待ち後の再検査もPASS。
+- 未検証: 次回07:00・12:00・20:00枠での実際の記事生成。今回の公開専用処理では有料生成APIを呼んでいない。
 - 詳細: `docs/STRATEGY_IMPLEMENTATION_REPORT_20260801.md`、`docs/ARTICLE_AUDIT_20260801.csv`。
 
 ## 本番状態
@@ -39,7 +43,7 @@
 ## SEOの正本
 
 - 各公開記事は canonical を1件だけ持つ。
-- canonical形式: `https://media.soam-creative.com/articles/article-XX.html`
+- canonical形式: `https://media.soam-creative.com/articles/article-XX`
 - Article JSON-LD の `mainEntityOfPage` / `url` はcanonicalと一致させる。
 - 生成・公開前に `scripts/test-media-seo.mjs` が全公開記事を検査する。
 - 2026-08-01時点の自動検査: 82記事すべてPASS。article-82をカスタムドメインで確認済み。
