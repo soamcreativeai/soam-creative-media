@@ -55,12 +55,20 @@
 - デプロイURL: https://3951b2e9.soam-creative-media.pages.dev
 - カスタムドメインでトップ、記事一覧、article-82のtitle、h1、canonical、Article JSON-LD、記事一覧、sitemap、拡張子なしURLを確認済み。
 
+## 2026-08-01 レスポンシブ表示の調整
+
+- 対象: トップページの新着記事カード。
+- 原因: 940pxより広いタブレット幅ではPC用の3列配置が使われ、カード幅に対して長い記事タイトルが詰まりやすかった。
+- 変更: 1,100px以下を2列、700px以下を1列へ切り替えた。カードが内容に押し広げられない指定と、長い日本語タイトルの折り返し指定も追加した。
+- ローカル確認: PC幅・タブレット幅・スマホ幅で、横スクロールなし・カードの見切れなし・文字の重なりなしを確認。site-links、media-seo（82記事）、scheduled-publish、media-generation、Cloudflare Pages buildをPASS。
+
 ## 直近検証結果
 
 - `node scripts/normalize-soam-link-urls.mjs`: SOAM Link URLの正規化を実施
 - `node scripts/test-site-links.mjs`: PASS
 - `node scripts/test-media-seo.mjs`: PASS（82 published articles）
 - `node scripts/test-publish-scheduled-articles.mjs`: PASS
+- レスポンシブ表示: PC / タブレット / スマホの実画面確認でPASS（横スクロール、見切れ、文字重なりなし）
 - workflow YAML構文検査: PASS
 - Cloudflare Pages build / deploy: PASS
 
