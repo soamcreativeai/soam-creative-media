@@ -14,21 +14,36 @@ const article = manifest.find((item) => item.status === 'published' && item.file
 if (!article) throw new Error(`${articleFile} は公開済みmanifestにありません。`);
 const expectedCanonical = canonicalUrl(`articles/${articleFile}`);
 const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-const page = async (pathname) => {
+const isCurrentArticle = (html) => {
+  const title = (html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1]?.trim();
+  const h1 = (html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1]?.replace(/<[^>]+>/g, '').trim();
+  const canonical = (html.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/i) || [])[1];
+  const rawJsonLd = (html.match(/<script[^>]+data-seo="article"[^>]*>([\s\S]*?)<\/script>/i) || [])[1];
+  try {
+    const jsonLd = JSON.parse(rawJsonLd);
+    return title === `${article.title} | SOAM CREATIVE`
+      && h1 === article.title
+      && canonical === expectedCanonical
+      && jsonLd['@type'] === 'Article'
+      && jsonLd.headline === article.title
+      && jsonLd.mainEntityOfPage?.['@id'] === expectedCanonical;
+  } catch { return false; }
+};
+const page = async (pathname, validate = () => true) => {
   let lastError;
   for (let attempt = 1; attempt <= 20; attempt += 1) {
     try {
       const response = await fetch(`${baseUrl}${pathname}`, { redirect: 'follow', signal: AbortSignal.timeout(15000) });
       const html = await response.text();
-      if (response.ok) return html;
-      lastError = new Error(`${pathname}: HTTP ${response.status}`);
+      if (response.ok && validate(html)) return html;
+      lastError = new Error(`${pathname}: HTTP ${response.status} または反映待ち`);
     } catch (error) { lastError = error; }
     await wait(3000);
   }
   throw lastError || new Error(`${pathname}: 応答を取得できませんでした。`);
 };
-const text = await page(`/articles/${articleFile}`);
-const bareText = await page(`/articles/${articleFile.replace(/\.html$/, '')}`);
+const text = await page(`/articles/${articleFile}`, isCurrentArticle);
+const bareText = await page(`/articles/${articleFile.replace(/\.html$/, '')}`, isCurrentArticle);
 const index = await page('/articles/index.html');
 const sitemap = await page('/sitemap.xml');
 const title = (text.match(/<title>([\s\S]*?)<\/title>/i) || [])[1]?.trim();
