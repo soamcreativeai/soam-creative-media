@@ -5,7 +5,7 @@
 - 対象: Google検索流入・SEO・アフィリエイト収益導線の全体監査。
 - 発見: sitemapとcanonicalが `.html` 付きだった一方、Cloudflare Pagesの実URLは拡張子なしへ308移動していた。
 - 変更: 公開82記事、記事一覧、固定ページ、sitemapのcanonicalを実URLへ統一。Article構造化データに著者・運営者URL・言語を追加し、全記事へ著者表記とSNS共有情報を付与。今後の自動公開にも同じ要件を追加。
-- 検索管理: Google Search Consoleへ正式URLを登録し、Google Analyticsによる所有権確認を完了。sitemap.xmlを送信。初回の集計・クロール結果は処理待ち。
+- 検索管理: Google Search Consoleへ正式URLを登録し、Google Analyticsによる所有権確認を完了。sitemap.xmlを送信し、成功・89ページ検出を確認。検索語・表示回数の集計は新規登録による待機中。
 - 除外: 保存ページ、未公開診断、管理デモは検索結果に出ない設定を維持。本文・公開日・画像・カテゴリ・アフィリエイト先は変更していない。
 - 検証: media-seo（82記事）、scheduled-publish、media-generation、site-links、Cloudflare Pages build、差分形式検査をPASS。
 
