@@ -97,13 +97,20 @@ const main = async () => {
   for (let attempt = 1; attempt <= 3; attempt += 1) {
     const response = fixture ? { generated: fixtureArticle(choice.theme), usage: { input_tokens: 0, output_tokens: 0 } } : await responseRequest({ ...input, retryAttempt: attempt, previousQualityErrors: errors });
     generated = response.generated; usage = response.usage;
+    const sections = (generated.sections || []).map((section) => String(section.heading || '').trim() === 'まとめ'
+      ? { ...section, heading: '最後に確認したいこと' }
+      : section);
+    const relatedArticleIds = Array.isArray(generated.related_article_ids)
+      ? generated.related_article_ids.filter((related) => relatedCandidates.includes(related))
+      : [];
     normalized = {
       ...generated,
+      sections,
       category: choice.theme.category,
       metaDescription: generated.meta_description,
       excerpt: generated.excerpt || generated.introduction,
-      bodyHtml: htmlFromArticle(generated),
-      relatedArticleIds: generated.related_article_ids
+      bodyHtml: htmlFromArticle({ ...generated, sections }),
+      relatedArticleIds
     };
     errors = qualityErrors({ article: normalized, styleGuide: catalog.styleGuide, expectedCategory: choice.theme.category, expectedTitlePool: manifest.map((article) => article.title), expectedTextPool: manifest.map((article) => `${article.title} ${article.excerpt} ${(article.tags || []).join(' ')}`), expectedRelatedIds: relatedCandidates, offers });
     if (!Array.isArray(normalized.relatedArticleIds) || normalized.relatedArticleIds.some((related) => !manifest.some((article) => article.slug === related))) errors.push('related_article_ids に存在しない記事があります。');
