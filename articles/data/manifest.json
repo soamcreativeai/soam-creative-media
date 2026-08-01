@@ -4634,5 +4634,28 @@
       "article-75",
       "article-80"
     ]
+  },
+  {
+    "title": "診断コンテンツで業務効率化を図る基本手法",
+    "slug": "article-84",
+    "file": "article-84.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "all",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "診断コンテンツは業務の効率化に役立つツールです。しかし、正しく作成し活用するにはいくつかのポイントがあります。本記事では、その基本を詳しく解説します。",
+    "metaTitle": "診断コンテンツ作成の基本と活用法",
+    "metaDescription": "診断コンテンツを活用して業務効率を向上させる方法を解説。診断内容の設計から適用例までを紹介します。",
+    "publishedAt": "2026-08-02",
+    "updatedAt": "2026-08-02",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-70",
+      "article-76"
+    ]
   }
 ]
