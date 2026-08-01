@@ -6,7 +6,9 @@
 - 原因: 記事一覧を旧方式で書き戻す処理が、予約公開に必要な `AUTO:ARTICLE_LIST` 更新マーカーを削除していた。記事生成後の予約公開テストで停止したため、article-68以降はCloudflare Pagesへ反映されなかった。
 - 変更: 記事一覧マーカーを復元。記事68〜79のcanonical・Article JSON-LD・記事一覧・sitemapを79記事の正本へ整合させた。
 - 変更: 有効な提携先のうち記事テーマに一致する13案件をアフィリエイトカタログへ登録し、リンク未設置かつ適合する28記事へ広告である旨を明記して追加した。広告リンクがない記事は31本から3本（暮らしの一般記事）へ減少。今後のためにテーマ一致時のみ挿入する同期処理を追加。
-- 検証: scheduled-publish、site-links、media-seo（79記事）、media-generation、差分形式検査をPASS。本番反映後の確認結果はこの項へ追記する。
+- 検証: scheduled-publish、site-links、media-seo（80記事）、media-generation、差分形式検査をPASS。
+- 公開: article-80を生成し、article-68〜80をCloudflare Pagesへ反映。 [run 30680033658](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30680033658) が成功し、article-80のtitle、h1、canonical、Article JSON-LD、記事一覧、sitemap、拡張子なしURLをカスタムドメインで確認した。デプロイURLは https://5b7a6edc.soam-creative-media.pages.dev。
+- 改善: 配信直後の古い内容を公開済みと判定しないよう、公開確認は検索情報を含む正しい記事内容がそろうまで待機する方式へ変更。
 
 ## 2026-07-28
 

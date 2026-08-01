@@ -1,15 +1,15 @@
 # SOAM Media 現在地
 
-最終確認・引き継ぎ更新: 2026-08-01 JST（本番反映前の復旧記録）
+最終確認・引き継ぎ更新: 2026-08-01 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
 ## 本番状態
 
 - 公開サイト: https://media.soam-creative.com/
 - 配信基盤: Cloudflare Pages（project: `soam-creative-media`）
-- リポジトリ収録記事数: 79本
-- 本番確認済みの記事数: 67本（`article-67` まで）
-- `article-68`〜`article-79` はリポジトリへ追加済みだが、本番反映・公開確認は未完了。
+- リポジトリ収録記事数: 80本
+- 本番確認済みの記事数: 80本（`article-80` まで）
+- `article-68`〜`article-80` はCloudflare Pagesへ反映済み。`article-80` はカスタムドメインで公開項目を確認済み。
 - 記事自動生成workflow: `Generate and publish SOAM Media article`
 - 定時実行: JST 07:00 / 12:00 / 20:00
 
@@ -28,7 +28,7 @@
 - canonical形式: `https://media.soam-creative.com/articles/article-XX.html`
 - Article JSON-LD の `mainEntityOfPage` / `url` はcanonicalと一致させる。
 - 生成・公開前に `scripts/test-media-seo.mjs` が全公開記事を検査する。
-- 2026-07-28時点の自動検査: 69記事すべてPASS。ただし本番確認済みは`article-67`まで。
+- 2026-08-01時点の自動検査: 80記事すべてPASS。article-80をカスタムドメインで確認済み。
 
 ## SOAM Link 導線の正本
 
@@ -42,18 +42,18 @@
 
 ## 直近の本番反映
 
-- 修正commit: [`4f20393`](https://github.com/soamcreativeai/soam-creative-media/commit/4f20393) `content: publish article-67 依頼のすれ違いを減らす、最初の確認メモの作り方`
-- ワークフロー修正commit: [`f584cd4`](https://github.com/soamcreativeai/soam-creative-media/commit/f584cd4) `fix: restore media article index workflow markers`
-- GitHub Actions: [run 30321297239](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30321297239)（成功）
-- Cloudflare PagesデプロイURL: https://ebc01111.soam-creative-media.pages.dev
-- 本番確認: article-67のtitle、h1、canonical、Article JSON-LD、記事一覧、sitemap、拡張子なしURLをカスタムドメインで検証済み。
+- 復旧commit: [`1216920`](https://github.com/soamcreativeai/soam-creative-media/commit/1216920) `fix: restore media publishing and affiliate links`
+- 公開確認待機修正: [`9a61ba6`](https://github.com/soamcreativeai/soam-creative-media/commit/9a61ba6) `fix: wait for media publication propagation`
+- GitHub Actions: [run 30680033658](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30680033658)（成功）
+- Cloudflare PagesデプロイURL: https://5b7a6edc.soam-creative-media.pages.dev
+- 本番確認: article-80のtitle、h1、canonical、Article JSON-LD、記事一覧、sitemap、拡張子なしURLをカスタムドメインで検証済み。
 - `https://link.soam-creative.com/` はHTTP 200。
 
 ## 直近検証結果
 
-- `node scripts/normalize-soam-link-urls.mjs`: 変更対象なし
+- `node scripts/normalize-soam-link-urls.mjs`: SOAM Link URLの正規化を実施
 - `node scripts/test-site-links.mjs`: PASS
-- `node scripts/test-media-seo.mjs`: PASS（67 published articles）
+- `node scripts/test-media-seo.mjs`: PASS（80 published articles）
 - `node scripts/test-publish-scheduled-articles.mjs`: PASS
 - workflow YAML構文検査: PASS
 - Cloudflare Pages build / deploy: PASS
@@ -72,7 +72,8 @@
 - `article-68`〜`article-79` の生成内容・HTML・記事一覧・manifestはリポジトリに追加済み。
 - 公開停止の直接原因は、`articles/index.html` の `AUTO:ARTICLE_LIST:START/END` 更新マーカーが消えたこと。2026-07-28に一度復旧した後、旧方式の記事一覧更新が一覧全体を書き戻し、マーカーを再び削除した。
 - その結果、記事の生成・保存は進んだが、予約公開テストで `ARTICLE_LIST の更新マーカーが見つかりません。` と停止し、その後のCloudflare Pages反映まで到達しなかった。
-- 復旧準備として、記事一覧マーカーを復元し、予約公開・SOAM Link・SEO・記事生成のローカル検査を79記事でPASSした。本番確認までは`article-68`以降を公開済みとは扱わない。
+- 記事一覧マーカーを復元し、予約公開・SOAM Link・SEO・記事生成の検査を通過後、article-68〜80をCloudflare Pagesへ反映した。
+- 初回のarticle-80反映では、配信直後の古い内容を公開確認が取得して失敗扱いになった。本文は反映済みだったため、公開確認を「HTTP応答がある」だけでなくtitle・h1・canonical・Article JSON-LDが揃うまで待つ方式へ修正し、成功runで再確認した。
 
 ## アフィリエイトリンクの運用
 
@@ -85,4 +86,4 @@
 - `actions/checkout@v4` と `actions/setup-node@v4` のNode 20非推奨警告は、今回の復旧・リンク修正とは別課題として未変更。
 - アフィリエイト案件の掲載可否は、activeな案件カタログと記事テーマに基づいて判断する。案件が0件でも有益な記事は生成・公開可能。
 - 記事本文、外部サービスの機能・実績・数値は、確認できない事実を追加しない。
-- `article-68`〜`article-79`の公開状態は未確認のため、修復と本番確認が完了するまで公開済みとして案内しない。
+- Node 20非推奨警告は出るが、今回のrunでは非停止。別課題として維持する。
