@@ -51,13 +51,6 @@ jobs:
         run: |
           test -n "$CLOUDFLARE_API_TOKEN" || { echo "CLOUDFLARE_API_TOKEN is required before article generation starts."; exit 1; }
           test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo "CLOUDFLARE_ACCOUNT_ID is required before article generation starts."; exit 1; }
-      - name: Verify OpenAI connectivity and configured model
-        if: ${{ !inputs.list_models_only }}
-        env:
-          MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}
-          MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
-          MEDIA_AI_MODEL: ${{ secrets.MEDIA_AI_MODEL }}
-        run: node scripts/generate-media-article.mjs --verify-openai
       - name: List available OpenAI candidate models
         if: ${{ inputs.list_models_only }}
         env:
@@ -98,6 +91,8 @@ jobs:
           node scripts/test-site-links.mjs
           node scripts/test-media-seo.mjs
           node scripts/test-publish-scheduled-articles.mjs
+          node scripts/test-media-generation.mjs
+          node scripts/test-media-strategy.mjs
       - name: Commit and push a complete article publication
         if: ${{ !inputs.dry_run && !inputs.list_models_only }}
         run: |
@@ -108,7 +103,7 @@ jobs:
           TITLE="$(node -e "const q=require('./automation/article-queue.json');const a=q.articles.filter(x=>x.generated).at(-1).article;process.stdout.write('content: publish '+a.slug+' '+a.title.slice(0,60))")"
           git config user.name "SOAM CREATIVE Publisher"
           git config user.email "soam.creative.media@gmail.com"
-          git add articles automation index.html sitemap.xml
+          git add articles automation index.html sitemap.xml pillars guides media-home.js media-strategy.css docs/ARTICLE_AUDIT_20260801.csv docs/ARTICLE_AUDIT_20260801.md
           git commit -m "$TITLE"
           git pull --rebase origin main
           node scripts/test-media-seo.mjs

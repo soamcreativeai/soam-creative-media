@@ -171,7 +171,7 @@
         title.textContent = item.title;
         link.append(label, title);
         link.addEventListener('click', () => {
-          track('article_next_read', { from_article: current.title, to_article: item.title, category: item.categoryLabel || '' });
+          track('related_article_click', { from_article: current.title, to_article: item.title, category: item.categoryLabel || '' });
         });
         list.append(link);
       });
@@ -193,10 +193,27 @@
     nav.append(link);
   };
 
+  const addEditorialTracking = () => {
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('a[data-track-event]');
+      if (!link) return;
+      track(link.dataset.trackEvent, {
+        article_file: articleFile(),
+        offer_id: link.dataset.offerId || '',
+        link_label: link.dataset.trackLabel || link.textContent.trim(),
+        destination: link.href
+      });
+    });
+    document.querySelectorAll('a[href*="template"], a[download]').forEach((link) => {
+      if (!link.dataset.trackEvent) link.dataset.trackEvent = 'template_click';
+    });
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     renderSavedPage();
     createReaderUtility();
     renderNextReads();
     addSavedLinkToArticleNav();
+    addEditorialTracking();
   });
 })();

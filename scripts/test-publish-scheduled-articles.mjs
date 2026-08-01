@@ -19,7 +19,8 @@ try {
     fs.copyFile(path.join(rootDir, 'index.html'), path.join(fixtureDir, 'index.html'))
   ]);
 
-  await fs.writeFile(path.join(fixtureDir, 'automation/approved-content/test-article.html'), `
+  await fs.mkdir(path.join(fixtureDir, 'automation/generated-content'), { recursive: true });
+  await fs.writeFile(path.join(fixtureDir, 'automation/generated-content/test-article.html'), `
       <section class="what-you-get">
         <p><strong>この記事でわかること</strong></p>
         <ul><li>公開キューの動作確認</li></ul>
@@ -37,10 +38,10 @@ try {
     ],
     articles: [{
       id: 'publisher-test-article',
-      status: 'approved',
+      status: 'scheduled',
       slot: 'morning',
       scheduledAt: '2026-08-01T07:00:00+09:00',
-      source: 'automation/approved-content/test-article.html',
+      source: 'automation/generated-content/test-article.html',
       article: {
         slug: 'article-publisher-test',
         title: '予約公開のテスト記事',
@@ -73,6 +74,8 @@ try {
   ]);
   assert.match(article, /予約公開のテスト記事/);
   assert.match(article, /隔離テスト用本文/);
+  assert.match(article, /data-editorial-strategy/);
+  assert.doesNotMatch(article, /status[^<]*approved/);
   assert.match(manifest, /article-publisher-test/);
   assert.match(queue, /"status": "published"/);
   assert.match(articleIndex, /予約公開のテスト記事/);

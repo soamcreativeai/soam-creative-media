@@ -3,6 +3,20 @@
 最終確認・引き継ぎ更新: 2026-08-01 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
+## 2026-08-01 メディア戦略再設計（専用作業場所・本番未反映）
+
+- 状態: **ローカル反映・検査済み／main・GitHub・本番は未変更**。
+- 作業開始時の保存ID: `c3e7ba67adb29eebb2ea8a3d3c7762a282a52080`。本番統合時は共有側の最新 `fe3da52` を土台に再適用。
+- メディアの使命、3本柱、トップ、3本柱ハブ、比較・選び方ハブを追加。
+- 既存82記事を全件監査し、読者、困りごと、検索意図、記事種類、3本柱、情報確認日、次回見直し日、関連記事3件以上、主導線1種類を記録・表示。
+- 主導線: アフィリエイト67本、SOAM Link 3本、関連記事12本。案件は有効な13件のうち、記事本文の具体語と一致するものだけ最大2件。
+- 恋愛・占い6記事は公開URLを維持し、今後の自動生成対象外・検索除外候補としてHOLD記録。削除・転送・検索除外は未実施。
+- 今後の有料記事生成APIは **07:00・12:00・20:00の各枠で1回だけ**。再生成APIを呼ばず、固定形式と手元の処理で判断表・出典・確認日・導線を完成させる。
+- ローカル検査: generation、scheduled-publish、site-links、media-seo（82記事）、media-strategy、Pages build、差分形式がPASS。
+- 実画面: PC、タブレット、スマホでトップ、article-82、比較絞り込みを確認。横方向のページずれなし、記事の主導線1種類、比較の「お金・事業手続き」12件表示を確認。
+- 未検証: 実際の定時GitHub Actions、Cloudflare Pages、本番ドメイン。今回の指示で本番反映が禁止されているため未実施。
+- 詳細: `docs/STRATEGY_IMPLEMENTATION_REPORT_20260801.md`、`docs/ARTICLE_AUDIT_20260801.csv`。
+
 ## 本番状態
 
 - 公開サイト: https://media.soam-creative.com/
@@ -18,7 +32,7 @@
 - 生成APIは OpenAI Responses API（`POST https://api.openai.com/v1/responses`）を使用する。
 - 認証は `Authorization: Bearer`。APIキー、モデル、ベースURLはGitHub Actions Secretから注入する。
 - AIは厳格なJSONを返し、HTMLはローカルのテンプレート変換で生成する。AIにHTMLや外部URLを自由生成させない。
-- 生成前にOpenAI接続と設定済みモデルを確認し、失敗時は記事・一覧・サイトマップを変更しない。
+- 定時実行では、モデル一覧確認のための余分なAPI通信を行わない。設定不足や生成失敗時は記事・一覧・サイトマップを変更しない。
 - 品質、重複、禁止表現、SEO、予約公開テストを通過した場合のみ公開対象をcommit・pushする。
 - 同じslotがすでに記録済みの場合は安全に no-op となる。no-opでもSEO・リンク検査・Cloudflare Pagesデプロイは実行できる。
 

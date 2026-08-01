@@ -1,27 +1,53 @@
 {
-  "version": 1,
+  "version": 2,
   "timezone": "Asia/Tokyo",
+  "mediaPromise": "個人で商品・サービスを作り、売り、届ける人が、一人で抱えている判断と実務を、使える手順へ変えるメディア",
+  "pillars": [
+    {"id":"decision","label":"判断を言葉にする"},
+    {"id":"systems","label":"一人で回す仕組み"},
+    {"id":"reach","label":"必要な人へ届ける"}
+  ],
   "styleGuide": {
-    "voice": "落ち着いた実務的な日本語。読者の判断を急かさず、できることと確認が必要なことを分ける。",
-    "forbiddenPhrases": ["いかがでしたでしょうか", "誰でも簡単", "放置で稼げる", "絶対に得する", "今すぐ申し込まないと損", "おすすめ1位"],
-    "requiredSections": ["こんな悩みはありませんか", "結論", "具体例", "注意点", "向いている人・向いていない人", "まとめ"],
+    "voice": "落ち着いた実務的な日本語。読者の努力不足にせず、確認できる事実・判断基準・具体的な手順を分ける。",
+    "forbiddenPhrases": ["いかがでしたでしょうか", "誰でも簡単", "放置で稼げる", "絶対", "絶対に得する", "今すぐ申し込まないと損", "おすすめ1位", "体験してみました", "使ってみました"],
+    "requiredSections": ["こんな悩みはありませんか", "結論", "問題の構造", "判断基準", "具体的な手順", "判断表", "確認項目", "注意点", "向いている人・向いていない人", "出典・情報確認日", "まとめ"],
     "qualityBaseline": {
-      "referenceArticle": "article-19",
-      "referenceBodyChars": 3601,
-      "minimumBodyChars": 2521,
+      "referenceArticle": "article-82",
+      "referenceBodyChars": 4300,
+      "minimumBodyChars": 3000,
       "minimumH2": 10,
       "minimumH3": 1,
-      "minimumSectionChars": 150
+      "minimumSectionChars": 150,
+      "minimumDecisionCriteria": 3,
+      "minimumSteps": 3,
+      "minimumChecklistItems": 4,
+      "minimumSources": 1
+    },
+    "rejectionPolicy": {
+      "revisionsPerTheme": 1,
+      "fallbackThemesPerSlot": 1,
+      "maximumGenerationApiCallsPerSlot": 1,
+      "rule": "生成APIは1公開枠につき1回だけ。必須構造は最初から固定し、判断表・出典リンク・確認日・導線はローカル処理で完成させる。"
     }
   },
   "themes": [
-    {"id":"ai-workflow-inventory","category":"ai","categoryLabel":"AI・業務効率化","articleType":"howto","intent":"AI導入前に業務を整理したい","reader":"小規模事業者・個人事業主","titleHint":"AIに任せる作業を決めるための、小さな業務棚卸し"},
-    {"id":"ai-meeting-followup","category":"ai","categoryLabel":"AI・業務効率化","articleType":"howto","intent":"打ち合わせ後の抜け漏れを減らしたい","reader":"顧客対応のある個人事業主","titleHint":"打ち合わせ後の連絡を軽くする、メモから次の行動へつなぐ方法"},
-    {"id":"templates-client-brief","category":"templates","categoryLabel":"テンプレート・教材","articleType":"howto","intent":"依頼内容の確認漏れを減らしたい","reader":"受託・制作を行う個人事業主","titleHint":"依頼のすれ違いを減らす、最初の確認メモの作り方"},
-    {"id":"marketing-content-repurpose","category":"marketing","categoryLabel":"集客・販売","articleType":"guide","intent":"発信を続ける負担を減らしたい","reader":"小規模店舗・個人サービス","titleHint":"一つの相談から発信の種を見つける、内容を使い回す前の整理"},
-    {"id":"creative-visual-brief","category":"creative","categoryLabel":"動画・画像・デザイン","articleType":"guide","intent":"画像づくりの依頼を整理したい","reader":"SNS発信を行う事業者","titleHint":"画像づくりで迷わないために、先に決めておきたい三つのこと"},
-    {"id":"money-records-routine","category":"money","categoryLabel":"税金・副業・お金","articleType":"guide","intent":"日々の記録を後回しにしない方法を知りたい","reader":"個人事業主・副業を始めた人","titleHint":"確定申告の前に慌てないための、日々の記録を続ける小さな仕組み"},
-    {"id":"personal-service-boundary","category":"personal","categoryLabel":"個人サービス","articleType":"guide","intent":"個人サービスの対応範囲を整理したい","reader":"講師・コーチ・個人サービス提供者","titleHint":"個人サービスのやり取りを整える、対応範囲を言葉にする方法"},
-    {"id":"marketing-consultation-flow","category":"marketing","categoryLabel":"集客・販売","articleType":"guide","intent":"問い合わせから相談までの導線を見直したい","reader":"小規模店舗・個人事業主","titleHint":"問い合わせの後で迷わせない、相談までの案内を整える方法"}
+    {"id":"decision-service-scope","pillar":"decision","category":"personal","categoryLabel":"個人サービス","articleType":"guide","slots":["morning","noon"],"intent":"提供範囲と対象外を整理したい","reader":"講師・コーチ・相談・制作などの個人サービス提供者","titleHint":"個人サービスの提供範囲を言葉にする判断表"},
+    {"id":"decision-client-requirements","pillar":"decision","category":"templates","categoryLabel":"テンプレート・教材","articleType":"howto","slots":["morning","evening"],"intent":"依頼内容の確認漏れを減らしたい","reader":"受託・制作を行う個人事業主","titleHint":"依頼のすれ違いを減らす、最初の確認シート"},
+    {"id":"decision-product-offer","pillar":"decision","category":"marketing","categoryLabel":"集客・販売","articleType":"guide","slots":["morning","noon"],"intent":"商品の対象者と約束を整理したい","reader":"自分の商品・サービスを販売する個人事業主","titleHint":"商品説明を書く前に決める、対象者と提供範囲"},
+    {"id":"decision-diagnosis-next-step","pillar":"decision","category":"diagnosis","categoryLabel":"診断ツール活用","articleType":"guide","slots":["noon","evening"],"intent":"診断結果を次の行動につなげたい","reader":"診断コンテンツを集客や接客に使う小規模事業者","titleHint":"診断結果を答えで終わらせない、次の行動の作り方"},
+    {"id":"systems-ai-workflow-inventory","pillar":"systems","category":"ai","categoryLabel":"AI・業務効率化","articleType":"howto","slots":["morning","evening"],"intent":"AI導入前に業務を整理したい","reader":"AIを仕事に取り入れたい小規模事業者・個人事業主","titleHint":"AIに任せる作業を決めるための、小さな業務棚卸し"},
+    {"id":"systems-ai-human-check","pillar":"systems","category":"ai","categoryLabel":"AI・業務効率化","articleType":"guide","slots":["noon","evening"],"intent":"AIの出力をどこまで確認するか決めたい","reader":"AIで文章・資料・顧客対応の下書きを作る事業者","titleHint":"AIに任せる前に決めたい、人が確認する三つの場所"},
+    {"id":"systems-meeting-followup","pillar":"systems","category":"ai","categoryLabel":"AI・業務効率化","articleType":"howto","slots":["morning","evening"],"intent":"打ち合わせ後の抜け漏れを減らしたい","reader":"顧客対応のある個人事業主","titleHint":"打ち合わせ後の連絡を、メモから次の行動へ変える方法"},
+    {"id":"systems-record-routine","pillar":"systems","category":"money","categoryLabel":"税金・副業・お金","articleType":"guide","slots":["morning","evening"],"intent":"事業の記録を後回しにしない方法を知りたい","reader":"記帳や証憑整理を一人で行う個人事業主","titleHint":"期限前に慌てないための、事業記録の小さな仕組み"},
+    {"id":"systems-template-handover","pillar":"systems","category":"templates","categoryLabel":"テンプレート・教材","articleType":"howto","slots":["morning","evening"],"intent":"引き継ぎや共有の確認漏れを減らしたい","reader":"業務を他の人へ渡すことがある小規模事業者","titleHint":"引き継ぎを説明だけで終わらせない確認テンプレート"},
+    {"id":"systems-customer-response","pillar":"systems","category":"personal","categoryLabel":"個人サービス","articleType":"howto","slots":["morning","evening"],"intent":"問い合わせ対応を一人で回したい","reader":"問い合わせや相談を一人で受けている個人サービス提供者","titleHint":"問い合わせ対応を抱え込まない、返信と記録の分け方"},
+    {"id":"reach-content-repurpose","pillar":"reach","category":"marketing","categoryLabel":"集客・販売","articleType":"guide","slots":["morning","evening"],"intent":"発信を続ける負担を減らしたい","reader":"小規模店舗・個人サービス提供者","titleHint":"一つの相談から発信の種を見つける、内容を使い回す前の整理"},
+    {"id":"reach-consultation-flow","pillar":"reach","category":"marketing","categoryLabel":"集客・販売","articleType":"guide","slots":["morning","noon"],"intent":"問い合わせから相談までの導線を見直したい","reader":"小規模店舗・個人事業主","titleHint":"問い合わせの後で迷わせない、相談までの案内を整える方法"},
+    {"id":"reach-lp-decision-flow","pillar":"reach","category":"lp","categoryLabel":"LP・Web集客","articleType":"howto","slots":["morning","noon"],"intent":"LPで読者の次の行動を分かりやすくしたい","reader":"自分の商品・サービスのLPを運営する個人事業主","titleHint":"LPの情報を増やす前に、読者の判断順を整える"},
+    {"id":"reach-sns-reader-intent","pillar":"reach","category":"sns","categoryLabel":"SNS・note運用","articleType":"guide","slots":["morning","evening"],"intent":"投稿を必要な人へ届けたい","reader":"SNSやnoteで商品・サービスを発信する個人事業主","titleHint":"投稿ネタより先に決めたい、誰の何を軽くする発信か"},
+    {"id":"reach-creative-brief","pillar":"reach","category":"creative","categoryLabel":"動画・画像・デザイン","articleType":"guide","slots":["morning","evening"],"intent":"画像づくりの依頼を整理したい","reader":"SNS発信を行う個人事業主・小規模事業者","titleHint":"画像づくりで迷わないために、先に決める依頼条件"},
+    {"id":"reach-affiliate-fit","pillar":"reach","category":"affiliate","categoryLabel":"アフィリエイト・収益化","articleType":"comparison","slots":["noon"],"intent":"記事と案件が合うか判断したい","reader":"読者の信頼を守りながらアフィリエイト収益を作りたい発信者","titleHint":"アフィリエイト案件を載せる前に確認する、記事との一致条件"},
+    {"id":"reach-service-selection","pillar":"reach","category":"personal","categoryLabel":"個人サービス","articleType":"comparison","slots":["noon"],"intent":"外注先やサービスを条件から選びたい","reader":"制作・相談・業務支援の依頼先を探している個人事業主","titleHint":"サービス名より先に決める、依頼先を選ぶ基準"},
+    {"id":"reach-tool-selection","pillar":"reach","category":"ai","categoryLabel":"AI・業務効率化","articleType":"comparison","slots":["noon"],"intent":"AIツールを用途と負担から選びたい","reader":"AIツールの導入を検討している個人事業主・小規模事業者","titleHint":"AIツールを機能の多さだけで選ばないための比較表"}
   ]
 }

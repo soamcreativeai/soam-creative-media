@@ -24,6 +24,10 @@ const latestDate = articles.map((article) => article.updatedAt || article.publis
 const staticPages = [
   { path: '', lastmod: latestDate },
   { path: 'articles/index.html', lastmod: latestDate },
+  { path: 'pillars/decision.html', lastmod: '2026-08-01' },
+  { path: 'pillars/systems.html', lastmod: '2026-08-01' },
+  { path: 'pillars/reach.html', lastmod: '2026-08-01' },
+  { path: 'guides/index.html', lastmod: '2026-08-01' },
   { path: 'editorial-policy.html', lastmod: '2026-07-14' },
   { path: 'privacy.html', lastmod: '2026-07-14' },
   { path: 'contact.html', lastmod: '2026-07-14' },

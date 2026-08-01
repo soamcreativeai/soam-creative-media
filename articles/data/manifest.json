@@ -7,7 +7,7 @@
     "categoryLabel": "お金・確定申告",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "AIを使って副業を始めた人が絶対知っておくべき確定申告の基本",
@@ -15,10 +15,54 @@
     "publishedAt": "2026-06-21",
     "updatedAt": "2026-06-21",
     "status": "published",
-    "primaryCta": null,
-    "affiliateLinks": [],
-    "relatedArticles": [],
-    "legacyImport": true
+    "primaryCta": "マネーフォワード クラウド会計",
+    "affiliateLinks": [
+      {
+        "offerId": "moneyforward-accounting",
+        "name": "マネーフォワード クラウド会計",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "tax-audit-membership",
+        "name": "税務調査あんしんメンバーシップ",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "個人事業主・小規模法人向けの税務調査対策サービス",
+        "officialUrl": "https://zeimu-chosa.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-02",
+      "article-06",
+      "article-07"
+    ],
+    "legacyImport": true,
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「AIを使って副業を始めた人が絶対知っておくべき確定申告の基本」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-06-21",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-07-20",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIツールのサブスク、経費に落とせる？個人事業主の節税入門",
@@ -28,7 +72,7 @@
     "categoryLabel": "お金・確定申告",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "AIツールのサブスク、経費に落とせる？個人事業主の節税入門",
@@ -36,10 +80,44 @@
     "publishedAt": "2026-06-21",
     "updatedAt": "2026-06-21",
     "status": "published",
-    "primaryCta": null,
-    "affiliateLinks": [],
-    "relatedArticles": [],
-    "legacyImport": true
+    "primaryCta": "マネーフォワード クラウド会計",
+    "affiliateLinks": [
+      {
+        "offerId": "moneyforward-accounting",
+        "name": "マネーフォワード クラウド会計",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-01",
+      "article-06",
+      "article-07"
+    ],
+    "legacyImport": true,
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「AIツールのサブスク、経費に落とせる？個人事業主の節税入門」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-06-21",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-07-20",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIだけで副業を始めるとき、最初にやるべき5つのこと",
@@ -49,7 +127,7 @@
     "categoryLabel": "副業・キャリア",
     "articleType": "marketing",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "AIだけで副業を始めるとき、最初にやるべき5つのこと",
@@ -59,8 +137,30 @@
     "status": "published",
     "primaryCta": null,
     "affiliateLinks": [],
-    "relatedArticles": [],
-    "legacyImport": true
+    "relatedArticles": [
+      "article-05",
+      "article-11",
+      "article-15"
+    ],
+    "legacyImport": true,
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「AIだけで副業を始めるとき、最初にやるべき5つのこと」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-06-21",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2026-12-17",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "うまく書けない人へ。AIを使ったら変わった話",
@@ -70,7 +170,7 @@
     "categoryLabel": "AI活用",
     "articleType": "ai",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "うまく書けない人へ。AIを使ったら変わった話",
@@ -79,22 +179,32 @@
     "updatedAt": "2026-06-21",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [
-      {
-        "name": "Value AI Writer byGMO",
-        "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "SEO記事作成を支援するAIライティングツール"
-      },
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "録音と文字起こしを支援するAIボイスレコーダー"
-      }
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-12",
+      "article-16",
+      "article-19"
     ],
-    "relatedArticles": [],
-    "legacyImport": true
+    "legacyImport": true,
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「うまく書けない人へ。AIを使ったら変わった話」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-06-21",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2026-12-17",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "昨日までフリーランスを考えていなかった人が、AIで副業を始めるまでのリアルなステップ",
@@ -104,7 +214,7 @@
     "categoryLabel": "副業・キャリア",
     "articleType": "marketing",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "昨日までフリーランスを考えていなかった人が、AIで副業を始めるまでのリアルなステップ",
@@ -112,10 +222,44 @@
     "publishedAt": "2026-06-21",
     "updatedAt": "2026-06-21",
     "status": "published",
-    "primaryCta": null,
-    "affiliateLinks": [],
-    "relatedArticles": [],
-    "legacyImport": true
+    "primaryCta": "ココナラ",
+    "affiliateLinks": [
+      {
+        "offerId": "coconala",
+        "name": "ココナラ",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-03",
+      "article-11",
+      "article-15"
+    ],
+    "legacyImport": true,
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「昨日までフリーランスを考えていなかった人が、AIで副業を始めるまでのリアルなステップ」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-06-21",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-07-20",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "副業が育ってきたら考える「法人化」のタイミングと手順",
@@ -125,7 +269,7 @@
     "categoryLabel": "お金・確定申告",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "副業が育ってきたら考える「法人化」のタイミングと手順",
@@ -133,10 +277,44 @@
     "publishedAt": "2026-06-22",
     "updatedAt": "2026-06-22",
     "status": "published",
-    "primaryCta": null,
-    "affiliateLinks": [],
-    "relatedArticles": [],
-    "legacyImport": true
+    "primaryCta": "税務調査あんしんメンバーシップ",
+    "affiliateLinks": [
+      {
+        "offerId": "tax-audit-membership",
+        "name": "税務調査あんしんメンバーシップ",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "個人事業主・小規模法人向けの税務調査対策サービス",
+        "officialUrl": "https://zeimu-chosa.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-01",
+      "article-02",
+      "article-07"
+    ],
+    "legacyImport": true,
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「副業が育ってきたら考える「法人化」のタイミングと手順」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-06-22",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-07-21",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "フリーランスの「初めての請求書」、AIと無料ツールで作る方法",
@@ -146,7 +324,7 @@
     "categoryLabel": "お金・確定申告",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "フリーランスの「初めての請求書」、AIと無料ツールで作る方法",
@@ -154,10 +332,54 @@
     "publishedAt": "2026-06-22",
     "updatedAt": "2026-06-22",
     "status": "published",
-    "primaryCta": null,
-    "affiliateLinks": [],
-    "relatedArticles": [],
-    "legacyImport": true
+    "primaryCta": "見積太郎２",
+    "affiliateLinks": [
+      {
+        "offerId": "mitsumotaro",
+        "name": "見積太郎２",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "見積もり相談と管理を支援するツール",
+        "officialUrl": "https://neo.estimator.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "coconala",
+        "name": "ココナラ",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-01",
+      "article-02",
+      "article-06"
+    ],
+    "legacyImport": true,
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「フリーランスの「初めての請求書」、AIと無料ツールで作る方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-06-22",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-07-21",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "インボイス制度って結局どうすれば？AI副業初心者向けにやさしく解説",
@@ -167,7 +389,7 @@
     "categoryLabel": "お金・確定申告",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "インボイス制度って結局どうすれば？AI副業初心者向けにやさしく解説",
@@ -175,10 +397,54 @@
     "publishedAt": "2026-06-22",
     "updatedAt": "2026-06-22",
     "status": "published",
-    "primaryCta": null,
-    "affiliateLinks": [],
-    "relatedArticles": [],
-    "legacyImport": true
+    "primaryCta": "マネーフォワード クラウド会計",
+    "affiliateLinks": [
+      {
+        "offerId": "moneyforward-accounting",
+        "name": "マネーフォワード クラウド会計",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "tax-audit-membership",
+        "name": "税務調査あんしんメンバーシップ",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "個人事業主・小規模法人向けの税務調査対策サービス",
+        "officialUrl": "https://zeimu-chosa.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-01",
+      "article-02",
+      "article-06"
+    ],
+    "legacyImport": true,
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「インボイス制度って結局どうすれば？AI副業初心者向けにやさしく解説」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-06-22",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-07-21",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "副業の確定申告で失敗しやすい7つのポイントと対策",
@@ -188,7 +454,7 @@
     "categoryLabel": "お金・確定申告",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "副業の確定申告で失敗しやすい7つのポイントと対策",
@@ -196,10 +462,54 @@
     "publishedAt": "2026-07-09",
     "updatedAt": "2026-07-09",
     "status": "published",
-    "primaryCta": null,
-    "affiliateLinks": [],
-    "relatedArticles": [],
-    "legacyImport": true
+    "primaryCta": "マネーフォワード クラウド会計",
+    "affiliateLinks": [
+      {
+        "offerId": "moneyforward-accounting",
+        "name": "マネーフォワード クラウド会計",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "tax-audit-membership",
+        "name": "税務調査あんしんメンバーシップ",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "個人事業主・小規模法人向けの税務調査対策サービス",
+        "officialUrl": "https://zeimu-chosa.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-01",
+      "article-02",
+      "article-06"
+    ],
+    "legacyImport": true,
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「副業の確定申告で失敗しやすい7つのポイントと対策」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-09",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-07",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "診断ツールが集客に強い理由と読まれて終わらせない導線設計",
@@ -209,7 +519,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "診断ツールが集客に強い理由と読まれて終わらせない導線設計",
@@ -217,16 +527,42 @@
     "publishedAt": "2026-07-10",
     "updatedAt": "2026-07-10",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
-    "relatedArticles": []
+    "relatedArticles": [
+      "article-14",
+      "article-20",
+      "article-25"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「診断ツールが集客に強い理由と読まれて終わらせない導線設計」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-10",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-08",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "美容サロンの診断ツール入門。来店前に悩みを整理する導線設計",
@@ -236,7 +572,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "beauty",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "美容サロンの診断ツール入門。来店前に悩みを整理する導線設計",
@@ -244,19 +580,42 @@
     "publishedAt": "2026-07-10",
     "updatedAt": "2026-07-10",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "LOCALGOAT",
     "affiliateLinks": [
       {
+        "offerId": "localgoat",
         "name": "LOCALGOAT",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "AI検索時代に合わせて店舗集客を強化したい経営者向けのAIO×MEO×SNS次世代店舗集客対策として、記事テーマ（美容サロンの診断ツール入門。来店前に悩みを整理する導線設計）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-03",
-      "article-05"
-    ]
+      "article-05",
+      "article-15"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「美容サロンの診断ツール入門。来店前に悩みを整理する導線設計」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-10",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-08",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIに任せる前に、仕事のどこが重いのかを先に見る",
@@ -266,7 +625,7 @@
     "categoryLabel": "AI活用",
     "articleType": "thought",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": null,
     "metaTitle": "AIに任せる前に、仕事のどこが重いのかを先に見る",
@@ -274,30 +633,32 @@
     "publishedAt": "2026-07-10",
     "updatedAt": "2026-07-10",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
-    "affiliateLinks": [
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（AIに任せる前に、仕事のどこが重いのかを先に見る）に合致するため選定"
-      },
-      {
-        "name": "AIブログくんGOLD",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "ブログ運用を自動化したい個人・事業者向けのAIによるブログ自動投稿として、記事テーマ（AIに任せる前に、仕事のどこが重いのかを先に見る）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（AIに任せる前に、仕事のどこが重いのかを先に見る）に合致するため選定"
-      }
-    ],
+    "primaryCta": null,
+    "affiliateLinks": [],
     "relatedArticles": [
-      "article-04"
-    ]
+      "article-04",
+      "article-16",
+      "article-19"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「AIに任せる前に、仕事のどこが重いのかを先に見る」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-10",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-05",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "noteとX投稿の使い分けで、発信の摩擦を減らす",
@@ -307,7 +668,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "「noteもXもやったほうがいい」と言われて、どちらも中途半端になっていませんか。実は、両者を同じ発想で運用しようとすると疲れます。役割の違いを整理すれば、発信はもっと軽くなります。",
     "metaTitle": "noteとXの使い分けで発信を軽くする実践ガイド",
@@ -315,16 +676,44 @@
     "publishedAt": "2026-07-12",
     "updatedAt": "2026-07-12",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（noteとX投稿の使い分けで、発信の摩擦を減らす）に合致するため選定"
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
-    "relatedArticles": []
+    "relatedArticles": [
+      "article-18",
+      "article-24",
+      "article-29"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「noteとX投稿の使い分けで、発信の摩擦を減らす」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-12",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-10",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "美容サロンの集客を軽くする診断コンテンツの作り方",
@@ -334,7 +723,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "beauty",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "「メニューが多くて、どれを選べばいいかわからない」というお客様の声に、その都度対応していませんか。診断コンテンツは、その最初のひと押しをお客様自身に任せる仕組みです。今回は美容サロンでの作り方を基本から整理します。",
     "metaTitle": "美容サロン向け診断コンテンツの作り方と設計の基本",
@@ -342,18 +731,42 @@
     "publishedAt": "2026-07-13",
     "updatedAt": "2026-07-13",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
-      "article-10"
-    ]
+      "article-10",
+      "article-20",
+      "article-25"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「美容サロンの集客を軽くする診断コンテンツの作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-13",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-11",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "予約が埋まらない時にまず見直す4つの場所",
@@ -363,7 +776,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "nightwork",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "「頑張って営業しているのに予約が埋まらない」。そんな時、多くの人は接客や自分の魅力を疑いがちです。でも、実際に詰まっているのはもっと手前の見えにくい場所であることが少なくありません。",
     "metaTitle": "予約が埋まらない時に見直す場所｜夜職の集客改善",
@@ -371,25 +784,43 @@
     "publishedAt": "2026-07-13",
     "updatedAt": "2026-07-13",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "LOCALGOAT",
     "affiliateLinks": [
       {
-        "name": "AIブログくんGOLD",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "ブログ運用を支援するAIサービス"
-      },
-      {
+        "offerId": "localgoat",
         "name": "LOCALGOAT",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "店舗集客の情報発信を支援するサービス"
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-05",
-      "article-11"
-    ]
+      "article-11",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「予約が埋まらない時にまず見直す4つの場所」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-13",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-11",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "仕事が止まる理由は、能力ではなく「待ち」にある",
@@ -399,7 +830,7 @@
     "categoryLabel": "AI活用",
     "articleType": "thought",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "気づけば今日も、なにも進まなかった気がする。でもサボっていたわけではありません。あなたの仕事が止まるのは、能力の問題ではなく「止まる構造」があるからかもしれません。",
     "metaTitle": "仕事が止まる理由と、止まりを減らすAIの使い方",
@@ -407,31 +838,32 @@
     "publishedAt": "2026-07-13",
     "updatedAt": "2026-07-13",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
-    "affiliateLinks": [
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（仕事が止まる理由は、能力ではなく「待ち」にある）に合致するため選定"
-      },
-      {
-        "name": "見積太郎２",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "見積管理を効率化したい事業者向けのAI補助付き見積相談スレッド管理として、記事テーマ（仕事が止まる理由は、能力ではなく「待ち」にある）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（仕事が止まる理由は、能力ではなく「待ち」にある）に合致するため選定"
-      }
-    ],
+    "primaryCta": null,
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-04",
-      "article-12"
-    ]
+      "article-12",
+      "article-19"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「仕事が止まる理由は、能力ではなく「待ち」にある」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-13",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-08",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "店舗ビジネスの無料相談導線の作り方と設計の考え方",
@@ -441,7 +873,7 @@
     "categoryLabel": "LP・Web集客",
     "articleType": "lp",
     "targetIndustry": "local-business",
-    "targetReader": null,
+    "targetReader": "LPやWebサイトから相談・販売につなげたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "「まずは無料相談から」とサイトに書いているのに、なかなか予約が入らない。そんな店舗の方は多いと思います。問題は相談メニューそのものではなく、そこへ辿り着くまでの導線が重すぎることかもしれません。",
     "metaTitle": "無料相談導線の作り方｜店舗ビジネスのLP設計",
@@ -449,16 +881,54 @@
     "publishedAt": "2026-07-14",
     "updatedAt": "2026-07-14",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "ココナラ",
     "affiliateLinks": [
       {
-        "name": "お名前.com",
+        "offerId": "coconala",
+        "name": "ココナラ",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（店舗ビジネスの無料相談導線の作り方と設計の考え方）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "localgoat",
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
-    "relatedArticles": []
+    "relatedArticles": [
+      "article-23",
+      "article-43",
+      "article-50"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「店舗ビジネスの無料相談導線の作り方と設計の考え方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-14",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-12",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "保存される投稿の作り方：見返される情報の設計を考える",
@@ -468,7 +938,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "投稿はそれなりに見られているのに、フォロワーや反応が伸びない。そんなときに見直したいのが「保存」という指標です。保存される投稿には、見た人が「あとで役立てたい」と思う設計が隠れています。",
     "metaTitle": "保存される投稿の作り方｜見返される情報設計の考え方",
@@ -476,18 +946,44 @@
     "publishedAt": "2026-07-14",
     "updatedAt": "2026-07-14",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（保存される投稿の作り方：見返される情報の設計を考える）に合致するため選定"
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
-      "article-13"
-    ]
+      "article-13",
+      "article-24",
+      "article-29"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「保存される投稿の作り方：見返される情報の設計を考える」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-14",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-12",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIに任せる前に、まず自分の仕事を見つめ直す時間を",
@@ -497,7 +993,7 @@
     "categoryLabel": "AI活用",
     "articleType": "thought",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "「とりあえずAIを使ってみたけど、思ったより変わらなかった」。そんな声をよく聞きます。問題はツールではなく、任せる前の設計かもしれません。今日は少しだけ立ち止まって考えてみませんか。",
     "metaTitle": "AIに任せる前に考えること｜仕事の摩擦を見つける",
@@ -505,31 +1001,32 @@
     "publishedAt": "2026-07-14",
     "updatedAt": "2026-07-14",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
-    "affiliateLinks": [
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（AIに任せる前に、まず自分の仕事を見つめ直す時間を）に合致するため選定"
-      },
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "関連ツール",
-        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（AIに任せる前に、まず自分の仕事を見つめ直す時間を）に合致するため選定"
-      },
-      {
-        "name": "Value AI Writer byGMO",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "SEO記事・ブログ記事の執筆を効率化したい人向けのSEO記事生成AIツールとして、記事テーマ（AIに任せる前に、まず自分の仕事を見つめ直す時間を）に合致するため選定"
-      }
-    ],
+    "primaryCta": null,
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-12",
-      "article-16"
-    ]
+      "article-16",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「AIに任せる前に、まず自分の仕事を見つめ直す時間を」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-14",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-09",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "診断結果ページで離脱されない設計の考え方",
@@ -539,7 +1036,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "beauty",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "診断は最後まで答えてもらえるのに、結果ページで静かに閉じられてしまう。そんな経験はありませんか。実は診断そのものよりも、結果ページの設計で予約率は大きく変わります。この記事では、その一瞬をどう受け止めるかを考えます。",
     "metaTitle": "美容サロンの診断結果ページ離脱を防ぐ設計術",
@@ -547,19 +1044,42 @@
     "publishedAt": "2026-07-15",
     "updatedAt": "2026-07-15",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-10",
-      "article-14"
-    ]
+      "article-14",
+      "article-25"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「診断結果ページで離脱されない設計の考え方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-15",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-13",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "請求書作成をAIと無料ツールで軽くする実務ガイド",
@@ -569,7 +1089,7 @@
     "categoryLabel": "アフィリエイト・収益化",
     "articleType": "affiliate",
     "targetIndustry": "solo-business",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": "月末になると、請求書作成に思ったより時間を取られていませんか。金額の計算、宛名の確認、送付、控えの保管。一枚あたりは小さな作業でも、積み重なると意外な負担です。この記事では、その摩擦をAIと無料ツールで減らす方法を整理します。",
     "metaTitle": "請求書作成をAIと無料ツールで軽くする方法",
@@ -577,43 +1097,54 @@
     "publishedAt": "2026-07-15",
     "updatedAt": "2026-07-15",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "Value AI Writer byGMO",
     "affiliateLinks": [
       {
-        "name": "やよいの青色申告 オンライン",
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "mitsumotaro",
+        "name": "見積太郎２",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "確定申告を自分でやる個人事業主向けの青色申告ソフトとして、記事テーマ（請求書作成をAIと無料ツールで軽くする実務ガイド）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド（個人事業主向け機能）",
-        "asp": "A8.net",
-        "placement": "関連ツール",
-        "reason": "個人事業主向け会計機能を探している人向けのクラウド会計（個人事業主向け機能訴求）として、記事テーマ（請求書作成をAIと無料ツールで軽くする実務ガイド）に合致するため選定"
-      },
-      {
-        "name": "税務調査あんしんメンバーシップ",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "税務調査に備えたい個人事業主・フリーランス・小規模法人向けの税務調査対策サービスの入会として、記事テーマ（請求書作成をAIと無料ツールで軽くする実務ガイド）に合致するため選定"
-      },
-      {
-        "name": "菊池会計事務所（マイクロ法人導入税務顧問）",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "節税のためマイクロ法人化を検討する個人事業主・フリーランス向けのマイクロ法人導入税務顧問として、記事テーマ（請求書作成をAIと無料ツールで軽くする実務ガイド）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド確定申告",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "確定申告の準備を効率化したい個人事業主向けのクラウド確定申告ソフトとして、記事テーマ（請求書作成をAIと無料ツールで軽くする実務ガイド）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "見積もり相談と管理を支援するツール",
+        "officialUrl": "https://neo.estimator.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-08",
-      "article-09"
-    ]
+      "article-09",
+      "article-01"
+    ],
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「請求書作成をAIと無料ツールで軽くする実務ガイド」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-15",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-13",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "業種別に考える、集客導線の摩擦を減らす設計図",
@@ -623,7 +1154,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "solo-business",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "「集客をなんとかしたい」と思いながら、何から手をつければいいかわからない。そんな夜が続いていませんか。今日は業種別に、自分の集客のどこを軽くするかを一緒に考えてみます。",
     "metaTitle": "個人事業主のための業種別集客導線の作り方",
@@ -631,25 +1162,31 @@
     "publishedAt": "2026-07-15",
     "updatedAt": "2026-07-15",
     "status": "published",
-    "primaryCta": "お問い合わせ",
-    "affiliateLinks": [
-      {
-        "name": "AIブログくんGOLD",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "ブログ運用を支援するAIサービス"
-      },
-      {
-        "name": "LOCALGOAT",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "店舗集客の情報発信を支援するサービス"
-      }
-    ],
+    "primaryCta": "SOAM Linkの公開内容",
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-11",
-      "article-15"
-    ]
+      "article-15",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「業種別に考える、集客導線の摩擦を減らす設計図」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-15",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-10",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": true,
+    "primaryCtaType": "soam-link",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "問い合わせが増えないLPの共通点と店舗が見直すべき導線",
@@ -659,7 +1196,7 @@
     "categoryLabel": "LP・Web集客",
     "articleType": "lp",
     "targetIndustry": "local-business",
-    "targetReader": null,
+    "targetReader": "LPやWebサイトから相談・販売につなげたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "LPを作ったのに問い合わせがほとんど来ない。そんな状態が続くと、そもそもLPに意味があるのか不安になります。実は原因の多くは、見た目ではなく「導線」と「情報の並び順」にあります。",
     "metaTitle": "問い合わせが増えないLPの共通点｜店舗の見直し方",
@@ -667,18 +1204,44 @@
     "publishedAt": "2026-07-16",
     "updatedAt": "2026-07-16",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "LOCALGOAT",
     "affiliateLinks": [
       {
-        "name": "お名前.com",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（問い合わせが増えないLPの共通点と店舗が見直すべき導線）に合致するため選定"
+        "offerId": "localgoat",
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
-      "article-17"
-    ]
+      "article-17",
+      "article-43",
+      "article-50"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「問い合わせが増えないLPの共通点と店舗が見直すべき導線」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-16",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-14",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "保存される投稿の作り方。バズより「あとで見たい」を狙う",
@@ -688,7 +1251,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "たくさんいいねはつくのに、なぜか次につながらない。そんなときに見直したいのが「保存される投稿かどうか」です。保存は、読者があなたを覚えておきたいと思った証拠です。",
     "metaTitle": "保存される投稿の作り方｜バズより後で見たいを狙う設計",
@@ -696,19 +1259,44 @@
     "publishedAt": "2026-07-16",
     "updatedAt": "2026-07-16",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（保存される投稿の作り方。バズより「あとで見たい」を狙う）に合致するため選定"
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-13",
-      "article-18"
-    ]
+      "article-18",
+      "article-29"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「保存される投稿の作り方。バズより「あとで見たい」を狙う」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-16",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-14",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "美容サロンの集客に診断ツールが強い理由と使いどころ",
@@ -718,7 +1306,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "beauty",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "「広告を出しても反応が薄い」「予約前に離脱される」——美容サロンの集客でこうした悩みは珍しくありません。診断ツールは、その離脱を減らす一つの選択肢になります。なぜ集客に効くのか、仕組みから見ていきます。",
     "metaTitle": "美容サロンで診断ツールが集客に強い理由と活用法",
@@ -726,19 +1314,42 @@
     "publishedAt": "2026-07-17",
     "updatedAt": "2026-07-17",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-14",
-      "article-20"
-    ]
+      "article-20",
+      "article-10"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「美容サロンの集客に診断ツールが強い理由と使いどころ」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-17",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-15",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "個人事業主が会計ソフトを選ぶときに見るべき5つのポイント",
@@ -748,7 +1359,7 @@
     "categoryLabel": "アフィリエイト・収益化",
     "articleType": "affiliate",
     "targetIndustry": "solo-business",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": "毎年の確定申告、なんとなく使っているソフトで本当に大丈夫か気になっている方も多いのではないでしょうか。会計ソフトは「とりあえず使えればいい」ではなく、自分の仕事の流れに合っているかどうかで、日々の手間がかなり変わります。この記事では、個人事業主が会計ソフトを選ぶときに見るべき視点を整理します。",
     "metaTitle": "個人事業主向け会計ソフトの選び方｜比較と判断基準",
@@ -756,43 +1367,53 @@
     "publishedAt": "2026-07-17",
     "updatedAt": "2026-07-17",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "マネーフォワード クラウド会計",
     "affiliateLinks": [
       {
-        "name": "やよいの青色申告 オンライン",
-        "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "確定申告を自分でやる個人事業主向けの青色申告ソフトとして、記事テーマ（個人事業主が会計ソフトを選ぶときに見るべき5つのポイント）に合致するため選定"
-      },
-      {
+        "offerId": "moneyforward-accounting",
         "name": "マネーフォワード クラウド会計",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "会計ソフトを探している個人事業主・店舗経営者向けのクラウド会計として、記事テーマ（個人事業主が会計ソフトを選ぶときに見るべき5つのポイント）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
+        "offerId": "tax-audit-membership",
         "name": "税務調査あんしんメンバーシップ",
         "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "税務調査に備えたい個人事業主・フリーランス・小規模法人向けの税務調査対策サービスの入会として、記事テーマ（個人事業主が会計ソフトを選ぶときに見るべき5つのポイント）に合致するため選定"
-      },
-      {
-        "name": "菊池会計事務所（マイクロ法人導入税務顧問）",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "節税のためマイクロ法人化を検討する個人事業主・フリーランス向けのマイクロ法人導入税務顧問として、記事テーマ（個人事業主が会計ソフトを選ぶときに見るべき5つのポイント）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド確定申告",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "確定申告の準備を効率化したい個人事業主向けのクラウド確定申告ソフトとして、記事テーマ（個人事業主が会計ソフトを選ぶときに見るべき5つのポイント）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人事業主・小規模法人向けの税務調査対策サービス",
+        "officialUrl": "https://zeimu-chosa.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-09",
-      "article-21"
-    ]
+      "article-21",
+      "article-01"
+    ],
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「個人事業主が会計ソフトを選ぶときに見るべき5つのポイント」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-17",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-15",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "仕事が止まる理由は、能力じゃなく「摩擦」かもしれない",
@@ -802,7 +1423,7 @@
     "categoryLabel": "AI活用",
     "articleType": "thought",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "やる気はあるのに、なぜか作業が進まない。そんな日が続くとき、原因を自分の能力に求めてしまいがちです。でも、止まっているのは意外と別の場所かもしれません。",
     "metaTitle": "仕事が止まる理由とAIで減らせる摩擦の話",
@@ -810,31 +1431,32 @@
     "publishedAt": "2026-07-17",
     "updatedAt": "2026-07-17",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
-    "affiliateLinks": [
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（仕事が止まる理由は、能力じゃなく「摩擦」かもしれない）に合致するため選定"
-      },
-      {
-        "name": "見積太郎２",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "見積管理を効率化したい事業者向けのAI補助付き見積相談スレッド管理として、記事テーマ（仕事が止まる理由は、能力じゃなく「摩擦」かもしれない）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（仕事が止まる理由は、能力じゃなく「摩擦」かもしれない）に合致するため選定"
-      }
-    ],
+    "primaryCta": null,
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-16",
-      "article-19"
-    ]
+      "article-19",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「仕事が止まる理由は、能力じゃなく「摩擦」かもしれない」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-17",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-12",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "小さな通販店が発信を続けるための現実的な仕組み作り",
@@ -844,7 +1466,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "ecommerce",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "「発信は大事とわかっているけれど続かない」。小さな通販店を運営していると、そう感じる場面は多いはずです。この記事では、根性ではなく仕組みで発信の摩擦を減らす方法を考えます。",
     "metaTitle": "小さなEC店舗が発信を続けるコツと仕組み化の考え方",
@@ -852,25 +1474,43 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
+        "offerId": "ai-blog-gold",
         "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "ブログ運用を支援するAIサービス"
-      },
-      {
-        "name": "LOCALGOAT",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "店舗集客の情報発信を支援するサービス"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-15",
-      "article-22"
-    ]
+      "article-22",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「小さな通販店が発信を続けるための現実的な仕組み作り」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "note記事とX投稿の使い分けで発信の手間を軽くする",
@@ -880,7 +1520,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "「noteとXの両方をやっているけれど、何をどっちに書けばいいのかわからない」。そんなふうに手が止まってしまう方は少なくありません。この記事では、二つの使い分けを役割で整理し、発信の負担を軽くする考え方をお伝えします。",
     "metaTitle": "noteとXの使い分けで発信を軽くする実践ガイド",
@@ -888,19 +1528,54 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "Value AI Writer byGMO",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（note記事とX投稿の使い分けで発信の手間を軽くする）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-18",
-      "article-24"
-    ]
+      "article-24",
+      "article-13"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「note記事とX投稿の使い分けで発信の手間を軽くする」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "毎日の仕事を軽くする、はじめての業務テンプレート設計",
@@ -910,7 +1585,7 @@
     "categoryLabel": "テンプレート・教材",
     "articleType": "howto",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "繰り返す仕事や確認の往復を減らしたい個人事業主・小規模事業者",
     "tags": [
       "テンプレート",
       "業務効率化",
@@ -922,18 +1597,43 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "MiriCanvas",
     "affiliateLinks": [
       {
-        "name": "見積太郎２",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "見積もり相談と管理を支援するツール"
+        "offerId": "miricanvas",
+        "name": "MiriCanvas",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "AIを使った資料・デザイン作成を支援するサービス",
+        "officialUrl": "https://www.miricanvas.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
-      "article-27"
-    ]
+      "article-27",
+      "article-31",
+      "article-32"
+    ],
+    "readerProblem": "同じ内容を毎回考え直し、確認漏れや手戻りが起きている。",
+    "searchIntent": "「毎日の仕事を軽くする、はじめての業務テンプレート設計」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "引き継ぎで迷わないためのチェックリストの作り方",
@@ -943,7 +1643,7 @@
     "categoryLabel": "テンプレート・教材",
     "articleType": "howto",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "繰り返す仕事や確認の往復を減らしたい個人事業主・小規模事業者",
     "tags": [
       "チェックリスト",
       "引き継ぎ",
@@ -956,17 +1656,30 @@
     "updatedAt": "2026-07-18",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [
-      {
-        "name": "見積太郎２",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "見積もり相談と管理を支援するツール"
-      }
-    ],
+    "affiliateLinks": [],
     "relatedArticles": [
-      "article-30"
-    ]
+      "article-30",
+      "article-32",
+      "article-67"
+    ],
+    "readerProblem": "同じ内容を毎回考え直し、確認漏れや手戻りが起きている。",
+    "searchIntent": "「引き継ぎで迷わないためのチェックリストの作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-13",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIに渡す前に整える、依頼文テンプレートの基本",
@@ -976,7 +1689,7 @@
     "categoryLabel": "テンプレート・教材",
     "articleType": "howto",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "繰り返す仕事や確認の往復を減らしたい個人事業主・小規模事業者",
     "tags": [
       "AI活用",
       "依頼文",
@@ -988,19 +1701,53 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "MiriCanvas",
     "affiliateLinks": [
       {
-        "name": "見積太郎２",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "見積もり相談と管理を支援するツール"
+        "offerId": "miricanvas",
+        "name": "MiriCanvas",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "AIを使った資料・デザイン作成を支援するサービス",
+        "officialUrl": "https://www.miricanvas.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "coconala",
+        "name": "ココナラ",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-12",
-      "article-30"
-    ]
+      "article-30",
+      "article-31"
+    ],
+    "readerProblem": "同じ内容を毎回考え直し、確認漏れや手戻りが起きている。",
+    "searchIntent": "「AIに渡す前に整える、依頼文テンプレートの基本」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "すれ違いを増やさないために、気持ちを言葉にする順番",
@@ -1010,7 +1757,7 @@
     "categoryLabel": "恋愛・人間関係",
     "articleType": "guide",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "人間関係の中で、自分の気持ちと相手への伝え方を整理したい人",
     "tags": [
       "コミュニケーション",
       "恋愛",
@@ -1022,16 +1769,43 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "NewMA",
     "affiliateLinks": [
       {
+        "offerId": "newma",
         "name": "NewMA",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "結婚に関する相談先を探すための結婚相談所サービス"
+        "placement": "主な選択肢",
+        "reason": "結婚に関する相談先を探すための結婚相談所サービス",
+        "officialUrl": "https://newma.co.jp/marriage/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
-    "relatedArticles": []
+    "relatedArticles": [
+      "article-34",
+      "article-35",
+      "article-10"
+    ],
+    "readerProblem": "事実と想像、希望と不安が混ざり、次の言葉や行動を選びにくくなっている。",
+    "searchIntent": "「すれ違いを増やさないために、気持ちを言葉にする順番」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "HOLD",
+    "auditNotes": "今後の自動生成対象外。公開URLは維持し、主題との関係を次回見直す。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE",
+      "HOLD",
+      "NOINDEX_CANDIDATE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "返信が遅いと不安になるとき、決めつける前に整理したいこと",
@@ -1041,7 +1815,7 @@
     "categoryLabel": "恋愛・人間関係",
     "articleType": "guide",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "人間関係の中で、自分の気持ちと相手への伝え方を整理したい人",
     "tags": [
       "返信",
       "不安",
@@ -1053,18 +1827,43 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "NewMA",
     "affiliateLinks": [
       {
+        "offerId": "newma",
         "name": "NewMA",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "結婚に関する相談先を探すための結婚相談所サービス"
+        "placement": "主な選択肢",
+        "reason": "結婚に関する相談先を探すための結婚相談所サービス",
+        "officialUrl": "https://newma.co.jp/marriage/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
-      "article-33"
-    ]
+      "article-33",
+      "article-35",
+      "article-10"
+    ],
+    "readerProblem": "事実と想像、希望と不安が混ざり、次の言葉や行動を選びにくくなっている。",
+    "searchIntent": "「返信が遅いと不安になるとき、決めつける前に整理したいこと」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "HOLD",
+    "auditNotes": "今後の自動生成対象外。公開URLは維持し、主題との関係を次回見直す。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE",
+      "HOLD",
+      "NOINDEX_CANDIDATE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "関係を続けるために、境界線を穏やかに伝える方法",
@@ -1074,7 +1873,7 @@
     "categoryLabel": "恋愛・人間関係",
     "articleType": "guide",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "人間関係の中で、自分の気持ちと相手への伝え方を整理したい人",
     "tags": [
       "境界線",
       "人間関係",
@@ -1086,19 +1885,43 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "NewMA",
     "affiliateLinks": [
       {
+        "offerId": "newma",
         "name": "NewMA",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "結婚に関する相談先を探すための結婚相談所サービス"
+        "placement": "主な選択肢",
+        "reason": "結婚に関する相談先を探すための結婚相談所サービス",
+        "officialUrl": "https://newma.co.jp/marriage/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-33",
-      "article-34"
-    ]
+      "article-34",
+      "article-10"
+    ],
+    "readerProblem": "事実と想像、希望と不安が混ざり、次の言葉や行動を選びにくくなっている。",
+    "searchIntent": "「関係を続けるために、境界線を穏やかに伝える方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "HOLD",
+    "auditNotes": "今後の自動生成対象外。公開URLは維持し、主題との関係を次回見直す。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE",
+      "HOLD",
+      "NOINDEX_CANDIDATE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "占いを答え合わせで終わらせない、気持ちを整理する使い方",
@@ -1108,7 +1931,7 @@
     "categoryLabel": "占い・診断",
     "articleType": "guide",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "診断や占いを答えとしてではなく、自分の判断材料として使いたい人",
     "tags": [
       "占い",
       "自己理解",
@@ -1120,16 +1943,43 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "iraada（イラーダ）",
     "affiliateLinks": [
       {
+        "offerId": "iraada",
         "name": "iraada（イラーダ）",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト"
+        "placement": "主な選択肢",
+        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト",
+        "officialUrl": "https://iraada.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
-    "relatedArticles": []
+    "relatedArticles": [
+      "article-37",
+      "article-38",
+      "article-10"
+    ],
+    "readerProblem": "結果を受け取るだけになり、自分で選ぶための問いや確認が不足している。",
+    "searchIntent": "「占いを答え合わせで終わらせない、気持ちを整理する使い方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "HOLD",
+    "auditNotes": "今後の自動生成対象外。公開URLは維持し、主題との関係を次回見直す。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE",
+      "HOLD",
+      "NOINDEX_CANDIDATE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "診断結果を次の行動に変えるための3つの問い",
@@ -1139,7 +1989,7 @@
     "categoryLabel": "占い・診断",
     "articleType": "guide",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "診断や占いを答えとしてではなく、自分の判断材料として使いたい人",
     "tags": [
       "診断",
       "自己理解",
@@ -1151,18 +2001,43 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "iraada（イラーダ）",
     "affiliateLinks": [
       {
+        "offerId": "iraada",
         "name": "iraada（イラーダ）",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト"
+        "placement": "主な選択肢",
+        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト",
+        "officialUrl": "https://iraada.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
-      "article-36"
-    ]
+      "article-36",
+      "article-38",
+      "article-10"
+    ],
+    "readerProblem": "結果を受け取るだけになり、自分で選ぶための問いや確認が不足している。",
+    "searchIntent": "「診断結果を次の行動に変えるための3つの問い」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "HOLD",
+    "auditNotes": "今後の自動生成対象外。公開URLは維持し、主題との関係を次回見直す。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE",
+      "HOLD",
+      "NOINDEX_CANDIDATE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "迷いがある日に、自分の選択を見つめ直す小さな習慣",
@@ -1172,7 +2047,7 @@
     "categoryLabel": "占い・診断",
     "articleType": "guide",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "診断や占いを答えとしてではなく、自分の判断材料として使いたい人",
     "tags": [
       "自己理解",
       "習慣",
@@ -1184,19 +2059,43 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "iraada（イラーダ）",
     "affiliateLinks": [
       {
+        "offerId": "iraada",
         "name": "iraada（イラーダ）",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト"
+        "placement": "主な選択肢",
+        "reason": "占い・スピリチュアル関連のサービスと商品を扱うサイト",
+        "officialUrl": "https://iraada.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-36",
-      "article-37"
-    ]
+      "article-37",
+      "article-10"
+    ],
+    "readerProblem": "結果を受け取るだけになり、自分で選ぶための問いや確認が不足している。",
+    "searchIntent": "「迷いがある日に、自分の選択を見つめ直す小さな習慣」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "HOLD",
+    "auditNotes": "今後の自動生成対象外。公開URLは維持し、主題との関係を次回見直す。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE",
+      "HOLD",
+      "NOINDEX_CANDIDATE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "暮らしの小さな面倒を減らす、週に一度の整え方",
@@ -1206,7 +2105,7 @@
     "categoryLabel": "暮らし・その他",
     "articleType": "howto",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "日々の記録・整理・判断を一人で抱え、負担を軽くしたい人",
     "tags": [
       "暮らし",
       "習慣",
@@ -1220,7 +2119,28 @@
     "status": "published",
     "primaryCta": null,
     "affiliateLinks": [],
-    "relatedArticles": []
+    "relatedArticles": [
+      "article-40",
+      "article-41",
+      "article-04"
+    ],
+    "readerProblem": "情報や予定が散らばり、必要なときに判断材料を取り出せない。",
+    "searchIntent": "「暮らしの小さな面倒を減らす、週に一度の整え方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-13",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "やることが多い日に、頭の中を軽くするメモの使い方",
@@ -1230,7 +2150,7 @@
     "categoryLabel": "暮らし・その他",
     "articleType": "howto",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "日々の記録・整理・判断を一人で抱え、負担を軽くしたい人",
     "tags": [
       "メモ",
       "暮らし",
@@ -1242,11 +2162,42 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": null,
-    "affiliateLinks": [],
+    "primaryCta": "PLAUD NOTE",
+    "affiliateLinks": [
+      {
+        "offerId": "plaud-note",
+        "name": "PLAUD NOTE",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "録音と文字起こしを支援するAIボイスレコーダー",
+        "officialUrl": "https://jp.plaud.ai/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
     "relatedArticles": [
-      "article-39"
-    ]
+      "article-39",
+      "article-41",
+      "article-04"
+    ],
+    "readerProblem": "情報や予定が散らばり、必要なときに判断材料を取り出せない。",
+    "searchIntent": "「やることが多い日に、頭の中を軽くするメモの使い方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-16",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "疲れた日に判断を増やさないための、いつもの仕組み",
@@ -1256,7 +2207,7 @@
     "categoryLabel": "暮らし・その他",
     "articleType": "howto",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "日々の記録・整理・判断を一人で抱え、負担を軽くしたい人",
     "tags": [
       "暮らし",
       "ルーティン",
@@ -1272,8 +2223,26 @@
     "affiliateLinks": [],
     "relatedArticles": [
       "article-39",
-      "article-40"
-    ]
+      "article-40",
+      "article-04"
+    ],
+    "readerProblem": "情報や予定が散らばり、必要なときに判断材料を取り出せない。",
+    "searchIntent": "「疲れた日に判断を増やさないための、いつもの仕組み」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-13",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIに任せる前に考える、自分の仕事の輪郭",
@@ -1283,7 +2252,7 @@
     "categoryLabel": "AI活用",
     "articleType": "thought",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "AIツールを開いてみたものの、何を頼めばいいのかわからず閉じた。そんな経験はありませんか。問題はツールではなく、自分の仕事の輪郭がまだ見えていないことかもしれません。",
     "metaTitle": "AIに任せる前に考えること｜仕事の摩擦を見つける",
@@ -1291,31 +2260,32 @@
     "publishedAt": "2026-07-18",
     "updatedAt": "2026-07-18",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
-    "affiliateLinks": [
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（AIに任せる前に考える、自分の仕事の輪郭）に合致するため選定"
-      },
-      {
-        "name": "ZENCHORD1",
-        "asp": "A8.net",
-        "placement": "関連ツール",
-        "reason": "打ち合わせの議事録作成を自動化したい人向けのAI議事録イヤホンとして、記事テーマ（AIに任せる前に考える、自分の仕事の輪郭）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（AIに任せる前に考える、自分の仕事の輪郭）に合致するため選定"
-      }
-    ],
+    "primaryCta": null,
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-19",
-      "article-27"
-    ]
+      "article-27",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「AIに任せる前に考える、自分の仕事の輪郭」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-18",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-13",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "LPのファーストビューで離脱される理由と店舗の見直し方",
@@ -1325,7 +2295,7 @@
     "categoryLabel": "LP・Web集客",
     "articleType": "lp",
     "targetIndustry": "local-business",
-    "targetReader": null,
+    "targetReader": "LPやWebサイトから相談・販売につなげたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "せっかく広告や検索から人が来ているのに、ページを開いた瞬間に離れてしまう。店舗のLPでよくある悩みです。その多くは、ファーストビューで「自分に関係ある」と伝わっていないことが原因です。",
     "metaTitle": "LPのファーストビューで離脱される理由と改善の考え方",
@@ -1333,19 +2303,44 @@
     "publishedAt": "2026-07-19",
     "updatedAt": "2026-07-19",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "LOCALGOAT",
     "affiliateLinks": [
       {
-        "name": "お名前.com",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（LPのファーストビューで離脱される理由と店舗の見直し方）に合致するため選定"
+        "offerId": "localgoat",
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-17",
-      "article-23"
-    ]
+      "article-23",
+      "article-50"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「LPのファーストビューで離脱される理由と店舗の見直し方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-19",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-17",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "小さな美容サロンが発信を続けるための現実的なコツ",
@@ -1355,7 +2350,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "beauty",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "「発信した方がいいのはわかっているけれど、施術で手一杯で続かない」。多くの小さな美容サロンが同じ悩みを抱えています。この記事では、頑張り続けるのではなく、発信のどこを軽くすれば続くのかを一緒に考えます。",
     "metaTitle": "美容サロンが発信を無理なく続けるコツと仕組み化",
@@ -1363,19 +2358,42 @@
     "publishedAt": "2026-07-19",
     "updatedAt": "2026-07-19",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "LOCALGOAT",
     "affiliateLinks": [
       {
+        "offerId": "localgoat",
         "name": "LOCALGOAT",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "AI検索時代に合わせて店舗集客を強化したい経営者向けのAIO×MEO×SNS次世代店舗集客対策として、記事テーマ（小さな美容サロンが発信を続けるための現実的なコツ）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-22",
-      "article-28"
-    ]
+      "article-28",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「小さな美容サロンが発信を続けるための現実的なコツ」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-19",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-17",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "投稿ネタが尽きたと感じる時に、本当に足りていないもの",
@@ -1385,7 +2403,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "「今日、何を投稿しよう」と画面を開いたまま、指が止まる。あの感覚は、発信を続けている人なら一度は通る道です。でも、ネタが尽きたと感じる時、本当に足りていないのは発想力ではないのかもしれません。",
     "metaTitle": "投稿ネタが尽きた時の考え方｜SNS・note運用の見直し方",
@@ -1393,19 +2411,44 @@
     "publishedAt": "2026-07-19",
     "updatedAt": "2026-07-19",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（投稿ネタが尽きたと感じる時に、本当に足りていないもの）に合致するため選定"
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-24",
-      "article-29"
-    ]
+      "article-29",
+      "article-13"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「投稿ネタが尽きたと感じる時に、本当に足りていないもの」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-19",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-17",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "小さな店舗の発信を軽くする持続可能なコツ",
@@ -1415,7 +2458,7 @@
     "categoryLabel": "AI活用",
     "articleType": "marketing",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "発信は小さな店舗にとっても重要な活動です。しかし、日々の業務と両立するのは簡単ではありません。AIを使った解決策で長期的な発信を支援します。",
     "metaTitle": "AIを使った発信の軽減術―小さな店舗向け",
@@ -1423,31 +2466,43 @@
     "publishedAt": "2026-07-21",
     "updatedAt": "2026-07-21",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（小さな店舗の発信を軽くする持続可能なコツ）に合致するため選定"
-      },
-      {
+        "offerId": "ai-blog-gold",
         "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "ブログ運用を自動化したい個人・事業者向けのAIによるブログ自動投稿として、記事テーマ（小さな店舗の発信を軽くする持続可能なコツ）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（小さな店舗の発信を軽くする持続可能なコツ）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-27",
-      "article-42"
-    ]
+      "article-42",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「小さな店舗の発信を軽くする持続可能なコツ」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-21",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-19",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "美容サロンの診断結果ページでの離脱を防ぐ方法",
@@ -1457,7 +2512,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "beauty",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "美容サロンを運営していると、お客様に最適なサービスを提案する診断ツールが役立ちますが、診断結果ページで離脱されがちではありませんか？この記事では、その対策を考えてみましょう。",
     "metaTitle": "美容サロン診断結果の離脱防止法",
@@ -1465,19 +2520,42 @@
     "publishedAt": "2026-07-22",
     "updatedAt": "2026-07-22",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-20",
-      "article-25"
-    ]
+      "article-25",
+      "article-10"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「美容サロンの診断結果ページでの離脱を防ぐ方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-22",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-20",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "小さな採用店舗が発信を続けるための持続可能な工夫",
@@ -1487,7 +2565,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "recruitment",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "小さな店舗の採用担当者にとって、定期的な発信は大変な作業です。この負担をどう軽くするか、一緒に考えてみませんか？",
     "metaTitle": "店舗が採用発信を持続するコツ",
@@ -1495,25 +2573,54 @@
     "publishedAt": "2026-07-22",
     "updatedAt": "2026-07-22",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "LOCALGOAT",
     "affiliateLinks": [
       {
-        "name": "コマッタサン（退職防止エージェント）",
+        "offerId": "localgoat",
+        "name": "LOCALGOAT",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "離職防止・労務相談をしたい経営者向けの退職防止・コンプライアンス相談窓口として、記事テーマ（小さな採用店舗が発信を続けるための持続可能な工夫）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
-        "name": "type転職エージェント",
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "転職を考えている求職者向けの転職エージェントの面談実施として、記事テーマ（小さな採用店舗が発信を続けるための持続可能な工夫）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-28",
-      "article-44"
-    ]
+      "article-44",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「小さな採用店舗が発信を続けるための持続可能な工夫」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-22",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-20",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "SNSとnoteを使って思いを効果的に伝える方法",
@@ -1523,7 +2630,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "自分の思いを伝えるために、SNSの投稿とnoteの記事はどのように使い分けるべきでしょうか。本記事では、その効果的な方法について考えます。",
     "metaTitle": "SNSとnoteの効果的な使い分け方法",
@@ -1531,19 +2638,54 @@
     "publishedAt": "2026-07-22",
     "updatedAt": "2026-07-22",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "Value AI Writer byGMO",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（SNSとnoteを使って思いを効果的に伝える方法）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-29",
-      "article-45"
-    ]
+      "article-45",
+      "article-13"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「SNSとnoteを使って思いを効果的に伝える方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-22",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-20",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "店舗ビジネスにおける無料相談導線の作り方",
@@ -1553,7 +2695,7 @@
     "categoryLabel": "LP・Web集客",
     "articleType": "lp",
     "targetIndustry": "local-business",
-    "targetReader": null,
+    "targetReader": "LPやWebサイトから相談・販売につなげたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "店舗ビジネスを運営する皆さん、顧客との接点を増やし売上を伸ばすために無料相談導線を活用してみませんか？この記事ではその具体的な方法を解説します。",
     "metaTitle": "店舗向け無料相談導線の作成方法",
@@ -1561,19 +2703,54 @@
     "publishedAt": "2026-07-23",
     "updatedAt": "2026-07-23",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "Value AI Writer byGMO",
     "affiliateLinks": [
       {
-        "name": "お名前.com",
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（店舗ビジネスにおける無料相談導線の作り方）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "coconala",
+        "name": "ココナラ",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-23",
-      "article-43"
-    ]
+      "article-43",
+      "article-17"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「店舗ビジネスにおける無料相談導線の作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-23",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-21",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIと無料ツールで摩擦を減らす請求書作成法",
@@ -1583,7 +2760,7 @@
     "categoryLabel": "アフィリエイト・収益化",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": "請求書作成は多くの事業者にとって日々の負担です。AIと無料ツールを使えば、効率的に作業を軽減できます。今回はその具体的な方法を解説します。",
     "metaTitle": "AI活用で効率的に請求書作成｜無料ツールの方法",
@@ -1591,43 +2768,54 @@
     "publishedAt": "2026-07-23",
     "updatedAt": "2026-07-23",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "見積太郎２",
     "affiliateLinks": [
       {
-        "name": "やよいの青色申告 オンライン",
+        "offerId": "mitsumotaro",
+        "name": "見積太郎２",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "確定申告を自分でやる個人事業主向けの青色申告ソフトとして、記事テーマ（AIと無料ツールで摩擦を減らす請求書作成法）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "見積もり相談と管理を支援するツール",
+        "officialUrl": "https://neo.estimator.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
-        "name": "税務調査あんしんメンバーシップ",
+        "offerId": "moneyforward-accounting",
+        "name": "マネーフォワード クラウド会計",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "税務調査に備えたい個人事業主・フリーランス・小規模法人向けの税務調査対策サービスの入会として、記事テーマ（AIと無料ツールで摩擦を減らす請求書作成法）に合致するため選定"
-      },
-      {
-        "name": "菊池会計事務所（マイクロ法人導入税務顧問）",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "節税のためマイクロ法人化を検討する個人事業主・フリーランス向けのマイクロ法人導入税務顧問として、記事テーマ（AIと無料ツールで摩擦を減らす請求書作成法）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド確定申告",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "確定申告の準備を効率化したい個人事業主向けのクラウド確定申告ソフトとして、記事テーマ（AIと無料ツールで摩擦を減らす請求書作成法）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド会社設立",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "法人化を検討する個人事業主向けの無料の会社設立サポートとして、記事テーマ（AIと無料ツールで摩擦を減らす請求書作成法）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-21",
-      "article-26"
-    ]
+      "article-26",
+      "article-01"
+    ],
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「AIと無料ツールで摩擦を減らす請求書作成法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-23",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-21",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "予約が埋まらない原因をAIで見直そう",
@@ -1637,7 +2825,7 @@
     "categoryLabel": "AI活用",
     "articleType": "marketing",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "予約が思ったように埋まらないことはありませんか？その原因を探るために、AIを活用する方法を考えてみましょう。",
     "metaTitle": "予約が埋まらない原因をAIで見直す方法",
@@ -1645,31 +2833,44 @@
     "publishedAt": "2026-07-23",
     "updatedAt": "2026-07-23",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "LOCALGOAT",
     "affiliateLinks": [
       {
-        "name": "見積太郎２",
+        "offerId": "localgoat",
+        "name": "LOCALGOAT",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "見積管理を効率化したい事業者向けのAI補助付き見積相談スレッド管理として、記事テーマ（予約が埋まらない原因をAIで見直そう）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（予約が埋まらない原因をAIで見直そう）に合致するため選定"
-      },
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（予約が埋まらない原因をAIで見直そう）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-42",
-      "article-46"
-    ]
+      "article-46",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「予約が埋まらない原因をAIで見直そう」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-23",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-21",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "基本から学ぶ診断コンテンツの作り方",
@@ -1679,7 +2880,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "診断コンテンツは顧客との関係構築や理解を深める有効な手段です。しかし、どのように作成するべきか悩んでいる方も多いのではないでしょうか。この記事では、初心者にもわかりやすく診断コンテンツの作り方を解説します。",
     "metaTitle": "診断コンテンツ作成の基本と活用法",
@@ -1687,19 +2888,42 @@
     "publishedAt": "2026-07-24",
     "updatedAt": "2026-07-24",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-25",
-      "article-47"
-    ]
+      "article-47",
+      "article-10"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「基本から学ぶ診断コンテンツの作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-24",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-22",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "求人が埋まらないときに見直すべき6つのポイント",
@@ -1709,7 +2933,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "recruitment",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "採用の求人が思うように埋まらない。そんな悩みは多くの企業が抱える課題です。しかし、微調整で解決できるケースも少なくありません。本記事では、そんな場合に見直すべき点を具体的に解説します。",
     "metaTitle": "求人が埋まらないときの見直しポイント",
@@ -1717,25 +2941,54 @@
     "publishedAt": "2026-07-24",
     "updatedAt": "2026-07-24",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "Value AI Writer byGMO",
     "affiliateLinks": [
       {
-        "name": "コマッタサン（退職防止エージェント）",
-        "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "離職防止・労務相談をしたい経営者向けの退職防止・コンプライアンス相談窓口として、記事テーマ（求人が埋まらないときに見直すべき6つのポイント）に合致するため選定"
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
-        "name": "type転職エージェント",
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "転職を考えている求職者向けの転職エージェントの面談実施として、記事テーマ（求人が埋まらないときに見直すべき6つのポイント）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-44",
-      "article-48"
-    ]
+      "article-48",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「求人が埋まらないときに見直すべき6つのポイント」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-24",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-22",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "note記事とX投稿の違いを理解して使い分ける",
@@ -1745,7 +2998,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "SNSやnoteを活用しているけど、どのように使い分けるべきか悩んでいませんか？この記事ではそれぞれの特性を活かし、効果的に発信する方法を考えます。",
     "metaTitle": "note記事とX投稿の使い分け方",
@@ -1753,19 +3006,54 @@
     "publishedAt": "2026-07-24",
     "updatedAt": "2026-07-24",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "Value AI Writer byGMO",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（note記事とX投稿の違いを理解して使い分ける）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-45",
-      "article-49"
-    ]
+      "article-49",
+      "article-13"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「note記事とX投稿の違いを理解して使い分ける」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-24",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-22",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "個人事業主が成功する無料相談導線の作り方",
@@ -1775,7 +3063,7 @@
     "categoryLabel": "LP・Web集客",
     "articleType": "lp",
     "targetIndustry": "solo-business",
-    "targetReader": null,
+    "targetReader": "LPやWebサイトから相談・販売につなげたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "個人事業主の皆さん、効率的に顧客を獲得してますか？無料相談導線で、より多くの見込み客を引き寄せましょう。",
     "metaTitle": "無料相談導線の作り方を解説",
@@ -1783,19 +3071,44 @@
     "publishedAt": "2026-07-25",
     "updatedAt": "2026-07-25",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "ココナラ",
     "affiliateLinks": [
       {
-        "name": "お名前.com",
+        "offerId": "coconala",
+        "name": "ココナラ",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（個人事業主が成功する無料相談導線の作り方）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-43",
-      "article-50"
-    ]
+      "article-50",
+      "article-17"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「個人事業主が成功する無料相談導線の作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-25",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-23",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIと無料ツールで手軽に請求書作成を始めよう",
@@ -1805,7 +3118,7 @@
     "categoryLabel": "アフィリエイト・収益化",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": "請求書作成に時間を取られていませんか？AIと無料ツールを活用すれば、作業を効率化し、摩擦を減らせます。本記事ではその方法を解説します。",
     "metaTitle": "AIと無料ツールで請求書作成を効率化",
@@ -1813,43 +3126,54 @@
     "publishedAt": "2026-07-25",
     "updatedAt": "2026-07-25",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "見積太郎２",
     "affiliateLinks": [
       {
-        "name": "やよいの青色申告 オンライン",
+        "offerId": "mitsumotaro",
+        "name": "見積太郎２",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "確定申告を自分でやる個人事業主向けの青色申告ソフトとして、記事テーマ（AIと無料ツールで手軽に請求書作成を始めよう）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "見積もり相談と管理を支援するツール",
+        "officialUrl": "https://neo.estimator.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
-        "name": "税務調査あんしんメンバーシップ",
+        "offerId": "moneyforward-accounting",
+        "name": "マネーフォワード クラウド会計",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "税務調査に備えたい個人事業主・フリーランス・小規模法人向けの税務調査対策サービスの入会として、記事テーマ（AIと無料ツールで手軽に請求書作成を始めよう）に合致するため選定"
-      },
-      {
-        "name": "菊池会計事務所（マイクロ法人導入税務顧問）",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "節税のためマイクロ法人化を検討する個人事業主・フリーランス向けのマイクロ法人導入税務顧問として、記事テーマ（AIと無料ツールで手軽に請求書作成を始めよう）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド確定申告",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "確定申告の準備を効率化したい個人事業主向けのクラウド確定申告ソフトとして、記事テーマ（AIと無料ツールで手軽に請求書作成を始めよう）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド会社設立",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "法人化を検討する個人事業主向けの無料の会社設立サポートとして、記事テーマ（AIと無料ツールで手軽に請求書作成を始めよう）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-26",
-      "article-51"
-    ]
+      "article-51",
+      "article-01"
+    ],
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「AIと無料ツールで手軽に請求書作成を始めよう」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-25",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-23",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIに任せる前に考えるべきこととは",
@@ -1859,7 +3183,7 @@
     "categoryLabel": "AI活用",
     "articleType": "thought",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "AIの進化が進む中、どの作業をAIに任せるべきか考えていますか？効率化を測る前提として、自分の仕事にどう役立つのかを考えてみましょう。",
     "metaTitle": "AIを活用する前に考える重要なポイント",
@@ -1867,31 +3191,32 @@
     "publishedAt": "2026-07-25",
     "updatedAt": "2026-07-25",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
-    "affiliateLinks": [
-      {
-        "name": "AIブログくんGOLD",
-        "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "ブログ運用を自動化したい個人・事業者向けのAIによるブログ自動投稿として、記事テーマ（AIに任せる前に考えるべきこととは）に合致するため選定"
-      },
-      {
-        "name": "見積太郎２",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "見積管理を効率化したい事業者向けのAI補助付き見積相談スレッド管理として、記事テーマ（AIに任せる前に考えるべきこととは）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（AIに任せる前に考えるべきこととは）に合致するため選定"
-      }
-    ],
+    "primaryCta": null,
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-46",
-      "article-52"
-    ]
+      "article-52",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「AIに任せる前に考えるべきこととは」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-25",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-20",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "コーチ・講師業の店舗が発信を続ける方法",
@@ -1901,7 +3226,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "coaching",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "コーチや講師業で小さな店舗を運営している方にとって、持続的な発信は大きな課題です。本記事では、実務で使える具体的なコツを紹介します。",
     "metaTitle": "小規模店舗のための持続可能な発信方法",
@@ -1909,25 +3234,52 @@
     "publishedAt": "2026-07-26",
     "updatedAt": "2026-07-26",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
+        "offerId": "ai-blog-gold",
         "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "ブログ運用を支援するAIサービス"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
+        "offerId": "localgoat",
         "name": "LOCALGOAT",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "店舗集客の情報発信を支援するサービス"
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-48",
-      "article-54"
-    ]
+      "article-54",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「コーチ・講師業の店舗が発信を続ける方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-26",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-24",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "投稿ネタ不足を感じた時の乗り越え方",
@@ -1937,7 +3289,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "SNSやnoteで投稿ネタが尽きることは運用者にとって共通の悩み。今回は、そんな状況をどのように乗り越えるか考えていきます。",
     "metaTitle": "ネタ尽き対策！SNS投稿のアイデア法",
@@ -1945,19 +3297,44 @@
     "publishedAt": "2026-07-26",
     "updatedAt": "2026-07-26",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（投稿ネタ不足を感じた時の乗り越え方）に合致するため選定"
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-49",
-      "article-55"
-    ]
+      "article-55",
+      "article-13"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「投稿ネタ不足を感じた時の乗り越え方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-26",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-24",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "診断結果ページでの離脱を防ぐ方法と工夫",
@@ -1967,7 +3344,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "local-business",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "あなたの店舗ビジネスで、診断ツールを活用して集客を図っているけれど、結果ページでの離脱率が高いとお悩みではありませんか？本記事では、診断結果ページでの離脱を防ぐ具体的な方法を解説します。",
     "metaTitle": "診断結果ページで離脱を防ぐ設計方法",
@@ -1975,19 +3352,42 @@
     "publishedAt": "2026-07-27",
     "updatedAt": "2026-07-27",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-47",
-      "article-53"
-    ]
+      "article-53",
+      "article-10"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「診断結果ページでの離脱を防ぐ方法と工夫」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-27",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-25",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "個人サービスのやり取りを整える、対応範囲を言葉にする方法",
@@ -2012,16 +3412,41 @@
     "publishedAt": "2026-07-27",
     "updatedAt": "2026-07-27",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "ココナラ",
     "affiliateLinks": [
       {
+        "offerId": "coconala",
         "name": "ココナラ",
         "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット"
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
-    "relatedArticles": []
+    "relatedArticles": [
+      "article-10",
+      "article-14",
+      "article-20"
+    ],
+    "readerProblem": "提供範囲や依頼条件が曖昧で、相談後の認識違いや追加対応が起きている。",
+    "searchIntent": "「個人サービスのやり取りを整える、対応範囲を言葉にする方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-27",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-25",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "小さなコーチ・講師業の発信を続ける秘訣",
@@ -2031,7 +3456,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "coaching",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "小さな店舗やコーチ業では、日々の発信が重要です。しかし継続するのは簡単ではありません。今回は発信を続けるための具体的なステップを紹介します。",
     "metaTitle": "小さなコーチ業の発信継続術",
@@ -2039,25 +3464,52 @@
     "publishedAt": "2026-07-27",
     "updatedAt": "2026-07-27",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
+        "offerId": "ai-blog-gold",
         "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "ブログ運用を支援するAIサービス"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
+        "offerId": "localgoat",
         "name": "LOCALGOAT",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "店舗集客の情報発信を支援するサービス"
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-54",
-      "article-59"
-    ]
+      "article-59",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「小さなコーチ・講師業の発信を続ける秘訣」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-27",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-25",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIに任せる作業を決めるための、小さな業務棚卸しの進め方",
@@ -2084,27 +3536,30 @@
     "updatedAt": "2026-07-27",
     "status": "published",
     "primaryCta": null,
-    "affiliateLinks": [
-      {
-        "name": "Value AI Writer byGMO",
-        "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "SEO記事作成を支援するAIライティングツール"
-      },
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "録音と文字起こしを支援するAIボイスレコーダー"
-      }
-    ],
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-12",
       "article-19",
-      "article-42",
-      "article-58",
-      "article-16"
-    ]
+      "article-42"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「AIに任せる作業を決めるための、小さな業務棚卸しの進め方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-27",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-22",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": false,
+    "primaryCtaType": "related-article",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "小さな店舗が持続的に発信を続けるためのポイント",
@@ -2114,7 +3569,7 @@
     "categoryLabel": "AI活用",
     "articleType": "marketing",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "小さな店舗を運営していて、発信に課題を感じている方へ。AIを活用した効率的な方法や継続するための心構えを紹介します。",
     "metaTitle": "小さな店舗が発信を続けるコツ",
@@ -2122,31 +3577,43 @@
     "publishedAt": "2026-07-27",
     "updatedAt": "2026-07-27",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "Value AI Writer byGMO",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SEO記事・ブログ記事の執筆を効率化したい人向けのSEO記事生成AIツールとして、記事テーマ（小さな店舗が持続的に発信を続けるためのポイント）に合致するため選定"
-      },
-      {
+        "offerId": "ai-blog-gold",
         "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "ブログ運用を自動化したい個人・事業者向けのAIによるブログ自動投稿として、記事テーマ（小さな店舗が持続的に発信を続けるためのポイント）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（小さな店舗が持続的に発信を続けるためのポイント）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-58",
-      "article-64"
-    ]
+      "article-64",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「小さな店舗が持続的に発信を続けるためのポイント」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-27",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-25",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "無料相談導線で店舗ビジネスの集客を軽くする方法",
@@ -2156,7 +3623,7 @@
     "categoryLabel": "LP・Web集客",
     "articleType": "lp",
     "targetIndustry": "local-business",
-    "targetReader": null,
+    "targetReader": "LPやWebサイトから相談・販売につなげたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "店舗ビジネスで無料相談を上手に活用した集客がしたいですか？導線を整えることで、顧客との接点が効果的に増やせます。",
     "metaTitle": "無料相談導線の作り方｜店舗ビジネス向けWeb集客",
@@ -2164,19 +3631,54 @@
     "publishedAt": "2026-07-28",
     "updatedAt": "2026-07-28",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "ココナラ",
     "affiliateLinks": [
       {
-        "name": "お名前.com",
+        "offerId": "coconala",
+        "name": "ココナラ",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（無料相談導線で店舗ビジネスの集客を軽くする方法）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "localgoat",
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-50",
-      "article-56"
-    ]
+      "article-56",
+      "article-17"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「無料相談導線で店舗ビジネスの集客を軽くする方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-28",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-26",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "依頼のすれ違いを減らす、最初の確認メモの作り方",
@@ -2202,20 +3704,53 @@
     "publishedAt": "2026-07-28",
     "updatedAt": "2026-07-28",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "PLAUD NOTE",
     "affiliateLinks": [
       {
-        "name": "見積太郎２",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "見積もり相談と管理を支援するツール"
+        "offerId": "plaud-note",
+        "name": "PLAUD NOTE",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "録音と文字起こしを支援するAIボイスレコーダー",
+        "officialUrl": "https://jp.plaud.ai/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "miricanvas",
+        "name": "MiriCanvas",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "AIを使った資料・デザイン作成を支援するサービス",
+        "officialUrl": "https://www.miricanvas.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-30",
       "article-31",
       "article-32"
-    ]
+    ],
+    "readerProblem": "同じ内容を毎回考え直し、確認漏れや手戻りが起きている。",
+    "searchIntent": "「依頼のすれ違いを減らす、最初の確認メモの作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-28",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-26",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "保存される投稿を目指す！SNSコンテンツの具体策",
@@ -2225,7 +3760,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "SNS運用で、ただ投稿するだけではなく、読者にとって価値のある「保存される投稿」を作ることが重要です。本記事では、その具体的な方法と効果的なアプローチを解説します。",
     "metaTitle": "保存されるSNS投稿の作り方と実例",
@@ -2233,19 +3768,54 @@
     "publishedAt": "2026-07-28",
     "updatedAt": "2026-07-28",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "Value AI Writer byGMO",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（保存される投稿を目指す！SNSコンテンツの具体策）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-55",
-      "article-60"
-    ]
+      "article-60",
+      "article-13"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「保存される投稿を目指す！SNSコンテンツの具体策」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-28",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-26",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "投稿ネタ不足時のAI活用と発想の転換",
@@ -2255,7 +3825,7 @@
     "categoryLabel": "AI活用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "SNSの投稿ネタが尽きてしまった――そんな時にAIを活用して新しいアイデアを生む方法があります。今回は、その手法を具体的に探ります。",
     "metaTitle": "AI活用で投稿ネタ不足を乗り越える方法",
@@ -2263,31 +3833,44 @@
     "publishedAt": "2026-07-28",
     "updatedAt": "2026-07-28",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "Value AI Writer byGMO",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SEO記事・ブログ記事の執筆を効率化したい人向けのSEO記事生成AIツールとして、記事テーマ（投稿ネタ不足時のAI活用と発想の転換）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（投稿ネタ不足時のAI活用と発想の転換）に合致するため選定"
-      },
-      {
-        "name": "PLAUD NOTE",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "会議・商談の記録や文字起こしを自動化したい人向けのAIボイスレコーダーとして、記事テーマ（投稿ネタ不足時のAI活用と発想の転換）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-64",
-      "article-65"
-    ]
+      "article-65",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「投稿ネタ不足時のAI活用と発想の転換」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-28",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-26",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "店舗ビジネスを成功に導く診断コンテンツの基本",
@@ -2297,7 +3880,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "local-business",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "店舗ビジネスを効果的に運営するには、顧客のニーズを的確に把握することが重要です。そのために役立つのが診断コンテンツです。この記事では、診断ツールを活用する方法を解説します。",
     "metaTitle": "店舗向け診断コンテンツの作り方",
@@ -2305,19 +3888,42 @@
     "publishedAt": "2026-07-29",
     "updatedAt": "2026-07-29",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-53",
-      "article-61"
-    ]
+      "article-61",
+      "article-10"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「店舗ビジネスを成功に導く診断コンテンツの基本」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-29",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-27",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIと無料ツールで簡単に請求書を作成する方法",
@@ -2327,7 +3933,7 @@
     "categoryLabel": "アフィリエイト・収益化",
     "articleType": "affiliate",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": "請求書作成に時間がかかっていませんか？AIと無料ツールを活用することで、業種問わず作業を効率化できます。どんなプロセスで導入できるかをご紹介します。",
     "metaTitle": "AIと無料ツールで請求書作成を効率化",
@@ -2335,43 +3941,43 @@
     "publishedAt": "2026-07-29",
     "updatedAt": "2026-07-29",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "マネーフォワード クラウド会計",
     "affiliateLinks": [
       {
+        "offerId": "moneyforward-accounting",
         "name": "マネーフォワード クラウド会計",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "会計ソフトを探している個人事業主・店舗経営者向けのクラウド会計として、記事テーマ（AIと無料ツールで簡単に請求書を作成する方法）に合致するため選定"
-      },
-      {
-        "name": "やよいの青色申告 オンライン",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "確定申告を自分でやる個人事業主向けの青色申告ソフトとして、記事テーマ（AIと無料ツールで簡単に請求書を作成する方法）に合致するため選定"
-      },
-      {
-        "name": "税務調査あんしんメンバーシップ",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "税務調査に備えたい個人事業主・フリーランス・小規模法人向けの税務調査対策サービスの入会として、記事テーマ（AIと無料ツールで簡単に請求書を作成する方法）に合致するため選定"
-      },
-      {
-        "name": "菊池会計事務所（マイクロ法人導入税務顧問）",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "節税のためマイクロ法人化を検討する個人事業主・フリーランス向けのマイクロ法人導入税務顧問として、記事テーマ（AIと無料ツールで簡単に請求書を作成する方法）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド確定申告",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "確定申告の準備を効率化したい個人事業主向けのクラウド確定申告ソフトとして、記事テーマ（AIと無料ツールで簡単に請求書を作成する方法）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-51",
-      "article-57"
-    ]
+      "article-57",
+      "article-01"
+    ],
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「AIと無料ツールで簡単に請求書を作成する方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-29",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-27",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "夜職で成功するための集客導線の構築法",
@@ -2381,7 +3987,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "nightwork",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "夜職・ナイトワークにおいて、効率的な集客は業務を円滑に進めるための鍵です。効率的な導線を構築することで、作業の負担を減らしましょう。",
     "metaTitle": "夜職集客導線の作り方｜業種別攻略法",
@@ -2389,25 +3995,31 @@
     "publishedAt": "2026-07-29",
     "updatedAt": "2026-07-29",
     "status": "published",
-    "primaryCta": "お問い合わせ",
-    "affiliateLinks": [
-      {
-        "name": "AIブログくんGOLD",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "ブログ運用を支援するAIサービス"
-      },
-      {
-        "name": "LOCALGOAT",
-        "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "店舗集客の情報発信を支援するサービス"
-      }
-    ],
+    "primaryCta": "SOAM Linkの公開内容",
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-59",
-      "article-63"
-    ]
+      "article-63",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「夜職で成功するための集客導線の構築法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-29",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-24",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": true,
+    "primaryCtaType": "soam-link",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "問い合わせが増えないLPの共通点と改善法",
@@ -2417,7 +4029,7 @@
     "categoryLabel": "LP・Web集客",
     "articleType": "lp",
     "targetIndustry": "solo-business",
-    "targetReader": null,
+    "targetReader": "LPやWebサイトから相談・販売につなげたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "LPを作ったのに問い合わせが増えない…。そんな悩みを抱えた個人事業主の方に向けて、LPの改善ポイントを解説します。",
     "metaTitle": "問い合わせが増えないLPの共通点と改善策",
@@ -2425,19 +4037,31 @@
     "publishedAt": "2026-07-30",
     "updatedAt": "2026-07-30",
     "status": "published",
-    "primaryCta": "お問い合わせ",
-    "affiliateLinks": [
-      {
-        "name": "お名前.com",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（問い合わせが増えないLPの共通点と改善法）に合致するため選定"
-      }
-    ],
+    "primaryCta": "SOAM Linkの公開内容",
+    "affiliateLinks": [],
     "relatedArticles": [
       "article-56",
-      "article-66"
-    ]
+      "article-66",
+      "article-17"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「問い合わせが増えないLPの共通点と改善法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-30",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-01-25",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": true,
+    "primaryCtaType": "soam-link",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "保存される投稿を作るためのポイントとテクニック",
@@ -2447,7 +4071,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "SNSやnoteでの投稿、見てもらえるだけでなく「保存される」ことが目指すべき次のステップです。どのようにすれば読者にとって保存したくなる内容を提供できるのでしょうか。具体的なテクニックを解説します。",
     "metaTitle": "保存されるSNS投稿の作り方のコツ",
@@ -2455,19 +4079,44 @@
     "publishedAt": "2026-07-30",
     "updatedAt": "2026-07-30",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（保存される投稿を作るためのポイントとテクニック）に合致するため選定"
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-60",
-      "article-68"
-    ]
+      "article-68",
+      "article-13"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「保存される投稿を作るためのポイントとテクニック」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-30",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-28",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "発信を続けるための考え方とAI活用術",
@@ -2477,7 +4126,7 @@
     "categoryLabel": "AI活用",
     "articleType": "thought",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "AIを仕事に取り入れたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "発信の継続は小さな事業者にとって重要です。でも、それが難しいと感じることも多いでしょう。そんなあなたに、発信を楽にする考え方とAIの活用法をお伝えします。",
     "metaTitle": "小さな事業者のための発信継続術",
@@ -2485,31 +4134,43 @@
     "publishedAt": "2026-07-30",
     "updatedAt": "2026-07-30",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "Value AI Writer byGMO",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SEO記事・ブログ記事の執筆を効率化したい人向けのSEO記事生成AIツールとして、記事テーマ（発信を続けるための考え方とAI活用術）に合致するため選定"
-      },
-      {
+        "offerId": "ai-blog-gold",
         "name": "AIブログくんGOLD",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "ブログ運用を自動化したい個人・事業者向けのAIによるブログ自動投稿として、記事テーマ（発信を続けるための考え方とAI活用術）に合致するため選定"
-      },
-      {
-        "name": "AI鬼管理",
-        "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "Claude Codeで業務自動化したい個人・事業者向けのClaude Code活用の業務自動化トレーニングとして、記事テーマ（発信を続けるための考え方とAI活用術）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-65",
-      "article-69"
-    ]
+      "article-69",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「発信を続けるための考え方とAI活用術」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-07-30",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-28",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "個人事業主向け診断コンテンツ作成の基本",
@@ -2519,7 +4180,7 @@
     "categoryLabel": "診断ツール活用",
     "articleType": "diagnosis",
     "targetIndustry": "solo-business",
-    "targetReader": null,
+    "targetReader": "診断や質問を使って、顧客の迷いを整理したい小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "個人事業主としての業務を効率化する診断コンテンツ作成の基本を解説します。自分のビジネスに合った診断ツールを活用し、作業負担を軽減してみましょう。",
     "metaTitle": "診断コンテンツ作成の基本：個人事業主向け",
@@ -2527,19 +4188,42 @@
     "publishedAt": "2026-07-31",
     "updatedAt": "2026-07-31",
     "status": "published",
-    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "primaryCta": "gleasin",
     "affiliateLinks": [
       {
+        "offerId": "gleasin",
         "name": "gleasin",
         "asp": "もしもアフィリエイト",
-        "placement": "関連サービス",
-        "reason": "商圏分析を支援する店舗ビジネス向けツール"
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-61",
-      "article-70"
-    ]
+      "article-70",
+      "article-10"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「個人事業主向け診断コンテンツ作成の基本」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-07-31",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-29",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "AIと無料ツールで簡単！請求書作成を効率化する方法",
@@ -2549,7 +4233,7 @@
     "categoryLabel": "アフィリエイト・収益化",
     "articleType": "affiliate",
     "targetIndustry": "solo-business",
-    "targetReader": null,
+    "targetReader": "商品やサービスを紹介し、誠実な収益導線を作りたい個人事業主・発信者",
     "tags": [],
     "excerpt": "請求書作成は個人事業主にとって頻繁に必要な作業です。AIと無料ツールを利用して、その手間を大幅に軽減する方法をご紹介します。",
     "metaTitle": "AIと無料ツールで請求書作成を効率化",
@@ -2557,43 +4241,54 @@
     "publishedAt": "2026-07-31",
     "updatedAt": "2026-07-31",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "見積太郎２",
     "affiliateLinks": [
       {
-        "name": "マネーフォワード クラウド（個人事業主向け機能）",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "個人事業主向け会計機能を探している人向けのクラウド会計（個人事業主向け機能訴求）として、記事テーマ（AIと無料ツールで簡単！請求書作成を効率化する方法）に合致するため選定"
-      },
-      {
-        "name": "やよいの青色申告 オンライン",
+        "offerId": "mitsumotaro",
+        "name": "見積太郎２",
         "asp": "もしもアフィリエイト",
-        "placement": "関連ツール",
-        "reason": "確定申告を自分でやる個人事業主向けの青色申告ソフトとして、記事テーマ（AIと無料ツールで簡単！請求書作成を効率化する方法）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "見積もり相談と管理を支援するツール",
+        "officialUrl": "https://neo.estimator.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
-        "name": "税務調査あんしんメンバーシップ",
+        "offerId": "moneyforward-accounting",
+        "name": "マネーフォワード クラウド会計",
         "asp": "もしもアフィリエイト",
-        "placement": "まとめ前",
-        "reason": "税務調査に備えたい個人事業主・フリーランス・小規模法人向けの税務調査対策サービスの入会として、記事テーマ（AIと無料ツールで簡単！請求書作成を効率化する方法）に合致するため選定"
-      },
-      {
-        "name": "菊池会計事務所（マイクロ法人導入税務顧問）",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "節税のためマイクロ法人化を検討する個人事業主・フリーランス向けのマイクロ法人導入税務顧問として、記事テーマ（AIと無料ツールで簡単！請求書作成を効率化する方法）に合致するため選定"
-      },
-      {
-        "name": "マネーフォワード クラウド確定申告",
-        "asp": "A8.net",
-        "placement": "まとめ前",
-        "reason": "確定申告の準備を効率化したい個人事業主向けのクラウド確定申告ソフトとして、記事テーマ（AIと無料ツールで簡単！請求書作成を効率化する方法）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "個人事業主・事業者向けのクラウド会計サービス",
+        "officialUrl": "https://biz.moneyforward.com/accounting/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-57",
-      "article-71"
-    ]
+      "article-71",
+      "article-01"
+    ],
+    "readerProblem": "読者の課題解決と広告収益を、押し売りにならない形で両立できていない。",
+    "searchIntent": "「AIと無料ツールで簡単！請求書作成を効率化する方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-31",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-29",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "整体・エステ業界で「予約が埋まらない時に見直す場所」",
@@ -2603,7 +4298,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "salon",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "特に予約が埋まらず、空きが目立つ日が続くと、どうすればいいのか焦ることもありますね。予約状況の不調には、いくつかの見直すべくポイントがあります。実は、少しのアイデアと工夫で、その問題に光を当てることができるのです。",
     "metaTitle": "整体・エステの予約改善のための見直しポイント",
@@ -2611,19 +4306,42 @@
     "publishedAt": "2026-07-31",
     "updatedAt": "2026-07-31",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "LOCALGOAT",
     "affiliateLinks": [
       {
+        "offerId": "localgoat",
         "name": "LOCALGOAT",
         "asp": "もしもアフィリエイト",
-        "placement": "本文中",
-        "reason": "AI検索時代に合わせて店舗集客を強化したい経営者向けのAIO×MEO×SNS次世代店舗集客対策として、記事テーマ（整体・エステ業界で「予約が埋まらない時に見直す場所」）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-63",
-      "article-72"
-    ]
+      "article-72",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「整体・エステ業界で「予約が埋まらない時に見直す場所」」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-07-31",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-29",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "問い合わせが増えないLPの原因と改善策",
@@ -2633,7 +4351,7 @@
     "categoryLabel": "LP・Web集客",
     "articleType": "lp",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "LPやWebサイトから相談・販売につなげたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "問い合わせが増えずに悩んでいる方、あなたのLPに共通点があるかもしれません。この記事では、LPの改善策を具体的に紹介します。",
     "metaTitle": "問い合わせが増えないLPの改善策",
@@ -2641,19 +4359,54 @@
     "publishedAt": "2026-08-01",
     "updatedAt": "2026-08-01",
     "status": "published",
-    "primaryCta": "お問い合わせ",
+    "primaryCta": "Value AI Writer byGMO",
     "affiliateLinks": [
       {
-        "name": "お名前.com",
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
         "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "自分のサイト・LPのドメインを取得・整理したい人向けの独自ドメイン取得として、記事テーマ（問い合わせが増えないLPの原因と改善策）に合致するため選定"
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-66",
-      "article-73"
-    ]
+      "article-73",
+      "article-17"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「問い合わせが増えないLPの原因と改善策」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-08-01",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-30",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "打ち合わせ後の連絡を軽くする、メモから次の行動へつなぐ方法",
@@ -2679,25 +4432,42 @@
     "publishedAt": "2026-08-01",
     "updatedAt": "2026-08-01",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "PLAUD NOTE",
     "affiliateLinks": [
       {
-        "name": "Value AI Writer byGMO",
-        "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "SEO記事作成を支援するAIライティングツール"
-      },
-      {
+        "offerId": "plaud-note",
         "name": "PLAUD NOTE",
         "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "録音と文字起こしを支援するAIボイスレコーダー"
+        "placement": "主な選択肢",
+        "reason": "録音と文字起こしを支援するAIボイスレコーダー",
+        "officialUrl": "https://jp.plaud.ai/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-16",
-      "article-64"
-    ]
+      "article-64",
+      "article-04"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「打ち合わせ後の連絡を軽くする、メモから次の行動へつなぐ方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-08-01",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-30",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "投稿ネタが尽きたときの新しい視点の持ち方",
@@ -2707,7 +4477,7 @@
     "categoryLabel": "SNS・note運用",
     "articleType": "sns",
     "targetIndustry": "all",
-    "targetReader": null,
+    "targetReader": "SNSやnoteで商品・サービスの発信を続けたい個人事業主・小規模事業者",
     "tags": [],
     "excerpt": "SNS運用において、アイデアが枯渇する瞬間が誰しも訪れます。そこで今回は、日々の生活や活動の中から新しいネタを見つける方法を考えます。",
     "metaTitle": "ネタ切れ時のSNS新戦略",
@@ -2715,19 +4485,44 @@
     "publishedAt": "2026-08-01",
     "updatedAt": "2026-08-01",
     "status": "published",
-    "primaryCta": "SOAM CREATIVE（X）",
+    "primaryCta": "AIブログくんGOLD",
     "affiliateLinks": [
       {
-        "name": "ConoHa AI Canvas",
-        "asp": "A8.net",
-        "placement": "本文中",
-        "reason": "SNS投稿・記事用の画像をAIで作りたい人向けのAI画像生成として、記事テーマ（投稿ネタが尽きたときの新しい視点の持ち方）に合致するため選定"
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
     "relatedArticles": [
       "article-68",
-      "article-74"
-    ]
+      "article-74",
+      "article-13"
+    ],
+    "readerProblem": "発信の目的と相手が曖昧になり、投稿を続けても販売や相談につながりにくい。",
+    "searchIntent": "「投稿ネタが尽きたときの新しい視点の持ち方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-08-01",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-30",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REMOVE_AFFILIATE",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   },
   {
     "title": "画像づくりで迷わないために、先に決めておきたい三つのこと",
@@ -2752,21 +4547,50 @@
     "publishedAt": "2026-08-01",
     "updatedAt": "2026-08-01",
     "status": "published",
-    "primaryCta": null,
+    "primaryCta": "MiriCanvas",
     "affiliateLinks": [
       {
+        "offerId": "miricanvas",
         "name": "MiriCanvas",
         "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "AIを使った資料・デザイン作成を支援するサービス"
+        "placement": "主な選択肢",
+        "reason": "AIを使った資料・デザイン作成を支援するサービス",
+        "officialUrl": "https://www.miricanvas.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       },
       {
+        "offerId": "conoha-ai-canvas",
         "name": "ConoHa AI Canvas",
         "asp": "A8.net",
-        "placement": "関連サービス",
-        "reason": "ブラウザで使えるAI画像生成サービス"
+        "placement": "主な選択肢",
+        "reason": "ブラウザで使えるAI画像生成サービス",
+        "officialUrl": "https://ai.conoha.jp/canvas/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
       }
     ],
-    "relatedArticles": []
+    "relatedArticles": [
+      "article-01",
+      "article-02",
+      "article-03"
+    ],
+    "readerProblem": "制作の目的や条件を言葉にできず、依頼や確認で手戻りが起きている。",
+    "searchIntent": "「画像づくりで迷わないために、先に決めておきたい三つのこと」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-08-01",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-30",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   }
 ]

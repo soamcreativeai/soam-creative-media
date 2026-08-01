@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { articleStructuredData, canonicalUrl, jsonForScript } from './seo-utils.mjs';
+import { decorateArticleHtml, enrichArticle } from './editorial-strategy-utils.mjs';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(scriptDir, '..');
@@ -11,6 +12,7 @@ const queuePath = path.join(rootDir, 'automation/article-queue.json');
 const approvedContentDir = path.join(rootDir, 'automation/approved-content');
 const generatedContentDir = path.join(rootDir, 'automation/generated-content');
 const manifestPath = path.join(rootDir, 'articles/data/manifest.json');
+const affiliateCatalogPath = path.join(rootDir, 'automation/affiliate-catalog.json');
 const articleIndexPath = path.join(rootDir, 'articles/index.html');
 const homePath = path.join(rootDir, 'index.html');
 
@@ -21,10 +23,10 @@ const now = nowArgument ? new Date(nowArgument.slice('--now='.length)) : new Dat
 const isCheck = args.has('--check');
 const isDryRun = args.has('--dry-run');
 const isSyncOnly = args.has('--sync-indexes');
-// 公開済み記事の本文だけを、承認済み原稿から再生成する明示的な保守モードです。
+// 公開済み記事の本文だけを、保存済み原稿から再生成する明示的な保守モードです。
 // 記事一覧・公開日・キューの状態は変更しません。
 const isRefreshPublished = args.has('--refresh-published');
-// 編集確認済みの記事を一括で公開するための明示的な手動モードです。
+// 予約済みの記事を一括で公開するための明示的な保守モードです。
 // 通常の定時公開では使わず、予約枠の重複も許可しません。
 const isPublishAll = args.has('--publish-all');
 
@@ -116,7 +118,7 @@ const renderArticleList = (articles) => articles.map((article) => `      <a clas
 const renderHomeHero = (articles) => {
   const classes = ['media-tile-main', 'media-tile-pink', 'media-tile-blue', 'media-tile-yellow'];
   return articles.slice(0, 4).map((article, index) => {
-    const heading = index === 0 ? 'h1' : 'h2';
+    const heading = 'h2';
     const readLink = index === 0 ? '\n          <span class="media-read">記事を読む →</span>' : '';
     return `        <a class="media-tile ${classes[index]}" href="articles/${escapeHtml(article.file)}">
           <span class="media-pill">${escapeHtml(article.categoryLabel || '記事')}</span>
@@ -135,8 +137,8 @@ const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf
 
 const validateArticle = (entry, slots, existingManifest) => {
   requireString(entry.id, 'キューID');
-  if (!['draft', 'review', 'approved', 'published'].includes(entry.status)) {
-    throw new Error(`${entry.id}: status は draft / review / approved / published のいずれかにしてください。`);
+  if (!['scheduled', 'published'].includes(entry.status)) {
+    throw new Error(`${entry.id}: status は scheduled / published のいずれかにしてください。承認待ち状態は自動公開を止めるため使用しません。`);
   }
   const scheduledAt = new Date(requireString(entry.scheduledAt, `${entry.id}: scheduledAt`));
   if (Number.isNaN(scheduledAt.getTime())) throw new Error(`${entry.id}: scheduledAt の形式が不正です。`);
@@ -164,11 +166,11 @@ const validateArticle = (entry, slots, existingManifest) => {
   if (entry.status !== 'published' && existing) {
     throw new Error(`${entry.id}: ${slug} はすでに公開済みの記事と重複しています。`);
   }
-  if (entry.status === 'approved') {
+  if (entry.status === 'scheduled') {
     const source = requireString(entry.source, `${entry.id}: source`);
     const sourcePath = path.resolve(rootDir, source);
-    if (!sourcePath.startsWith(`${approvedContentDir}${path.sep}`) && !sourcePath.startsWith(`${generatedContentDir}${path.sep}`)) {
-      throw new Error(`${entry.id}: source は automation/approved-content/ または automation/generated-content/ 配下に置いてください。`);
+    if (!sourcePath.startsWith(`${generatedContentDir}${path.sep}`)) {
+      throw new Error(`${entry.id}: 自動公開する source は automation/generated-content/ 配下に置いてください。`);
     }
   }
 };
@@ -229,12 +231,6 @@ const categoryPracticeGuide = (article) => {
   return `${guides[article.category] || guides.personal || ''}${closeout}`;
 };
 
-const buildDisclosure = (article) => article.containsAffiliateLinks ? `
-      <div class="affiliate-box">
-        <p><strong>広告・紹介リンクについて</strong></p>
-        <p>この記事には紹介リンクまたはアフィリエイト広告を含む場合があります。料金・仕様・提供条件は変更されることがあるため、リンク先の公式情報をご確認ください。</p>
-      </div>` : '';
-
 const socialMeta = (article, canonical) => `
   <meta property="og:title" content="${escapeHtml(article.metaTitle || article.title)} | SOAM MEDIA" data-seo="social">
   <meta property="og:description" content="${escapeHtml(article.metaDescription)}" data-seo="social">
@@ -294,7 +290,6 @@ ${socialMeta(article, canonicalUrl(`articles/${file}`))}
       <p class="article-byline" data-seo="byline">執筆・編集：SOAM MEDIA</p>
       <p class="article-excerpt">${escapeHtml(article.excerpt)}</p>
 ${content}
-${buildDisclosure(article)}
     </div>
   </main>
   <footer>
@@ -332,7 +327,7 @@ const syncIndexes = async (manifest, dryRun) => {
 };
 
 const main = async () => {
-  const [queue, manifest] = await Promise.all([readJson(queuePath), readJson(manifestPath)]);
+  const [queue, manifest, affiliateCatalog] = await Promise.all([readJson(queuePath), readJson(manifestPath), readJson(affiliateCatalogPath)]);
   validateQueue(queue, manifest, { allowReservedSlotOverlap: isPublishAll });
   if (isCheck) {
     console.log(`[scheduled-publish] queue is valid: ${queue.articles.length} article(s), ${queue.slots.length} slot(s).`);
@@ -342,7 +337,7 @@ const main = async () => {
   const due = queue.articles
     .filter((entry) => isRefreshPublished
       ? entry.status === 'published'
-      : entry.status === 'approved' && (isPublishAll || new Date(entry.scheduledAt) <= now))
+      : entry.status === 'scheduled' && (isPublishAll || new Date(entry.scheduledAt) <= now))
     .sort((a, b) => new Date(a.scheduledAt) - new Date(b.scheduledAt));
   if (!due.length) {
     if (isSyncOnly) {
@@ -350,7 +345,7 @@ const main = async () => {
       console.log(`[scheduled-publish] ${isDryRun ? 'would synchronize' : 'synchronized'} ${sortedPublished(manifest).length} published article(s).`);
       return;
     }
-    console.log('[scheduled-publish] no approved articles are due.');
+    console.log('[scheduled-publish] no scheduled articles are due.');
     return;
   }
 
@@ -362,7 +357,7 @@ const main = async () => {
     const published = isRefreshPublished && existingPublished?.publishedAt
       ? datePartsInTokyo(new Date(`${existingPublished.publishedAt}T00:00:00+09:00`))
       : datePartsInTokyo(isPublishAll ? now : new Date(entry.scheduledAt));
-    const manifestItem = {
+    const manifestItem = enrichArticle({
       title: entry.article.title,
       slug: entry.article.slug,
       file: `${entry.article.slug}.html`,
@@ -381,8 +376,12 @@ const main = async () => {
       primaryCta: entry.article.primaryCta || null,
       affiliateLinks: Array.isArray(entry.article.affiliateLinks) ? entry.article.affiliateLinks : [],
       relatedArticles: Array.isArray(entry.article.relatedArticles) ? entry.article.relatedArticles : []
-    };
-    if (!isDryRun) await fs.writeFile(articlePath, renderArticlePage(entry, content, published));
+    }, { catalog: affiliateCatalog, date: published.date });
+    const pageEntry = { ...entry, article: manifestItem };
+    if (!isDryRun) {
+      const page = renderArticlePage(pageEntry, content, published);
+      await fs.writeFile(articlePath, decorateArticleHtml(page, manifestItem, affiliateCatalog));
+    }
     if (!isRefreshPublished) {
       nextManifest.push(manifestItem);
       entry.status = 'published';
