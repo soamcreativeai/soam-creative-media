@@ -24,6 +24,7 @@
 - 変更: 本文・題名・公開日は維持し、article-85の検索情報・構造化情報・著者表記・判断情報・主導線・関連記事・情報確認日を補正。
 - 変更: 旧方式の一覧書き戻しで失われた `AUTO:ARTICLE_LIST` マーカーと、クエリ付きSOAM Link URLを復元・正規化。
 - 検証: generation、scheduled-publish、site-links、media-seo（85記事）、media-strategy（85記事）、差分形式がPASS。
+- 公開: [`b8f6b8a`](https://github.com/soamcreativeai/soam-creative-media/commit/b8f6b8a2ccbdb111ee4f42eb1a87d6330e5ae31f) を共有側へ反映し、[run 30731294798](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30731294798) でCloudflare Pages反映・カスタムドメイン確認まで成功。
 
 ## 2026-08-01（アフィリエイトボタン一本化・本番反映済み）
 

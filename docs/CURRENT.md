@@ -15,20 +15,23 @@
 - 本番反映: [run 30727942411](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30727942411) が、検査・Cloudflare Pages反映・カスタムドメイン確認まで成功。
 - 未検証: 次回定時枠での実際のOpenAI生成のみ。追加料金が発生する手動生成は行わず、通常の定時枠で確認する。
 
-## 2026-08-02 予約記事の自動公開を復旧（共有側反映前）
+## 2026-08-02 予約記事の自動公開を復旧（本番反映・確認済み）
 
 - 12時の確認で、公開専用workflow `Publish scheduled articles` は `workflow_dispatch`（手動実行）だけで、定時起動が設定されていないことを確認した。
 - 変更: 生成はJST 07:02 / 12:02 / 20:02、予約記事の公開専用処理はJST 07:07 / 12:07 / 20:07に設定。毎時ちょうどの集中を避け、同じ処理が重ならないようにした。
 - 変更: 公開専用処理は、記事を公開した場合だけCloudflare Pagesへ反映し、カスタムドメインの公開確認まで実行する。公開対象がなければ何も変更しない。
 - 検証: generation、scheduled-publish、site-links、media-seo（84記事）、media-strategy（84記事）、差分形式がPASS。
-- 未検証: 共有側反映後の次回20時枠での定時起動・公開。
+- 保存ID: [`7ceba56`](https://github.com/soamcreativeai/soam-creative-media/commit/7ceba56a165778a7358d88e1cfc2993d53c65e01)（article-85との統合・公開契約補正: [`b8f6b8a`](https://github.com/soamcreativeai/soam-creative-media/commit/b8f6b8a2ccbdb111ee4f42eb1a87d6330e5ae31f)）。
+- 本番反映: [run 30731294798](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30731294798) が、85記事の検査・Cloudflare Pages反映・カスタムドメイン確認まで成功。
+- 未検証: 次回20:02の生成と20:07の定時公開の実行記録。手動生成・手動公開は行わない。
 
-## 2026-08-02 article-85取り込み時の公開契約補正（共有側反映前）
+## 2026-08-02 article-85取り込み時の公開契約補正（本番反映・確認済み）
 
 - 共有側へ追加された article-85 は、記事本文・題名・公開日を維持する。
 - 同時に旧方式の記事一覧更新で消えた `AUTO:ARTICLE_LIST` マーカーと、クエリ付きSOAM Link URLを復元・正規化した。
 - article-85へcanonical、Article JSON-LD、SNS共有情報、著者表記、判断情報、主導線、関連記事、情報確認日を追加し、sitemapを85記事へ更新した。
 - ローカル検証: generation、scheduled-publish、site-links、media-seo（85記事）、media-strategy（85記事）、差分形式がPASS。
+- 本番反映: [run 30731294798](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30731294798) でCloudflare Pages反映・カスタムドメイン確認まで成功。
 
 ## 2026-08-01 アフィリエイトボタン一本化（本番確認済み）
 
