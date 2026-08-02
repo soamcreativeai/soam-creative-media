@@ -4802,5 +4802,28 @@
       "article-74",
       "article-81"
     ]
+  },
+  {
+    "title": "店舗ビジネス向け診断コンテンツの基本と活用法",
+    "slug": "article-87",
+    "file": "article-87.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "diagnosis",
+    "targetIndustry": "local-business",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "診断コンテンツが店舗ビジネスの集客や顧客満足向上に役立つって知っていますか？この記事ではその基本と活用法を解説します。",
+    "metaTitle": "店舗ビジネスの診断コンテンツ活用法",
+    "metaDescription": "店舗ビジネスに役立つ診断コンテンツの作り方と活用法。集客やリピーター獲得に活かす手法を解説。",
+    "publishedAt": "2026-08-03",
+    "updatedAt": "2026-08-03",
+    "status": "published",
+    "primaryCta": "サキのAI課金ジャッジ（診断ツールの実例）",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-76",
+      "article-84"
+    ]
   }
 ]
