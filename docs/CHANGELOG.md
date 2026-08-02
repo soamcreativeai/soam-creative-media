@@ -8,7 +8,8 @@
 - 変更: 再び消えていた `AUTO:ARTICLE_LIST` マーカーを記事一覧へ復元。隔離した予約公開テストで、記事・記事一覧・トップの更新まで確認。
 - 併せて: article-83・article-84のcanonical、Article JSON-LD、SNS共有情報、著者表記、sitemap、主導線情報を補正。本文・タイトル・公開日は維持。
 - 検証: media-generation、scheduled-publish、site-links、media-seo（84記事）、media-strategy（84記事）、差分形式がPASS。
-- 未検証: 共有側反映後の次回定時枠での実OpenAI生成、Cloudflare Pages公開、カスタムドメイン確認。
+- 公開: [`5cceb1d`](https://github.com/soamcreativeai/soam-creative-media/commit/5cceb1d5f147f971414852fc46bc2d5da06471a4) を共有側へ反映し、[run 30727942411](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30727942411) でCloudflare Pages反映・カスタムドメイン確認まで成功。
+- 未検証: 次回定時枠での実OpenAI生成のみ。余計な生成費用を出さないため、手動生成は行わない。
 
 ## 2026-08-01（アフィリエイトボタン一本化・本番反映済み）
 

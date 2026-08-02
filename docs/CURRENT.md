@@ -3,7 +3,7 @@
 最終確認・引き継ぎ更新: 2026-08-01 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
-## 2026-08-02 自動公開の再発防止（共有側反映前）
+## 2026-08-02 自動公開の再発防止（本番反映・確認済み）
 
 - 2026-08-02 07:46 JST の定時処理 [run 30721985176](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30721985176) は、記事一覧マーカーではなく、生成結果の品質確認で停止した。
 - 直接原因: AIが返した section 見出し「判断表」と、公開処理が固定で追加する「判断表」が二重になった。加えて、短すぎる section をJSONの受け取り条件で防げていなかった。
@@ -11,7 +11,9 @@
 - 併発していた停止要因: `articles/index.html` から予約公開用の `AUTO:ARTICLE_LIST` マーカーが再び失われていたため復元した。隔離した予約公開テストで、記事・記事一覧・トップの更新までPASS。
 - 直近の手動追加 article-83 / article-84 は、本文・タイトル・公開日を維持したまま、canonical、Article JSON-LD、SNS共有情報、著者表記、sitemap、主導線の共通ルールを補正した。
 - ローカル検証: media-generation、scheduled-publish、site-links、media-seo（84記事）、media-strategy（84記事）、差分形式がPASS。
-- 未検証: 共有側へ反映後の次回定時枠での実際のOpenAI生成・Cloudflare Pages公開・カスタムドメイン確認。
+- 保存ID: [`5cceb1d`](https://github.com/soamcreativeai/soam-creative-media/commit/5cceb1d5f147f971414852fc46bc2d5da06471a4)。
+- 本番反映: [run 30727942411](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30727942411) が、検査・Cloudflare Pages反映・カスタムドメイン確認まで成功。
+- 未検証: 次回定時枠での実際のOpenAI生成のみ。追加料金が発生する手動生成は行わず、通常の定時枠で確認する。
 
 ## 2026-08-01 アフィリエイトボタン一本化（本番確認済み）
 
