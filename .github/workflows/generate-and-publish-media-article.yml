@@ -2,10 +2,10 @@ name: Generate and publish SOAM Media article
 
 on:
   schedule:
-    # UTC: JST 07:00 / 12:00 / 20:00
-    - cron: "0 22 * * *"
-    - cron: "0 3 * * *"
-    - cron: "0 11 * * *"
+    # UTC: JST 07:02 / 12:02 / 20:02. Avoid the top-of-hour scheduler concentration.
+    - cron: "2 22 * * *"
+    - cron: "2 3 * * *"
+    - cron: "2 11 * * *"
   workflow_dispatch:
     inputs:
       slot:
@@ -64,7 +64,7 @@ jobs:
           MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
           MEDIA_AI_MODEL: ${{ secrets.MEDIA_AI_MODEL }}
         run: |
-          SLOT="${{ inputs.slot != 'auto' && inputs.slot || (github.event.schedule == '0 22 * * *' && 'morning') || (github.event.schedule == '0 3 * * *' && 'noon') || 'evening' }}"
+          SLOT="${{ inputs.slot != 'auto' && inputs.slot || (github.event.schedule == '2 22 * * *' && 'morning') || (github.event.schedule == '2 3 * * *' && 'noon') || 'evening' }}"
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             node scripts/generate-media-article.mjs --dry-run --slot="$SLOT"
           else

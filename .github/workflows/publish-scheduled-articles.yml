@@ -1,13 +1,18 @@
 name: Publish scheduled articles
 
 on:
+  schedule:
+    # UTC: JST 07:07 / 12:07 / 20:07. Run after the article-generation slot.
+    - cron: "7 22 * * *"
+    - cron: "7 3 * * *"
+    - cron: "7 11 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: scheduled-article-publishing
+  group: soam-media-generation
   cancel-in-progress: false
 
 jobs:
@@ -35,16 +40,44 @@ jobs:
         run: node scripts/generate-sitemap.mjs
 
       - name: Verify search metadata and sitemap
-        run: node scripts/test-media-seo.mjs
+        run: |
+          node scripts/test-site-links.mjs
+          node scripts/test-media-seo.mjs
+          node scripts/test-publish-scheduled-articles.mjs
+          node scripts/test-media-strategy.mjs
 
       - name: Commit published articles when there are changes
+        id: commit
         run: |
           if git diff --quiet; then
             echo "No approved articles are due."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "SOAM CREATIVE Publisher"
           git config user.email "soam.creative.media@gmail.com"
-          git add index.html articles automation/article-queue.json sitemap.xml
+          git add index.html articles automation sitemap.xml
           git commit -m "chore: publish scheduled articles"
           git push origin HEAD:main
+          ARTICLE_FILE="$(git show --format= --name-only HEAD | sed -n 's#^articles/\(article-[0-9][0-9]*\.html\)$#\1#p' | head -1)"
+          if [ -z "$ARTICLE_FILE" ]; then
+            echo "Published article file could not be identified after commit."
+            exit 1
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "article_file=$ARTICLE_FILE" >> "$GITHUB_OUTPUT"
+
+      - name: Build Cloudflare Pages artifact
+        if: steps.commit.outputs.changed == 'true'
+        run: node scripts/build-pages-site.mjs
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@4.105.0 pages deploy dist/site --project-name soam-creative-media --branch main
+
+      - name: Verify custom-domain article publication
+        if: steps.commit.outputs.changed == 'true'
+        run: node scripts/verify-media-publication.mjs --article-file="${{ steps.commit.outputs.article_file }}"
