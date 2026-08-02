@@ -18,6 +18,13 @@
 - 変更: 記事の公開があった場合だけ、Cloudflare Pages反映とカスタムドメイン確認まで行う。公開対象がない場合は保存も本番反映も行わない。
 - 検証: generation、scheduled-publish、site-links、media-seo（84記事）、media-strategy（84記事）、差分形式がPASS。
 
+## 2026-08-02（article-85の公開契約補正）
+
+- 対象: article-85、記事一覧、manifest、sitemap。
+- 変更: 本文・題名・公開日は維持し、article-85の検索情報・構造化情報・著者表記・判断情報・主導線・関連記事・情報確認日を補正。
+- 変更: 旧方式の一覧書き戻しで失われた `AUTO:ARTICLE_LIST` マーカーと、クエリ付きSOAM Link URLを復元・正規化。
+- 検証: generation、scheduled-publish、site-links、media-seo（85記事）、media-strategy（85記事）、差分形式がPASS。
+
 ## 2026-08-01（アフィリエイトボタン一本化・本番反映済み）
 
 - 対象: 広告掲載67記事・広告カード91件と、今後の記事生成テンプレート。

@@ -4717,7 +4717,7 @@
     "categoryLabel": "業界別マーケティング",
     "articleType": "marketing",
     "targetIndustry": "nightwork",
-    "targetReader": null,
+    "targetReader": "集客や販売を一人で担っている小規模事業者・個人サービス提供者",
     "tags": [],
     "excerpt": "夜職の小さな店舗が発信を続けるのは簡単ではありません。しかし、適切な方法を取り入れることで、より効果的にお客様に情報を届けることができます。",
     "metaTitle": "小さな夜職店舗のための発信戦略",
@@ -4725,11 +4725,52 @@
     "publishedAt": "2026-08-02",
     "updatedAt": "2026-08-02",
     "status": "published",
-    "primaryCta": "お問い合わせ",
-    "affiliateLinks": [],
+    "primaryCta": "LOCALGOAT",
+    "affiliateLinks": [
+      {
+        "offerId": "localgoat",
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
     "relatedArticles": [
       "article-72",
-      "article-78"
-    ]
+      "article-78",
+      "article-03"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「小さな店舗の夜職が発信力を高めるためのヒント」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-08-02",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-08-31",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。",
+    "auditActions": [
+      "KEEP",
+      "ADD_AFFILIATE",
+      "REMOVE_LINK_CTA",
+      "REWRITE"
+    ],
+    "duplicateCandidate": null
   }
 ]

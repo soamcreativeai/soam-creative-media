@@ -23,6 +23,13 @@
 - 検証: generation、scheduled-publish、site-links、media-seo（84記事）、media-strategy（84記事）、差分形式がPASS。
 - 未検証: 共有側反映後の次回20時枠での定時起動・公開。
 
+## 2026-08-02 article-85取り込み時の公開契約補正（共有側反映前）
+
+- 共有側へ追加された article-85 は、記事本文・題名・公開日を維持する。
+- 同時に旧方式の記事一覧更新で消えた `AUTO:ARTICLE_LIST` マーカーと、クエリ付きSOAM Link URLを復元・正規化した。
+- article-85へcanonical、Article JSON-LD、SNS共有情報、著者表記、判断情報、主導線、関連記事、情報確認日を追加し、sitemapを85記事へ更新した。
+- ローカル検証: generation、scheduled-publish、site-links、media-seo（85記事）、media-strategy（85記事）、差分形式がPASS。
+
 ## 2026-08-01 アフィリエイトボタン一本化（本番確認済み）
 
 - 状態: **全82記事の本番反映・カスタムドメイン確認まで完了**。
