@@ -4708,5 +4708,28 @@
       "REWRITE"
     ],
     "duplicateCandidate": null
+  },
+  {
+    "title": "小さな店舗の夜職が発信力を高めるためのヒント",
+    "slug": "article-85",
+    "file": "article-85.html",
+    "category": "marketing",
+    "categoryLabel": "業界別マーケティング",
+    "articleType": "marketing",
+    "targetIndustry": "nightwork",
+    "targetReader": null,
+    "tags": [],
+    "excerpt": "夜職の小さな店舗が発信を続けるのは簡単ではありません。しかし、適切な方法を取り入れることで、より効果的にお客様に情報を届けることができます。",
+    "metaTitle": "小さな夜職店舗のための発信戦略",
+    "metaDescription": "夜職の小さな店舗が、効果的な発信を続けるための具体的なコツや方法を紹介します。",
+    "publishedAt": "2026-08-02",
+    "updatedAt": "2026-08-02",
+    "status": "published",
+    "primaryCta": "お問い合わせ",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-72",
+      "article-78"
+    ]
   }
 ]
