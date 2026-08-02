@@ -50,9 +50,6 @@ for (const file of ['pillars/decision.html', 'pillars/systems.html', 'pillars/re
 const workflow = await read('.github/workflows/generate-and-publish-media-article.yml');
 for (const cron of ['2 22 * * *', '2 3 * * *', '2 11 * * *']) assert.match(workflow, new RegExp(cron.replaceAll('*', '\\*')));
 assert.doesNotMatch(workflow, /Verify OpenAI connectivity/, '定時実行で余分なモデル確認APIを呼ばない');
-const publisherWorkflow = await read('.github/workflows/publish-scheduled-articles.yml');
-for (const cron of ['7 22 * * *', '7 3 * * *', '7 11 * * *']) assert.match(publisherWorkflow, new RegExp(cron.replaceAll('*', '\\*')));
-assert.match(publisherWorkflow, /Deploy to Cloudflare Pages/, '予約記事の公開後にCloudflareへ反映する');
 const reader = await read('articles/article-reader.js');
 const trackedMarkup = articleHtmls.join('\n');
 for (const event of ['affiliate_click', 'soam_link_click', 'related_article_click', 'template_click']) {

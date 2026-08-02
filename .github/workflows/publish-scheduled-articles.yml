@@ -1,18 +1,13 @@
 name: Publish scheduled articles
 
 on:
-  schedule:
-    # UTC: JST 07:07 / 12:07 / 20:07. Run after the article-generation slot.
-    - cron: "7 22 * * *"
-    - cron: "7 3 * * *"
-    - cron: "7 11 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: soam-media-generation
+  group: scheduled-article-publishing
   cancel-in-progress: false
 
 jobs:

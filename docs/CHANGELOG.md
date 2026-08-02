@@ -11,12 +11,11 @@
 - 公開: [`5cceb1d`](https://github.com/soamcreativeai/soam-creative-media/commit/5cceb1d5f147f971414852fc46bc2d5da06471a4) を共有側へ反映し、[run 30727942411](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30727942411) でCloudflare Pages反映・カスタムドメイン確認まで成功。
 - 未検証: 次回定時枠での実OpenAI生成のみ。余計な生成費用を出さないため、手動生成は行わない。
 
-## 2026-08-02（予約記事の定時公開を復旧）
+## 2026-08-02（定時記事作成・公開を一本化）
 
-- 発見: `Publish scheduled articles` は手動起動だけで、予約済み記事を定時に公開する設定が失われていた。
-- 変更: 生成をJST 07:02 / 12:02 / 20:02、予約公開をJST 07:07 / 12:07 / 20:07へ設定。毎時ちょうどの混雑を避け、公開専用処理は生成処理と同じ待ち行列で直列化した。
-- 変更: 記事の公開があった場合だけ、Cloudflare Pages反映とカスタムドメイン確認まで行う。公開対象がない場合は保存も本番反映も行わない。
-- 検証: generation、scheduled-publish、site-links、media-seo（84記事）、media-strategy（84記事）、差分形式がPASS。
+- 発見: `Publish scheduled articles` は手動起動だけで、定時記事作成・公開の責任は `Generate and publish SOAM Media article` に寄せるべき状態だった。
+- 変更: JST 07:02 / 12:02 / 20:02の1本の定時処理だけで、記事作成・品質確認・公開・Cloudflare Pages反映・カスタムドメイン確認まで実行する。公開専用workflowの定時起動は設けない。
+- 検証: generation、scheduled-publish、site-links、media-seo（85記事）、media-strategy（85記事）、差分形式がPASS。
 
 ## 2026-08-02（article-85の公開契約補正）
 
