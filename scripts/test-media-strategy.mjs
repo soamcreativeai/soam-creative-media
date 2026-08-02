@@ -12,7 +12,8 @@ const generation = JSON.parse(await read('automation/generation-catalog.json'));
 const activeOfferIds = new Set(catalog.offers.filter((offer) => offer.active).map((offer) => offer.id));
 const articleHtmls = [];
 
-assert.equal(manifest.length, 82, '既存82記事を全件維持する');
+const articleFiles = (await fs.readdir(path.join(root, 'articles'))).filter((file) => /^article-\d+\.html$/.test(file));
+assert.equal(manifest.length, articleFiles.length, '公開記事一覧と記事ファイル数を一致させる');
 assert.equal(generation.styleGuide.rejectionPolicy.maximumGenerationApiCallsPerSlot, 1, '1枠の生成APIは1回だけ');
 for (const field of ['targetReader', 'readerProblem', 'searchIntent', 'pillar', 'pillarLabel', 'articleType', 'informationVerifiedAt', 'nextReviewAt', 'primaryCtaType']) {
   assert.equal(manifest.filter((article) => !article[field]).length, 0, `全記事に ${field} が必要`);

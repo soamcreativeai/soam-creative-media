@@ -7,6 +7,7 @@ import { canonicalUrl } from './seo-utils.mjs';
 import { similarity } from './media-generation-utils.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const requestedArticleSlugs = new Set((process.argv.find((argument) => argument.startsWith('--articles='))?.slice('--articles='.length) || '').split(',').map((slug) => slug.trim()).filter(Boolean));
 const manifestPath = path.join(root, 'articles/data/manifest.json');
 const catalogPath = path.join(root, 'automation/affiliate-catalog.json');
 const auditCsvPath = path.join(root, 'docs/ARTICLE_AUDIT_20260801.csv');
@@ -167,6 +168,7 @@ const main = async () => {
   for (let index = 0; index < enriched.length; index += 1) {
     const before = original[index];
     const article = enriched[index];
+    if (requestedArticleSlugs.size && !requestedArticleSlugs.has(article.slug)) continue;
     const articlePath = path.join(root, 'articles', article.file);
     const html = await fs.readFile(articlePath, 'utf8');
     const actions = new Set(['KEEP']);
@@ -194,7 +196,14 @@ const main = async () => {
     auditRows.push({ before, after: enriched[index], actions: orderedActions });
   }
 
-  await fs.writeFile(manifestPath, `${JSON.stringify(enriched, null, 2)}\n`);
+  const nextManifest = requestedArticleSlugs.size
+    ? original.map((article, index) => requestedArticleSlugs.has(article.slug) ? enriched[index] : article)
+    : enriched;
+  await fs.writeFile(manifestPath, `${JSON.stringify(nextManifest, null, 2)}\n`);
+  if (requestedArticleSlugs.size) {
+    console.log(`[media-strategy] repaired ${auditRows.length} requested article(s).`);
+    return;
+  }
   await fs.mkdir(pillarDir, { recursive: true });
   await fs.mkdir(guideDir, { recursive: true });
   await Promise.all(Object.keys(PILLARS).map((key) => fs.writeFile(

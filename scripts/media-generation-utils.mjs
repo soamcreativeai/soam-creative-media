@@ -51,6 +51,46 @@ export const selectOffers = ({ offers, category, manifest }) => offers
     return count(a.name) - count(b.name) || a.id.localeCompare(b.id);
   }).slice(0, 2);
 
+// These headings are written by htmlFromArticle.  AI-generated sections must
+// never reuse them, otherwise a structurally valid response becomes a duplicate
+// H2 after the fixed decision table, checklist, and source blocks are added.
+export const renderedSectionHeadingAlternatives = new Map([
+  ['悩みの構造', '悩みを分けて見直す'],
+  ['問題の構造', '問題を分けて見直す'],
+  ['判断表', '判断表を使う前に決めること'],
+  ['具体的な手順', '手順を始める前の準備'],
+  ['確認項目', '確認漏れを防ぐ見方'],
+  ['確認用チェックリスト', '確認漏れを防ぐ見方'],
+  ['出典・情報確認日', '情報を見直すタイミング'],
+  ['まとめ', '最後に確認したいこと']
+]);
+
+const normalizeHeading = (value) => String(value || '').replace(/\s+/g, ' ').trim();
+
+export const normalizeGeneratedSections = (sections) => {
+  const seen = new Set();
+  return (Array.isArray(sections) ? sections : []).map((section, index) => {
+    const originalHeading = normalizeHeading(section.heading);
+    let heading = renderedSectionHeadingAlternatives.get(originalHeading) || originalHeading || `確認したいこと ${index + 1}`;
+    if (seen.has(heading)) {
+      const base = heading;
+      let suffix = 2;
+      do { heading = `${base}（補足${suffix}）`; suffix += 1; } while (seen.has(heading));
+    }
+    seen.add(heading);
+    return {
+      ...section,
+      heading,
+      paragraphs: (Array.isArray(section.paragraphs) ? section.paragraphs : []).map((paragraph) => String(paragraph || '').trim()).filter(Boolean),
+      subsections: (Array.isArray(section.subsections) ? section.subsections : []).map((subsection) => ({
+        ...subsection,
+        heading: normalizeHeading(subsection.heading),
+        paragraphs: (Array.isArray(subsection.paragraphs) ? subsection.paragraphs : []).map((paragraph) => String(paragraph || '').trim()).filter(Boolean)
+      })).filter((subsection) => subsection.heading && subsection.paragraphs.length)
+    };
+  });
+};
+
 const visibleText = (html) => String(html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 const sentences = (text) => String(text || '').split(/[。！？]/).map((sentence) => sentence.trim()).filter((sentence) => [...sentence].length >= 18);
 
