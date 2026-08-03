@@ -3,6 +3,18 @@
 最終確認・引き継ぎ更新: 2026-08-01 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
+## 2026-08-03 自動記事公開の二重起動を解消（本番反映・確認済み）
+
+- 定時公開の正本は、`Generate and publish SOAM Media article` のみ。JST **07:02 / 12:02 / 20:02** に各1本を生成・検査・公開・Cloudflare Pages反映する。
+- 旧Cloudflare WorkerからのSOAM MEDIA直接投稿、手動生成入口、旧専用部品を削除し、共有OPSの朝・昼・晩処理は維持した。これにより、旧処理が記事一覧の更新マーカーやSOAM Linkの正式URLを上書きする経路をなくした。
+- `articles/index.html` は、更新マーカーが完全に失われても、次回公開時に公開記事台帳から自動復旧して一覧を再構築する。片方だけ残る不完全な状態は安全のため停止する。
+- 生成記事の小見出しはローカルの固定構造へ移し、AIが小見出しを返さないだけで公開が止まることはない。生成APIは1公開枠1回のまま。
+- article-86 / article-87は、本文・題名・公開日を維持したまま、canonical、Article JSON-LD、著者表記、読者・判断情報、正式SOAM Link、関連記事、sitemapを補正した。全87記事の検索情報も再検査済み。
+- 検証: scheduled-publish、media-generation、site-links、media-seo（87記事）、media-strategy（87記事）、Cloudflare Pages buildがPASS。共有OPS側は構文検査と213件の機能検査がPASS（画面検査はこの作業場所に依存部品がなく未実施）。
+- 保存ID: メディア `29c525f`、旧投稿の削除 `ef870c1`。Cloudflare Pages: https://de691d20.soam-creative-media.pages.dev
+- 本番確認: `article-86`・`article-87` のHTTP 200、title、h1、canonical、Article JSON-LD、記事一覧、sitemap、article-87の拡張子なしURLを確認済み。
+- 未検証: 次回の定時枠での実OpenAI生成。追加料金が発生する手動生成・手動公開は実施しない。
+
 ## 2026-08-02 自動公開の再発防止（本番反映・確認済み）
 
 - 2026-08-02 07:46 JST の定時処理 [run 30721985176](https://github.com/soamcreativeai/soam-creative-media/actions/runs/30721985176) は、記事一覧マーカーではなく、生成結果の品質確認で停止した。

@@ -1,5 +1,14 @@
 # SOAM Media 変更履歴
 
+## 2026-08-03（自動記事公開の二重起動を削除）
+
+- 原因: GitHub側の定時公開とは別に、共有Cloudflare Workerの旧SOAM MEDIA生成がJST 06:50 / 11:50 / 17:50に動作していた。旧処理はarticle-86・87を直接追加し、`AUTO:ARTICLE_LIST`更新マーカーと正式SOAM Link導線を上書きした。その結果、新しい定時公開が品質確認または予約公開段階で停止した。
+- 変更: 共有Workerから旧SOAM MEDIAの自動投稿、手動生成入口、旧専用部品を削除。共有OPSの定時処理は維持し、SOAM MEDIAの定時公開はGitHub側の07:02 / 12:02 / 20:02の一本だけに固定。
+- 変更: 記事一覧マーカーが完全に消えた場合は、公開記事台帳から次回公開時に復旧する処理を追加。片側だけ残る状態は安全停止とする。小見出しは固定HTML構造で必ず出力するようにし、余分な生成APIは呼ばない。
+- 併せて: article-86・87と全87記事の検索情報を検査・補正。本文、題名、公開日は変更していない。
+- 検証: scheduled-publish、media-generation、site-links、media-seo（87記事）、media-strategy（87記事）、Pages buildがPASS。共有Workerは構文検査・213件の機能検査がPASS。画面検査は依存部品不足により未実施。
+- 公開: メディア `29c525f`、旧投稿削除 `ef870c1` を共有側へ反映。Cloudflare Pages: https://de691d20.soam-creative-media.pages.dev。カスタムドメインでarticle-86・87、記事一覧、sitemap、拡張子なしarticle-87を確認。
+
 ## 2026-08-02（自動公開の品質停止・再発防止）
 
 - 対象: 定時記事生成、予約公開、article-83・article-84の検索情報。
