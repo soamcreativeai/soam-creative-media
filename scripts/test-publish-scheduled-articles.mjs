@@ -40,7 +40,7 @@ try {
       id: 'publisher-test-article',
       status: 'scheduled',
       slot: 'morning',
-      scheduledAt: '2026-08-01T07:00:00+09:00',
+      scheduledAt: '2026-08-10T07:00:00+09:00',
       source: 'automation/generated-content/test-article.html',
       article: {
         slug: 'article-publisher-test',
@@ -62,7 +62,7 @@ try {
 
   execFileSync(process.execPath, [
     'scripts/publish-scheduled-articles.mjs',
-    '--now=2026-08-01T07:00:00+09:00'
+    '--now=2026-08-10T07:00:00+09:00'
   ], { cwd: fixtureDir, stdio: 'inherit' });
 
   const [article, manifest, queue, articleIndex, home] = await Promise.all([
@@ -79,6 +79,8 @@ try {
   assert.match(manifest, /article-publisher-test/);
   assert.match(queue, /"status": "published"/);
   assert.match(articleIndex, /予約公開のテスト記事/);
+  assert.match(articleIndex, /AUTO:ARTICLE_LIST:START/, '失われた記事一覧マーカーを自動復旧する');
+  assert.match(articleIndex, /AUTO:ARTICLE_LIST:END/, '失われた記事一覧マーカーを自動復旧する');
   assert.match(home, /予約公開のテスト記事/);
   console.log('[scheduled-publish:test] passed');
 } finally {

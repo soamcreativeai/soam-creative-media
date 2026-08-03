@@ -76,6 +76,23 @@ const replaceManagedSection = (html, name, content) => {
   return html.replace(expression, `$1\n${content}\n        $2`);
 };
 
+// 旧式の投稿処理が記事カードを直接追加した時期のHTMLでも、次の定時公開で
+// 記事一覧だけを安全に正本（manifest）から再構築できるようにする。
+// 片方だけのマーカーは手編集事故の可能性があるため、勝手に上書きしない。
+const restoreArticleListMarkers = (html) => {
+  const hasStart = html.includes('<!-- AUTO:ARTICLE_LIST:START -->');
+  const hasEnd = html.includes('<!-- AUTO:ARTICLE_LIST:END -->');
+  if (hasStart && hasEnd) return html;
+  if (hasStart || hasEnd) {
+    throw new Error('ARTICLE_LIST の更新マーカーが片方だけです。記事一覧を安全に再構築できません。');
+  }
+  const grid = /(<div class="article-grid">)([\s\S]*?)(\n    <\/div>\n\n    <div class="soamlink-cta")/;
+  if (!grid.test(html)) {
+    throw new Error('ARTICLE_LIST の更新対象となる記事一覧を特定できません。');
+  }
+  return html.replace(grid, (_, open, cards, close) => `${open}\n      <!-- AUTO:ARTICLE_LIST:START -->${cards}\n      <!-- AUTO:ARTICLE_LIST:END -->${close}`);
+};
+
 const excerptFor = (article) => article.excerpt || article.metaDescription || '記事を読む';
 const displayArticleDate = (date) => date
   ? datePartsInTokyo(new Date(`${date}T00:00:00+09:00`)).display
@@ -305,7 +322,7 @@ ${content}
 const syncIndexes = async (manifest, dryRun) => {
   const articles = sortedPublished(manifest);
   const updated = datePartsInTokyo(now);
-  const articleIndex = await fs.readFile(articleIndexPath, 'utf8');
+  const articleIndex = restoreArticleListMarkers(await fs.readFile(articleIndexPath, 'utf8'));
   const home = await fs.readFile(homePath, 'utf8');
   const nextArticleIndex = replaceManagedSection(articleIndex, 'ARTICLE_LIST', renderArticleList(articles));
   const nextHome = replaceManagedSection(

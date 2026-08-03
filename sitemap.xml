@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://media.soam-creative.com/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
   </url>
   <url>
     <loc>https://media.soam-creative.com/articles/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
   </url>
   <url>
     <loc>https://media.soam-creative.com/pillars/decision</loc>
@@ -38,11 +38,11 @@
   </url>
   <url>
     <loc>https://media.soam-creative.com/shindan-ai</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
   </url>
   <url>
     <loc>https://media.soam-creative.com/ai-tool-lp</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
   </url>
   <url>
     <loc>https://media.soam-creative.com/articles/article-01</loc>
@@ -383,5 +383,13 @@
   <url>
     <loc>https://media.soam-creative.com/articles/article-85</loc>
     <lastmod>2026-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://media.soam-creative.com/articles/article-86</loc>
+    <lastmod>2026-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://media.soam-creative.com/articles/article-87</loc>
+    <lastmod>2026-08-03</lastmod>
   </url>
 </urlset>
