@@ -6,6 +6,10 @@ on:
     - cron: "2 22 * * *"
     - cron: "2 3 * * *"
     - cron: "2 11 * * *"
+    # 各枠の保険。公開済みならAIを呼ばずに終了する。
+    - cron: "17 22 * * *"
+    - cron: "17 3 * * *"
+    - cron: "17 11 * * *"
   workflow_dispatch:
     inputs:
       slot:
@@ -43,8 +47,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Check this publication slot before any paid generation
+        id: publication_slot
+        if: ${{ !inputs.list_models_only }}
+        run: |
+          SLOT="${{ inputs.slot != 'auto' && inputs.slot || ((github.event.schedule == '2 22 * * *' || github.event.schedule == '17 22 * * *') && 'morning') || ((github.event.schedule == '2 3 * * *' || github.event.schedule == '17 3 * * *') && 'noon') || 'evening' }}"
+          echo "slot=$SLOT" >> "$GITHUB_OUTPUT"
+          node scripts/check-media-publication-slot.mjs --slot="$SLOT" >> "$GITHUB_OUTPUT"
       - name: Verify Cloudflare deployment credentials
-        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -58,25 +69,26 @@ jobs:
           MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
         run: node scripts/generate-media-article.mjs --list-openai-models
       - name: Preflight generated article publication contract
-        if: ${{ !inputs.list_models_only }}
+        if: ${{ !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         run: |
           node scripts/test-media-publication-contract.mjs
+          node scripts/test-media-publication-slot.mjs
           node scripts/test-generated-media-publication.mjs
       - name: Generate, validate, and publish one article
-        if: ${{ !inputs.list_models_only }}
+        if: ${{ !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         env:
           MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}
           MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
           MEDIA_AI_MODEL: ${{ secrets.MEDIA_AI_MODEL }}
         run: |
-          SLOT="${{ inputs.slot != 'auto' && inputs.slot || (github.event.schedule == '2 22 * * *' && 'morning') || (github.event.schedule == '2 3 * * *' && 'noon') || 'evening' }}"
+          SLOT="${{ steps.publication_slot.outputs.slot }}"
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             node scripts/generate-media-article.mjs --dry-run --slot="$SLOT"
           else
             node scripts/generate-media-article.mjs --slot="$SLOT"
           fi
       - name: Upload dry-run preview
-        if: ${{ inputs.dry_run && !inputs.list_models_only && success() }}
+        if: ${{ inputs.dry_run && !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' && success() }}
         uses: actions/upload-artifact@v4
         with:
           name: soam-media-article-dry-run-preview
@@ -85,12 +97,12 @@ jobs:
             automation/dry-run-output/*-generation-summary.json
           retention-days: 7
       - name: Normalize SEO metadata
-        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         run: |
           node scripts/normalize-soam-link-urls.mjs
           node scripts/apply-media-seo.mjs
       - name: Refresh sitemap and verify all published articles
-        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         run: |
           node scripts/generate-sitemap.mjs
           node scripts/test-site-links.mjs
@@ -99,7 +111,7 @@ jobs:
           node scripts/test-media-generation.mjs
           node scripts/test-media-strategy.mjs
       - name: Commit and push a complete article publication
-        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         run: |
           if git diff --quiet; then
             echo "No new article was generated."
@@ -119,16 +131,16 @@ jobs:
             exit 1
           fi
       - name: Build Cloudflare Pages artifact
-        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         run: node scripts/build-pages-site.mjs
       - name: Deploy to Cloudflare Pages
-        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx --yes wrangler@4.105.0 pages deploy dist/site --project-name soam-creative-media --branch main
       - name: Verify custom-domain article publication
-        if: ${{ !inputs.dry_run && !inputs.list_models_only }}
+        if: ${{ !inputs.dry_run && !inputs.list_models_only && steps.publication_slot.outputs.should_generate == 'true' }}
         run: |
           ARTICLE_FILE="$(node -e "const q=require('./automation/article-queue.json');const a=q.articles.filter(x=>x.generated).at(-1)?.article;if(!a)process.exit(1);process.stdout.write(a.slug+'.html')")"
           node scripts/verify-media-publication.mjs --article-file="$ARTICLE_FILE"
