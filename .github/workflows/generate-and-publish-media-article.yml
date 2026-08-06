@@ -57,6 +57,9 @@ jobs:
           MEDIA_AI_BASE_URL: ${{ secrets.MEDIA_AI_BASE_URL }}
           MEDIA_AI_API_KEY: ${{ secrets.MEDIA_AI_API_KEY }}
         run: node scripts/generate-media-article.mjs --list-openai-models
+      - name: Preflight generated article publication contract
+        if: ${{ !inputs.list_models_only }}
+        run: node scripts/test-generated-media-publication.mjs
       - name: Generate, validate, and publish one article
         if: ${{ !inputs.list_models_only }}
         env:
