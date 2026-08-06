@@ -127,7 +127,7 @@ export const qualityErrors = ({ article, styleGuide, expectedTitlePool, expected
   for (const phrase of styleGuide.forbiddenPhrases || []) if (whole.includes(phrase)) errors.push(`禁止表現: ${phrase}`);
   for (const offer of offers) for (const phrase of offer.prohibitedClaims || []) if (whole.includes(phrase)) errors.push(`案件禁止表現: ${offer.name} / ${phrase}`);
   const externalLinkTags = [...article.bodyHtml.matchAll(/<a\b[^>]*href=["']https?:\/\/[^"']+["'][^>]*>/gi)].map((match) => match[0]);
-  if (externalLinkTags.some((tag) => !/data-track-event=["']outbound_official_click["']/i.test(tag))) errors.push('AI本文に未管理の外部URLを直接入れてはいけません。外部リンクは確認済み候補から後付けします。');
+  if (externalLinkTags.some((tag) => !/data-track-event=["'](?:outbound_official_click|source_reference_click)["']/i.test(tag))) errors.push('AI本文に未管理の外部URLを直接入れてはいけません。外部リンクは確認済み候補から後付けします。');
   if (expectedRelatedIds.length && article.relatedArticleIds?.some((id) => !expectedRelatedIds.includes(id))) errors.push('関連記事IDが選定テーマに適合していません。');
   return errors;
 };
