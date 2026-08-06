@@ -59,7 +59,9 @@ jobs:
         run: node scripts/generate-media-article.mjs --list-openai-models
       - name: Preflight generated article publication contract
         if: ${{ !inputs.list_models_only }}
-        run: node scripts/test-generated-media-publication.mjs
+        run: |
+          node scripts/test-media-publication-contract.mjs
+          node scripts/test-generated-media-publication.mjs
       - name: Generate, validate, and publish one article
         if: ${{ !inputs.list_models_only }}
         env:
