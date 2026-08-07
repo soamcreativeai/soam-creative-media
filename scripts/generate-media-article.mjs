@@ -138,7 +138,11 @@ const main = async () => {
     if (!errors.length) break;
   }
   if (errors.length || acceptedThemeIndex < 0) throw new Error(`この公開枠の1回の生成が品質基準を満たしませんでした。追加の生成APIは呼ばず、書込み・公開も行いません。\n- ${errors.join('\n- ')}`);
-  const scheduledAt = `${date}T${slots[slot]}:00+09:00`; const relatedArticles = normalized.relatedArticleIds.length ? normalized.relatedArticleIds : relatedCandidates.slice(-3);
+  const scheduledAt = `${date}T${slots[slot]}:00+09:00`;
+  // AIが返す関連記事IDは3件未満のことがある。公開契約(関連記事3件以上)を満たすため、不足分は候補から補う。
+  const relatedArticles = normalized.relatedArticleIds.length >= 3
+    ? normalized.relatedArticleIds
+    : [...normalized.relatedArticleIds, ...relatedCandidates.filter((slug) => !normalized.relatedArticleIds.includes(slug)).slice(-(3 - normalized.relatedArticleIds.length))];
   const baseArticle = { slug, title: normalized.title, category: normalized.category, categoryLabel: choice.theme.categoryLabel, articleType: choice.theme.articleType, contentType: choice.theme.articleType, targetIndustry: 'all', targetReader: normalized.target_reader, readerProblem: normalized.problem_structure.join('／'), searchIntent: normalized.search_intent, pillar: normalized.pillar, tags: [normalized.primary_keyword, ...normalized.secondary_keywords], excerpt: normalized.excerpt, metaDescription: normalized.metaDescription, primaryCta: null, affiliateLinks: offers.map((offer) => ({ offerId: offer.id, name: offer.name, asp: offer.asp, placement: '記事末尾', reason: offer.summary })), relatedArticles, sourceIds: normalized.source_ids, informationVerifiedAt: date, containsAffiliateLinks: offers.length > 0 };
   const entry = { id, status: 'scheduled', slot, scheduledAt, source: `automation/generated-content/${slug}.html`, generated: { themeId: choice.theme.id, score: choice.score, fallbackThemesTried: acceptedThemeIndex, provider: fixture ? 'fixture' : 'openai-responses' }, article: enrichArticle(baseArticle, { catalog: affiliateCatalog, date }) };
   const bodyChars = [...plainText(normalized.bodyHtml)].length; const h2Count = (normalized.bodyHtml.match(/<h2[\s>]/gi) || []).length; const h3Count = (normalized.bodyHtml.match(/<h3[\s>]/gi) || []).length;
