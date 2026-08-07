@@ -1,5 +1,12 @@
 # SOAM Media 変更履歴
 
+## 2026-08-07（生成が「そもそも落ちる」根本原因の修正）
+
+- 発見: 品質チェックが必須にしていた「向いている人／向いていない人」という文言が、AIへの生成指示に一度も含まれていなかった。ローカルテストのfixtureだけがこの文言を最初から含んでいたため発覚が遅れた。
+- 変更: `seoRequirements`とsystem promptの両方に明記。あわせてsystem promptへ文字数・件数・見出し重複禁止の要件も明示的に追加（JSON Schemaのstrictモードはこれらを強制しないため）。`max_output_tokens`を7000→9000へ拡大。
+- 検証: 修正前は実生成2回中2回とも同じ理由で失敗（[run 31142535399](https://github.com/soamcreativeai/soam-creative-media/actions/runs/31142535399)）、修正後は1回目で品質エラー0件・成功（[run 31142658333](https://github.com/soamcreativeai/soam-creative-media/actions/runs/31142658333)）を確認。
+- commit: [`fe01918`](https://github.com/soamcreativeai/soam-creative-media/commit/fe01918)
+
 ## 2026-08-07（全体監査：ソフト404修正・幽霊スクリプト削除・コスト方針変更）
 
 - 監査で見つかった軽微な指摘3件を修正: ①ソフト404（存在しないURLがHTTP 200を返す）を`404.html`追加で解消 ②どのworkflowからも参照されていなかった`sync-affiliate-links.mjs``generate-strategy-audit.mjs``apply-media-strategy.mjs`を削除 ③`アフィリエイト.md`（mimi-creativeリポジトリ）の「実装正本＝aff-media.js」という古い記載を実態に修正。

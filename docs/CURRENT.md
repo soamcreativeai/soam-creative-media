@@ -3,6 +3,13 @@
 最終確認・引き継ぎ更新: 2026-08-07 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
+## 2026-08-07 生成が「そもそも落ちる」根本原因を特定・修正（本番反映・実生成で1回目成功を確認）
+
+- 発見: 品質チェック(`qualityErrors`)は本文に「向いている人」「向いていない人」という語を含めることを必須にしていたが、**AIへ送る指示（`seoRequirements`/`safety`/`sectionContract`）にはこの要件が一度も書かれていなかった**。ローカルの動作確認はこの要件を最初から満たす固定サンプル文（fixture）を使うため、この欠落は今までテストで発見できなかった。実際の生成は、この要件を偶然満たさない限り、1回目はもちろん品質エラーを踏まえた書き直し(2回目)でも同じ理由で落ち続けていた（直前の疎通確認で実際に2回とも失敗するのを確認）。
+- 併せて: OpenAIの構造化出力(`strict: true`のJSON Schema)は型・必須項目は強制するが、**文字数(`minLength`)や件数(`minItems`)の下限は強制しない**ことも判明。文字数・件数・見出し重複禁止の要件は、AIへの指示文（system prompt）でも明示的に繰り返すよう変更。あわせて`max_output_tokens`を7000→9000へ引き上げ（推論トークンと本文トークンが同じ枠を共有するモデルのため、応答が途中で切れて不正なJSONになる事態への余裕を持たせた）。
+- 検証: 修正前は実際に2回中2回とも「向いている人／向いていない人の判断基準が必要です」で失敗することを確認（[run 31142535399](https://github.com/soamcreativeai/soam-creative-media/actions/runs/31142535399)）。修正後は1回目で成功（品質エラー0件）を確認（[run 31142658333](https://github.com/soamcreativeai/soam-creative-media/actions/runs/31142658333)）。
+- 未確認: 実際のcronトリガーでの継続的な成功率。次回以降の定時実行で確認する。
+
 ## 2026-08-07 全体監査で見つかった軽微な指摘3件を修正・本番反映済み
 
 - 404: 存在しないURLがHTTP 200でトップページを返す（Cloudflare Pagesのソフト404）状態を修正。`404.html`を追加し`build-pages-site.mjs`へ組み込み、本番デプロイ・実URLで404が返ることを確認済み（[run 31142235675](https://github.com/soamcreativeai/soam-creative-media/actions/runs/31142235675)）。
