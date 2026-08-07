@@ -45,7 +45,15 @@ const articleSchema = {
 };
 const responseRequest = async (input) => {
   const { baseUrl, apiKey, model } = openAiConfig();
-  const body = { model, store: false, max_output_tokens: 7000, reasoning: { effort: 'low' }, input: [{ role: 'system', content: [{ type: 'input_text', text: 'SOAM Mediaの編集者として、事実・実績・料金・体験を創作せず、日本語の構造化記事データだけを返す。HTML、URL、広告リンクは返さない。未提供機能を提供中と書かない。' }] }, { role: 'user', content: [{ type: 'input_text', text: JSON.stringify(input) }] }], text: { format: { type: 'json_schema', name: 'soam_media_article', strict: true, schema: articleSchema } } };
+  // JSON Schemaのstrictモードは型・必須項目・enumは強制するが、minLength/minItems等の文字数・件数要件は強制しない。
+  // このため、件数・文字数・見出し重複禁止は、system側の指示文でも明示的に繰り返し伝える。
+  const systemPrompt = 'SOAM Mediaの編集者として、事実・実績・料金・体験を創作せず、日本語の構造化記事データだけを返す。HTML、URL、広告リンクは返さない。未提供機能を提供中と書かない。'
+    + '以下の形式要件は、ユーザーメッセージのJSON内容より優先して必ず守ること。守れない場合でも、必ず要件を満たす形へ調整してから返す：'
+    + '(1) sectionsは9件以上、各sectionにparagraphsを2件以上、各paragraphは80文字以上。'
+    + '(2) sectionの見出しは、ユーザーメッセージのsectionContract.prohibitedHeadingsおよびfixedBlocksに含まれる語（悩みの構造・判断表・具体的な手順・確認用チェックリスト・出典・情報確認日・まとめ 等）と一致させない。sections同士でも見出しを重複させない。'
+    + '(3) decision_criteria・steps・checklistは、それぞれユーザーメッセージのschemaが要求する最低件数以上を必ず用意する。'
+    + '(4) 同じ内容の文をそのまま繰り返さない。';
+  const body = { model, store: false, max_output_tokens: 9000, reasoning: { effort: 'low' }, input: [{ role: 'system', content: [{ type: 'input_text', text: systemPrompt }] }, { role: 'user', content: [{ type: 'input_text', text: JSON.stringify(input) }] }], text: { format: { type: 'json_schema', name: 'soam_media_article', strict: true, schema: articleSchema } } };
   let lastError; let lastResponse;
   const maxApiAttempts = 3;
   for (let attempt = 1; attempt <= maxApiAttempts; attempt += 1) {
