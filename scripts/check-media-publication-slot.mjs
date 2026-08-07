@@ -18,4 +18,4 @@ const alreadyRecorded = queue.articles.some((entry) => entry.id === id);
 
 console.log(`publication_id=${id}`);
 console.log(`should_generate=${alreadyRecorded ? 'false' : 'true'}`);
-console.log(`[media-publication-slot] ${alreadyRecorded ? 'already recorded; no AI generation or deployment is required.' : 'not yet recorded; generation is permitted.'}`);
+console.error(`[media-publication-slot] ${alreadyRecorded ? 'already recorded; no AI generation or deployment is required.' : 'not yet recorded; generation is permitted.'}`);

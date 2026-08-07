@@ -46,16 +46,19 @@ const articleSchema = {
 const responseRequest = async (input) => {
   const { baseUrl, apiKey, model } = openAiConfig();
   const body = { model, store: false, max_output_tokens: 7000, reasoning: { effort: 'low' }, input: [{ role: 'system', content: [{ type: 'input_text', text: 'SOAM Mediaの編集者として、事実・実績・料金・体験を創作せず、日本語の構造化記事データだけを返す。HTML、URL、広告リンクは返さない。未提供機能を提供中と書かない。' }] }, { role: 'user', content: [{ type: 'input_text', text: JSON.stringify(input) }] }], text: { format: { type: 'json_schema', name: 'soam_media_article', strict: true, schema: articleSchema } } };
-  let lastError;
-  for (let attempt = 1; attempt <= 1; attempt += 1) {
+  let lastError; let lastResponse;
+  const maxApiAttempts = 3;
+  for (let attempt = 1; attempt <= maxApiAttempts; attempt += 1) {
     const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), Number(process.env.MEDIA_AI_TIMEOUT_MS || 90000));
     try {
       const response = await fetch(`${baseUrl}/responses`, { method: 'POST', signal: controller.signal, headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      lastResponse = response;
       if (!response.ok) { lastError = new Error(`OpenAI Responses API failed: ${response.status}`); throw lastError; }
       const payload = await response.json();
       try { return { generated: JSON.parse(responseText(payload)), usage: payload.usage || {} }; } catch { lastError = new Error('OpenAI Responses APIが有効なJSONを返しませんでした。'); }
     } catch (error) { lastError = error.name === 'AbortError' ? new Error('OpenAI Responses API timed out.') : error; }
     finally { clearTimeout(timer); }
+    if (attempt < maxApiAttempts) await delay(retryDelay(lastResponse, attempt));
   }
   throw lastError || new Error('OpenAI Responses API request failed.');
 };
