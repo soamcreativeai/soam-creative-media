@@ -6,11 +6,15 @@ import { SOAM_LINK_URL } from './site-links.mjs';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const output = join(root, 'dist', 'site');
+// 配信対象から外したページ（2026-08-07 Founder判断）。ファイル自体は残すが本番へは出さない。
+// - shindan-ai-pro.html：有料予定の「サキのAI課金ジャッジ」。決済導線が無いまま公開されると
+//   中身が先に流出する（ページ自身がその旨を警告している）。売る準備ができたら戻す。
+// - gas-demo.html / slack-demo.html：B2B営業でも使っていないため。
 const publicFiles = [
   '.nojekyll', '404.html', 'ai-tool-lp.html', 'contact.html', 'editorial-policy.html',
-  'gas-demo.html', 'index.html', 'media-home.css', 'media-home.js', 'media-strategy.css',
-  'privacy.html', 'robots.txt', 'saved.html', 'shindan-ai-pro.html',
-  'shindan-ai.html', 'sitemap.xml', 'slack-demo.html', 'style.css'
+  'index.html', 'media-home.css', 'media-home.js', 'media-strategy.css',
+  'privacy.html', 'robots.txt', 'saved.html',
+  'shindan-ai.html', 'sitemap.xml', 'style.css'
 ];
 
 await rm(output, { recursive: true, force: true });
