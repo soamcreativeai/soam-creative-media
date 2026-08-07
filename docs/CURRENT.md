@@ -3,6 +3,13 @@
 最終確認・引き継ぎ更新: 2026-08-07 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
 
+## 2026-08-07 全体監査で見つかった軽微な指摘3件を修正・本番反映済み
+
+- 404: 存在しないURLがHTTP 200でトップページを返す（Cloudflare Pagesのソフト404）状態を修正。`404.html`を追加し`build-pages-site.mjs`へ組み込み、本番デプロイ・実URLで404が返ることを確認済み（[run 31142235675](https://github.com/soamcreativeai/soam-creative-media/actions/runs/31142235675)）。
+- 幽霊スクリプト削除: どのworkflowからも呼ばれていなかった`sync-affiliate-links.mjs`（`docs/CURRENT.md`は「自動処理」と誤記していた）`generate-strategy-audit.mjs``apply-media-strategy.mjs`（存在しない`/private/tmp`パスを参照しており実行不能だった）を削除。案件選定は`generate-media-article.mjs`の`selectOffers`が定時公開の都度その場で行う現行の仕組みのみに一本化。
+- **コスト方針の変更（Founder承認・2026-08-07）**：「1公開枠につき有料生成は1回だけ、再生成による費用増を禁止」の方針を、「品質チェックに落ちた時だけ、エラー内容をAIへ伝えて1回だけ書き直させる」に緩和（`maxRevisions`: 1→2）。直近1週間で約14回、AI呼び出し自体は成功したのに品質チェック落ちで記事0本のまま費用だけ発生していたため。上限は2回のまま固定し、無制限の再生成は禁止を維持。
+- 検証: ローカルの全関連テストPASS。本番push＋`deploy-media-strategy`実行でCloudflare Pages反映・404実URL確認済み。**「品質チェック落ち→1回だけ書き直し」の経路自体が実際のOpenAI応答で発動する場面は、次回以降の定時実行で確認する（未確認）。**
+
 ## 2026-08-07 定時公開が8/6 14:40以降ずっと全滅していた不具合を修正（本番反映・手動起動で疎通確認済み・次回の通常定時枠が最終確認）
 
 - 原因: 8/6 14:40の「取りこぼし対策」（`b188f01`）で追加した`scripts/check-media-publication-slot.mjs`が、人間向けの説明文をGitHub Actionsの`$GITHUB_OUTPUT`（決まった`key=value`形式しか受け付けない）へそのまま書き込んでいた。このため8/6 13時台以降、定時実行（主起動・保険起動とも）が最初のステップで毎回即失敗し、記事生成に一度も到達していなかった。

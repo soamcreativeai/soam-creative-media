@@ -1,5 +1,11 @@
 # SOAM Media 変更履歴
 
+## 2026-08-07（全体監査：ソフト404修正・幽霊スクリプト削除・コスト方針変更）
+
+- 監査で見つかった軽微な指摘3件を修正: ①ソフト404（存在しないURLがHTTP 200を返す）を`404.html`追加で解消 ②どのworkflowからも参照されていなかった`sync-affiliate-links.mjs``generate-strategy-audit.mjs``apply-media-strategy.mjs`を削除 ③`アフィリエイト.md`（mimi-creativeリポジトリ）の「実装正本＝aff-media.js」という古い記載を実態に修正。
+- コスト方針変更（Founder承認）: 「1公開枠1回・再生成禁止」を「品質チェック失敗時のみ、エラー内容をAIへ伝えて1回だけ書き直しを許可」に変更（`maxRevisions`: 1→2、[`4d4bca4`](https://github.com/soamcreativeai/soam-creative-media/commit/4d4bca4)）。無制限の再生成は引き続き禁止。
+- 検証: ローカル関連テスト全PASS。本番push後`deploy-media-strategy`workflowでCloudflare Pages反映、実URLで404動作を確認。品質チェック失敗→再書き直しの経路自体の実発動は未確認（次回以降の定時実行で確認）。
+
 ## 2026-08-07（定時公開が全滅していた不具合の修正）
 
 - 発見: 8/6 13時台以降、定時実行が全て「Check this publication slot before any paid generation」ステップで即失敗していた。原因は8/6 14:40の修正（`b188f01`）で追加したチェック用スクリプトが、人間向けの説明文を`$GITHUB_OUTPUT`（`key=value`形式限定）へそのまま出力していたこと。
