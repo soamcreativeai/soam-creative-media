@@ -660,6 +660,75 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-07T05:34:27.889Z"
+    },
+    {
+      "id": "2026-08-08-morning-auto",
+      "status": "published",
+      "slot": "morning",
+      "scheduledAt": "2026-08-08T07:00:00+09:00",
+      "source": "automation/generated-content/article-89.html",
+      "generated": {
+        "themeId": "systems-template-handover",
+        "score": 0.0847457627118644,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-89",
+        "title": "引き継ぎを説明だけで終わらせない確認テンプレートの作り方",
+        "category": "templates",
+        "categoryLabel": "テンプレート・教材",
+        "articleType": "howto",
+        "contentType": "howto",
+        "targetIndustry": "all",
+        "targetReader": "担当者が変わることがあり、業務を他の人へ渡す必要がある小規模事業者。",
+        "readerProblem": "引き継ぐ側は知っている前提を省略しやすく、受け取る側は省略された前提を推測するため、同じ説明を聞いても作業の理解に差が生まれます。／通常時の作業だけを伝えると、問い合わせ、締切変更、担当者不在、データ不備などの例外が起きた際に、受け取った人が判断できず作業が止まります。／説明を終えたことと、受け取った人が実際に作業できることは別です。最後に受け手が自分の言葉で要点を説明し、確認者が差分を直す工程が必要です.",
+        "searchIntent": "引き継ぎ時の確認漏れや認識違いを減らせるテンプレートの項目と使い方を知りたい。",
+        "pillar": "systems",
+        "tags": [
+          "引き継ぎ 確認テンプレート",
+          "引き継ぎテンプレート",
+          "業務引き継ぎ",
+          "引き継ぎチェックリスト",
+          "小規模事業者 業務整理",
+          "確認漏れ 防止"
+        ],
+        "excerpt": "引き継ぎは、説明したかどうかではなく、受け取った人が同じ条件で作業できるかを確認することが重要です。業務内容、判断基準、例外対応、完了確認を一つの型にまとめる方法を紹介します。",
+        "metaDescription": "小規模事業者向けに、引き継ぎの説明漏れや確認の往復を減らすテンプレートの作り方を解説。情報の分け方、確認方法、運用時の注意点を整理します。",
+        "primaryCta": "MiriCanvas",
+        "affiliateLinks": [
+          {
+            "offerId": "miricanvas",
+            "name": "MiriCanvas",
+            "asp": "A8.net",
+            "placement": "主な選択肢",
+            "reason": "AIを使った資料・デザイン作成を支援するサービス",
+            "officialUrl": "https://www.miricanvas.com/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-31",
+          "article-30",
+          "article-64",
+          "article-67",
+          "article-80"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy"
+        ],
+        "informationVerifiedAt": "2026-08-08",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "一人で回す仕組み",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-06",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-07T22:39:03.849Z"
     }
   ]
 }

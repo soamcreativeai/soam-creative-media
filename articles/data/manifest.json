@@ -4949,5 +4949,61 @@
     "primaryCtaType": "affiliate",
     "auditStatus": "KEEP",
     "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+  },
+  {
+    "title": "引き継ぎを説明だけで終わらせない確認テンプレートの作り方",
+    "slug": "article-89",
+    "file": "article-89.html",
+    "category": "templates",
+    "categoryLabel": "テンプレート・教材",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": "担当者が変わることがあり、業務を他の人へ渡す必要がある小規模事業者。",
+    "tags": [
+      "引き継ぎ 確認テンプレート",
+      "引き継ぎテンプレート",
+      "業務引き継ぎ",
+      "引き継ぎチェックリスト",
+      "小規模事業者 業務整理",
+      "確認漏れ 防止"
+    ],
+    "excerpt": "引き継ぎは、説明したかどうかではなく、受け取った人が同じ条件で作業できるかを確認することが重要です。業務内容、判断基準、例外対応、完了確認を一つの型にまとめる方法を紹介します。",
+    "metaTitle": "引き継ぎを説明だけで終わらせない確認テンプレートの作り方",
+    "metaDescription": "小規模事業者向けに、引き継ぎの説明漏れや確認の往復を減らすテンプレートの作り方を解説。情報の分け方、確認方法、運用時の注意点を整理します。",
+    "publishedAt": "2026-08-08",
+    "updatedAt": "2026-08-08",
+    "status": "published",
+    "primaryCta": "MiriCanvas",
+    "affiliateLinks": [
+      {
+        "offerId": "miricanvas",
+        "name": "MiriCanvas",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "AIを使った資料・デザイン作成を支援するサービス",
+        "officialUrl": "https://www.miricanvas.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-31",
+      "article-30",
+      "article-64",
+      "article-67",
+      "article-80"
+    ],
+    "readerProblem": "同じ内容を毎回考え直し、確認漏れや手戻りが起きている。",
+    "searchIntent": "「引き継ぎを説明だけで終わらせない確認テンプレートの作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-08-08",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-09-06",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
   }
 ]
