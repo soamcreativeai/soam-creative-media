@@ -1,5 +1,13 @@
 # SOAM Media 変更履歴
 
+## 2026-08-07（定時公開が全滅していた不具合の修正）
+
+- 発見: 8/6 13時台以降、定時実行が全て「Check this publication slot before any paid generation」ステップで即失敗していた。原因は8/6 14:40の修正（`b188f01`）で追加したチェック用スクリプトが、人間向けの説明文を`$GITHUB_OUTPUT`（`key=value`形式限定）へそのまま出力していたこと。
+- 変更: 説明文の出力先を`console.error`に変更し、`$GITHUB_OUTPUT`には正しい2行だけが渡るようにした（[`ad2bf32`](https://github.com/soamcreativeai/soam-creative-media/commit/ad2bf32)）。
+- 併せて: OpenAI呼び出し自体が通信エラー・タイムアウト・不正なJSONで失敗した場合の自動再試行を1回→最大3回に増やした。「1公開枠1回の有料生成、内容のやり直しはしない」という既存の方針・検査（`assert.match(generator, /const maxRevisions = 1;/...)`）はそのまま維持し、変更していない。
+- 検証: ローカルの関連テスト（publication-contract / publication-slot / generated-media-publication / media-generation）が全てPASS。本番へpush後、`workflow_dispatch`（dry-run）で実行し、GITHUB_OUTPUTエラーが解消したこと、実OpenAI生成が成功しquality検査が1回目で通過することを確認（[run 31141650051](https://github.com/soamcreativeai/soam-creative-media/actions/runs/31141650051)）。
+- 未検証: 実際のcronトリガーでの成功。次回の通常定時枠（本日20:02 JSTまたは明朝07:02 JST）で確認するまでは「本番反映・疎通一部確認」の状態として扱う。
+
 ## 2026-08-06（定時公開の取りこぼし・費用防止）
 
 - 発見: 主定時が遅延または取りこぼされても、同じ枠を安全に確認する仕組みがなかった。既存の重複防止は生成処理内にあったが、起動・配信まで含めた契約として固定されていなかった。

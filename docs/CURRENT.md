@@ -1,7 +1,15 @@
 # SOAM Media 現在地
 
-最終確認・引き継ぎ更新: 2026-08-01 JST
+最終確認・引き継ぎ更新: 2026-08-07 JST
 対象リポジトリ: `soamcreativeai/soam-creative-media` / `main`
+
+## 2026-08-07 定時公開が8/6 14:40以降ずっと全滅していた不具合を修正（本番反映・手動起動で疎通確認済み・次回の通常定時枠が最終確認）
+
+- 原因: 8/6 14:40の「取りこぼし対策」（`b188f01`）で追加した`scripts/check-media-publication-slot.mjs`が、人間向けの説明文をGitHub Actionsの`$GITHUB_OUTPUT`（決まった`key=value`形式しか受け付けない）へそのまま書き込んでいた。このため8/6 13時台以降、定時実行（主起動・保険起動とも）が最初のステップで毎回即失敗し、記事生成に一度も到達していなかった。
+- 修正: 該当の説明文だけを`console.error`（画面表示用）へ変更し、`$GITHUB_OUTPUT`には決まった2行だけが渡るようにした。
+- 併せて: OpenAI呼び出しが通信エラー・タイムアウト・不正なJSON応答で失敗した場合に限り、同一リクエストを最大3回まで自動で再試行するようにした（**「1公開枠につき有料の記事生成は1回だけ、内容のやり直しはしない」という既存方針・検査(`test-media-publication-contract.mjs`)は変更していない**。今回変えたのは同じ1回のリクエストが通信の都合で失敗した時の再送であり、内容が気に入らないからAIに書き直させる処理ではない）。
+- 検証: ローカルで`test-media-publication-contract.mjs` `test-media-publication-slot.mjs` `test-generated-media-publication.mjs` `test-media-generation.mjs`がPASS。修正後のコードを本番へpushし、本番のワークフローを手動起動（dry-run）して実OpenAI生成が成功、品質チェックも1回目で通過することを確認（[run 31141650051](https://github.com/soamcreativeai/soam-creative-media/actions/runs/31141650051)）。
+- 未確認: 手動起動ではなく、実際の定時トリガー（cron）での成功。次の定時枠（本日20:02 JSTまたは明朝07:02 JST）で実際に記事が公開されることを確認するまでは「疎通未確認」として扱う。
 
 ## 2026-08-06 定時公開の広告・出典リンク判定を修正（次回定時確認待ち）
 
