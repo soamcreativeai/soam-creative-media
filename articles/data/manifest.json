@@ -4891,5 +4891,63 @@
       "REWRITE"
     ],
     "duplicateCandidate": null
+  },
+  {
+    "title": "問い合わせ対応を抱え込まない、返信と記録の分け方",
+    "slug": "article-88",
+    "file": "article-88.html",
+    "category": "personal",
+    "categoryLabel": "個人サービス",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": "講師、コーチ、相談業、制作業など、問い合わせや相談を一人で受けている個人サービス提供者。",
+    "tags": [
+      "問い合わせ対応 一人で回す",
+      "問い合わせ対応 効率化",
+      "個人サービス 返信テンプレート",
+      "問い合わせ記録 方法",
+      "個人事業主 顧客対応",
+      "返信と記録の分け方",
+      "対応範囲の決め方"
+    ],
+    "excerpt": "問い合わせ対応の負担は、返信を書くことだけでなく、情報を探し、判断し、後から思い出す作業にも生まれます。返信と記録を分けて整えることで、一人でも対応の抜け漏れを減らしやすくなります。",
+    "metaTitle": "問い合わせ対応を抱え込まない、返信と記録の分け方",
+    "metaDescription": "個人サービス提供者が問い合わせ対応を一人で回すために、返信と記録を分ける考え方、対応範囲の決め方、テンプレート化の手順を整理します。",
+    "publishedAt": "2026-08-07",
+    "updatedAt": "2026-08-07",
+    "status": "published",
+    "primaryCta": "ココナラ",
+    "affiliateLinks": [
+      {
+        "offerId": "coconala",
+        "name": "ココナラ",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-62",
+      "article-30",
+      "article-31",
+      "article-64",
+      "article-67",
+      "article-80"
+    ],
+    "readerProblem": "提供範囲や依頼条件が曖昧で、相談後の認識違いや追加対応が起きている。",
+    "searchIntent": "「問い合わせ対応を抱え込まない、返信と記録の分け方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-08-07",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-09-05",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
   }
 ]
