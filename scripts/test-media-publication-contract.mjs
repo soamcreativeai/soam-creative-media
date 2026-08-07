@@ -44,7 +44,7 @@ assert.ok(workflow.includes("steps.publication_slot.outputs.should_generate == '
 assert.match(generator, /if \(queue\.articles\.some\(\(entry\) => entry\.id === id\)\) return console\.log/, '同じ公開枠は生成APIより前に安全停止してください。');
 assert.ok(generator.indexOf('queue.articles.some((entry) => entry.id === id)') < generator.indexOf('responseRequest('), '重複公開枠の判定は有料生成より前にしてください。');
 assert.match(generator, /const maxThemeCandidates = 1;/, '同一枠のテーマ差し替えは行わないでください。');
-assert.match(generator, /const maxRevisions = 1;/, '同一枠の再生成は行わないでください。');
+assert.match(generator, /const maxRevisions = 2;/, '品質チェック失敗時の書き直しは、無制限にせず最大1回までにしてください。');
 assert.equal((generator.match(/\/responses/g) || []).length, 1, '記事生成のResponses API呼び出しは1実装だけにしてください。');
 
 assert.equal(queue.timezone, 'Asia/Tokyo', '公開枠は日本時間で管理してください。');

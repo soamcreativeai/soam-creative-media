@@ -97,7 +97,8 @@ const main = async () => {
   if (queue.articles.some((entry) => entry.id === id)) return console.log(`[media-generation] no-op: ${id} is already recorded.`);
   const number = nextArticleNumber(manifest); const slug = `article-${number}`;
   const maxThemeCandidates = 1;
-  const maxRevisions = 1;
+  // 品質チェックに落ちた時だけ、エラー内容をAIへ伝えて1回だけ書き直させる（無条件の再生成ではない）。
+  const maxRevisions = 2;
   const excludedThemeIds = [];
   let choice; let offers = []; let relatedCandidates = []; let sourceCandidates = [];
   let generated; let normalized; let usage = {}; let errors = []; let acceptedThemeIndex = -1;

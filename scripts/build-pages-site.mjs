@@ -7,7 +7,7 @@ import { SOAM_LINK_URL } from './site-links.mjs';
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const output = join(root, 'dist', 'site');
 const publicFiles = [
-  '.nojekyll', 'ai-tool-lp.html', 'contact.html', 'editorial-policy.html',
+  '.nojekyll', '404.html', 'ai-tool-lp.html', 'contact.html', 'editorial-policy.html',
   'gas-demo.html', 'index.html', 'media-home.css', 'media-home.js', 'media-strategy.css',
   'privacy.html', 'robots.txt', 'saved.html', 'shindan-ai-pro.html',
   'shindan-ai.html', 'sitemap.xml', 'slack-demo.html', 'style.css'
