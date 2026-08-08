@@ -729,6 +729,78 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-07T22:39:03.849Z"
+    },
+    {
+      "id": "2026-08-08-evening-auto",
+      "status": "published",
+      "slot": "evening",
+      "scheduledAt": "2026-08-08T20:00:00+09:00",
+      "source": "automation/generated-content/article-90.html",
+      "generated": {
+        "themeId": "systems-record-routine",
+        "score": 0.0873015873015873,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-90",
+        "title": "期限前に慌てないための、事業記録の小さな仕組み",
+        "category": "money",
+        "categoryLabel": "税金・副業・お金",
+        "articleType": "guide",
+        "contentType": "guide",
+        "targetIndustry": "all",
+        "targetReader": "記帳や証憑整理を一人で行っている個人事業主。日中は顧客対応や制作に追われ、夜に記録を整えたいと考えている人。",
+        "readerProblem": "取引の内容を後から思い出そうとすると、何の支出だったのか、事業との関係は何か、証憑がどこにあるのかを一度に確認することになります。作業量そのものよりも、複数の判断を同時に求められることが、記録を先送りする原因になりやすいと考えられます。／領収書や請求書を受け取った時点で保存場所が決まっていないと、紙、メール、ダウンロードフォルダなどに情報が分散します。後で探せると思っていても、記録と証憑の対応関係が曖昧になり、確認に時間がかかる状態を招きます。／売上や経費を記録する作業と、税務上の扱いを最終判断する作業は同じではありません。日々の段階では事実を残すことに集中し、判断に迷う項目は保留理由を記録して、後で確認できる状態にする方法が現実的です。",
+        "searchIntent": "記帳や証憑整理を後回しにしてしまう個人事業主が、日々の負担を小さくしながら事業記録を残す方法と判断基準を知りたい。",
+        "pillar": "systems",
+        "tags": [
+          "事業記録を後回しにしない方法",
+          "個人事業主 記帳 習慣",
+          "証憑整理 方法",
+          "事業記録 ルーティン",
+          "経費 記録",
+          "確定申告 準備"
+        ],
+        "excerpt": "記帳や領収書の整理が後回しになる原因を分解し、毎晩の短い時間で記録を残す仕組みを紹介します。税務上の判断が必要な部分と、日々の整理として取り組める部分を分けて考えます。",
+        "metaDescription": "個人事業主が記帳や証憑整理を後回しにしないために、夜の短時間で事業記録を整える考え方と実践手順を解説します。",
+        "primaryCta": "マネーフォワード クラウド会計",
+        "affiliateLinks": [
+          {
+            "offerId": "moneyforward-accounting",
+            "name": "マネーフォワード クラウド会計",
+            "asp": "もしもアフィリエイト",
+            "placement": "主な選択肢",
+            "reason": "個人事業主・事業者向けのクラウド会計サービス",
+            "officialUrl": "https://biz.moneyforward.com/accounting/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-30",
+          "article-31",
+          "article-39",
+          "article-40",
+          "article-41",
+          "article-64",
+          "article-89"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy",
+          "offer-moneyforward-accounting"
+        ],
+        "informationVerifiedAt": "2026-08-08",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "一人で回す仕組み",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-06",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-08T11:27:11.303Z"
     }
   ]
 }
