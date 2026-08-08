@@ -5063,5 +5063,50 @@
     "primaryCtaType": "affiliate",
     "auditStatus": "KEEP",
     "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+  },
+  {
+    "title": "LPの情報を増やす前に、読者の判断順を整える方法",
+    "slug": "article-91",
+    "file": "article-91.html",
+    "category": "lp",
+    "categoryLabel": "LP・Web集客",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": "自分の商品・サービスのLPを運営する個人事業主",
+    "tags": [
+      "LP 判断順",
+      "LP 情報設計",
+      "LP 導線設計",
+      "LP 問い合わせ 改善",
+      "個人事業主 LP",
+      "LP 次の行動"
+    ],
+    "excerpt": "LPの問い合わせや申込みにつながりにくいとき、情報不足ではなく、読者が判断する順番と案内が合っていない可能性があります。伝える内容を増やす前に、読者の迷いを分解し、次の行動までの流れを整えます。",
+    "metaTitle": "LPの情報を増やす前に、読者の判断順を整える方法",
+    "metaDescription": "個人事業主のLPで読者が迷う原因を、情報量ではなく判断順の設計から整理します。目的・不安・根拠・次の行動を整える手順と確認項目を紹介します。",
+    "publishedAt": "2026-08-09",
+    "updatedAt": "2026-08-09",
+    "status": "published",
+    "primaryCta": "SOAM Linkの公開内容",
+    "affiliateLinks": [],
+    "relatedArticles": [
+      "article-23",
+      "article-43",
+      "article-73",
+      "article-79",
+      "article-17"
+    ],
+    "readerProblem": "ページに情報はあるものの、読者が判断して次へ進むための順番が整っていない。",
+    "searchIntent": "「LPの情報を増やす前に、読者の判断順を整える方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-08-09",
+    "reviewCycleDays": 180,
+    "nextReviewAt": "2027-02-04",
+    "containsAffiliateLinks": false,
+    "soamLinkEligible": true,
+    "primaryCtaType": "soam-link",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
   }
 ]

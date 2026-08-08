@@ -801,6 +801,64 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-08T11:27:11.303Z"
+    },
+    {
+      "id": "2026-08-09-morning-auto",
+      "status": "published",
+      "slot": "morning",
+      "scheduledAt": "2026-08-09T07:00:00+09:00",
+      "source": "automation/generated-content/article-91.html",
+      "generated": {
+        "themeId": "reach-lp-decision-flow",
+        "score": 0.0625,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-91",
+        "title": "LPの情報を増やす前に、読者の判断順を整える方法",
+        "category": "lp",
+        "categoryLabel": "LP・Web集客",
+        "articleType": "howto",
+        "contentType": "howto",
+        "targetIndustry": "all",
+        "targetReader": "自分の商品・サービスのLPを運営する個人事業主",
+        "readerProblem": "読者はLPを上から順番に全文読むとは限らず、自分に関係があるか、内容を理解できるか、不安を解消できるか、行動しても問題がないかを短い時間で確認しようとします。最初に必要な情報が見つからなければ、後半に詳しい説明があっても到達されにくくなります。／運営者はサービスの特徴やこだわりを詳しく説明したくなりますが、読者が先に知りたいのは、自分が対象かどうか、何が変わるのか、どのような流れか、負担や条件は何かという判断材料です。伝えたい内容と判断に必要な内容を分けることが出発点になります。／問い合わせが少ない原因は、必ずしも商品やサービスそのものにあるとは限りません。対象者の説明が曖昧、得られるものが具体化されていない、料金や流れが探しにくい、行動ボタンの意味が不明確といった、ページ内の摩擦が影響している場合もあります。",
+        "searchIntent": "LPに情報を追加する前に、読者が迷わず判断できる構成と次の行動への導線を整えたい。",
+        "pillar": "reach",
+        "tags": [
+          "LP 判断順",
+          "LP 情報設計",
+          "LP 導線設計",
+          "LP 問い合わせ 改善",
+          "個人事業主 LP",
+          "LP 次の行動"
+        ],
+        "excerpt": "LPの問い合わせや申込みにつながりにくいとき、情報不足ではなく、読者が判断する順番と案内が合っていない可能性があります。伝える内容を増やす前に、読者の迷いを分解し、次の行動までの流れを整えます。",
+        "metaDescription": "個人事業主のLPで読者が迷う原因を、情報量ではなく判断順の設計から整理します。目的・不安・根拠・次の行動を整える手順と確認項目を紹介します。",
+        "primaryCta": "SOAM Linkの公開内容",
+        "affiliateLinks": [],
+        "relatedArticles": [
+          "article-23",
+          "article-43",
+          "article-73",
+          "article-79",
+          "article-17"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy"
+        ],
+        "informationVerifiedAt": "2026-08-09",
+        "containsAffiliateLinks": false,
+        "pillarLabel": "必要な人へ届ける",
+        "reviewCycleDays": 180,
+        "nextReviewAt": "2027-02-04",
+        "soamLinkEligible": true,
+        "primaryCtaType": "soam-link",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-08T22:32:21.831Z"
     }
   ]
 }
