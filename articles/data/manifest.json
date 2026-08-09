@@ -5169,5 +5169,61 @@
     "primaryCtaType": "affiliate",
     "auditStatus": "KEEP",
     "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+  },
+  {
+    "title": "打ち合わせ後の連絡を、メモから次の行動へ変える方法",
+    "slug": "article-93",
+    "file": "article-93.html",
+    "category": "ai",
+    "categoryLabel": "AI・業務効率化",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": "顧客対応や受託業務を一人で担う個人事業主",
+    "tags": [
+      "打ち合わせ後 連絡 メモ 整理",
+      "打ち合わせメモ 整理",
+      "顧客対応 効率化",
+      "議事録 次の行動",
+      "AI 議事録",
+      "確認事項 メール",
+      "個人事業主 業務効率化"
+    ],
+    "excerpt": "打ち合わせ後の連絡が遅れたり、確認事項が抜けたりする原因は、メモの中に事実と行動が混在していることかもしれません。記録を分解し、次に誰が何をするかまで整える方法を紹介します。",
+    "metaTitle": "打ち合わせ後の連絡を、メモから次の行動へ変える方法",
+    "metaDescription": "顧客対応のある個人事業主向けに、打ち合わせメモを確認事項・担当・期限・次の連絡へ整理する方法を解説。AIを使う際の注意点も紹介します。",
+    "publishedAt": "2026-08-10",
+    "updatedAt": "2026-08-10",
+    "status": "published",
+    "primaryCta": "PLAUD NOTE",
+    "affiliateLinks": [
+      {
+        "offerId": "plaud-note",
+        "name": "PLAUD NOTE",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "録音と文字起こしを支援するAIボイスレコーダー",
+        "officialUrl": "https://jp.plaud.ai/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-80",
+      "article-67",
+      "article-32",
+      "article-30"
+    ],
+    "readerProblem": "AIへ任せる範囲と、人が確認する範囲を分けられず、かえって作業が増えている。",
+    "searchIntent": "「打ち合わせ後の連絡を、メモから次の行動へ変える方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-08-10",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-09-08",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
   }
 ]

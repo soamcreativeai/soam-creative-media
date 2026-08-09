@@ -933,6 +933,76 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-09T11:27:39.757Z"
+    },
+    {
+      "id": "2026-08-10-morning-auto",
+      "status": "published",
+      "slot": "morning",
+      "scheduledAt": "2026-08-10T07:00:00+09:00",
+      "source": "automation/generated-content/article-93.html",
+      "generated": {
+        "themeId": "systems-meeting-followup",
+        "score": 0.13513513513513514,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-93",
+        "title": "打ち合わせ後の連絡を、メモから次の行動へ変える方法",
+        "category": "ai",
+        "categoryLabel": "AI・業務効率化",
+        "articleType": "howto",
+        "contentType": "howto",
+        "targetIndustry": "all",
+        "targetReader": "顧客対応や受託業務を一人で担う個人事業主",
+        "readerProblem": "メモには、会話で出た意見、確定した内容、保留中の論点、依頼事項、自分用の気づきが同じ粒度で並びやすく、後から見たときに重要度を判断しにくくなります。／打ち合わせ直後に連絡文を作ろうとすると、記録の整理と文章化を同時に行うことになります。その結果、期限や担当者の記載漏れ、確認が必要な点の見落とし、相手が返答しにくい表現が起こりやすくなります。／AIで文字起こしや要約を行う場合も、出力された文章をそのまま確定記録として扱うことはできません。固有名詞、数字、否定表現、発言者、保留のニュアンスなどは、元の記録や自分の記憶と照合する必要があります。",
+        "searchIntent": "打ち合わせ後のメモを整理し、確認事項や次の行動を抜け漏れなく顧客へ連絡したい。AIを使う場合の適切な確認方法も知りたい。",
+        "pillar": "systems",
+        "tags": [
+          "打ち合わせ後 連絡 メモ 整理",
+          "打ち合わせメモ 整理",
+          "顧客対応 効率化",
+          "議事録 次の行動",
+          "AI 議事録",
+          "確認事項 メール",
+          "個人事業主 業務効率化"
+        ],
+        "excerpt": "打ち合わせ後の連絡が遅れたり、確認事項が抜けたりする原因は、メモの中に事実と行動が混在していることかもしれません。記録を分解し、次に誰が何をするかまで整える方法を紹介します。",
+        "metaDescription": "顧客対応のある個人事業主向けに、打ち合わせメモを確認事項・担当・期限・次の連絡へ整理する方法を解説。AIを使う際の注意点も紹介します。",
+        "primaryCta": "PLAUD NOTE",
+        "affiliateLinks": [
+          {
+            "offerId": "plaud-note",
+            "name": "PLAUD NOTE",
+            "asp": "A8.net",
+            "placement": "主な選択肢",
+            "reason": "録音と文字起こしを支援するAIボイスレコーダー",
+            "officialUrl": "https://jp.plaud.ai/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-80",
+          "article-67",
+          "article-32",
+          "article-30"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy",
+          "offer-plaud-note"
+        ],
+        "informationVerifiedAt": "2026-08-10",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "一人で回す仕組み",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-08",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-09T22:33:59.028Z"
     }
   ]
 }
