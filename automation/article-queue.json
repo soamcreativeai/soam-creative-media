@@ -859,6 +859,80 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-08T22:32:21.831Z"
+    },
+    {
+      "id": "2026-08-09-evening-auto",
+      "status": "published",
+      "slot": "evening",
+      "scheduledAt": "2026-08-09T20:00:00+09:00",
+      "source": "automation/generated-content/article-92.html",
+      "generated": {
+        "themeId": "reach-sns-reader-intent",
+        "score": 0.056074766355140186,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-92",
+        "title": "投稿ネタより先に決めたい、誰の何を軽くする発信か",
+        "category": "sns",
+        "categoryLabel": "SNS・note運用",
+        "articleType": "guide",
+        "contentType": "guide",
+        "targetIndustry": "all",
+        "targetReader": "SNSやnoteで商品・サービスを発信する個人事業主",
+        "readerProblem": "発信の対象が「できるだけ多くの人」になっていると、読者が自分に関係する内容だと判断しにくくなります。年齢や職業だけでなく、何に困り、どの場面で情報を探しているのかまで整理しないと、投稿の言葉が一般論に寄りやすくなります。／投稿ネタを先に決めると、発信者が話したいことと読者が知りたいことの間にずれが生まれる場合があります。ネタが悪いのではなく、読者の負担や迷いとの接続が見えないため、読後に何をすればよいか伝わりにくくなる点が課題です。／商品やサービスの説明を増やしても、読者が感じている不安や面倒が整理されていなければ、申し込みや相談を急かされているように受け取られることがあります。まず困りごとの一部を言葉にし、判断材料を渡す順番を考えることが重要です。",
+        "searchIntent": "SNSやnoteで発信しているものの、投稿が必要な読者に届かない理由を整理し、読者設定と投稿内容の決め方を知りたい。",
+        "pillar": "reach",
+        "tags": [
+          "誰の何を軽くする発信",
+          "SNS 発信 読者設定",
+          "note 発信 テーマ",
+          "個人事業主 集客",
+          "投稿ネタ 探し方",
+          "発信の方向性"
+        ],
+        "excerpt": "投稿を続けているのに必要な人へ届かないと感じるときは、ネタの数よりも「誰の何を軽くする発信か」が曖昧になっている可能性があります。読者の状況、負担、次の行動を整理して、SNSとnoteの役割を整えましょう。",
+        "metaDescription": "SNSやnoteで商品・サービスを発信する個人事業主向けに、投稿ネタを探す前に読者の困りごとと軽くしたい負担を整理し、届きやすい発信へ整える考え方と手順を解説します。",
+        "primaryCta": "AIブログくんGOLD",
+        "affiliateLinks": [
+          {
+            "offerId": "ai-blog-gold",
+            "name": "AIブログくんGOLD",
+            "asp": "もしもアフィリエイト",
+            "placement": "主な選択肢",
+            "reason": "ブログ運用を支援するAIサービス",
+            "officialUrl": "https://app.ai-blog-business.com/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-13",
+          "article-18",
+          "article-22",
+          "article-29",
+          "article-45",
+          "article-49",
+          "article-55",
+          "article-60",
+          "article-74",
+          "article-91"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy"
+        ],
+        "informationVerifiedAt": "2026-08-09",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "必要な人へ届ける",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-07",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-09T11:27:39.757Z"
     }
   ]
 }
