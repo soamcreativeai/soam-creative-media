@@ -1084,6 +1084,84 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-10T11:46:06.108Z"
+    },
+    {
+      "id": "2026-08-11-morning-auto",
+      "status": "published",
+      "slot": "morning",
+      "scheduledAt": "2026-08-11T07:00:00+09:00",
+      "source": "automation/generated-content/article-95.html",
+      "generated": {
+        "themeId": "decision-client-requirements",
+        "score": 0.20328767123287672,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-95",
+        "title": "依頼のすれ違いを減らす、最初の確認シートの作り方",
+        "category": "templates",
+        "categoryLabel": "テンプレート・教材",
+        "articleType": "howto",
+        "contentType": "howto",
+        "targetIndustry": "all",
+        "targetReader": "デザイン、ライティング、動画制作、Web制作などを受託する個人事業主",
+        "readerProblem": "依頼者が伝える「作りたいもの」と、本当に達成したい目的が一致していない場合があります。たとえば画像制作を頼まれても、目的が集客なのか既存顧客への案内なのかで、必要な情報や表現は変わります。目的を確認しないまま制作を始めると、完成後に方向性そのものを直すことになりやすくなります。／成果物の数や形式が曖昧なままだと、納品後に別サイズや別媒体への展開が追加されることがあります。依頼者にとっては最初から含まれているつもりでも、受託側では想定していない作業かもしれません。ファイル形式、掲載場所、点数、使用期間などを分けて確認する必要があります。／期限だけを聞いても、いつ何を確認するのかが決まっていなければ、最終日に判断が集中します。素材の受け渡し、初稿の確認、修正指示、最終承認のそれぞれに期限を置くと、遅れの原因を見つけやすくなります。受託側だけでなく、依頼者側の確認時間も予定に含めることが重要です。",
+        "searchIntent": "受託・制作の依頼を受ける前に、何をどの順番で確認すればすれ違いを減らせるか知りたい。",
+        "pillar": "decision",
+        "tags": [
+          "依頼内容 確認シート",
+          "制作依頼 確認事項",
+          "受託業務 認識違い 防止",
+          "依頼内容 確認メモ",
+          "修正範囲 決め方",
+          "個人事業主 ヒアリング"
+        ],
+        "excerpt": "依頼を受けた直後に確認すべき情報を一枚に整理すると、認識違いや確認の往復を減らしやすくなります。制作前に確認したい項目と運用方法を紹介します。",
+        "metaDescription": "受託・制作の個人事業主向けに、依頼の目的や成果物、期限、修正範囲、連絡方法を最初に整理する確認シートの作り方を解説します。",
+        "primaryCta": "ココナラ",
+        "affiliateLinks": [
+          {
+            "offerId": "coconala",
+            "name": "ココナラ",
+            "asp": "A8.net",
+            "placement": "主な選択肢",
+            "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+            "officialUrl": "https://coconala.com/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          },
+          {
+            "offerId": "plaud-note",
+            "name": "PLAUD NOTE",
+            "asp": "A8.net",
+            "placement": "主な選択肢",
+            "reason": "録音と文字起こしを支援するAIボイスレコーダー",
+            "officialUrl": "https://jp.plaud.ai/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-67",
+          "article-30",
+          "article-32",
+          "article-88"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy"
+        ],
+        "informationVerifiedAt": "2026-08-11",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "判断を言葉にする",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-09",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-10T22:40:23.825Z"
     }
   ]
 }

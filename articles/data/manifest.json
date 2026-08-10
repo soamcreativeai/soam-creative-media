@@ -5293,5 +5293,70 @@
     "primaryCtaType": "affiliate",
     "auditStatus": "KEEP",
     "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+  },
+  {
+    "title": "依頼のすれ違いを減らす、最初の確認シートの作り方",
+    "slug": "article-95",
+    "file": "article-95.html",
+    "category": "templates",
+    "categoryLabel": "テンプレート・教材",
+    "articleType": "howto",
+    "targetIndustry": "all",
+    "targetReader": "デザイン、ライティング、動画制作、Web制作などを受託する個人事業主",
+    "tags": [
+      "依頼内容 確認シート",
+      "制作依頼 確認事項",
+      "受託業務 認識違い 防止",
+      "依頼内容 確認メモ",
+      "修正範囲 決め方",
+      "個人事業主 ヒアリング"
+    ],
+    "excerpt": "依頼を受けた直後に確認すべき情報を一枚に整理すると、認識違いや確認の往復を減らしやすくなります。制作前に確認したい項目と運用方法を紹介します。",
+    "metaTitle": "依頼のすれ違いを減らす、最初の確認シートの作り方",
+    "metaDescription": "受託・制作の個人事業主向けに、依頼の目的や成果物、期限、修正範囲、連絡方法を最初に整理する確認シートの作り方を解説します。",
+    "publishedAt": "2026-08-11",
+    "updatedAt": "2026-08-11",
+    "status": "published",
+    "primaryCta": "ココナラ",
+    "affiliateLinks": [
+      {
+        "offerId": "coconala",
+        "name": "ココナラ",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+        "officialUrl": "https://coconala.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "plaud-note",
+        "name": "PLAUD NOTE",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "録音と文字起こしを支援するAIボイスレコーダー",
+        "officialUrl": "https://jp.plaud.ai/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-67",
+      "article-30",
+      "article-32",
+      "article-88"
+    ],
+    "readerProblem": "同じ内容を毎回考え直し、確認漏れや手戻りが起きている。",
+    "searchIntent": "「依頼のすれ違いを減らす、最初の確認シートの作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "systems",
+    "pillarLabel": "一人で回す仕組み",
+    "informationVerifiedAt": "2026-08-11",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-09-09",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
   }
 ]
