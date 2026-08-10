@@ -1003,6 +1003,87 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-09T22:33:59.028Z"
+    },
+    {
+      "id": "2026-08-10-evening-auto",
+      "status": "published",
+      "slot": "evening",
+      "scheduledAt": "2026-08-10T20:00:00+09:00",
+      "source": "automation/generated-content/article-94.html",
+      "generated": {
+        "themeId": "reach-content-repurpose",
+        "score": 0.09615384615384616,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-94",
+        "title": "一つの相談から発信の種を見つける、内容を使い回す前の整理",
+        "category": "marketing",
+        "categoryLabel": "集客・販売",
+        "articleType": "guide",
+        "contentType": "guide",
+        "targetIndustry": "all",
+        "targetReader": "小規模店舗の運営者、講師、コーチ、施術者などの個人サービス提供者。",
+        "readerProblem": "発信の負担は、ネタの数だけでなく、相談内容を発信できる形へ変換する判断が毎回発生することから生まれます。質問を受けた直後は相手の状況に合わせて答えているため、そのままでは他の人に通用する一般的な情報になっていない場合があります。／一つの相談に含まれる内容には、相談者が困っている事実、困りごとが起きる背景、判断に迷っている選択肢、次に取れる行動が混在しています。これらを分けずに一つの長文へまとめると、読者が自分に関係する部分を見つけにくくなり、投稿の目的もぼやけます。／相談内容を再利用する際は、相談者が特定されないように状況を一般化し、個別の事情や秘密を含めない確認も欠かせません。発信の効率だけを優先せず、信頼関係を守れる範囲で共通する悩みを抽出することが基本になります。",
+        "searchIntent": "日々の相談や接客から発信テーマを見つけ、同じ内容を無理なく複数の発信形式へ整理したい。",
+        "pillar": "reach",
+        "tags": [
+          "相談内容 発信 ネタ",
+          "発信ネタの見つけ方",
+          "コンテンツ使い回し",
+          "小規模店舗 発信",
+          "個人サービス 発信",
+          "SNS投稿 整理",
+          "相談内容 コンテンツ化"
+        ],
+        "excerpt": "発信のネタが足りないのではなく、日々の相談や接客に含まれる情報が整理されていないだけかもしれません。一つの相談を複数の投稿へ変える前に、何を分けて考えると続けやすいのかを整理します。",
+        "metaDescription": "小規模店舗や個人サービス提供者向けに、相談内容を発信の種へ整理する方法を解説。使い回しの前に、悩み・判断・行動を分けて発信の負担を軽くします。",
+        "primaryCta": "LOCALGOAT",
+        "affiliateLinks": [
+          {
+            "offerId": "localgoat",
+            "name": "LOCALGOAT",
+            "asp": "もしもアフィリエイト",
+            "placement": "主な選択肢",
+            "reason": "店舗集客の情報発信を支援するサービス",
+            "officialUrl": "https://localgoat.net/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          },
+          {
+            "offerId": "ai-blog-gold",
+            "name": "AIブログくんGOLD",
+            "asp": "もしもアフィリエイト",
+            "placement": "主な選択肢",
+            "reason": "ブログ運用を支援するAIサービス",
+            "officialUrl": "https://app.ai-blog-business.com/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-45",
+          "article-49",
+          "article-60",
+          "article-68",
+          "article-74",
+          "article-92"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy"
+        ],
+        "informationVerifiedAt": "2026-08-10",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "必要な人へ届ける",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-08",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-10T11:46:06.108Z"
     }
   ]
 }

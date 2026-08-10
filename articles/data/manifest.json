@@ -5225,5 +5225,73 @@
     "primaryCtaType": "affiliate",
     "auditStatus": "KEEP",
     "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+  },
+  {
+    "title": "一つの相談から発信の種を見つける、内容を使い回す前の整理",
+    "slug": "article-94",
+    "file": "article-94.html",
+    "category": "marketing",
+    "categoryLabel": "集客・販売",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": "小規模店舗の運営者、講師、コーチ、施術者などの個人サービス提供者。",
+    "tags": [
+      "相談内容 発信 ネタ",
+      "発信ネタの見つけ方",
+      "コンテンツ使い回し",
+      "小規模店舗 発信",
+      "個人サービス 発信",
+      "SNS投稿 整理",
+      "相談内容 コンテンツ化"
+    ],
+    "excerpt": "発信のネタが足りないのではなく、日々の相談や接客に含まれる情報が整理されていないだけかもしれません。一つの相談を複数の投稿へ変える前に、何を分けて考えると続けやすいのかを整理します。",
+    "metaTitle": "一つの相談から発信の種を見つける、内容を使い回す前の整理",
+    "metaDescription": "小規模店舗や個人サービス提供者向けに、相談内容を発信の種へ整理する方法を解説。使い回しの前に、悩み・判断・行動を分けて発信の負担を軽くします。",
+    "publishedAt": "2026-08-10",
+    "updatedAt": "2026-08-10",
+    "status": "published",
+    "primaryCta": "LOCALGOAT",
+    "affiliateLinks": [
+      {
+        "offerId": "localgoat",
+        "name": "LOCALGOAT",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "店舗集客の情報発信を支援するサービス",
+        "officialUrl": "https://localgoat.net/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      },
+      {
+        "offerId": "ai-blog-gold",
+        "name": "AIブログくんGOLD",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "ブログ運用を支援するAIサービス",
+        "officialUrl": "https://app.ai-blog-business.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-45",
+      "article-49",
+      "article-60",
+      "article-68",
+      "article-74",
+      "article-92"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「一つの相談から発信の種を見つける、内容を使い回す前の整理」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-08-10",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-09-08",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
   }
 ]
