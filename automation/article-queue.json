@@ -1162,6 +1162,73 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-10T22:40:23.825Z"
+    },
+    {
+      "id": "2026-08-11-noon-auto",
+      "status": "published",
+      "slot": "noon",
+      "scheduledAt": "2026-08-11T12:00:00+09:00",
+      "source": "automation/generated-content/article-96.html",
+      "generated": {
+        "themeId": "reach-service-selection",
+        "score": 0.03870967741935484,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-96",
+        "title": "サービス名より先に決める、依頼先を選ぶ基準",
+        "category": "personal",
+        "categoryLabel": "個人サービス",
+        "articleType": "comparison",
+        "contentType": "comparison",
+        "targetIndustry": "all",
+        "targetReader": "制作、相談、業務支援などを外部へ依頼したい個人事業主。初めて依頼する人や、過去に認識違いを経験して比較軸を整えたい人。",
+        "readerProblem": "依頼したい仕事が制作なのか相談なのか業務支援なのか曖昧なままだと、候補を見ても比較する項目がそろいません。作業を任せたいのか、判断材料がほしいのか、完成物を受け取りたいのかを分ける必要があります。／表示されている料金だけでは、含まれる作業、納品形式、修正回数、打ち合わせ、追加対応の扱いまで分からないことがあります。安さだけを基準にすると、後から確認したい事項が増え、結果的に負担が大きくなる可能性があります。／依頼者と提供者の間で、目的や優先順位の理解が違うと、成果物が完成しても期待と一致しないことがあります。依頼前に完成の条件と避けたい状態を共有し、相手がどのように確認するかを見ることが重要です／個人事業主は依頼後の確認や素材準備も自分で担うため、相手の能力だけでなく、やり取りの進めやすさも選定条件になります。返信方法や連絡可能な時間帯が合わない場合は、品質以前に進行が止まりやすくなります。",
+        "searchIntent": "制作・相談・業務支援を依頼したい個人事業主が、サービス名や料金だけに頼らず、自分の条件に合う依頼先を比較して選ぶ方法を知りたい。",
+        "pillar": "reach",
+        "tags": [
+          "依頼先を選ぶ基準",
+          "個人事業主 外注先 選び方",
+          "制作依頼 比較",
+          "業務支援 サービス 選び方",
+          "依頼内容 確認事項",
+          "個人サービス 対応範囲"
+        ],
+        "excerpt": "依頼先選びで迷ったときは、知名度や料金を比べる前に、何を任せたいのか、どこまで対応してほしいのかを言葉にすることが大切です。制作・相談・業務支援に共通する選び方を、確認しやすい順番で整理します。",
+        "metaDescription": "制作・相談・業務支援の依頼先を探す個人事業主向けに、サービス名や料金だけで決めず、目的・成果物・対応範囲・やり取りの相性から選ぶ基準を整理します。",
+        "primaryCta": "ココナラ",
+        "affiliateLinks": [
+          {
+            "offerId": "coconala",
+            "name": "ココナラ",
+            "asp": "A8.net",
+            "placement": "主な選択肢",
+            "reason": "個人向けのデザイン・相談・制作サービスを探せるスキルマーケット",
+            "officialUrl": "https://coconala.com/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-82",
+          "article-88",
+          "article-62"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy"
+        ],
+        "informationVerifiedAt": "2026-08-11",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "必要な人へ届ける",
+        "reviewCycleDays": 90,
+        "nextReviewAt": "2026-11-08",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-11T04:16:14.232Z"
     }
   ]
 }
