@@ -1229,6 +1229,86 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-11T04:16:14.232Z"
+    },
+    {
+      "id": "2026-08-11-evening-auto",
+      "status": "published",
+      "slot": "evening",
+      "scheduledAt": "2026-08-11T20:00:00+09:00",
+      "source": "automation/generated-content/article-97.html",
+      "generated": {
+        "themeId": "reach-creative-brief",
+        "score": 0.16793893129770993,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-97",
+        "title": "画像づくりで迷わないために、先に決める依頼条件",
+        "category": "creative",
+        "categoryLabel": "動画・画像・デザイン",
+        "articleType": "guide",
+        "contentType": "guide",
+        "targetIndustry": "all",
+        "targetReader": "SNS発信を行う個人事業主・小規模事業者",
+        "readerProblem": "依頼者は完成イメージを持っていても、それを言葉や資料に置き換えられていない場合があります。制作側は目的や優先順位が分からないため、見た目の判断に頼ることになり、双方の想定がずれやすくなります。／SNS画像は、掲載場所や画面サイズ、表示される時間によって必要な設計が変わります。同じ内容でも、プロフィール投稿、ストーリーズ、広告、案内資料では、文字量や視線の誘導、次に促す行動が異なります。／依頼条件には、画像そのものだけでなく、納期、納品形式、修正の範囲、使用する素材、公開後の利用先なども含まれます。これらを後から確認すると、追加作業や判断の往復が生まれやすくなります.",
+        "searchIntent": "SNSや広告で使う画像制作を依頼する前に、必要な条件や確認事項を整理したい。",
+        "pillar": "reach",
+        "tags": [
+          "画像づくり 依頼",
+          "画像制作 依頼",
+          "SNS画像 作成",
+          "画像依頼 内容",
+          "デザイン依頼 確認事項",
+          "SNS発信 画像",
+          "個人事業主 外注"
+        ],
+        "excerpt": "画像制作を依頼するとき、雰囲気だけを伝えると修正や確認の往復が増えます。目的、伝える内容、使用条件を先に整理し、依頼内容を具体化する方法を紹介します。",
+        "metaDescription": "SNS画像の制作依頼で迷わないために、目的・伝える内容・使用条件を先に整理する方法を解説。依頼前の判断基準や確認項目をまとめます。",
+        "primaryCta": "ConoHa AI Canvas",
+        "affiliateLinks": [
+          {
+            "offerId": "conoha-ai-canvas",
+            "name": "ConoHa AI Canvas",
+            "asp": "A8.net",
+            "placement": "主な選択肢",
+            "reason": "ブラウザで使えるAI画像生成サービス",
+            "officialUrl": "https://ai.conoha.jp/canvas/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          },
+          {
+            "offerId": "miricanvas",
+            "name": "MiriCanvas",
+            "asp": "A8.net",
+            "placement": "主な選択肢",
+            "reason": "AIを使った資料・デザイン作成を支援するサービス",
+            "officialUrl": "https://www.miricanvas.com/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-82",
+          "article-18",
+          "article-94"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy",
+          "offer-conoha-ai-canvas",
+          "offer-miricanvas"
+        ],
+        "informationVerifiedAt": "2026-08-11",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "必要な人へ届ける",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-09",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-11T11:43:04.094Z"
     }
   ]
 }
