@@ -5477,5 +5477,59 @@
     "primaryCtaType": "affiliate",
     "auditStatus": "KEEP",
     "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+  },
+  {
+    "title": "商品説明を書く前に決める、対象者と提供範囲の整理方法",
+    "slug": "article-98",
+    "file": "article-98.html",
+    "category": "marketing",
+    "categoryLabel": "集客・販売",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": "自分の商品・サービスを販売する個人事業主",
+    "tags": [
+      "商品 対象者 提供範囲",
+      "商品説明 書き方",
+      "サービス 対象者",
+      "個人事業主 商品設計",
+      "サービス 対応範囲",
+      "商品の約束"
+    ],
+    "excerpt": "商品説明が伝わりにくい原因は、文章力よりも対象者と提供範囲が曖昧なことにあります。販売前に決めたい整理の順番を紹介します。",
+    "metaTitle": "商品説明を書く前に決める、対象者と提供範囲の整理方法",
+    "metaDescription": "個人事業主が商品説明を書く前に、誰に何を提供するのか、対応範囲や対象外を整理する方法を解説します。",
+    "publishedAt": "2026-08-12",
+    "updatedAt": "2026-08-12",
+    "status": "published",
+    "primaryCta": "Value AI Writer byGMO",
+    "affiliateLinks": [
+      {
+        "offerId": "value-ai-writer",
+        "name": "Value AI Writer byGMO",
+        "asp": "A8.net",
+        "placement": "主な選択肢",
+        "reason": "SEO記事作成を支援するAIライティングツール",
+        "officialUrl": "https://www.value-domain.com/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-62",
+      "article-96",
+      "article-94"
+    ],
+    "readerProblem": "発信や施策を増やしても、必要な人が次に何をすればよいか伝わっていない。",
+    "searchIntent": "「商品説明を書く前に決める、対象者と提供範囲の整理方法」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "reach",
+    "pillarLabel": "必要な人へ届ける",
+    "informationVerifiedAt": "2026-08-12",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-09-10",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
   }
 ]

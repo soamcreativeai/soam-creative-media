@@ -1309,6 +1309,73 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-11T11:43:04.094Z"
+    },
+    {
+      "id": "2026-08-12-morning-auto",
+      "status": "published",
+      "slot": "morning",
+      "scheduledAt": "2026-08-12T07:00:00+09:00",
+      "source": "automation/generated-content/article-98.html",
+      "generated": {
+        "themeId": "decision-product-offer",
+        "score": 0.23660377358490567,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-98",
+        "title": "商品説明を書く前に決める、対象者と提供範囲の整理方法",
+        "category": "marketing",
+        "categoryLabel": "集客・販売",
+        "articleType": "guide",
+        "contentType": "guide",
+        "targetIndustry": "all",
+        "targetReader": "自分の商品・サービスを販売する個人事業主",
+        "readerProblem": "対象者を広げすぎると、説明文に複数の悩みや利用場面を詰め込むことになり、結局誰に向けた商品なのかが見えにくくなります。最初からすべての人を対象にするのではなく、困りごとが具体的で、提供する内容と接点がある人から考える必要があります。／商品の約束が大きすぎると、購入前の期待と実際の提供内容に差が生まれます。成果を保証できない部分まで断定するのではなく、自分が提供する作業、判断材料、サポートの範囲を分けて説明することが重要です。／対応範囲を決めないまま販売すると、質問への返信、追加修正、個別相談などが際限なく増える可能性があります。これは顧客に冷たくするためではなく、品質を保ちながら継続して提供するために、最初から扱う範囲と扱わない範囲を明確にする作業です.",
+        "searchIntent": "自分の商品やサービスの対象者、提供する内容、対応しない範囲を整理して、誤解の少ない商品説明を書きたい。",
+        "pillar": "decision",
+        "tags": [
+          "商品 対象者 提供範囲",
+          "商品説明 書き方",
+          "サービス 対象者",
+          "個人事業主 商品設計",
+          "サービス 対応範囲",
+          "商品の約束"
+        ],
+        "excerpt": "商品説明が伝わりにくい原因は、文章力よりも対象者と提供範囲が曖昧なことにあります。販売前に決めたい整理の順番を紹介します。",
+        "metaDescription": "個人事業主が商品説明を書く前に、誰に何を提供するのか、対応範囲や対象外を整理する方法を解説します。",
+        "primaryCta": "Value AI Writer byGMO",
+        "affiliateLinks": [
+          {
+            "offerId": "value-ai-writer",
+            "name": "Value AI Writer byGMO",
+            "asp": "A8.net",
+            "placement": "主な選択肢",
+            "reason": "SEO記事作成を支援するAIライティングツール",
+            "officialUrl": "https://www.value-domain.com/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-62",
+          "article-96",
+          "article-94"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy"
+        ],
+        "informationVerifiedAt": "2026-08-12",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "判断を言葉にする",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-10",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-11T22:45:22.907Z"
     }
   ]
 }
