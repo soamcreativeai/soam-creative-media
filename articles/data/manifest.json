@@ -5531,5 +5531,62 @@
     "primaryCtaType": "affiliate",
     "auditStatus": "KEEP",
     "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+  },
+  {
+    "title": "診断結果を答えで終わらせない、次の行動の作り方",
+    "slug": "article-99",
+    "file": "article-99.html",
+    "category": "diagnosis",
+    "categoryLabel": "診断ツール活用",
+    "articleType": "guide",
+    "targetIndustry": "all",
+    "targetReader": "診断コンテンツを集客や接客に活用したい小規模店舗、個人事業主、講師、コーチ、個人サービス提供者。",
+    "tags": [
+      "診断結果 次の行動",
+      "診断コンテンツ 導線設計",
+      "診断結果ページ 改善",
+      "小規模事業者 集客",
+      "診断ツール 活用",
+      "診断結果 行動喚起"
+    ],
+    "excerpt": "診断コンテンツは、結果を表示しただけでは行動につながりません。結果を受け取った人が迷わず小さな一歩を選べるように、結果の意味、提案、選択肢、案内の順番を整える方法を解説します。",
+    "metaTitle": "診断結果を答えで終わらせない、次の行動の作り方",
+    "metaDescription": "診断結果を集客や接客の次の行動につなげるために、結果の分け方、案内文、導線、確認方法を小規模事業者向けに整理します。",
+    "publishedAt": "2026-08-12",
+    "updatedAt": "2026-08-12",
+    "status": "published",
+    "primaryCta": "gleasin",
+    "affiliateLinks": [
+      {
+        "offerId": "gleasin",
+        "name": "gleasin",
+        "asp": "もしもアフィリエイト",
+        "placement": "主な選択肢",
+        "reason": "商圏分析を支援する店舗ビジネス向けツール",
+        "officialUrl": "https://www.gleasin.jp/",
+        "informationVerifiedAt": "2026-08-01",
+        "nextReviewAt": "2026-08-30"
+      }
+    ],
+    "relatedArticles": [
+      "article-10",
+      "article-20",
+      "article-37",
+      "article-53",
+      "article-61",
+      "article-76"
+    ],
+    "readerProblem": "診断結果を見せるだけになり、読者が自分に合う次の行動を選べていない。",
+    "searchIntent": "「診断結果を答えで終わらせない、次の行動の作り方」について、判断基準と具体的な進め方を知りたい。",
+    "pillar": "decision",
+    "pillarLabel": "判断を言葉にする",
+    "informationVerifiedAt": "2026-08-12",
+    "reviewCycleDays": 30,
+    "nextReviewAt": "2026-09-10",
+    "containsAffiliateLinks": true,
+    "soamLinkEligible": false,
+    "primaryCtaType": "affiliate",
+    "auditStatus": "KEEP",
+    "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
   }
 ]

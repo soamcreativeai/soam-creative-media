@@ -1376,6 +1376,76 @@
         "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
       },
       "publishedAt": "2026-08-11T22:45:22.907Z"
+    },
+    {
+      "id": "2026-08-12-evening-auto",
+      "status": "published",
+      "slot": "evening",
+      "scheduledAt": "2026-08-12T20:00:00+09:00",
+      "source": "automation/generated-content/article-99.html",
+      "generated": {
+        "themeId": "decision-diagnosis-next-step",
+        "score": 0.17105263157894737,
+        "fallbackThemesTried": 0,
+        "provider": "openai-responses"
+      },
+      "article": {
+        "slug": "article-99",
+        "title": "診断結果を答えで終わらせない、次の行動の作り方",
+        "category": "diagnosis",
+        "categoryLabel": "診断ツール活用",
+        "articleType": "guide",
+        "contentType": "guide",
+        "targetIndustry": "all",
+        "targetReader": "診断コンテンツを集客や接客に活用したい小規模店舗、個人事業主、講師、コーチ、個人サービス提供者。",
+        "readerProblem": "診断結果が性格やタイプのラベルだけで終わると、読者は自分に関係する内容だと感じても、具体的な行動へ移る理由を持ちにくくなります。結果の説明とサービス案内が離れている場合も、読者が自分で情報をつなぎ合わせる必要が生じ、途中で離脱しやすくなります。／結果ごとに同じ案内を表示すると、診断した意味が薄れます。回答内容に応じた悩みや優先順位を示さず、いきなり予約や購入だけを促すと、読者は売り込みと受け止める可能性があります。結果ページでは、理解、納得、選択の順に情報を並べることが重要です。／行動を一つに絞りすぎることも問題になります。相談を希望する人と、まず情報を読みたい人では準備の度合いが異なるため、同じ強さの誘導だけでは合わない読者が出ます。主行動と補助行動を分け、負担の異なる選択肢を用意すると判断しやすくなります。",
+        "searchIntent": "診断コンテンツの結果を、問い合わせ、予約、相談、資料請求などの次の行動へ自然につなげる設計方法を知りたい。",
+        "pillar": "decision",
+        "tags": [
+          "診断結果 次の行動",
+          "診断コンテンツ 導線設計",
+          "診断結果ページ 改善",
+          "小規模事業者 集客",
+          "診断ツール 活用",
+          "診断結果 行動喚起"
+        ],
+        "excerpt": "診断コンテンツは、結果を表示しただけでは行動につながりません。結果を受け取った人が迷わず小さな一歩を選べるように、結果の意味、提案、選択肢、案内の順番を整える方法を解説します。",
+        "metaDescription": "診断結果を集客や接客の次の行動につなげるために、結果の分け方、案内文、導線、確認方法を小規模事業者向けに整理します。",
+        "primaryCta": "gleasin",
+        "affiliateLinks": [
+          {
+            "offerId": "gleasin",
+            "name": "gleasin",
+            "asp": "もしもアフィリエイト",
+            "placement": "主な選択肢",
+            "reason": "商圏分析を支援する店舗ビジネス向けツール",
+            "officialUrl": "https://www.gleasin.jp/",
+            "informationVerifiedAt": "2026-08-01",
+            "nextReviewAt": "2026-08-30"
+          }
+        ],
+        "relatedArticles": [
+          "article-10",
+          "article-20",
+          "article-37",
+          "article-53",
+          "article-61",
+          "article-76"
+        ],
+        "sourceIds": [
+          "soam-editorial-policy"
+        ],
+        "informationVerifiedAt": "2026-08-12",
+        "containsAffiliateLinks": true,
+        "pillarLabel": "判断を言葉にする",
+        "reviewCycleDays": 30,
+        "nextReviewAt": "2026-09-10",
+        "soamLinkEligible": false,
+        "primaryCtaType": "affiliate",
+        "auditStatus": "KEEP",
+        "auditNotes": "3本柱・読者・検索意図・鮮度・主導線を明示して維持する。"
+      },
+      "publishedAt": "2026-08-12T11:44:37.103Z"
     }
   ]
 }
